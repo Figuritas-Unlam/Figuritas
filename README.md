@@ -12,6 +12,7 @@ Obtiene los jugadores (con sus características), equipos y paises.
 - Pais por nombre = https://api.sportmonks.com/v3/core/countries/search/{PaisNombre}?api_token={{api_token}}&include=ç
 Documentacion: https://docs.sportmonks.com/football
 ### WORLD CUP API - 2022 DATA SET
-Api en desarrollo que nos brinda datos como proximos matches, equipos clasificados y tabla de puntuaciones.
+Api en desarrollo que nos brinda datos como proximos matches, equipos clasificados y tabla de puntuaciones del mundial 2022.
 - Api Token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzRjZTNkOWRhYTlhZmYzZTc1YjYyMTYiLCJpYXQiOjE2NjU5ODM0NTAsImV4cCI6MTY2NjA2OTg1MH0.vDk4ZEXUb7rz_jraHxq39wQonWXKFG0DUgh5ypxerew 
+
 Repositorio Git y su documentacion = https://github.com/raminmr/free-api-worldcup2022
