@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.figuritasunlam.app-mergeDebugResources-27:/values-v17/values-v17.xml",
+            "outputFile": "com.example.figuritasunlam.app-mergeDebugResources-3:/values-v17/values-v17.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\usuario\\.gradle\\caches\\transforms-3\\685980b024686d78956b91eec9b43f3b\\transformed\\appcompat-1.5.1\\res\\values-v17\\values-v17.xml",
+                    "source": "C:\\Users\\usuario\\Desktop\\Trabajo Ejemplo\\videoteca\\caches\\transforms-3\\685980b024686d78956b91eec9b43f3b\\transformed\\appcompat-1.5.1\\res\\values-v17\\values-v17.xml",
                     "from": {
                         "startLines": "2,5,9,12,15,18,22,25,29,33,37,40,43,46,50,53,57",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

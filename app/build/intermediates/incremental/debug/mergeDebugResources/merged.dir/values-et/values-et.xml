@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
     <plurals name="mtrl_badge_content_description">
     <item quantity="one">%d uus märguanne</item>
     <item quantity="other">%d uut märguannet</item>
@@ -35,9 +35,34 @@
     <string name="character_counter_content_description">Sisestatud tähemärgid: %1$d/%2$d</string>
     <string name="character_counter_overflowed_content_description">Tähemärgipiirang on ületatud: %1$d/%2$d</string>
     <string name="clear_text_end_icon_content_description">Kustuta tekst</string>
+    <string msgid="406453423630273620" name="close_drawer">"Sule navigeerimismenüü"</string>
+    <string msgid="7573152094250666567" name="close_sheet">"Sule leht"</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Luba</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">Rakendus %1$s töötab ainult siis, kui lubate Google Play teenused.</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Google Play teenuste lubamine</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">Installi</string>
+    <string name="common_google_play_services_install_text">Rakendus %1$s töötab ainult koos Google Play teenustega, mida teie seadmes pole.</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Google Play teenuste hankimine</string>
+    <string name="common_google_play_services_notification_channel_name">Google Play teenuste saadavalolek</string>
+    <string name="common_google_play_services_notification_ticker">Viga Google Play teenustes</string>
+    <string name="common_google_play_services_unknown_issue">Rakendusel %1$s on probleeme Google Play teenustega. Proovige uuesti.</string>
+    <string name="common_google_play_services_unsupported_text">Rakendus %1$s töötab ainult koos Google Play teenustega, mida teie seadmes ei toetata.</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">Värskenda</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">Rakenduse %1$s töötamiseks peate värskendama Google Play teenuseid.</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">Google Play teenuste värskendamine</string>
+    <string name="common_google_play_services_updating_text">Rakendus %1$s töötab ainult koos Google Play teenustega, mida praegu värskendatakse.</string>
+    <string name="common_google_play_services_wear_update_text">Vajalik on Google Play teenuste uus versioon. See värskendab end peagi.</string>
+    <string name="common_open_on_phone">Ava telefonis</string>
+    <string name="common_signin_button_text">Logi sisse</string>
+    <string name="common_signin_button_text_long">Logi sisse Google\'i kontoga</string>
+    <string msgid="8038256446254964252" name="default_error_message">"Sobimatu sisend"</string>
+    <string msgid="6312721426453364202" name="default_popup_window_title">"Hüpikaken"</string>
+    <string msgid="1890207353314751437" name="dropdown_menu">"Rippmenüü"</string>
     <string name="error_icon_content_description">Viga</string>
     <string name="exposed_dropdown_menu_content_description">Kuva rippmenüü</string>
     <string name="icon_content_description">Dialoogi ikoon</string>
+    <string msgid="6827826412747255547" name="in_progress">"Pooleli"</string>
+    <string msgid="2486394087603402002" name="indeterminate">"Ei märgitud ega märkimata"</string>
     <string name="item_view_role_description">Vaheleht</string>
     <string name="material_clock_toggle_content_description">Valige AM või PM</string>
     <string name="material_hour_selection">Valige tund</string>
@@ -53,11 +78,12 @@
     <string name="material_timepicker_text_input_mode_description">Aktiveerige kellaaja sisestamiseks tekstisisestusrežiim.</string>
     <string name="mtrl_badge_numberless_content_description">Uus märguanne</string>
     <string name="mtrl_chip_close_icon_content_description">Üksuse %1$s eemaldamine</string>
-    <string name="mtrl_exceed_max_badge_number_content_description">Rohkem kui %1$d uut märguannet</string>
+    <string name="mtrl_exceed_max_badge_number_content_description" ns2:ignore="PluralsCandidate">Rohkem kui %1$d uut märguannet</string>
     <string name="mtrl_picker_a11y_next_month">Vaheta järgmisele kuule</string>
     <string name="mtrl_picker_a11y_prev_month">Vaheta eelmisele kuule</string>
     <string name="mtrl_picker_announce_current_selection">Praegune valik: %1$s</string>
-    <string name="mtrl_picker_confirm">@android:string/ok</string>
+    <string name="mtrl_picker_cancel">Tühista</string>
+    <string name="mtrl_picker_confirm">OK</string>
     <string name="mtrl_picker_date_header_selected">%1$s</string>
     <string name="mtrl_picker_date_header_title">Valige kuupäev</string>
     <string name="mtrl_picker_date_header_unselected">Valitud kuupäev</string>
@@ -84,7 +110,18 @@
     <string name="mtrl_picker_toggle_to_day_selection">Puudutage, et lülituda päeva valimisele</string>
     <string name="mtrl_picker_toggle_to_text_input_mode">Lülitu tekstisisestusrežiimile</string>
     <string name="mtrl_picker_toggle_to_year_selection">Puudutage, et lülituda aasta valimisele</string>
+    <string name="mtrl_timepicker_cancel">Tühista</string>
+    <string name="mtrl_timepicker_confirm">OK</string>
+    <string msgid="6301633601645100427" name="nav_app_bar_navigate_up_description">"Navigeeri üles"</string>
+    <string msgid="7456070600745802113" name="nav_app_bar_open_drawer_description">"Navigeerimissahtli avamine"</string>
+    <string msgid="542007171693138492" name="navigation_menu">"Navigeerimismenüü"</string>
+    <string msgid="6610465462668679431" name="not_selected">"Pole valitud"</string>
+    <string msgid="875452955155264703" name="off">"Väljas"</string>
+    <string msgid="8655164131929253426" name="on">"Sees"</string>
     <string name="password_toggle_content_description">Parooli kuvamine</string>
     <string msgid="6264217191555673260" name="search_menu_title">"Otsing"</string>
+    <string msgid="6043586758067023" name="selected">"Valitud"</string>
     <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="1672349317127674378" name="tab">"Vaheleht"</string>
+    <string msgid="5946805113151406391" name="template_percent">"<ns1:g id="PERCENTAGE">%1$d</ns1:g> protsenti."</string>
 </resources>

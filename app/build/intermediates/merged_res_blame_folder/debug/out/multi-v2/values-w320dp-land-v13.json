@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.figuritasunlam.app-mergeDebugResources-27:/values-w320dp-land-v13/values-w320dp-land-v13.xml",
+            "outputFile": "com.example.figuritasunlam.app-mergeDebugResources-3:/values-w320dp-land-v13/values-w320dp-land-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\usuario\\.gradle\\caches\\transforms-3\\0700c079a9361c9bc5e6404d34690c50\\transformed\\material-1.6.1\\res\\values-w320dp-land-v13\\values-w320dp-land-v13.xml",
+                    "source": "C:\\Users\\usuario\\Desktop\\Trabajo Ejemplo\\videoteca\\caches\\transforms-3\\11918c9aa544653f8c45c32ea9ac02b8\\transformed\\material-1.7.0\\res\\values-w320dp-land-v13\\values-w320dp-land-v13.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

@@ -1,32 +1,75 @@
-com.example.figuritasunlam.app-savedstate-1.2.0-0 C:\Users\usuario\.gradle\caches\transforms-3\02d9a1c992ba142a6f1c7f5d7ffca310\transformed\savedstate-1.2.0\res
-com.example.figuritasunlam.app-appcompat-resources-1.5.1-1 C:\Users\usuario\.gradle\caches\transforms-3\04b99c2d3ee38714c14bf3d221b2a08b\transformed\appcompat-resources-1.5.1\res
-com.example.figuritasunlam.app-material-1.6.1-2 C:\Users\usuario\.gradle\caches\transforms-3\0700c079a9361c9bc5e6404d34690c50\transformed\material-1.6.1\res
-com.example.figuritasunlam.app-emoji2-views-helper-1.2.0-3 C:\Users\usuario\.gradle\caches\transforms-3\0b622ae0009252fd9de3ea6d232488c7\transformed\emoji2-views-helper-1.2.0\res
-com.example.figuritasunlam.app-lifecycle-livedata-core-2.5.1-4 C:\Users\usuario\.gradle\caches\transforms-3\0ff8f254ca685ecf1cb4e6f520f40b73\transformed\lifecycle-livedata-core-2.5.1\res
-com.example.figuritasunlam.app-recyclerview-1.1.0-5 C:\Users\usuario\.gradle\caches\transforms-3\4b680873f5535aea704d3a34b63b6935\transformed\recyclerview-1.1.0\res
-com.example.figuritasunlam.app-viewpager2-1.0.0-6 C:\Users\usuario\.gradle\caches\transforms-3\4bec0276ba6259360fdac8888ee312fa\transformed\viewpager2-1.0.0\res
-com.example.figuritasunlam.app-fragment-1.3.6-7 C:\Users\usuario\.gradle\caches\transforms-3\52a35ffae9473845de56d1ef9f964929\transformed\fragment-1.3.6\res
-com.example.figuritasunlam.app-appcompat-1.5.1-8 C:\Users\usuario\.gradle\caches\transforms-3\685980b024686d78956b91eec9b43f3b\transformed\appcompat-1.5.1\res
-com.example.figuritasunlam.app-core-1.8.0-9 C:\Users\usuario\.gradle\caches\transforms-3\6a19de105318aab1da00cfa3c60fb56e\transformed\core-1.8.0\res
-com.example.figuritasunlam.app-activity-1.5.1-10 C:\Users\usuario\.gradle\caches\transforms-3\72aa18d267fcea65a67f1c67469f91b1\transformed\activity-1.5.1\res
-com.example.figuritasunlam.app-annotation-experimental-1.1.0-11 C:\Users\usuario\.gradle\caches\transforms-3\760b9af4b43b4d512130ddd1633ee153\transformed\annotation-experimental-1.1.0\res
-com.example.figuritasunlam.app-lifecycle-viewmodel-2.5.1-12 C:\Users\usuario\.gradle\caches\transforms-3\83a8f2ff4fefab06a91b8a5cb0437f5b\transformed\lifecycle-viewmodel-2.5.1\res
-com.example.figuritasunlam.app-emoji2-1.2.0-13 C:\Users\usuario\.gradle\caches\transforms-3\848773e611bbde5d3ec0ec3e63d01c98\transformed\emoji2-1.2.0\res
-com.example.figuritasunlam.app-drawerlayout-1.1.1-14 C:\Users\usuario\.gradle\caches\transforms-3\89f334ed0aaa1263b47c6d75629cdccc\transformed\drawerlayout-1.1.1\res
-com.example.figuritasunlam.app-constraintlayout-2.1.4-15 C:\Users\usuario\.gradle\caches\transforms-3\9827ec6617366e82ed5e7c7a909d86e6\transformed\constraintlayout-2.1.4\res
-com.example.figuritasunlam.app-core-ktx-1.8.0-16 C:\Users\usuario\.gradle\caches\transforms-3\9f2d8786483f16acab3469f1ecada2e8\transformed\core-ktx-1.8.0\res
-com.example.figuritasunlam.app-lifecycle-process-2.4.1-17 C:\Users\usuario\.gradle\caches\transforms-3\a4f0fb44e9b56370f8c2ed23c9d5d030\transformed\lifecycle-process-2.4.1\res
-com.example.figuritasunlam.app-lifecycle-runtime-2.5.1-18 C:\Users\usuario\.gradle\caches\transforms-3\b1625850bd12ed5a169353107cc1dd79\transformed\lifecycle-runtime-2.5.1\res
-com.example.figuritasunlam.app-startup-runtime-1.1.1-19 C:\Users\usuario\.gradle\caches\transforms-3\baef32cd3c953915a0114f73cc9cca3f\transformed\startup-runtime-1.1.1\res
-com.example.figuritasunlam.app-transition-1.2.0-20 C:\Users\usuario\.gradle\caches\transforms-3\d9ab7ff9bc4a114cf32a2090c5357a01\transformed\transition-1.2.0\res
-com.example.figuritasunlam.app-cardview-1.0.0-21 C:\Users\usuario\.gradle\caches\transforms-3\ecb62397fcd2d0e31dd8cc20a358496e\transformed\cardview-1.0.0\res
-com.example.figuritasunlam.app-lifecycle-viewmodel-savedstate-2.5.1-22 C:\Users\usuario\.gradle\caches\transforms-3\f1c05abca8b731045f6324e39a2dc706\transformed\lifecycle-viewmodel-savedstate-2.5.1\res
-com.example.figuritasunlam.app-coordinatorlayout-1.1.0-23 C:\Users\usuario\.gradle\caches\transforms-3\ff339137cecee5be0e91e8f58664aa0c\transformed\coordinatorlayout-1.1.0\res
-com.example.figuritasunlam.app-pngs-24 C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\build\generated\res\pngs\debug
-com.example.figuritasunlam.app-resValues-25 C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\build\generated\res\resValues\debug
-com.example.figuritasunlam.app-rs-26 C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\build\generated\res\rs\debug
-com.example.figuritasunlam.app-packageDebugResources-27 C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
-com.example.figuritasunlam.app-packageDebugResources-28 C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
-com.example.figuritasunlam.app-merged_res-29 C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\build\intermediates\merged_res\debug
-com.example.figuritasunlam.app-debug-30 C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\debug\res
-com.example.figuritasunlam.app-main-31 C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\res
+com.example.figuritasunlam.app-pngs-0 C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\build\generated\res\pngs\debug
+com.example.figuritasunlam.app-resValues-1 C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\build\generated\res\resValues\debug
+com.example.figuritasunlam.app-rs-2 C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\build\generated\res\rs\debug
+com.example.figuritasunlam.app-packageDebugResources-3 C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.example.figuritasunlam.app-packageDebugResources-4 C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.example.figuritasunlam.app-merged_res-5 C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\build\intermediates\merged_res\debug
+com.example.figuritasunlam.app-debug-6 C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\debug\res
+com.example.figuritasunlam.app-main-7 C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\res
+com.example.figuritasunlam.app-navigation-ui-ktx-2.5.2-8 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\022c1b21f652b14bb5e75a27a25777ee\transformed\navigation-ui-ktx-2.5.2\res
+com.example.figuritasunlam.app-lifecycle-livedata-core-2.5.1-9 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\0ff8f254ca685ecf1cb4e6f520f40b73\transformed\lifecycle-livedata-core-2.5.1\res
+com.example.figuritasunlam.app-material-1.7.0-10 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\11918c9aa544653f8c45c32ea9ac02b8\transformed\material-1.7.0\res
+com.example.figuritasunlam.app-jetified-play-services-basement-18.1.0-11 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\1239c2b09c81063a65b65888a82ca300\transformed\jetified-play-services-basement-18.1.0\res
+com.example.figuritasunlam.app-jetified-lifecycle-livedata-ktx-2.5.1-12 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\1710b30114c1008585b5a4653b259ad9\transformed\jetified-lifecycle-livedata-ktx-2.5.1\res
+com.example.figuritasunlam.app-jetified-runtime-1.1.1-13 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\1b784d806c095ee8558e44e195161937\transformed\jetified-runtime-1.1.1\res
+com.example.figuritasunlam.app-lifecycle-livedata-2.5.1-14 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\1cb6376de20b42be3ca5676f64db84ba\transformed\lifecycle-livedata-2.5.1\res
+com.example.figuritasunlam.app-navigation-common-ktx-2.5.2-15 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\2057bbb861103c319be754f347ef5953\transformed\navigation-common-ktx-2.5.2\res
+com.example.figuritasunlam.app-jetified-ui-geometry-1.1.1-16 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\20a20b19c249a7844a4eeeba6c1a7d8e\transformed\jetified-ui-geometry-1.1.1\res
+com.example.figuritasunlam.app-jetified-viewpager2-1.0.0-17 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\27b31f755ddc6f6f25e80c77e30076c4\transformed\jetified-viewpager2-1.0.0\res
+com.example.figuritasunlam.app-navigation-common-2.5.2-18 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\2ee4e1f231f79787a0303e2637f5c69d\transformed\navigation-common-2.5.2\res
+com.example.figuritasunlam.app-navigation-runtime-2.5.2-19 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\367d808ff9e2b2f8efbf72406ebda36e\transformed\navigation-runtime-2.5.2\res
+com.example.figuritasunlam.app-jetified-camera-view-1.1.0-beta01-20 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\3b685422b8a05c0f2d8bd526cbbc3c79\transformed\jetified-camera-view-1.1.0-beta01\res
+com.example.figuritasunlam.app-sqlite-framework-2.2.0-21 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\404227ddb82287bca2d0f337e540b4bf\transformed\sqlite-framework-2.2.0\res
+com.example.figuritasunlam.app-navigation-ui-2.5.2-22 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\44e75603e6e17723bcf66d315357fc79\transformed\navigation-ui-2.5.2\res
+com.example.figuritasunlam.app-navigation-runtime-ktx-2.5.2-23 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\45dbe670b6bb800078ee9f3aa85d423a\transformed\navigation-runtime-ktx-2.5.2\res
+com.example.figuritasunlam.app-transition-1.4.1-24 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\46540cdaaf96706a34eff11b7aa197ca\transformed\transition-1.4.1\res
+com.example.figuritasunlam.app-jetified-ui-unit-1.1.1-25 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\4819b8fe87eb0c2915abea077ab7e52e\transformed\jetified-ui-unit-1.1.1\res
+com.example.figuritasunlam.app-jetified-play-services-base-18.0.1-26 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\49e1fdcc542bde6869659be3a6e1ba42\transformed\jetified-play-services-base-18.0.1\res
+com.example.figuritasunlam.app-jetified-ui-util-1.1.1-27 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\5282b020e48e4bc51260f75ad91bbe30\transformed\jetified-ui-util-1.1.1\res
+com.example.figuritasunlam.app-jetified-profileinstaller-1.1.0-28 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\539aa2ffee07b54d7e501f36e7840a1c\transformed\jetified-profileinstaller-1.1.0\res
+com.example.figuritasunlam.app-navigation-fragment-ktx-2.5.2-29 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\667b7360bbd225ba80d9815352ac3a77\transformed\navigation-fragment-ktx-2.5.2\res
+com.example.figuritasunlam.app-appcompat-1.5.1-30 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\685980b024686d78956b91eec9b43f3b\transformed\appcompat-1.5.1\res
+com.example.figuritasunlam.app-jetified-activity-1.6.0-31 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\69118b1420796a59021b9ec8e4a396e6\transformed\jetified-activity-1.6.0\res
+com.example.figuritasunlam.app-databinding-runtime-7.3.0-32 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\6c5487127295ae65951c7aecb4b5a037\transformed\databinding-runtime-7.3.0\res
+com.example.figuritasunlam.app-jetified-savedstate-1.2.0-33 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\74867c7ed43888f15694d9d002150d44\transformed\jetified-savedstate-1.2.0\res
+com.example.figuritasunlam.app-jetified-ui-text-1.1.1-34 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\758857ad8a6df4827af31405d423b7ca\transformed\jetified-ui-text-1.1.1\res
+com.example.figuritasunlam.app-jetified-annotation-experimental-1.3.0-35 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\812a3fd0465f80f3df6800aa0f64e561\transformed\jetified-annotation-experimental-1.3.0\res
+com.example.figuritasunlam.app-jetified-lifecycle-livedata-core-ktx-2.5.1-36 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\824608112b5355e65fd6ec7f919791be\transformed\jetified-lifecycle-livedata-core-ktx-2.5.1\res
+com.example.figuritasunlam.app-lifecycle-viewmodel-2.5.1-37 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\83a8f2ff4fefab06a91b8a5cb0437f5b\transformed\lifecycle-viewmodel-2.5.1\res
+com.example.figuritasunlam.app-jetified-lifecycle-viewmodel-ktx-2.5.1-38 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\8409d7ea127378a131949bd61ba35829\transformed\jetified-lifecycle-viewmodel-ktx-2.5.1\res
+com.example.figuritasunlam.app-jetified-appcompat-resources-1.5.1-39 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\85e4e2cd99fa69655b477d5331f634e6\transformed\jetified-appcompat-resources-1.5.1\res
+com.example.figuritasunlam.app-jetified-lifecycle-service-2.4.0-40 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\869b611e76067c860f3e8df396b65e8e\transformed\jetified-lifecycle-service-2.4.0\res
+com.example.figuritasunlam.app-drawerlayout-1.1.1-41 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\89f334ed0aaa1263b47c6d75629cdccc\transformed\drawerlayout-1.1.1\res
+com.example.figuritasunlam.app-jetified-core-ktx-1.9.0-42 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\8b675d2633a415baa9fd2f23518b247c\transformed\jetified-core-ktx-1.9.0\res
+com.example.figuritasunlam.app-jetified-camera-camera2-1.1.0-beta01-43 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\8b992964b9ae5905edb78cf8b4c5dd26\transformed\jetified-camera-camera2-1.1.0-beta01\res
+com.example.figuritasunlam.app-jetified-lifecycle-viewmodel-compose-2.4.1-44 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\8e471b9c34eee51ecb86440577fe145a\transformed\jetified-lifecycle-viewmodel-compose-2.4.1\res
+com.example.figuritasunlam.app-databinding-adapters-7.3.0-45 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\97fdb91708c3570a3ef55529ff77c3ac\transformed\databinding-adapters-7.3.0\res
+com.example.figuritasunlam.app-constraintlayout-2.1.4-46 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\9827ec6617366e82ed5e7c7a909d86e6\transformed\constraintlayout-2.1.4\res
+com.example.figuritasunlam.app-jetified-savedstate-ktx-1.2.0-47 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\9ba630824061464f954df2cd5a5813fc\transformed\jetified-savedstate-ktx-1.2.0\res
+com.example.figuritasunlam.app-core-1.9.0-48 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\9baae2a0a064870b9506522ab355f7bf\transformed\core-1.9.0\res
+com.example.figuritasunlam.app-jetified-lifecycle-viewmodel-savedstate-2.5.1-49 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\abbccd5aa3129f84ed657e9b3e8aaf01\transformed\jetified-lifecycle-viewmodel-savedstate-2.5.1\res
+com.example.figuritasunlam.app-recyclerview-1.2.1-50 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\b15ec2f6b89054d43119a75e8de6207e\transformed\recyclerview-1.2.1\res
+com.example.figuritasunlam.app-lifecycle-runtime-2.5.1-51 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\b1625850bd12ed5a169353107cc1dd79\transformed\lifecycle-runtime-2.5.1\res
+com.example.figuritasunlam.app-jetified-ui-graphics-1.1.1-52 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\b6dad7619658f56686f9862e4b805d79\transformed\jetified-ui-graphics-1.1.1\res
+com.example.figuritasunlam.app-jetified-fragment-ktx-1.6.0-alpha02-53 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\b82736436640d1dfa34e12933b81c527\transformed\jetified-fragment-ktx-1.6.0-alpha02\res
+com.example.figuritasunlam.app-navigation-fragment-2.5.2-54 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\b8f7072fe15f8fedc2b1b486f368b8b4\transformed\navigation-fragment-2.5.2\res
+com.example.figuritasunlam.app-sqlite-2.2.0-55 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\ba90233cf40437be4965aca991dedb5d\transformed\sqlite-2.2.0\res
+com.example.figuritasunlam.app-jetified-play-services-maps-18.1.0-56 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\bd7d173265e66aeb83f3a4dbb481a913\transformed\jetified-play-services-maps-18.1.0\res
+com.example.figuritasunlam.app-jetified-emoji2-views-helper-1.2.0-57 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\c5e64553c5eb9d00c7fb037ddb005060\transformed\jetified-emoji2-views-helper-1.2.0\res
+com.example.figuritasunlam.app-jetified-emoji2-1.2.0-58 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\c80ce55a4995639d4ed0d5a763e84b4a\transformed\jetified-emoji2-1.2.0\res
+com.example.figuritasunlam.app-jetified-startup-runtime-1.1.1-59 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\cc295d917883b18b6d985863df52dcc5\transformed\jetified-startup-runtime-1.1.1\res
+com.example.figuritasunlam.app-jetified-camera-core-1.1.0-beta01-60 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\cdde5541081ba00f7fda027a5fca2a3f\transformed\jetified-camera-core-1.1.0-beta01\res
+com.example.figuritasunlam.app-room-runtime-2.4.3-61 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\d41e7e53f32459aa3010224ea7797c1c\transformed\room-runtime-2.4.3\res
+com.example.figuritasunlam.app-jetified-lifecycle-runtime-ktx-2.5.1-62 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\d4292b7c31e633e934595d7ae1c9ab9d\transformed\jetified-lifecycle-runtime-ktx-2.5.1\res
+com.example.figuritasunlam.app-jetified-ui-1.1.1-63 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\e680b952ae48d0500d82fe9e0c3b9a0a\transformed\jetified-ui-1.1.1\res
+com.example.figuritasunlam.app-slidingpanelayout-1.2.0-64 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\e7a70ac917b1060f9ab54d36598ddb2c\transformed\slidingpanelayout-1.2.0\res
+com.example.figuritasunlam.app-jetified-lifecycle-process-2.4.1-65 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\eb02fa3de8df92428b4fead2b13ac84f\transformed\jetified-lifecycle-process-2.4.1\res
+com.example.figuritasunlam.app-jetified-camera-extensions-1.1.0-beta01-66 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\ec1e3daa376884cee9db259bc91a0098\transformed\jetified-camera-extensions-1.1.0-beta01\res
+com.example.figuritasunlam.app-cardview-1.0.0-67 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\ecb62397fcd2d0e31dd8cc20a358496e\transformed\cardview-1.0.0\res
+com.example.figuritasunlam.app-jetified-window-1.0.0-68 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\f1217600e02a115283f1f553f7c054b1\transformed\jetified-window-1.0.0\res
+com.example.figuritasunlam.app-jetified-activity-ktx-1.6.0-69 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\f1d41f686f7fe274406f401152012bf0\transformed\jetified-activity-ktx-1.6.0\res
+com.example.figuritasunlam.app-jetified-runtime-saveable-1.1.1-70 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\f618b8620dd25200f75cd990507106ca\transformed\jetified-runtime-saveable-1.1.1\res
+com.example.figuritasunlam.app-jetified-camera-lifecycle-1.1.0-beta01-71 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\f7ea80f0594c2c6c0586994abfb516df\transformed\jetified-camera-lifecycle-1.1.0-beta01\res
+com.example.figuritasunlam.app-fragment-1.6.0-alpha02-72 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\fd56ca7c1ca1dd326f878171979d07ac\transformed\fragment-1.6.0-alpha02\res
+com.example.figuritasunlam.app-jetified-camera-video-1.1.0-beta01-73 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\fdc403e02bc6af533c7d64528b9668bb\transformed\jetified-camera-video-1.1.0-beta01\res
+com.example.figuritasunlam.app-coordinatorlayout-1.1.0-74 C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\ff339137cecee5be0e91e8f58664aa0c\transformed\coordinatorlayout-1.1.0\res

@@ -1,210 +1,435 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:2:1-30:12
-INJECTED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:2:1-30:12
-INJECTED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:2:1-30:12
-INJECTED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:2:1-30:12
-MERGED from [com.google.android.material:material:1.6.1] C:\Users\usuario\.gradle\caches\transforms-3\0700c079a9361c9bc5e6404d34690c50\transformed\material-1.6.1\AndroidManifest.xml:17:1-26:12
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\usuario\.gradle\caches\transforms-3\9827ec6617366e82ed5e7c7a909d86e6\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
-MERGED from [androidx.appcompat:appcompat-resources:1.5.1] C:\Users\usuario\.gradle\caches\transforms-3\04b99c2d3ee38714c14bf3d221b2a08b\transformed\appcompat-resources-1.5.1\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.appcompat:appcompat:1.5.1] C:\Users\usuario\.gradle\caches\transforms-3\685980b024686d78956b91eec9b43f3b\transformed\appcompat-1.5.1\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\usuario\.gradle\caches\transforms-3\4bec0276ba6259360fdac8888ee312fa\transformed\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\usuario\.gradle\caches\transforms-3\52a35ffae9473845de56d1ef9f964929\transformed\fragment-1.3.6\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.activity:activity:1.5.1] C:\Users\usuario\.gradle\caches\transforms-3\72aa18d267fcea65a67f1c67469f91b1\transformed\activity-1.5.1\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\usuario\.gradle\caches\transforms-3\ce1d2a9a011b7d266bdabac9f5af30f5\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\usuario\.gradle\caches\transforms-3\7b931d1d8da871744894709d535f32cd\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\usuario\.gradle\caches\transforms-3\d31416bf3b7101f1cffdb06a14f1b2b7\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] C:\Users\usuario\.gradle\caches\transforms-3\83a8f2ff4fefab06a91b8a5cb0437f5b\transformed\lifecycle-viewmodel-2.5.1\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] C:\Users\usuario\.gradle\caches\transforms-3\f1c05abca8b731045f6324e39a2dc706\transformed\lifecycle-viewmodel-savedstate-2.5.1\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.core:core-ktx:1.8.0] C:\Users\usuario\.gradle\caches\transforms-3\9f2d8786483f16acab3469f1ecada2e8\transformed\core-ktx-1.8.0\AndroidManifest.xml:2:1-9:12
-MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\usuario\.gradle\caches\transforms-3\02d9a1c992ba142a6f1c7f5d7ffca310\transformed\savedstate-1.2.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\usuario\.gradle\caches\transforms-3\0b622ae0009252fd9de3ea6d232488c7\transformed\emoji2-views-helper-1.2.0\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\usuario\.gradle\caches\transforms-3\848773e611bbde5d3ec0ec3e63d01c98\transformed\emoji2-1.2.0\AndroidManifest.xml:17:1-35:12
-MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\usuario\.gradle\caches\transforms-3\89f334ed0aaa1263b47c6d75629cdccc\transformed\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\usuario\.gradle\caches\transforms-3\ff339137cecee5be0e91e8f58664aa0c\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.transition:transition:1.2.0] C:\Users\usuario\.gradle\caches\transforms-3\d9ab7ff9bc4a114cf32a2090c5357a01\transformed\transition-1.2.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\usuario\.gradle\caches\transforms-3\3a69fdc313f531835a0943e457c4cc93\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\usuario\.gradle\caches\transforms-3\912f437e477b893e1bc649d739324a83\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\usuario\.gradle\caches\transforms-3\595d6f5ec2a32b18a0a929af79e9c217\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\usuario\.gradle\caches\transforms-3\4b680873f5535aea704d3a34b63b6935\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.customview:customview:1.1.0] C:\Users\usuario\.gradle\caches\transforms-3\f99e13ac6b091b958c0a77e57b12da22\transformed\customview-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.core:core:1.8.0] C:\Users\usuario\.gradle\caches\transforms-3\6a19de105318aab1da00cfa3c60fb56e\transformed\core-1.8.0\AndroidManifest.xml:17:1-26:12
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\usuario\.gradle\caches\transforms-3\d2d5e40d280a225a883e9226566e523b\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\usuario\.gradle\caches\transforms-3\a4f0fb44e9b56370f8c2ed23c9d5d030\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:17:1-37:12
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\usuario\.gradle\caches\transforms-3\b1625850bd12ed5a169353107cc1dd79\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\usuario\.gradle\caches\transforms-3\ecb62397fcd2d0e31dd8cc20a358496e\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\usuario\.gradle\caches\transforms-3\ced32f29a036624fcee3c102df5f076d\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\usuario\.gradle\caches\transforms-3\baef32cd3c953915a0114f73cc9cca3f\transformed\startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
-MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\usuario\.gradle\caches\transforms-3\0e5cedd280decaba83b935974adbb486\transformed\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\usuario\.gradle\caches\transforms-3\984458306690357f412fd092257314a4\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\usuario\.gradle\caches\transforms-3\0ff8f254ca685ecf1cb4e6f520f40b73\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\usuario\.gradle\caches\transforms-3\cfeebfd8cd9b91764c6616b31ef99b3d\transformed\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\usuario\.gradle\caches\transforms-3\f5d6926c8dc9c0b352568d1177041a34\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\usuario\.gradle\caches\transforms-3\57befbfe6433a4d395d176f925cb9834\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\usuario\.gradle\caches\transforms-3\3ac119fa795bc1ef3ecdd8c6ea4af554\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.print:print:1.0.0] C:\Users\usuario\.gradle\caches\transforms-3\5b9f05308f02d2aab4c4e2d31764b8b7\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\usuario\.gradle\caches\transforms-3\760b9af4b43b4d512130ddd1633ee153\transformed\annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:2:1-30:12
-INJECTED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:2:1-30:12
-INJECTED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:2:1-30:12
+ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:2:1-42:12
+MERGED from [androidx.databinding:databinding-adapters:7.3.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\97fdb91708c3570a3ef55529ff77c3ac\transformed\databinding-adapters-7.3.0\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.databinding:databinding-ktx:7.3.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\300125977a27b09b0fd94135f657fa1a\transformed\jetified-databinding-ktx-7.3.0\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.databinding:databinding-runtime:7.3.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\6c5487127295ae65951c7aecb4b5a037\transformed\databinding-runtime-7.3.0\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.databinding:viewbinding:7.3.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\91788aa74ca8523ba145a29806b33f0c\transformed\jetified-viewbinding-7.3.0\AndroidManifest.xml:2:1-9:12
+MERGED from [io.insert-koin:koin-androidx-navigation:3.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\a36d0bf9d411ae938cc5ea4687fadc1c\transformed\jetified-koin-androidx-navigation-3.2.0\AndroidManifest.xml:2:1-9:12
+MERGED from [io.insert-koin:koin-androidx-compose:3.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\87612b88b4510293ebd04030cd695630\transformed\jetified-koin-androidx-compose-3.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [io.insert-koin:koin-android:3.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\cc230edcec2b4bba9e18377229e8b027\transformed\jetified-koin-android-3.2.0\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.navigation:navigation-fragment-ktx:2.5.2] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\667b7360bbd225ba80d9815352ac3a77\transformed\navigation-fragment-ktx-2.5.2\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-fragment:2.5.2] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\b8f7072fe15f8fedc2b1b486f368b8b4\transformed\navigation-fragment-2.5.2\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment-ktx:1.6.0-alpha02] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\b82736436640d1dfa34e12933b81c527\transformed\jetified-fragment-ktx-1.6.0-alpha02\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-ui-ktx:2.5.2] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\022c1b21f652b14bb5e75a27a25777ee\transformed\navigation-ui-ktx-2.5.2\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-ui:2.5.2] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\44e75603e6e17723bcf66d315357fc79\transformed\navigation-ui-2.5.2\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.material:material:1.7.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\11918c9aa544653f8c45c32ea9ac02b8\transformed\material-1.7.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\9827ec6617366e82ed5e7c7a909d86e6\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.camera:camera-view:1.1.0-beta01] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\3b685422b8a05c0f2d8bd526cbbc3c79\transformed\jetified-camera-view-1.1.0-beta01\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.5.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\85e4e2cd99fa69655b477d5331f634e6\transformed\jetified-appcompat-resources-1.5.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat:1.5.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\685980b024686d78956b91eec9b43f3b\transformed\appcompat-1.5.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\bd7d173265e66aeb83f3a4dbb481a913\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:17:1-44:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\27b31f755ddc6f6f25e80c77e30076c4\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\deb0f498e52113346f15fc7035367f54\transformed\lifecycle-extensions-2.2.0\AndroidManifest.xml:17:1-27:12
+MERGED from [com.google.android.gms:play-services-location:21.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\621cad8ab342fe5d43b13c0b4220a55a\transformed\jetified-play-services-location-21.0.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\49e1fdcc542bde6869659be3a6e1ba42\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\25c510fecedda5e233e050915636c4e0\transformed\jetified-play-services-tasks-18.0.1\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\1239c2b09c81063a65b65888a82ca300\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:16:1-26:12
+MERGED from [androidx.fragment:fragment:1.6.0-alpha02] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\fd56ca7c1ca1dd326f878171979d07ac\transformed\fragment-1.6.0-alpha02\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.6.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\69118b1420796a59021b9ec8e4a396e6\transformed\jetified-activity-1.6.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.5.2] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\45dbe670b6bb800078ee9f3aa85d423a\transformed\navigation-runtime-ktx-2.5.2\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-runtime:2.5.2] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\367d808ff9e2b2f8efbf72406ebda36e\transformed\navigation-runtime-2.5.2\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity-ktx:1.6.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\f1d41f686f7fe274406f401152012bf0\transformed\jetified-activity-ktx-1.6.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose:2.4.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\8e471b9c34eee51ecb86440577fe145a\transformed\jetified-lifecycle-viewmodel-compose-2.4.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-common-ktx:2.5.2] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\2057bbb861103c319be754f347ef5953\transformed\navigation-common-ktx-2.5.2\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-common:2.5.2] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\2ee4e1f231f79787a0303e2637f5c69d\transformed\navigation-common-2.5.2\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\8409d7ea127378a131949bd61ba35829\transformed\jetified-lifecycle-viewmodel-ktx-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.5.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\d4292b7c31e633e934595d7ae1c9ab9d\transformed\jetified-lifecycle-runtime-ktx-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.5.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\1710b30114c1008585b5a4653b259ad9\transformed\jetified-lifecycle-livedata-ktx-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.compose.ui:ui:1.1.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\e680b952ae48d0500d82fe9e0c3b9a0a\transformed\jetified-ui-1.1.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.compose.ui:ui-text:1.1.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\758857ad8a6df4827af31405d423b7ca\transformed\jetified-ui-text-1.1.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.compose.runtime:runtime-saveable:1.1.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\f618b8620dd25200f75cd990507106ca\transformed\jetified-runtime-saveable-1.1.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.compose.ui:ui-graphics:1.1.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\b6dad7619658f56686f9862e4b805d79\transformed\jetified-ui-graphics-1.1.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.compose.ui:ui-unit:1.1.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\4819b8fe87eb0c2915abea077ab7e52e\transformed\jetified-ui-unit-1.1.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.compose.ui:ui-geometry:1.1.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\20a20b19c249a7844a4eeeba6c1a7d8e\transformed\jetified-ui-geometry-1.1.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.compose.runtime:runtime:1.1.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\1b784d806c095ee8558e44e195161937\transformed\jetified-runtime-1.1.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\ce1d2a9a011b7d266bdabac9f5af30f5\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\7b931d1d8da871744894709d535f32cd\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\d31416bf3b7101f1cffdb06a14f1b2b7\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\83a8f2ff4fefab06a91b8a5cb0437f5b\transformed\lifecycle-viewmodel-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\abbccd5aa3129f84ed657e9b3e8aaf01\transformed\jetified-lifecycle-viewmodel-savedstate-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\e7a70ac917b1060f9ab54d36598ddb2c\transformed\slidingpanelayout-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.window:window:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\f1217600e02a115283f1f553f7c054b1\transformed\jetified-window-1.0.0\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.recyclerview:recyclerview:1.2.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\b15ec2f6b89054d43119a75e8de6207e\transformed\recyclerview-1.2.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.camera:camera-extensions:1.1.0-beta01] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\ec1e3daa376884cee9db259bc91a0098\transformed\jetified-camera-extensions-1.1.0-beta01\AndroidManifest.xml:17:1-36:12
+MERGED from [androidx.camera:camera-camera2:1.1.0-beta01] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\8b992964b9ae5905edb78cf8b4c5dd26\transformed\jetified-camera-camera2-1.1.0-beta01\AndroidManifest.xml:17:1-38:12
+MERGED from [androidx.camera:camera-lifecycle:1.1.0-beta01] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\f7ea80f0594c2c6c0586994abfb516df\transformed\jetified-camera-lifecycle-1.1.0-beta01\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.camera:camera-video:1.1.0-beta01] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\fdc403e02bc6af533c7d64528b9668bb\transformed\jetified-camera-video-1.1.0-beta01\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.camera:camera-core:1.1.0-beta01] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\cdde5541081ba00f7fda027a5fca2a3f\transformed\jetified-camera-core-1.1.0-beta01\AndroidManifest.xml:17:1-38:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\c5e64553c5eb9d00c7fb037ddb005060\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\c80ce55a4995639d4ed0d5a763e84b4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\89f334ed0aaa1263b47c6d75629cdccc\transformed\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\ff339137cecee5be0e91e8f58664aa0c\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\3a69fdc313f531835a0943e457c4cc93\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\912f437e477b893e1bc649d739324a83\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\595d6f5ec2a32b18a0a929af79e9c217\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\f99e13ac6b091b958c0a77e57b12da22\transformed\customview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.autofill:autofill:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\0c3e76e15e4fff370f1146da8fc464a5\transformed\jetified-autofill-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.4.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\46540cdaaf96706a34eff11b7aa197ca\transformed\transition-1.4.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.9.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\9baae2a0a064870b9506522ab355f7bf\transformed\core-1.9.0\AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\8b675d2633a415baa9fd2f23518b247c\transformed\jetified-core-ktx-1.9.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\ecb62397fcd2d0e31dd8cc20a358496e\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\7896870ae982ab6e64be85a74750089c\transformed\jetified-picasso-2.71828\AndroidManifest.xml:2:1-14:12
+MERGED from [androidx.room:room-runtime:2.4.3] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\d41e7e53f32459aa3010224ea7797c1c\transformed\room-runtime-2.4.3\AndroidManifest.xml:17:1-31:12
+MERGED from [androidx.lifecycle:lifecycle-service:2.4.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\869b611e76067c860f3e8df396b65e8e\transformed\jetified-lifecycle-service-2.4.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\eb02fa3de8df92428b4fead2b13ac84f\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:17:1-37:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\b1625850bd12ed5a169353107cc1dd79\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\d2d5e40d280a225a883e9226566e523b\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\9ba630824061464f954df2cd5a5813fc\transformed\jetified-savedstate-ktx-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\74867c7ed43888f15694d9d002150d44\transformed\jetified-savedstate-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.sqlite:sqlite-framework:2.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\404227ddb82287bca2d0f337e540b4bf\transformed\sqlite-framework-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.sqlite:sqlite:2.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\ba90233cf40437be4965aca991dedb5d\transformed\sqlite-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.2] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\a955dceb3b820198944041c351813e03\transformed\exifinterface-1.3.2\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\ced32f29a036624fcee3c102df5f076d\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.5.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\1cb6376de20b42be3ca5676f64db84ba\transformed\lifecycle-livedata-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.5.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\824608112b5355e65fd6ec7f919791be\transformed\jetified-lifecycle-livedata-core-ktx-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\0ff8f254ca685ecf1cb4e6f520f40b73\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\cfeebfd8cd9b91764c6616b31ef99b3d\transformed\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\539aa2ffee07b54d7e501f36e7840a1c\transformed\jetified-profileinstaller-1.1.0\AndroidManifest.xml:17:1-48:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\cc295d917883b18b6d985863df52dcc5\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\a13343be97cb89022ad3e774c1010fbd\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\f5d6926c8dc9c0b352568d1177041a34\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\57befbfe6433a4d395d176f925cb9834\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\3ac119fa795bc1ef3ecdd8c6ea4af554\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\5b9f05308f02d2aab4c4e2d31764b8b7\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\812a3fd0465f80f3df6800aa0f64e561\transformed\jetified-annotation-experimental-1.3.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.ui:ui-util:1.1.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\5282b020e48e4bc51260f75ad91bbe30\transformed\jetified-ui-util-1.1.1\AndroidManifest.xml:17:1-24:12
+INJECTED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:2:1-42:12
 	package
 		INJECTED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:2:1-30:12
+		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:2:1-42:12
 		INJECTED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:2:1-30:12
+		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:2:1-42:12
 		INJECTED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:2:1-30:12
+		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:2:1-42:12
 		INJECTED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:6:5-67
+MERGED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\bd7d173265e66aeb83f3a4dbb481a913\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\bd7d173265e66aeb83f3a4dbb481a913\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:24:5-67
+	android:name
+		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:6:22-64
+uses-feature#android.hardware.camera.any
+ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:7:5-64
+	android:name
+		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:7:19-61
+uses-permission#android.permission.CAMERA
+ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:8:5-64
+	android:name
+		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:8:22-62
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:9:5-71
+	android:name
+		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:9:22-68
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:10:5-11:38
+	android:maxSdkVersion
+		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:11:9-35
+	android:name
+		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:10:22-78
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:12:5-81
+	android:name
+		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:12:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:13:5-79
+	android:name
+		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:13:22-76
+uses-permission#android.permission.ACCESS_BACKGROUND_LOCATION
+ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:14:5-85
+	android:name
+		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:14:22-82
 application
-ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:5:5-28:19
-MERGED from [com.google.android.material:material:1.6.1] C:\Users\usuario\.gradle\caches\transforms-3\0700c079a9361c9bc5e6404d34690c50\transformed\material-1.6.1\AndroidManifest.xml:24:5-20
-MERGED from [com.google.android.material:material:1.6.1] C:\Users\usuario\.gradle\caches\transforms-3\0700c079a9361c9bc5e6404d34690c50\transformed\material-1.6.1\AndroidManifest.xml:24:5-20
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\usuario\.gradle\caches\transforms-3\9827ec6617366e82ed5e7c7a909d86e6\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\usuario\.gradle\caches\transforms-3\9827ec6617366e82ed5e7c7a909d86e6\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
-MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\usuario\.gradle\caches\transforms-3\848773e611bbde5d3ec0ec3e63d01c98\transformed\emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\usuario\.gradle\caches\transforms-3\848773e611bbde5d3ec0ec3e63d01c98\transformed\emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.core:core:1.8.0] C:\Users\usuario\.gradle\caches\transforms-3\6a19de105318aab1da00cfa3c60fb56e\transformed\core-1.8.0\AndroidManifest.xml:24:5-89
-MERGED from [androidx.core:core:1.8.0] C:\Users\usuario\.gradle\caches\transforms-3\6a19de105318aab1da00cfa3c60fb56e\transformed\core-1.8.0\AndroidManifest.xml:24:5-89
-MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\usuario\.gradle\caches\transforms-3\a4f0fb44e9b56370f8c2ed23c9d5d030\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:25:5-35:19
-MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\usuario\.gradle\caches\transforms-3\a4f0fb44e9b56370f8c2ed23c9d5d030\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:25:5-35:19
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\usuario\.gradle\caches\transforms-3\ced32f29a036624fcee3c102df5f076d\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\usuario\.gradle\caches\transforms-3\ced32f29a036624fcee3c102df5f076d\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\usuario\.gradle\caches\transforms-3\baef32cd3c953915a0114f73cc9cca3f\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\usuario\.gradle\caches\transforms-3\baef32cd3c953915a0114f73cc9cca3f\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:17:5-40:19
+MERGED from [io.insert-koin:koin-androidx-navigation:3.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\a36d0bf9d411ae938cc5ea4687fadc1c\transformed\jetified-koin-androidx-navigation-3.2.0\AndroidManifest.xml:7:5-20
+MERGED from [io.insert-koin:koin-androidx-navigation:3.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\a36d0bf9d411ae938cc5ea4687fadc1c\transformed\jetified-koin-androidx-navigation-3.2.0\AndroidManifest.xml:7:5-20
+MERGED from [io.insert-koin:koin-android:3.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\cc230edcec2b4bba9e18377229e8b027\transformed\jetified-koin-android-3.2.0\AndroidManifest.xml:7:5-20
+MERGED from [io.insert-koin:koin-android:3.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\cc230edcec2b4bba9e18377229e8b027\transformed\jetified-koin-android-3.2.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.material:material:1.7.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\11918c9aa544653f8c45c32ea9ac02b8\transformed\material-1.7.0\AndroidManifest.xml:24:5-20
+MERGED from [com.google.android.material:material:1.7.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\11918c9aa544653f8c45c32ea9ac02b8\transformed\material-1.7.0\AndroidManifest.xml:24:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\9827ec6617366e82ed5e7c7a909d86e6\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\9827ec6617366e82ed5e7c7a909d86e6\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\bd7d173265e66aeb83f3a4dbb481a913\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:36:5-42:19
+MERGED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\bd7d173265e66aeb83f3a4dbb481a913\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:36:5-42:19
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\deb0f498e52113346f15fc7035367f54\transformed\lifecycle-extensions-2.2.0\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\deb0f498e52113346f15fc7035367f54\transformed\lifecycle-extensions-2.2.0\AndroidManifest.xml:24:5-25:19
+MERGED from [com.google.android.gms:play-services-location:21.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\621cad8ab342fe5d43b13c0b4220a55a\transformed\jetified-play-services-location-21.0.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:21.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\621cad8ab342fe5d43b13c0b4220a55a\transformed\jetified-play-services-location-21.0.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\49e1fdcc542bde6869659be3a6e1ba42\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\49e1fdcc542bde6869659be3a6e1ba42\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\25c510fecedda5e233e050915636c4e0\transformed\jetified-play-services-tasks-18.0.1\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\25c510fecedda5e233e050915636c4e0\transformed\jetified-play-services-tasks-18.0.1\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\1239c2b09c81063a65b65888a82ca300\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\1239c2b09c81063a65b65888a82ca300\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:20:5-24:19
+MERGED from [androidx.window:window:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\f1217600e02a115283f1f553f7c054b1\transformed\jetified-window-1.0.0\AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.window:window:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\f1217600e02a115283f1f553f7c054b1\transformed\jetified-window-1.0.0\AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.camera:camera-extensions:1.1.0-beta01] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\ec1e3daa376884cee9db259bc91a0098\transformed\jetified-camera-extensions-1.1.0-beta01\AndroidManifest.xml:30:5-34:19
+MERGED from [androidx.camera:camera-extensions:1.1.0-beta01] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\ec1e3daa376884cee9db259bc91a0098\transformed\jetified-camera-extensions-1.1.0-beta01\AndroidManifest.xml:30:5-34:19
+MERGED from [androidx.camera:camera-camera2:1.1.0-beta01] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\8b992964b9ae5905edb78cf8b4c5dd26\transformed\jetified-camera-camera2-1.1.0-beta01\AndroidManifest.xml:25:5-36:19
+MERGED from [androidx.camera:camera-camera2:1.1.0-beta01] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\8b992964b9ae5905edb78cf8b4c5dd26\transformed\jetified-camera-camera2-1.1.0-beta01\AndroidManifest.xml:25:5-36:19
+MERGED from [androidx.camera:camera-core:1.1.0-beta01] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\cdde5541081ba00f7fda027a5fca2a3f\transformed\jetified-camera-core-1.1.0-beta01\AndroidManifest.xml:25:5-36:19
+MERGED from [androidx.camera:camera-core:1.1.0-beta01] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\cdde5541081ba00f7fda027a5fca2a3f\transformed\jetified-camera-core-1.1.0-beta01\AndroidManifest.xml:25:5-36:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\c80ce55a4995639d4ed0d5a763e84b4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\c80ce55a4995639d4ed0d5a763e84b4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.9.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\9baae2a0a064870b9506522ab355f7bf\transformed\core-1.9.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.9.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\9baae2a0a064870b9506522ab355f7bf\transformed\core-1.9.0\AndroidManifest.xml:28:5-89
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\7896870ae982ab6e64be85a74750089c\transformed\jetified-picasso-2.71828\AndroidManifest.xml:7:5-12:19
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\7896870ae982ab6e64be85a74750089c\transformed\jetified-picasso-2.71828\AndroidManifest.xml:7:5-12:19
+MERGED from [androidx.room:room-runtime:2.4.3] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\d41e7e53f32459aa3010224ea7797c1c\transformed\room-runtime-2.4.3\AndroidManifest.xml:24:5-29:19
+MERGED from [androidx.room:room-runtime:2.4.3] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\d41e7e53f32459aa3010224ea7797c1c\transformed\room-runtime-2.4.3\AndroidManifest.xml:24:5-29:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\eb02fa3de8df92428b4fead2b13ac84f\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\eb02fa3de8df92428b4fead2b13ac84f\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\ced32f29a036624fcee3c102df5f076d\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\ced32f29a036624fcee3c102df5f076d\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\539aa2ffee07b54d7e501f36e7840a1c\transformed\jetified-profileinstaller-1.1.0\AndroidManifest.xml:25:5-46:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\539aa2ffee07b54d7e501f36e7840a1c\transformed\jetified-profileinstaller-1.1.0\AndroidManifest.xml:25:5-46:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\cc295d917883b18b6d985863df52dcc5\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\cc295d917883b18b6d985863df52dcc5\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
 	android:appComponentFactory
-		ADDED from [androidx.core:core:1.8.0] C:\Users\usuario\.gradle\caches\transforms-3\6a19de105318aab1da00cfa3c60fb56e\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
+		ADDED from [androidx.core:core:1.9.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\9baae2a0a064870b9506522ab355f7bf\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:12:9-35
+		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:24:9-35
 	android:label
-		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:10:9-41
+		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:22:9-41
 	android:fullBackupContent
-		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:8:9-54
+		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:20:9-54
 	android:roundIcon
-		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:11:9-54
+		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:23:9-54
 	tools:targetApi
-		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:14:9-29
+		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:26:9-29
 	android:icon
-		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:9:9-43
+		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:21:9-43
 	android:allowBackup
-		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:18:9-35
 	android:theme
-		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:13:9-52
+		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:25:9-52
 	android:dataExtractionRules
-		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:7:9-65
+		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:19:9-65
 activity#com.example.figuritasunlam.ui.activities.MainActivity
-ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:15:9-27:20
+ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:27:9-39:20
 	android:exported
-		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:17:13-36
+		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:29:13-36
 	android:name
-		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:16:13-55
+		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:28:13-55
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:18:13-22:29
+ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:30:13-34:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:19:17-69
+ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:31:17-69
 	android:name
-		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:19:25-66
+		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:31:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:21:17-77
+ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:33:17-77
 	android:name
-		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:21:27-74
+		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:33:27-74
 meta-data#android.app.lib_name
-ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:24:13-26:36
+ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:36:13-38:36
 	android:value
-		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:26:17-33
+		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:38:17-33
 	android:name
-		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:25:17-52
+		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml:37:17-52
 uses-sdk
 INJECTED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml
-MERGED from [com.google.android.material:material:1.6.1] C:\Users\usuario\.gradle\caches\transforms-3\0700c079a9361c9bc5e6404d34690c50\transformed\material-1.6.1\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.material:material:1.6.1] C:\Users\usuario\.gradle\caches\transforms-3\0700c079a9361c9bc5e6404d34690c50\transformed\material-1.6.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\usuario\.gradle\caches\transforms-3\9827ec6617366e82ed5e7c7a909d86e6\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\usuario\.gradle\caches\transforms-3\9827ec6617366e82ed5e7c7a909d86e6\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.appcompat:appcompat-resources:1.5.1] C:\Users\usuario\.gradle\caches\transforms-3\04b99c2d3ee38714c14bf3d221b2a08b\transformed\appcompat-resources-1.5.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.appcompat:appcompat-resources:1.5.1] C:\Users\usuario\.gradle\caches\transforms-3\04b99c2d3ee38714c14bf3d221b2a08b\transformed\appcompat-resources-1.5.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.appcompat:appcompat:1.5.1] C:\Users\usuario\.gradle\caches\transforms-3\685980b024686d78956b91eec9b43f3b\transformed\appcompat-1.5.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.appcompat:appcompat:1.5.1] C:\Users\usuario\.gradle\caches\transforms-3\685980b024686d78956b91eec9b43f3b\transformed\appcompat-1.5.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\usuario\.gradle\caches\transforms-3\4bec0276ba6259360fdac8888ee312fa\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\usuario\.gradle\caches\transforms-3\4bec0276ba6259360fdac8888ee312fa\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\usuario\.gradle\caches\transforms-3\52a35ffae9473845de56d1ef9f964929\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\usuario\.gradle\caches\transforms-3\52a35ffae9473845de56d1ef9f964929\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.activity:activity:1.5.1] C:\Users\usuario\.gradle\caches\transforms-3\72aa18d267fcea65a67f1c67469f91b1\transformed\activity-1.5.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.activity:activity:1.5.1] C:\Users\usuario\.gradle\caches\transforms-3\72aa18d267fcea65a67f1c67469f91b1\transformed\activity-1.5.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\usuario\.gradle\caches\transforms-3\ce1d2a9a011b7d266bdabac9f5af30f5\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\usuario\.gradle\caches\transforms-3\ce1d2a9a011b7d266bdabac9f5af30f5\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\usuario\.gradle\caches\transforms-3\7b931d1d8da871744894709d535f32cd\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\usuario\.gradle\caches\transforms-3\7b931d1d8da871744894709d535f32cd\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\usuario\.gradle\caches\transforms-3\d31416bf3b7101f1cffdb06a14f1b2b7\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\usuario\.gradle\caches\transforms-3\d31416bf3b7101f1cffdb06a14f1b2b7\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] C:\Users\usuario\.gradle\caches\transforms-3\83a8f2ff4fefab06a91b8a5cb0437f5b\transformed\lifecycle-viewmodel-2.5.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] C:\Users\usuario\.gradle\caches\transforms-3\83a8f2ff4fefab06a91b8a5cb0437f5b\transformed\lifecycle-viewmodel-2.5.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] C:\Users\usuario\.gradle\caches\transforms-3\f1c05abca8b731045f6324e39a2dc706\transformed\lifecycle-viewmodel-savedstate-2.5.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] C:\Users\usuario\.gradle\caches\transforms-3\f1c05abca8b731045f6324e39a2dc706\transformed\lifecycle-viewmodel-savedstate-2.5.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core-ktx:1.8.0] C:\Users\usuario\.gradle\caches\transforms-3\9f2d8786483f16acab3469f1ecada2e8\transformed\core-ktx-1.8.0\AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.core:core-ktx:1.8.0] C:\Users\usuario\.gradle\caches\transforms-3\9f2d8786483f16acab3469f1ecada2e8\transformed\core-ktx-1.8.0\AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\usuario\.gradle\caches\transforms-3\02d9a1c992ba142a6f1c7f5d7ffca310\transformed\savedstate-1.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\usuario\.gradle\caches\transforms-3\02d9a1c992ba142a6f1c7f5d7ffca310\transformed\savedstate-1.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\usuario\.gradle\caches\transforms-3\0b622ae0009252fd9de3ea6d232488c7\transformed\emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\usuario\.gradle\caches\transforms-3\0b622ae0009252fd9de3ea6d232488c7\transformed\emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\usuario\.gradle\caches\transforms-3\848773e611bbde5d3ec0ec3e63d01c98\transformed\emoji2-1.2.0\AndroidManifest.xml:21:5-44
-MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\usuario\.gradle\caches\transforms-3\848773e611bbde5d3ec0ec3e63d01c98\transformed\emoji2-1.2.0\AndroidManifest.xml:21:5-44
-MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\usuario\.gradle\caches\transforms-3\89f334ed0aaa1263b47c6d75629cdccc\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\usuario\.gradle\caches\transforms-3\89f334ed0aaa1263b47c6d75629cdccc\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\usuario\.gradle\caches\transforms-3\ff339137cecee5be0e91e8f58664aa0c\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\usuario\.gradle\caches\transforms-3\ff339137cecee5be0e91e8f58664aa0c\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.transition:transition:1.2.0] C:\Users\usuario\.gradle\caches\transforms-3\d9ab7ff9bc4a114cf32a2090c5357a01\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.transition:transition:1.2.0] C:\Users\usuario\.gradle\caches\transforms-3\d9ab7ff9bc4a114cf32a2090c5357a01\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\usuario\.gradle\caches\transforms-3\3a69fdc313f531835a0943e457c4cc93\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\usuario\.gradle\caches\transforms-3\3a69fdc313f531835a0943e457c4cc93\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\usuario\.gradle\caches\transforms-3\912f437e477b893e1bc649d739324a83\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\usuario\.gradle\caches\transforms-3\912f437e477b893e1bc649d739324a83\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\usuario\.gradle\caches\transforms-3\595d6f5ec2a32b18a0a929af79e9c217\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\usuario\.gradle\caches\transforms-3\595d6f5ec2a32b18a0a929af79e9c217\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\usuario\.gradle\caches\transforms-3\4b680873f5535aea704d3a34b63b6935\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\usuario\.gradle\caches\transforms-3\4b680873f5535aea704d3a34b63b6935\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.customview:customview:1.1.0] C:\Users\usuario\.gradle\caches\transforms-3\f99e13ac6b091b958c0a77e57b12da22\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.customview:customview:1.1.0] C:\Users\usuario\.gradle\caches\transforms-3\f99e13ac6b091b958c0a77e57b12da22\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core:1.8.0] C:\Users\usuario\.gradle\caches\transforms-3\6a19de105318aab1da00cfa3c60fb56e\transformed\core-1.8.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core:1.8.0] C:\Users\usuario\.gradle\caches\transforms-3\6a19de105318aab1da00cfa3c60fb56e\transformed\core-1.8.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\usuario\.gradle\caches\transforms-3\d2d5e40d280a225a883e9226566e523b\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\usuario\.gradle\caches\transforms-3\d2d5e40d280a225a883e9226566e523b\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\usuario\.gradle\caches\transforms-3\a4f0fb44e9b56370f8c2ed23c9d5d030\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\usuario\.gradle\caches\transforms-3\a4f0fb44e9b56370f8c2ed23c9d5d030\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\usuario\.gradle\caches\transforms-3\b1625850bd12ed5a169353107cc1dd79\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\usuario\.gradle\caches\transforms-3\b1625850bd12ed5a169353107cc1dd79\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\usuario\.gradle\caches\transforms-3\ecb62397fcd2d0e31dd8cc20a358496e\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\usuario\.gradle\caches\transforms-3\ecb62397fcd2d0e31dd8cc20a358496e\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\usuario\.gradle\caches\transforms-3\ced32f29a036624fcee3c102df5f076d\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\usuario\.gradle\caches\transforms-3\ced32f29a036624fcee3c102df5f076d\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\usuario\.gradle\caches\transforms-3\baef32cd3c953915a0114f73cc9cca3f\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\usuario\.gradle\caches\transforms-3\baef32cd3c953915a0114f73cc9cca3f\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\usuario\.gradle\caches\transforms-3\0e5cedd280decaba83b935974adbb486\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\usuario\.gradle\caches\transforms-3\0e5cedd280decaba83b935974adbb486\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\usuario\.gradle\caches\transforms-3\984458306690357f412fd092257314a4\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\usuario\.gradle\caches\transforms-3\984458306690357f412fd092257314a4\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\usuario\.gradle\caches\transforms-3\0ff8f254ca685ecf1cb4e6f520f40b73\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\usuario\.gradle\caches\transforms-3\0ff8f254ca685ecf1cb4e6f520f40b73\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\usuario\.gradle\caches\transforms-3\cfeebfd8cd9b91764c6616b31ef99b3d\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\usuario\.gradle\caches\transforms-3\cfeebfd8cd9b91764c6616b31ef99b3d\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\usuario\.gradle\caches\transforms-3\f5d6926c8dc9c0b352568d1177041a34\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\usuario\.gradle\caches\transforms-3\f5d6926c8dc9c0b352568d1177041a34\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\usuario\.gradle\caches\transforms-3\57befbfe6433a4d395d176f925cb9834\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\usuario\.gradle\caches\transforms-3\57befbfe6433a4d395d176f925cb9834\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\usuario\.gradle\caches\transforms-3\3ac119fa795bc1ef3ecdd8c6ea4af554\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\usuario\.gradle\caches\transforms-3\3ac119fa795bc1ef3ecdd8c6ea4af554\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] C:\Users\usuario\.gradle\caches\transforms-3\5b9f05308f02d2aab4c4e2d31764b8b7\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] C:\Users\usuario\.gradle\caches\transforms-3\5b9f05308f02d2aab4c4e2d31764b8b7\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\usuario\.gradle\caches\transforms-3\760b9af4b43b4d512130ddd1633ee153\transformed\annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\usuario\.gradle\caches\transforms-3\760b9af4b43b4d512130ddd1633ee153\transformed\annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.databinding:databinding-adapters:7.3.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\97fdb91708c3570a3ef55529ff77c3ac\transformed\databinding-adapters-7.3.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.databinding:databinding-adapters:7.3.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\97fdb91708c3570a3ef55529ff77c3ac\transformed\databinding-adapters-7.3.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.databinding:databinding-ktx:7.3.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\300125977a27b09b0fd94135f657fa1a\transformed\jetified-databinding-ktx-7.3.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.databinding:databinding-ktx:7.3.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\300125977a27b09b0fd94135f657fa1a\transformed\jetified-databinding-ktx-7.3.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.databinding:databinding-runtime:7.3.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\6c5487127295ae65951c7aecb4b5a037\transformed\databinding-runtime-7.3.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.databinding:databinding-runtime:7.3.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\6c5487127295ae65951c7aecb4b5a037\transformed\databinding-runtime-7.3.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.databinding:viewbinding:7.3.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\91788aa74ca8523ba145a29806b33f0c\transformed\jetified-viewbinding-7.3.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.databinding:viewbinding:7.3.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\91788aa74ca8523ba145a29806b33f0c\transformed\jetified-viewbinding-7.3.0\AndroidManifest.xml:5:5-7:41
+MERGED from [io.insert-koin:koin-androidx-navigation:3.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\a36d0bf9d411ae938cc5ea4687fadc1c\transformed\jetified-koin-androidx-navigation-3.2.0\AndroidManifest.xml:5:5-44
+MERGED from [io.insert-koin:koin-androidx-navigation:3.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\a36d0bf9d411ae938cc5ea4687fadc1c\transformed\jetified-koin-androidx-navigation-3.2.0\AndroidManifest.xml:5:5-44
+MERGED from [io.insert-koin:koin-androidx-compose:3.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\87612b88b4510293ebd04030cd695630\transformed\jetified-koin-androidx-compose-3.2.0\AndroidManifest.xml:5:5-44
+MERGED from [io.insert-koin:koin-androidx-compose:3.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\87612b88b4510293ebd04030cd695630\transformed\jetified-koin-androidx-compose-3.2.0\AndroidManifest.xml:5:5-44
+MERGED from [io.insert-koin:koin-android:3.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\cc230edcec2b4bba9e18377229e8b027\transformed\jetified-koin-android-3.2.0\AndroidManifest.xml:5:5-44
+MERGED from [io.insert-koin:koin-android:3.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\cc230edcec2b4bba9e18377229e8b027\transformed\jetified-koin-android-3.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-fragment-ktx:2.5.2] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\667b7360bbd225ba80d9815352ac3a77\transformed\navigation-fragment-ktx-2.5.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-fragment-ktx:2.5.2] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\667b7360bbd225ba80d9815352ac3a77\transformed\navigation-fragment-ktx-2.5.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-fragment:2.5.2] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\b8f7072fe15f8fedc2b1b486f368b8b4\transformed\navigation-fragment-2.5.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-fragment:2.5.2] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\b8f7072fe15f8fedc2b1b486f368b8b4\transformed\navigation-fragment-2.5.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment-ktx:1.6.0-alpha02] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\b82736436640d1dfa34e12933b81c527\transformed\jetified-fragment-ktx-1.6.0-alpha02\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment-ktx:1.6.0-alpha02] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\b82736436640d1dfa34e12933b81c527\transformed\jetified-fragment-ktx-1.6.0-alpha02\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-ui-ktx:2.5.2] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\022c1b21f652b14bb5e75a27a25777ee\transformed\navigation-ui-ktx-2.5.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui-ktx:2.5.2] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\022c1b21f652b14bb5e75a27a25777ee\transformed\navigation-ui-ktx-2.5.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui:2.5.2] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\44e75603e6e17723bcf66d315357fc79\transformed\navigation-ui-2.5.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui:2.5.2] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\44e75603e6e17723bcf66d315357fc79\transformed\navigation-ui-2.5.2\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.material:material:1.7.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\11918c9aa544653f8c45c32ea9ac02b8\transformed\material-1.7.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.material:material:1.7.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\11918c9aa544653f8c45c32ea9ac02b8\transformed\material-1.7.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\9827ec6617366e82ed5e7c7a909d86e6\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\9827ec6617366e82ed5e7c7a909d86e6\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.camera:camera-view:1.1.0-beta01] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\3b685422b8a05c0f2d8bd526cbbc3c79\transformed\jetified-camera-view-1.1.0-beta01\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.camera:camera-view:1.1.0-beta01] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\3b685422b8a05c0f2d8bd526cbbc3c79\transformed\jetified-camera-view-1.1.0-beta01\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.5.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\85e4e2cd99fa69655b477d5331f634e6\transformed\jetified-appcompat-resources-1.5.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.5.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\85e4e2cd99fa69655b477d5331f634e6\transformed\jetified-appcompat-resources-1.5.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.5.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\685980b024686d78956b91eec9b43f3b\transformed\appcompat-1.5.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.5.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\685980b024686d78956b91eec9b43f3b\transformed\appcompat-1.5.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\bd7d173265e66aeb83f3a4dbb481a913\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\bd7d173265e66aeb83f3a4dbb481a913\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\27b31f755ddc6f6f25e80c77e30076c4\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\27b31f755ddc6f6f25e80c77e30076c4\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\deb0f498e52113346f15fc7035367f54\transformed\lifecycle-extensions-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\deb0f498e52113346f15fc7035367f54\transformed\lifecycle-extensions-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.gms:play-services-location:21.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\621cad8ab342fe5d43b13c0b4220a55a\transformed\jetified-play-services-location-21.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:21.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\621cad8ab342fe5d43b13c0b4220a55a\transformed\jetified-play-services-location-21.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\49e1fdcc542bde6869659be3a6e1ba42\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\49e1fdcc542bde6869659be3a6e1ba42\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\25c510fecedda5e233e050915636c4e0\transformed\jetified-play-services-tasks-18.0.1\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\25c510fecedda5e233e050915636c4e0\transformed\jetified-play-services-tasks-18.0.1\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\1239c2b09c81063a65b65888a82ca300\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\1239c2b09c81063a65b65888a82ca300\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:18:5-43
+MERGED from [androidx.fragment:fragment:1.6.0-alpha02] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\fd56ca7c1ca1dd326f878171979d07ac\transformed\fragment-1.6.0-alpha02\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.6.0-alpha02] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\fd56ca7c1ca1dd326f878171979d07ac\transformed\fragment-1.6.0-alpha02\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.6.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\69118b1420796a59021b9ec8e4a396e6\transformed\jetified-activity-1.6.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.6.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\69118b1420796a59021b9ec8e4a396e6\transformed\jetified-activity-1.6.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.5.2] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\45dbe670b6bb800078ee9f3aa85d423a\transformed\navigation-runtime-ktx-2.5.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.5.2] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\45dbe670b6bb800078ee9f3aa85d423a\transformed\navigation-runtime-ktx-2.5.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime:2.5.2] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\367d808ff9e2b2f8efbf72406ebda36e\transformed\navigation-runtime-2.5.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime:2.5.2] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\367d808ff9e2b2f8efbf72406ebda36e\transformed\navigation-runtime-2.5.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity-ktx:1.6.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\f1d41f686f7fe274406f401152012bf0\transformed\jetified-activity-ktx-1.6.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-ktx:1.6.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\f1d41f686f7fe274406f401152012bf0\transformed\jetified-activity-ktx-1.6.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose:2.4.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\8e471b9c34eee51ecb86440577fe145a\transformed\jetified-lifecycle-viewmodel-compose-2.4.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose:2.4.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\8e471b9c34eee51ecb86440577fe145a\transformed\jetified-lifecycle-viewmodel-compose-2.4.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common-ktx:2.5.2] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\2057bbb861103c319be754f347ef5953\transformed\navigation-common-ktx-2.5.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common-ktx:2.5.2] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\2057bbb861103c319be754f347ef5953\transformed\navigation-common-ktx-2.5.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common:2.5.2] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\2ee4e1f231f79787a0303e2637f5c69d\transformed\navigation-common-2.5.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common:2.5.2] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\2ee4e1f231f79787a0303e2637f5c69d\transformed\navigation-common-2.5.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\8409d7ea127378a131949bd61ba35829\transformed\jetified-lifecycle-viewmodel-ktx-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\8409d7ea127378a131949bd61ba35829\transformed\jetified-lifecycle-viewmodel-ktx-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.5.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\d4292b7c31e633e934595d7ae1c9ab9d\transformed\jetified-lifecycle-runtime-ktx-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.5.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\d4292b7c31e633e934595d7ae1c9ab9d\transformed\jetified-lifecycle-runtime-ktx-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.5.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\1710b30114c1008585b5a4653b259ad9\transformed\jetified-lifecycle-livedata-ktx-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.5.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\1710b30114c1008585b5a4653b259ad9\transformed\jetified-lifecycle-livedata-ktx-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.ui:ui:1.1.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\e680b952ae48d0500d82fe9e0c3b9a0a\transformed\jetified-ui-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.ui:ui:1.1.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\e680b952ae48d0500d82fe9e0c3b9a0a\transformed\jetified-ui-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.ui:ui-text:1.1.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\758857ad8a6df4827af31405d423b7ca\transformed\jetified-ui-text-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.ui:ui-text:1.1.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\758857ad8a6df4827af31405d423b7ca\transformed\jetified-ui-text-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.runtime:runtime-saveable:1.1.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\f618b8620dd25200f75cd990507106ca\transformed\jetified-runtime-saveable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.runtime:runtime-saveable:1.1.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\f618b8620dd25200f75cd990507106ca\transformed\jetified-runtime-saveable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.ui:ui-graphics:1.1.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\b6dad7619658f56686f9862e4b805d79\transformed\jetified-ui-graphics-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.ui:ui-graphics:1.1.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\b6dad7619658f56686f9862e4b805d79\transformed\jetified-ui-graphics-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.ui:ui-unit:1.1.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\4819b8fe87eb0c2915abea077ab7e52e\transformed\jetified-ui-unit-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.ui:ui-unit:1.1.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\4819b8fe87eb0c2915abea077ab7e52e\transformed\jetified-ui-unit-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.ui:ui-geometry:1.1.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\20a20b19c249a7844a4eeeba6c1a7d8e\transformed\jetified-ui-geometry-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.ui:ui-geometry:1.1.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\20a20b19c249a7844a4eeeba6c1a7d8e\transformed\jetified-ui-geometry-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.runtime:runtime:1.1.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\1b784d806c095ee8558e44e195161937\transformed\jetified-runtime-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.runtime:runtime:1.1.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\1b784d806c095ee8558e44e195161937\transformed\jetified-runtime-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\ce1d2a9a011b7d266bdabac9f5af30f5\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\ce1d2a9a011b7d266bdabac9f5af30f5\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\7b931d1d8da871744894709d535f32cd\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\7b931d1d8da871744894709d535f32cd\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\d31416bf3b7101f1cffdb06a14f1b2b7\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\d31416bf3b7101f1cffdb06a14f1b2b7\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\83a8f2ff4fefab06a91b8a5cb0437f5b\transformed\lifecycle-viewmodel-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\83a8f2ff4fefab06a91b8a5cb0437f5b\transformed\lifecycle-viewmodel-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\abbccd5aa3129f84ed657e9b3e8aaf01\transformed\jetified-lifecycle-viewmodel-savedstate-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\abbccd5aa3129f84ed657e9b3e8aaf01\transformed\jetified-lifecycle-viewmodel-savedstate-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\e7a70ac917b1060f9ab54d36598ddb2c\transformed\slidingpanelayout-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\e7a70ac917b1060f9ab54d36598ddb2c\transformed\slidingpanelayout-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\f1217600e02a115283f1f553f7c054b1\transformed\jetified-window-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\f1217600e02a115283f1f553f7c054b1\transformed\jetified-window-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.2.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\b15ec2f6b89054d43119a75e8de6207e\transformed\recyclerview-1.2.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.2.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\b15ec2f6b89054d43119a75e8de6207e\transformed\recyclerview-1.2.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.camera:camera-extensions:1.1.0-beta01] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\ec1e3daa376884cee9db259bc91a0098\transformed\jetified-camera-extensions-1.1.0-beta01\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.camera:camera-extensions:1.1.0-beta01] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\ec1e3daa376884cee9db259bc91a0098\transformed\jetified-camera-extensions-1.1.0-beta01\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.camera:camera-camera2:1.1.0-beta01] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\8b992964b9ae5905edb78cf8b4c5dd26\transformed\jetified-camera-camera2-1.1.0-beta01\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.camera:camera-camera2:1.1.0-beta01] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\8b992964b9ae5905edb78cf8b4c5dd26\transformed\jetified-camera-camera2-1.1.0-beta01\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.camera:camera-lifecycle:1.1.0-beta01] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\f7ea80f0594c2c6c0586994abfb516df\transformed\jetified-camera-lifecycle-1.1.0-beta01\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.camera:camera-lifecycle:1.1.0-beta01] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\f7ea80f0594c2c6c0586994abfb516df\transformed\jetified-camera-lifecycle-1.1.0-beta01\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.camera:camera-video:1.1.0-beta01] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\fdc403e02bc6af533c7d64528b9668bb\transformed\jetified-camera-video-1.1.0-beta01\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.camera:camera-video:1.1.0-beta01] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\fdc403e02bc6af533c7d64528b9668bb\transformed\jetified-camera-video-1.1.0-beta01\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.camera:camera-core:1.1.0-beta01] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\cdde5541081ba00f7fda027a5fca2a3f\transformed\jetified-camera-core-1.1.0-beta01\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.camera:camera-core:1.1.0-beta01] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\cdde5541081ba00f7fda027a5fca2a3f\transformed\jetified-camera-core-1.1.0-beta01\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\c5e64553c5eb9d00c7fb037ddb005060\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\c5e64553c5eb9d00c7fb037ddb005060\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\c80ce55a4995639d4ed0d5a763e84b4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\c80ce55a4995639d4ed0d5a763e84b4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\89f334ed0aaa1263b47c6d75629cdccc\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\89f334ed0aaa1263b47c6d75629cdccc\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\ff339137cecee5be0e91e8f58664aa0c\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\ff339137cecee5be0e91e8f58664aa0c\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\3a69fdc313f531835a0943e457c4cc93\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\3a69fdc313f531835a0943e457c4cc93\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\912f437e477b893e1bc649d739324a83\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\912f437e477b893e1bc649d739324a83\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\595d6f5ec2a32b18a0a929af79e9c217\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\595d6f5ec2a32b18a0a929af79e9c217\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\f99e13ac6b091b958c0a77e57b12da22\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\f99e13ac6b091b958c0a77e57b12da22\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\0c3e76e15e4fff370f1146da8fc464a5\transformed\jetified-autofill-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\0c3e76e15e4fff370f1146da8fc464a5\transformed\jetified-autofill-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.4.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\46540cdaaf96706a34eff11b7aa197ca\transformed\transition-1.4.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.4.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\46540cdaaf96706a34eff11b7aa197ca\transformed\transition-1.4.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.9.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\9baae2a0a064870b9506522ab355f7bf\transformed\core-1.9.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.9.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\9baae2a0a064870b9506522ab355f7bf\transformed\core-1.9.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\8b675d2633a415baa9fd2f23518b247c\transformed\jetified-core-ktx-1.9.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\8b675d2633a415baa9fd2f23518b247c\transformed\jetified-core-ktx-1.9.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\ecb62397fcd2d0e31dd8cc20a358496e\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\ecb62397fcd2d0e31dd8cc20a358496e\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\7896870ae982ab6e64be85a74750089c\transformed\jetified-picasso-2.71828\AndroidManifest.xml:5:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\7896870ae982ab6e64be85a74750089c\transformed\jetified-picasso-2.71828\AndroidManifest.xml:5:5-44
+MERGED from [androidx.room:room-runtime:2.4.3] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\d41e7e53f32459aa3010224ea7797c1c\transformed\room-runtime-2.4.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-runtime:2.4.3] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\d41e7e53f32459aa3010224ea7797c1c\transformed\room-runtime-2.4.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-service:2.4.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\869b611e76067c860f3e8df396b65e8e\transformed\jetified-lifecycle-service-2.4.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-service:2.4.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\869b611e76067c860f3e8df396b65e8e\transformed\jetified-lifecycle-service-2.4.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\eb02fa3de8df92428b4fead2b13ac84f\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\eb02fa3de8df92428b4fead2b13ac84f\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\b1625850bd12ed5a169353107cc1dd79\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\b1625850bd12ed5a169353107cc1dd79\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\d2d5e40d280a225a883e9226566e523b\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\d2d5e40d280a225a883e9226566e523b\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\9ba630824061464f954df2cd5a5813fc\transformed\jetified-savedstate-ktx-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\9ba630824061464f954df2cd5a5813fc\transformed\jetified-savedstate-ktx-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\74867c7ed43888f15694d9d002150d44\transformed\jetified-savedstate-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\74867c7ed43888f15694d9d002150d44\transformed\jetified-savedstate-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite-framework:2.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\404227ddb82287bca2d0f337e540b4bf\transformed\sqlite-framework-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite-framework:2.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\404227ddb82287bca2d0f337e540b4bf\transformed\sqlite-framework-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite:2.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\ba90233cf40437be4965aca991dedb5d\transformed\sqlite-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite:2.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\ba90233cf40437be4965aca991dedb5d\transformed\sqlite-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.2] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\a955dceb3b820198944041c351813e03\transformed\exifinterface-1.3.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.2] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\a955dceb3b820198944041c351813e03\transformed\exifinterface-1.3.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\ced32f29a036624fcee3c102df5f076d\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\ced32f29a036624fcee3c102df5f076d\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.5.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\1cb6376de20b42be3ca5676f64db84ba\transformed\lifecycle-livedata-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.5.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\1cb6376de20b42be3ca5676f64db84ba\transformed\lifecycle-livedata-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.5.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\824608112b5355e65fd6ec7f919791be\transformed\jetified-lifecycle-livedata-core-ktx-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.5.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\824608112b5355e65fd6ec7f919791be\transformed\jetified-lifecycle-livedata-core-ktx-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\0ff8f254ca685ecf1cb4e6f520f40b73\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\0ff8f254ca685ecf1cb4e6f520f40b73\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\cfeebfd8cd9b91764c6616b31ef99b3d\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\cfeebfd8cd9b91764c6616b31ef99b3d\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.profileinstaller:profileinstaller:1.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\539aa2ffee07b54d7e501f36e7840a1c\transformed\jetified-profileinstaller-1.1.0\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.profileinstaller:profileinstaller:1.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\539aa2ffee07b54d7e501f36e7840a1c\transformed\jetified-profileinstaller-1.1.0\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\cc295d917883b18b6d985863df52dcc5\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\cc295d917883b18b6d985863df52dcc5\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\a13343be97cb89022ad3e774c1010fbd\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\a13343be97cb89022ad3e774c1010fbd\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\f5d6926c8dc9c0b352568d1177041a34\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\f5d6926c8dc9c0b352568d1177041a34\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\57befbfe6433a4d395d176f925cb9834\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\57befbfe6433a4d395d176f925cb9834\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\3ac119fa795bc1ef3ecdd8c6ea4af554\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\3ac119fa795bc1ef3ecdd8c6ea4af554\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\5b9f05308f02d2aab4c4e2d31764b8b7\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\5b9f05308f02d2aab4c4e2d31764b8b7\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\812a3fd0465f80f3df6800aa0f64e561\transformed\jetified-annotation-experimental-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\812a3fd0465f80f3df6800aa0f64e561\transformed\jetified-annotation-experimental-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-util:1.1.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\5282b020e48e4bc51260f75ad91bbe30\transformed\jetified-ui-util-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.ui:ui-util:1.1.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\5282b020e48e4bc51260f75ad91bbe30\transformed\jetified-ui-util-1.1.1\AndroidManifest.xml:20:5-22:41
 INJECTED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
@@ -215,29 +440,173 @@ INJECTED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\m
 		INJECTED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml
 		ADDED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\usuario\Desktop\ProgramacionMovil3\TP\Figuritas\app\src\main\AndroidManifest.xml
-provider#androidx.startup.InitializationProvider
-ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\usuario\.gradle\caches\transforms-3\848773e611bbde5d3ec0ec3e63d01c98\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\usuario\.gradle\caches\transforms-3\a4f0fb44e9b56370f8c2ed23c9d5d030\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:26:9-34:20
-MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\usuario\.gradle\caches\transforms-3\a4f0fb44e9b56370f8c2ed23c9d5d030\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:26:9-34:20
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\usuario\.gradle\caches\transforms-3\baef32cd3c953915a0114f73cc9cca3f\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\usuario\.gradle\caches\transforms-3\baef32cd3c953915a0114f73cc9cca3f\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
-	tools:node
-		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\usuario\.gradle\caches\transforms-3\848773e611bbde5d3ec0ec3e63d01c98\transformed\emoji2-1.2.0\AndroidManifest.xml:28:13-31
-	android:authorities
-		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\usuario\.gradle\caches\transforms-3\848773e611bbde5d3ec0ec3e63d01c98\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\bd7d173265e66aeb83f3a4dbb481a913\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:23:5-79
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\bd7d173265e66aeb83f3a4dbb481a913\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:23:22-76
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\bd7d173265e66aeb83f3a4dbb481a913\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:26:5-28:35
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\bd7d173265e66aeb83f3a4dbb481a913\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:27:9-41
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\bd7d173265e66aeb83f3a4dbb481a913\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:28:9-32
+queries
+ADDED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\bd7d173265e66aeb83f3a4dbb481a913\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:30:5-34:15
+MERGED from [androidx.camera:camera-extensions:1.1.0-beta01] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\ec1e3daa376884cee9db259bc91a0098\transformed\jetified-camera-extensions-1.1.0-beta01\AndroidManifest.xml:24:5-28:15
+MERGED from [androidx.camera:camera-extensions:1.1.0-beta01] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\ec1e3daa376884cee9db259bc91a0098\transformed\jetified-camera-extensions-1.1.0-beta01\AndroidManifest.xml:24:5-28:15
+package#com.google.android.apps.maps
+ADDED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\bd7d173265e66aeb83f3a4dbb481a913\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:33:9-64
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\bd7d173265e66aeb83f3a4dbb481a913\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:33:18-61
+uses-library#org.apache.http.legacy
+ADDED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\bd7d173265e66aeb83f3a4dbb481a913\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:39:9-41:40
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\bd7d173265e66aeb83f3a4dbb481a913\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:41:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\bd7d173265e66aeb83f3a4dbb481a913\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:40:13-50
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\49e1fdcc542bde6869659be3a6e1ba42\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
 	android:exported
-		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\usuario\.gradle\caches\transforms-3\848773e611bbde5d3ec0ec3e63d01c98\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\49e1fdcc542bde6869659be3a6e1ba42\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\49e1fdcc542bde6869659be3a6e1ba42\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
 	android:name
-		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\usuario\.gradle\caches\transforms-3\848773e611bbde5d3ec0ec3e63d01c98\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\49e1fdcc542bde6869659be3a6e1ba42\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\1239c2b09c81063a65b65888a82ca300\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\1239c2b09c81063a65b65888a82ca300\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\1239c2b09c81063a65b65888a82ca300\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+uses-library#androidx.window.extensions
+ADDED from [androidx.window:window:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\f1217600e02a115283f1f553f7c054b1\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\f1217600e02a115283f1f553f7c054b1\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\f1217600e02a115283f1f553f7c054b1\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
+uses-library#androidx.window.sidecar
+ADDED from [androidx.window:window:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\f1217600e02a115283f1f553f7c054b1\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\f1217600e02a115283f1f553f7c054b1\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\f1217600e02a115283f1f553f7c054b1\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
+intent#action:name:androidx.camera.extensions.action.VENDOR_ACTION
+ADDED from [androidx.camera:camera-extensions:1.1.0-beta01] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\ec1e3daa376884cee9db259bc91a0098\transformed\jetified-camera-extensions-1.1.0-beta01\AndroidManifest.xml:25:9-27:18
+action#androidx.camera.extensions.action.VENDOR_ACTION
+ADDED from [androidx.camera:camera-extensions:1.1.0-beta01] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\ec1e3daa376884cee9db259bc91a0098\transformed\jetified-camera-extensions-1.1.0-beta01\AndroidManifest.xml:26:13-86
+	android:name
+		ADDED from [androidx.camera:camera-extensions:1.1.0-beta01] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\ec1e3daa376884cee9db259bc91a0098\transformed\jetified-camera-extensions-1.1.0-beta01\AndroidManifest.xml:26:21-83
+uses-library#androidx.camera.extensions.impl
+ADDED from [androidx.camera:camera-extensions:1.1.0-beta01] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\ec1e3daa376884cee9db259bc91a0098\transformed\jetified-camera-extensions-1.1.0-beta01\AndroidManifest.xml:31:9-33:40
+	android:required
+		ADDED from [androidx.camera:camera-extensions:1.1.0-beta01] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\ec1e3daa376884cee9db259bc91a0098\transformed\jetified-camera-extensions-1.1.0-beta01\AndroidManifest.xml:33:13-37
+	android:name
+		ADDED from [androidx.camera:camera-extensions:1.1.0-beta01] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\ec1e3daa376884cee9db259bc91a0098\transformed\jetified-camera-extensions-1.1.0-beta01\AndroidManifest.xml:32:13-59
+service#androidx.camera.core.impl.MetadataHolderService
+ADDED from [androidx.camera:camera-camera2:1.1.0-beta01] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\8b992964b9ae5905edb78cf8b4c5dd26\transformed\jetified-camera-camera2-1.1.0-beta01\AndroidManifest.xml:26:9-35:19
+MERGED from [androidx.camera:camera-core:1.1.0-beta01] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\cdde5541081ba00f7fda027a5fca2a3f\transformed\jetified-camera-core-1.1.0-beta01\AndroidManifest.xml:31:9-35:45
+MERGED from [androidx.camera:camera-core:1.1.0-beta01] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\cdde5541081ba00f7fda027a5fca2a3f\transformed\jetified-camera-core-1.1.0-beta01\AndroidManifest.xml:31:9-35:45
+	tools:node
+		ADDED from [androidx.camera:camera-camera2:1.1.0-beta01] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\8b992964b9ae5905edb78cf8b4c5dd26\transformed\jetified-camera-camera2-1.1.0-beta01\AndroidManifest.xml:31:13-31
+	android:enabled
+		ADDED from [androidx.camera:camera-camera2:1.1.0-beta01] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\8b992964b9ae5905edb78cf8b4c5dd26\transformed\jetified-camera-camera2-1.1.0-beta01\AndroidManifest.xml:28:13-36
+	android:exported
+		ADDED from [androidx.camera:camera-camera2:1.1.0-beta01] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\8b992964b9ae5905edb78cf8b4c5dd26\transformed\jetified-camera-camera2-1.1.0-beta01\AndroidManifest.xml:29:13-37
+	tools:ignore
+		ADDED from [androidx.camera:camera-camera2:1.1.0-beta01] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\8b992964b9ae5905edb78cf8b4c5dd26\transformed\jetified-camera-camera2-1.1.0-beta01\AndroidManifest.xml:30:13-42
+	android:name
+		ADDED from [androidx.camera:camera-camera2:1.1.0-beta01] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\8b992964b9ae5905edb78cf8b4c5dd26\transformed\jetified-camera-camera2-1.1.0-beta01\AndroidManifest.xml:27:13-75
+meta-data#androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER
+ADDED from [androidx.camera:camera-camera2:1.1.0-beta01] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\8b992964b9ae5905edb78cf8b4c5dd26\transformed\jetified-camera-camera2-1.1.0-beta01\AndroidManifest.xml:32:13-34:89
+	android:value
+		ADDED from [androidx.camera:camera-camera2:1.1.0-beta01] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\8b992964b9ae5905edb78cf8b4c5dd26\transformed\jetified-camera-camera2-1.1.0-beta01\AndroidManifest.xml:34:17-86
+	android:name
+		ADDED from [androidx.camera:camera-camera2:1.1.0-beta01] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\8b992964b9ae5905edb78cf8b4c5dd26\transformed\jetified-camera-camera2-1.1.0-beta01\AndroidManifest.xml:33:17-103
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\c80ce55a4995639d4ed0d5a763e84b4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\eb02fa3de8df92428b4fead2b13ac84f\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\eb02fa3de8df92428b4fead2b13ac84f\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\539aa2ffee07b54d7e501f36e7840a1c\transformed\jetified-profileinstaller-1.1.0\AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\539aa2ffee07b54d7e501f36e7840a1c\transformed\jetified-profileinstaller-1.1.0\AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\cc295d917883b18b6d985863df52dcc5\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\cc295d917883b18b6d985863df52dcc5\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\c80ce55a4995639d4ed0d5a763e84b4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\c80ce55a4995639d4ed0d5a763e84b4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\c80ce55a4995639d4ed0d5a763e84b4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\c80ce55a4995639d4ed0d5a763e84b4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
 meta-data#androidx.emoji2.text.EmojiCompatInitializer
-ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\usuario\.gradle\caches\transforms-3\848773e611bbde5d3ec0ec3e63d01c98\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\c80ce55a4995639d4ed0d5a763e84b4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
 	android:value
-		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\usuario\.gradle\caches\transforms-3\848773e611bbde5d3ec0ec3e63d01c98\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\c80ce55a4995639d4ed0d5a763e84b4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
 	android:name
-		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\usuario\.gradle\caches\transforms-3\848773e611bbde5d3ec0ec3e63d01c98\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\c80ce55a4995639d4ed0d5a763e84b4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\9baae2a0a064870b9506522ab355f7bf\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.9.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\9baae2a0a064870b9506522ab355f7bf\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.9.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\9baae2a0a064870b9506522ab355f7bf\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+permission#com.example.figuritasunlam.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\9baae2a0a064870b9506522ab355f7bf\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.9.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\9baae2a0a064870b9506522ab355f7bf\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.9.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\9baae2a0a064870b9506522ab355f7bf\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\9baae2a0a064870b9506522ab355f7bf\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.9.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\9baae2a0a064870b9506522ab355f7bf\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+uses-permission#com.example.figuritasunlam.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\9baae2a0a064870b9506522ab355f7bf\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.9.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\9baae2a0a064870b9506522ab355f7bf\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+provider#com.squareup.picasso.PicassoProvider
+ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\7896870ae982ab6e64be85a74750089c\transformed\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+	android:authorities
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\7896870ae982ab6e64be85a74750089c\transformed\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+	android:exported
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\7896870ae982ab6e64be85a74750089c\transformed\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+	android:name
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\7896870ae982ab6e64be85a74750089c\transformed\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
+service#androidx.room.MultiInstanceInvalidationService
+ADDED from [androidx.room:room-runtime:2.4.3] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\d41e7e53f32459aa3010224ea7797c1c\transformed\room-runtime-2.4.3\AndroidManifest.xml:25:9-28:40
+	android:exported
+		ADDED from [androidx.room:room-runtime:2.4.3] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\d41e7e53f32459aa3010224ea7797c1c\transformed\room-runtime-2.4.3\AndroidManifest.xml:28:13-37
+	android:directBootAware
+		ADDED from [androidx.room:room-runtime:2.4.3] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\d41e7e53f32459aa3010224ea7797c1c\transformed\room-runtime-2.4.3\AndroidManifest.xml:27:13-43
+	android:name
+		ADDED from [androidx.room:room-runtime:2.4.3] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\d41e7e53f32459aa3010224ea7797c1c\transformed\room-runtime-2.4.3\AndroidManifest.xml:26:13-74
 meta-data#androidx.lifecycle.ProcessLifecycleInitializer
-ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\usuario\.gradle\caches\transforms-3\a4f0fb44e9b56370f8c2ed23c9d5d030\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\eb02fa3de8df92428b4fead2b13ac84f\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
 	android:value
-		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\usuario\.gradle\caches\transforms-3\a4f0fb44e9b56370f8c2ed23c9d5d030\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\eb02fa3de8df92428b4fead2b13ac84f\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
 	android:name
-		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\usuario\.gradle\caches\transforms-3\a4f0fb44e9b56370f8c2ed23c9d5d030\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\eb02fa3de8df92428b4fead2b13ac84f\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\539aa2ffee07b54d7e501f36e7840a1c\transformed\jetified-profileinstaller-1.1.0\AndroidManifest.xml:31:13-33:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\539aa2ffee07b54d7e501f36e7840a1c\transformed\jetified-profileinstaller-1.1.0\AndroidManifest.xml:33:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\539aa2ffee07b54d7e501f36e7840a1c\transformed\jetified-profileinstaller-1.1.0\AndroidManifest.xml:32:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\539aa2ffee07b54d7e501f36e7840a1c\transformed\jetified-profileinstaller-1.1.0\AndroidManifest.xml:36:9-45:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\539aa2ffee07b54d7e501f36e7840a1c\transformed\jetified-profileinstaller-1.1.0\AndroidManifest.xml:39:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\539aa2ffee07b54d7e501f36e7840a1c\transformed\jetified-profileinstaller-1.1.0\AndroidManifest.xml:40:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\539aa2ffee07b54d7e501f36e7840a1c\transformed\jetified-profileinstaller-1.1.0\AndroidManifest.xml:41:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\539aa2ffee07b54d7e501f36e7840a1c\transformed\jetified-profileinstaller-1.1.0\AndroidManifest.xml:38:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\539aa2ffee07b54d7e501f36e7840a1c\transformed\jetified-profileinstaller-1.1.0\AndroidManifest.xml:37:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\539aa2ffee07b54d7e501f36e7840a1c\transformed\jetified-profileinstaller-1.1.0\AndroidManifest.xml:42:13-44:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\539aa2ffee07b54d7e501f36e7840a1c\transformed\jetified-profileinstaller-1.1.0\AndroidManifest.xml:43:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.1.0] C:\Users\usuario\Desktop\Trabajo Ejemplo\videoteca\caches\transforms-3\539aa2ffee07b54d7e501f36e7840a1c\transformed\jetified-profileinstaller-1.1.0\AndroidManifest.xml:43:25-88
