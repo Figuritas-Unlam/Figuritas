@@ -1,9 +1,6 @@
 package ar.edu.unlam.figuritas
 
-import android.animation.ObjectAnimator
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.ImageView
 import androidx.core.animation.doOnEnd
 import ar.edu.unlam.figuritas.databinding.ActivityOpenPackBinding
@@ -28,18 +25,15 @@ class OpenPackActivity : AppCompatActivity() {
         fifthCard = binding.imageView5
         var currentCard = firstCard
         var incomingCard = secondCard
+        var height = 100f
 
         binding.button.setOnClickListener {
-            ObjectAnimator.ofFloat(currentCard, "translationX", 500f).apply {
-                duration = 1000
-                start()
-            }.doOnEnd { currentCard.visibility = View.GONE }
-            ObjectAnimator.ofFloat(incomingCard, "translationY", -1300f).apply {
-                duration = 1000
-                start()
-            }
+            currentCard.animate().setDuration(1000).x(600f).y(height)
+            incomingCard.animate().setDuration(1000).y(400f)
+
             currentCard = secondCard
             incomingCard = thirdCard
+            height += 100
         }
 
         setContentView(view)
