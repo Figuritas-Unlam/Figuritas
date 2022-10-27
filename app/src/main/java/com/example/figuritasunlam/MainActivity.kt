@@ -2,6 +2,7 @@ package com.example.figuritasunlam
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import ar.edu.unlam.figuritas.R
 import com.microsoft.appcenter.AppCenter
 import com.microsoft.appcenter.analytics.Analytics
 import com.microsoft.appcenter.crashes.Crashes
