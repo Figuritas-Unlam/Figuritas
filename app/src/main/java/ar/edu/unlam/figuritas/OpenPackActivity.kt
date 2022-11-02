@@ -4,12 +4,6 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.IntrinsicSize
-import androidx.compose.foundation.layout.height
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.painterResource
 import ar.edu.unlam.figuritas.databinding.ActivityOpenPackBinding
 
 class OpenPackActivity : AppCompatActivity() {
@@ -43,7 +37,9 @@ class OpenPackActivity : AppCompatActivity() {
         if (incomingCardNumber <= 5) {
             incomingCard = binding.root.findViewById(resources.getIdentifier("imageView${incomingCardNumber}", "id", BuildConfig.APPLICATION_ID))
         } else {
-            binding.button.visibility = View.GONE
+            binding.button.animate().setDuration(300).alpha(0F).withEndAction {
+                binding.button.visibility = View.GONE
+            }
             for (cardNumber in 1..5) {
                 val cardView: ImageView = binding.root
                     .findViewById(resources.getIdentifier("imageView${cardNumber}", "id", BuildConfig.APPLICATION_ID))
