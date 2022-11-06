@@ -1,9 +1,11 @@
-package ar.edu.unlam.figuritas
+package ar.edu.unlam.figuritas.ui.activities
 
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import ar.edu.unlam.figuritas.BuildConfig
+import ar.edu.unlam.figuritas.R
 import ar.edu.unlam.figuritas.databinding.ActivityOpenPackBinding
 
 class OpenPackActivity : AppCompatActivity() {
@@ -35,14 +37,18 @@ class OpenPackActivity : AppCompatActivity() {
 
     private fun updateViews(incomingCardNumber: Int) {
         if (incomingCardNumber <= 5) {
-            incomingCard = binding.root.findViewById(resources.getIdentifier("imageView${incomingCardNumber}", "id", BuildConfig.APPLICATION_ID))
+            incomingCard = binding.root.findViewById(resources.getIdentifier("imageView${incomingCardNumber}", "id",
+                BuildConfig.APPLICATION_ID
+            ))
         } else {
             binding.button.animate().setDuration(300).alpha(0F).withEndAction {
                 binding.button.visibility = View.GONE
             }
             for (cardNumber in 1..5) {
                 val cardView: ImageView = binding.root
-                    .findViewById(resources.getIdentifier("imageView${cardNumber}", "id", BuildConfig.APPLICATION_ID))
+                    .findViewById(resources.getIdentifier("imageView${cardNumber}", "id",
+                        BuildConfig.APPLICATION_ID
+                    ))
                 if (cardNumber == 5) {
                     cardView.animate()
                         .setDuration(1000)
