@@ -16,6 +16,8 @@ class InitScreenActivity : AppCompatActivity() {
         binding = ActivityInitScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
+        initMotionLayout()
     }
     private fun initMotionLayout() {
         with(binding) {
