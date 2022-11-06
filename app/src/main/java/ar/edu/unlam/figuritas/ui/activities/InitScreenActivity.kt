@@ -15,6 +15,9 @@ class InitScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityInitScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        binding.ivIntercambio.setOnClickListener {
+            startActivity(Intent(this,MapActivity::class.java))
+        }
 
     }
     private fun initMotionLayout() {

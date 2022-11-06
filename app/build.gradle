@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
 }
 dependencies {
     def appCenterSdkVersion = '4.3.1'
@@ -86,4 +87,9 @@ dependencies {
 
     //CircleImageView
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //Services Maps
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+    //Location
+    implementation 'com.google.android.gms:play-services-location:21.0.0'
 }
