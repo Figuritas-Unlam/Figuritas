@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import ar.edu.unlam.figuritas.Domain.QRManager
 import ar.edu.unlam.figuritas.databinding.ActivityGetGiftBinding
 import com.google.zxing.integration.android.IntentIntegrator
 
@@ -16,7 +17,7 @@ class CameraActivity (private var qrManager : QRManager): AppCompatActivity(){
         super.onCreate(savedInstanceState)
         binding = ActivityGetGiftBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        qrManager=QRManager()
+        qrManager= QRManager()
         binding.btnScann.setOnClickListener {
             startCamera()
         }

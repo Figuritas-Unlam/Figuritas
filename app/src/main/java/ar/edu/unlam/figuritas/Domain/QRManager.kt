@@ -1,7 +1,8 @@
-package ar.edu.unlam.figuritas
+package ar.edu.unlam.figuritas.Domain
 
 import android.graphics.Bitmap
 import android.text.TextUtils
+import ar.edu.unlam.figuritas.PruebaRegaloFiguritas
 import com.google.gson.Gson
 import com.google.zxing.BarcodeFormat
 import com.journeyapps.barcodescanner.BarcodeEncoder
@@ -19,7 +20,7 @@ class QRManager {
         ))
 
     //Devolverá una lista de figuritas
-    fun deserializationPruebaFiguritas(result: String): PruebaRegaloFiguritas{
+    fun deserializationPruebaFiguritas(result: String): PruebaRegaloFiguritas {
         return Gson().fromJson(
             TextUtils.substring(result, CODE_VERIFY.length, result.length),
             PruebaRegaloFiguritas::class.java
@@ -34,7 +35,7 @@ class QRManager {
             width, height)
     }
 
-    private fun serializationPruebaFiguritas(figus :PruebaRegaloFiguritas): String{
+    private fun serializationPruebaFiguritas(figus : PruebaRegaloFiguritas): String{
         return Gson().toJson(figus)
     }
 }
