@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="40dp"
+    android:layout_marginBottom="50dp"
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_world_cup">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/figurita"
+        android:layout_width="320dp"
+        android:layout_height="430dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/border_figurita"
+        >
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/qatar_icon"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="170dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="ARG"
+                android:gravity="center"
+                android:textColor="@color/red_qatar"
+                android:background="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/imagePais"
+                android:layout_gravity="center"
+                />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:src="@drawable/arg"
+
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:text="Kg"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:layout_weight="2"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:layout_weight="2"
+                android:text="Mt"
+                />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                >
+                <TextView
+                    android:id="@+id/pesoJugador"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:text="72"
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:layout_weight="2"
+                    />
+                <TextView
+                    android:id="@+id/alturaJugador"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:layout_marginStart="1dp"
+                    android:gravity="center"
+                    android:layout_weight="2"
+                    android:text="1,70"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginStart="9dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:id="@+id/imagenJugador"
+                android:layout_width="match_parent"
+                android:layout_height="310dp"
+                android:background="@drawable/messi"
+                />
+
+        <TextView
+            android:id="@+id/nombreJugador"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/nombre"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="LIONEL MESSI"
+            android:textColor="@color/red_qatar"
+            android:textSize="25dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/red_qatar"
+                android:text="24-6-1987"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:id="@+id/textos1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/figurita"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="Dorsal"
+            android:layout_marginEnd="15dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="Equipo"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="Posicion"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+
+        android:gravity="center"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/textos1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+        <TextView
+            android:id="@+id/dorsal"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_weight="3"
+            android:background="@drawable/rombo"
+            android:textSize="27dp"
+            android:text="10"
+            android:textColor="@color/red_qatar"
+            />
+        <ImageView
+            android:id="@+id/escudoClub"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/escudo"
+            android:layout_weight="3"
+            />
+        <TextView
+            android:id="@+id/posicion"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="3"
+            android:background="@drawable/rombo"
+            android:textSize="27dp"
+            android:textStyle="bold"
+            android:text="DEL"
+            android:textColor="@color/red_qatar"
+            />
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
