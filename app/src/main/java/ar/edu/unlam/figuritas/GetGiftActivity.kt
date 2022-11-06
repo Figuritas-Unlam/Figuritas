@@ -7,17 +7,16 @@ import androidx.appcompat.app.AppCompatActivity
 import ar.edu.unlam.figuritas.databinding.ActivityGetGiftBinding
 import com.google.zxing.integration.android.IntentIntegrator
 
+//Cmabiar la logica a la pantalla Intercambio
+class CameraActivity (private var qrManager : QRManager): AppCompatActivity(){
 
-class CameraActivity : AppCompatActivity() {
-
-    //qrManager se debe inyectar al ViewModel
-    private val qrManager = QRManager()
     private lateinit var binding: ActivityGetGiftBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityGetGiftBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        qrManager=QRManager()
         binding.btnScann.setOnClickListener {
             startCamera()
         }
@@ -25,7 +24,7 @@ class CameraActivity : AppCompatActivity() {
     }
 
     private fun startCamera() {
-        val integrator=IntentIntegrator(this)
+        val integrator= IntentIntegrator(this)
         integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE)
         integrator.setPrompt("Escanee el QR para obtener el regalo")
         integrator.setOrientationLocked(true)
@@ -40,6 +39,7 @@ class CameraActivity : AppCompatActivity() {
             }else{
                 qrManager.deserializationPruebaFiguritas(result.contents).figus.forEach{
                     val x = binding.txt.text
+                    //Se agruegen a mis figuri (O se obtengan como un paquete)
                     binding.txt.text="$x / ${it.edad} / ${it.name} / ${it.pais}"
                 }
                 Toast.makeText(this,"Recuperacion correcta de datos", Toast.LENGTH_SHORT).show()
