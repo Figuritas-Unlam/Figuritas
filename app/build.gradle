@@ -71,6 +71,9 @@ dependencies {
     //Retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
 
+    // Picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
     //Room
     def room_version = "2.4.3"
 
