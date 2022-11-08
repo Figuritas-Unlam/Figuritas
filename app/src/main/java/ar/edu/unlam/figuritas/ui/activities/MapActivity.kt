@@ -1,6 +1,7 @@
 package ar.edu.unlam.figuritas.ui.activities
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -138,7 +139,7 @@ class MapActivity() : AppCompatActivity(),
                     resetLocations()
                     name = it.title.toString()
                     drawPolyLineRoute(
-                        "${actualLocation!!.longitude}, ${actualLocation!!.latitude}",
+                        "-58.455490, -34.610831",
                         "${coordinates.longitude}, ${coordinates.latitude}"
                     )
                 }
@@ -181,6 +182,7 @@ class MapActivity() : AppCompatActivity(),
 
     //1,2, 3, actualLocation y fusedLocation deberian pasar al VM
     //1
+    @SuppressLint("MissingPermission")
     private fun setActualLocation(isPermissionLocationGranted: Boolean) {
         if (isPermissionLocationGranted) {
             fusedLocation.requestLocationUpdates(
