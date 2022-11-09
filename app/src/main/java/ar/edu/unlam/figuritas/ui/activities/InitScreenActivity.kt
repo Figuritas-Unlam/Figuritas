@@ -1,5 +1,6 @@
 package ar.edu.unlam.figuritas.ui.activities
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.motion.widget.MotionLayout
@@ -13,8 +14,12 @@ class InitScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityInitScreenBinding.inflate(layoutInflater)
-        setContentView(binding.root)
 
+        binding.openPackButton.setOnClickListener {
+            val openPackActivityIntent = Intent(baseContext, OpenPackActivity::class.java)
+            startActivity(openPackActivityIntent)
+        }
+        setContentView(binding.root)
     }
 
     private fun initMotionLayout() {
