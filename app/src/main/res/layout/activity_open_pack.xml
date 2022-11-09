@@ -37,53 +37,50 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView1"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/stickerView1"
         android:layout_width="wrap_content"
-        android:layout_height="300dp"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="parent"
-        android:src="@drawable/messi"/>
+        android:name="ar.edu.unlam.figuritas.ui.fragments.StickerItemFragment"/>
 
-    <ImageView
-        android:id="@+id/imageView2"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/stickerView2"
         android:layout_width="wrap_content"
-        android:layout_height="300dp"
-        android:src="@drawable/messi"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="300dp"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="parent"
-        tools:srcCompat="@tools:sample/avatars"
-        android:src="@drawable/messi"/>
+        android:name="ar.edu.unlam.figuritas.ui.fragments.StickerItemFragment"/>
 
-    <ImageView
-        android:id="@+id/imageView4"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/stickerView3"
         android:layout_width="wrap_content"
-        android:layout_height="300dp"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="parent"
-        tools:srcCompat="@tools:sample/avatars"
-        android:src="@drawable/messi"/>
+        android:name="ar.edu.unlam.figuritas.ui.fragments.StickerItemFragment"/>
 
-    <ImageView
-        android:id="@+id/imageView5"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/stickerView4"
         android:layout_width="wrap_content"
-        android:layout_height="300dp"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="parent"
-        tools:srcCompat="@tools:sample/avatars"
-        android:src="@drawable/messi"/>
+        android:name="ar.edu.unlam.figuritas.ui.fragments.StickerItemFragment"/>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/stickerView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        android:name="ar.edu.unlam.figuritas.ui.fragments.StickerItemFragment"/>
 
     <Button
         android:id="@+id/button"

@@ -9,11 +9,13 @@ import ar.edu.unlam.figuritas.BuildConfig
 import ar.edu.unlam.figuritas.data.api.PlayerClient
 import ar.edu.unlam.figuritas.data.repository.PlayerRepository
 import ar.edu.unlam.figuritas.databinding.ActivityOpenPackBinding
+import ar.edu.unlam.figuritas.model.response.PlayerResponse
 import ar.edu.unlam.figuritas.ui.viewmodel.OpenPackViewModel
+import com.squareup.picasso.Picasso
 
 class OpenPackActivity : AppCompatActivity() {
-    private lateinit var incomingCard: ImageView
-    private var currentCard: ImageView? = null
+    private lateinit var incomingCard: View
+    private var currentCard: View? = null
     private lateinit var binding: ActivityOpenPackBinding
     private lateinit var openPackViewModel: OpenPackViewModel
 
@@ -23,7 +25,7 @@ class OpenPackActivity : AppCompatActivity() {
         val view = binding.root
         suscribeToViewModel()
 
-        incomingCard = binding.imageView1
+        incomingCard = binding.stickerView1
 
         var height = 100f
         var incomingCardNumber = 1
@@ -44,15 +46,26 @@ class OpenPackActivity : AppCompatActivity() {
         val client = PlayerClient()
         val repo = PlayerRepository(client)
         openPackViewModel = OpenPackViewModel(repo)
-        openPackViewModel.playerData.observe(this) { it ->
+        openPackViewModel.playerData.observe(this) {
             Log.d("RESPONSE:", it.toString())
-            binding.playerData.text = it.map { playerData -> Pair(playerData?.data?.fullname, playerData?.data?.nationality) }.toString()
+            setPackPlayers(it)
+        }
+    }
+
+    private fun setPackPlayers(playersData: List<PlayerResponse?>) {
+        for((index, playerData) in playersData.withIndex()) {
+            val imageView = binding.root.findViewById<View>(resources.getIdentifier("stickerView${index+1}", "id",
+                BuildConfig.APPLICATION_ID
+            )).findViewById<ImageView>(resources.getIdentifier("imagenJugador", "id",
+                BuildConfig.APPLICATION_ID
+            ))
+            Picasso.get().load(playerData?.data?.image).into(imageView)
         }
     }
 
     private fun updateViews(incomingCardNumber: Int) {
         if (incomingCardNumber <= 5) {
-            incomingCard = binding.root.findViewById(resources.getIdentifier("imageView${incomingCardNumber}", "id",
+            incomingCard = binding.root.findViewById(resources.getIdentifier("stickerView${incomingCardNumber}", "id",
                 BuildConfig.APPLICATION_ID
             ))
         } else {
@@ -60,8 +73,8 @@ class OpenPackActivity : AppCompatActivity() {
                 binding.button.visibility = View.GONE
             }
             for (cardNumber in 1..5) {
-                val cardView: ImageView = binding.root
-                    .findViewById(resources.getIdentifier("imageView${cardNumber}", "id",
+                val cardView: View = binding.root
+                    .findViewById(resources.getIdentifier("stickerView${cardNumber}", "id",
                         BuildConfig.APPLICATION_ID
                     ))
                 if (cardNumber == 5) {
