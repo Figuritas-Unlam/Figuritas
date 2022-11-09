@@ -17,7 +17,7 @@ class PlayerClient {
         return servicePlayerApi.searchPlayerById(playerId)
     }
 
-    suspend fun searchPlayerByCountryId(countryId : Int) : Response<TeamResponse> {
+    suspend fun searchPlayersByCountryId(countryId : Int) : Response<TeamResponse> {
         return servicePlayerApi.searchPlayersByCountryId(countryId)
     }
 }

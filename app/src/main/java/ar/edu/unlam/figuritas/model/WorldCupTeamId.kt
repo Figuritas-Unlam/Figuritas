@@ -1,6 +1,6 @@
 package ar.edu.unlam.figuritas.model
 
-enum class WorldCupTeamsId(val id:Int) {
+enum class WorldCupTeamId(val id:Int) {
     URUGUAY(15251),
     QATAR(18544),
     MOROCCO(18551),
