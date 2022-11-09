@@ -7,7 +7,9 @@ import androidx.appcompat.app.AppCompatActivity
 import ar.edu.unlam.figuritas.BuildConfig
 import ar.edu.unlam.figuritas.R
 import ar.edu.unlam.figuritas.databinding.ActivityOpenPackBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class OpenPackActivity : AppCompatActivity() {
     private lateinit var incomingCard: ImageView
     private var currentCard: ImageView? = null

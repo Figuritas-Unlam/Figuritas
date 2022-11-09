@@ -6,14 +6,13 @@ import ar.edu.unlam.figuritas.model.response.TeamsResponse
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import javax.inject.Inject
 
-class PlayerClient {
+class PlayerClient @Inject constructor(
+    private val servicePlayerApi: PlayerAPI,
+) {
 
-    private val servicePlayerApi : PlayerAPI = Retrofit.Builder()
-        .baseUrl("https://api.sportmonks.com/v3/football/")
-        .addConverterFactory(GsonConverterFactory.create())
-        .build()
-        .create(PlayerAPI::class.java)
+
 
     suspend fun searchPlayerById(playerId : Int) : Response<PlayerResponse>{
         return servicePlayerApi.searchPlayer(playerId)

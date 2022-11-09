@@ -1,51 +1,58 @@
 package ar.edu.unlam.figuritas.model.response
 
+import androidx.annotation.DrawableRes
 import com.google.gson.annotations.SerializedName
 
-data class PlayerResponse (
+data class PlayerResponse(
 
     @SerializedName("id")
-    var id : Int,
+    var id: Int,
 
     @SerializedName("player_id")
-    var playerId : Int,
+    var playerId: Int,
 
     @SerializedName("country_id")
-    var countryId : Int,
+    var countryId: Int,
 
     @SerializedName("team_id")
-    var teamId : Int,
+    var teamId: Int,
 
     @SerializedName("display_name")
-    var name : String,
+    var name: String,
 
     @SerializedName("fullname")
-    var fullname : String,
+    var fullname: String,
 
     @SerializedName("height")
-    var height : Double,
+    var height: Double,
 
     @SerializedName("weight")
-    var weight : Double,
+    var weight: Double,
 
     @SerializedName("birthdate")
-    var birthdate : String,
+    var birthdate: String,
 
     @SerializedName("nationality")
-    var nationality : String,
+    var nationality: String,
 
     @SerializedName("image_path")
-    var image : String,
+    var image: String,
 
     @SerializedName("position")
     var position: Position
-    )
+)
 
-data class Position (
+data class Position(
 
     @SerializedName("id")
     var id: Int,
 
     @SerializedName("developer_name")
-    var name : String
+    var name: String
+)
+
+
+data class MockPlayerProvisorio(
+    var name: String,
+    @DrawableRes var image: Int
 )
