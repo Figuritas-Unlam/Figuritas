@@ -14,7 +14,7 @@ class OpenPackViewModel(repository: PlayerRepository): ViewModel() {
 
     init {
         viewModelScope.launch {
-            _playerData.value = repository.get5RandomPlayers()
+            _playerData.value = repository.getRandomPlayers(5)
         }
     }
 }

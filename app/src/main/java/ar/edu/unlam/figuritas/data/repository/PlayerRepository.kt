@@ -16,8 +16,8 @@ class PlayerRepository(private val playerClient: PlayerClient) {
         return getSquadDataByCountry(country)?.map { getPlayerById(it.playerId).body() }
     }
 
-    suspend fun get5RandomPlayers() : List<PlayerResponse?> {
-        return List(5) { getPlayerById(getRandomPlayerId()).body() }
+    suspend fun getRandomPlayers(qty: Int) : List<PlayerResponse?> {
+        return List(qty) { getPlayerById(getRandomPlayerId()).body() }
     }
 
     private suspend fun getRandomPlayerId() : Int {
