@@ -1,5 +1,6 @@
 package ar.edu.unlam.figuritas.model.response
 
+import androidx.annotation.DrawableRes
 import com.google.gson.annotations.SerializedName
 
 data class PlayerResponse(
@@ -41,4 +42,10 @@ data class Position (
     var id: Int,
     @SerializedName("name")
     var name : String
+)
+
+
+data class MockPlayerProvisorio(
+    var name: String,
+    @DrawableRes var image: Int
 )

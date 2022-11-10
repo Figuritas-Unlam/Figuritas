@@ -4,8 +4,9 @@ import ar.edu.unlam.figuritas.data.api.PlayerClient
 import ar.edu.unlam.figuritas.model.WorldCupTeamId
 import ar.edu.unlam.figuritas.model.response.*
 import retrofit2.Response
+import javax.inject.Inject
 
-class PlayerRepository(private val playerClient: PlayerClient) {
+class PlayerRepository @Inject constructor(private val playerClient: PlayerClient) {
 
 
     suspend fun getPlayerById(playerId : Int) : Response<PlayerResponse> {

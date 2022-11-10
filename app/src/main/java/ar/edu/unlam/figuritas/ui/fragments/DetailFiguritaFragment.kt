@@ -7,14 +7,17 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import ar.edu.unlam.figuritas.R
 import ar.edu.unlam.figuritas.databinding.FragmentDetailFiguritaBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class DetailFiguritaFragment : Fragment() {
 
-    private lateinit var detailFiguritaBinding : FragmentDetailFiguritaBinding
+    private lateinit var detailFiguritaBinding: FragmentDetailFiguritaBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
