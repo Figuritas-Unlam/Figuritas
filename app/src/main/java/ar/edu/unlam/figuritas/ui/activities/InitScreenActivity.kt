@@ -19,6 +19,10 @@ class InitScreenActivity : AppCompatActivity() {
             val openPackActivityIntent = Intent(baseContext, OpenPackActivity::class.java)
             startActivity(openPackActivityIntent)
         }
+        binding.ivTitle.setOnClickListener {
+            val mapActivityIntent = Intent(baseContext, MapActivity::class.java)
+            startActivity(mapActivityIntent)
+        }
         setContentView(binding.root)
 
     }

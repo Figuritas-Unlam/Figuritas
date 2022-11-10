@@ -1,19 +1,17 @@
 package ar.edu.unlam.figuritas.ui.activities
 
 import android.Manifest
-import android.annotation.SuppressLint
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Looper
-import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import ar.edu.unlam.figuritas.R
 import ar.edu.unlam.figuritas.Data.api.OpenRouteClient
-import ar.edu.unlam.figuritas.Domain.Models.MeetPoint
+import ar.edu.unlam.figuritas.Domain.Models.MeetPoints
 import ar.edu.unlam.figuritas.Domain.PolyLineRouteProvider
 import ar.edu.unlam.figuritas.databinding.ActivityMapBinding
+import ar.edu.unlam.figuritas.ui.viewmodel.MapViewModel
 import com.google.android.gms.location.*
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -21,41 +19,30 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
-import com.google.android.gms.maps.model.Polyline
-import com.google.android.gms.maps.model.PolylineOptions
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 
 //Se tiene que inyectar VM y al que se le inyectaría routeProvider
 class MapActivity() : AppCompatActivity(),
     OnMapReadyCallback, GoogleMap.OnMyLocationButtonClickListener {
 
-    //private val viewModel: MainViewModel by viewModels { MainViewModel.Factory() }
-    private lateinit var routeProvider : PolyLineRouteProvider
+    private lateinit var mapViewModel: MapViewModel
     private val LOCATION_REQUEST = 0
     private val FINE_LOCATION = Manifest.permission.ACCESS_FINE_LOCATION
     private lateinit var binding: ActivityMapBinding
     private lateinit var map: GoogleMap
 
-    //Deberia de ser una lista obtenida de una BD o similar
-    val markers = listOf(
-        MeetPoint("PointOne", LatLng(-34.601732, -58.469339)),
-        MeetPoint("PointTwo", LatLng(-34.587871, -58.463758)),
-        MeetPoint("PointThree", LatLng(-34.587862, -58.395270)),
-        MeetPoint("PointFour", LatLng(-34.614463, -58.404880)),
-        MeetPoint("PointFive", LatLng(-34.641201, -58.479896)),
-        MeetPoint("PointSix", LatLng(-34.560833, -58.492334))
-    )
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMapBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        suscribeToViewModel()
         createMap()
-        //Inyectado en VM
-        routeProvider = PolyLineRouteProvider(OpenRouteClient())
         setManagerLocation()
+    }
+
+    private fun suscribeToViewModel() {
+        val client = OpenRouteClient()
+        val polyProvider=PolyLineRouteProvider(client)
+        mapViewModel= MapViewModel(polyProvider)
     }
 
     private fun isLocationPermissionGranted() = ContextCompat.checkSelfPermission(
@@ -105,10 +92,10 @@ class MapActivity() : AppCompatActivity(),
         }
         map.setOnMyLocationButtonClickListener(this)
         map.setOnMapClickListener {
-            resetLocations()
-            poly?.remove()
+            mapViewModel.resetLocations()
+            mapViewModel.poly?.remove()
         }
-        setActualLocation(isLocationPermissionGranted())
+        mapViewModel.setActualLocation(isLocationPermissionGranted())
         setMarkersMeetPoints()
     }
 
@@ -125,9 +112,12 @@ class MapActivity() : AppCompatActivity(),
     }
 
     private fun setMarkersMeetPoints() {
-        markers.forEach {
-            map.addMarker(MarkerOptions().title(it.namePoint).position(it.coordinates))
-        }
+        map.addMarker(MarkerOptions().title(MeetPoints.POINT_ONE.namePoint).position(MeetPoints.POINT_ONE.coordinates))
+        map.addMarker(MarkerOptions().title(MeetPoints.POINT_TWO.namePoint).position(MeetPoints.POINT_TWO.coordinates))
+        map.addMarker(MarkerOptions().title(MeetPoints.POINT_THREE.namePoint).position(MeetPoints.POINT_THREE.coordinates))
+        map.addMarker(MarkerOptions().title(MeetPoints.POINT_FOUR.namePoint).position(MeetPoints.POINT_FOUR.coordinates))
+        map.addMarker(MarkerOptions().title(MeetPoints.POINT_FIVE.namePoint).position(MeetPoints.POINT_FIVE.coordinates))
+        map.addMarker(MarkerOptions().title(MeetPoints.POINT_SIX.namePoint).position(MeetPoints.POINT_SIX.coordinates))
         setMarkerListener()
     }
 
@@ -135,11 +125,11 @@ class MapActivity() : AppCompatActivity(),
         map.setOnMarkerClickListener {
             val coordinates = it.position
             if (isLocationPermissionGranted()) {
-                if (name != it.title.toString()) {
-                    resetLocations()
-                    name = it.title.toString()
+                if (mapViewModel.name != it.title.toString()) {
+                    mapViewModel.resetLocations()
+                    mapViewModel.name = it.title.toString()
                     drawPolyLineRoute(
-                        "-58.455490, -34.610831",
+                        "${mapViewModel.actualLocation?.longitude}, ${mapViewModel.actualLocation?.latitude}",
                         "${coordinates.longitude}, ${coordinates.latitude}"
                     )
                 }
@@ -151,11 +141,10 @@ class MapActivity() : AppCompatActivity(),
     }
 
     private fun drawPolyLineRoute(start: String, end: String) {
-        val polyLine = getPolyline(start, end)
+        val polyLine = mapViewModel.getPolyline(start, end)
         if (polyLine != null) {
-            Toast.makeText(this, "poly lat", Toast.LENGTH_SHORT).show()
             runOnUiThread {
-                poly = map.addPolyline(polyLine)
+                mapViewModel.poly = map.addPolyline(polyLine)
             }
         } else {
             //Mensaje "No se pudo calcular la ruta"
@@ -165,69 +154,10 @@ class MapActivity() : AppCompatActivity(),
     override fun onResumeFragments() {
         super.onResumeFragments()
         if (!::map.isInitialized) return
-        setActualLocation(isLocationPermissionGranted())
+        mapViewModel.setActualLocation(isLocationPermissionGranted())
     }
 
-    //Estar en y ser manejadas por el viewModel
-    //Se podria dar un mejor manejo mediante LiveData<> y observer
-    private var name = ""
-    var poly: Polyline? = null
-    private lateinit var fusedLocation: FusedLocationProviderClient
-    private var actualLocation: LatLng? = null
-
-    //En el INIT{} del VM
     private fun setManagerLocation() {
-        fusedLocation = LocationServices.getFusedLocationProviderClient(this)
-    }
-
-    //1,2, 3, actualLocation y fusedLocation deberian pasar al VM
-    //1
-    @SuppressLint("MissingPermission")
-    private fun setActualLocation(isPermissionLocationGranted: Boolean) {
-        if (isPermissionLocationGranted) {
-            fusedLocation.requestLocationUpdates(
-                solicitudDeDatosDeGPS,
-                receptorDeUbicaciones,
-                Looper.getMainLooper()
-            )
-        }else{
-            actualLocation=null
-        }
-    }
-
-    //2
-    private val solicitudDeDatosDeGPS = LocationRequest.create().apply {
-        interval = 10000
-        fastestInterval = 5000
-        priority = LocationRequest.PRIORITY_HIGH_ACCURACY
-    }
-
-    //3
-    private val receptorDeUbicaciones = object : LocationCallback() {
-        override fun onLocationResult(location: LocationResult) {
-            if (location.lastLocation != null) {
-                actualLocation = LatLng(
-                    location.lastLocation!!.latitude,
-                    location.lastLocation!!.longitude
-                )
-            }
-        }
-    }
-
-    //en el VM
-    private fun getPolyline(start: String, end: String): PolylineOptions? {
-        var polyLine: PolylineOptions? = null
-        CoroutineScope(Dispatchers.IO).launch {
-            //Esta llamada pasaria al viewModel
-            polyLine = routeProvider.getPolyline(start, end)
-        }
-        return polyLine
-    }
-
-    //Pasaria al viewModel
-    private fun resetLocations() {
-        name = ""
-        poly?.remove()
-        poly = null
+        mapViewModel.fusedLocation = LocationServices.getFusedLocationProviderClient(this)
     }
 }
