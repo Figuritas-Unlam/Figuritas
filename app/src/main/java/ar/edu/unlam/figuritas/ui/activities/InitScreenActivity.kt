@@ -2,14 +2,18 @@ package ar.edu.unlam.figuritas.ui.activities
 
 import android.content.Intent
 import android.os.Bundle
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.motion.widget.MotionLayout
 import ar.edu.unlam.figuritas.databinding.ActivityInitScreenBinding
+import ar.edu.unlam.figuritas.ui.viewModel.FiguritasViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class InitScreenActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityInitScreenBinding
+    val viewModel: FiguritasViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,6 +24,10 @@ class InitScreenActivity : AppCompatActivity() {
             startActivity(openPackActivityIntent)
         }
         setContentView(binding.root)
+
+        initMotionLayout()
+        initOpenPack()
+        initMisFiguritas()
     }
 
     private fun initMotionLayout() {
@@ -52,5 +60,22 @@ class InitScreenActivity : AppCompatActivity() {
             })
         }
     }
+
+    private fun initOpenPack() {
+        binding.ivOpenPaquete.setOnClickListener {
+            val intent = Intent(applicationContext, OpenPackActivity::class.java)
+            startActivity(intent)
+        }
+
+    }
+
+    private fun initMisFiguritas() {
+        binding.clMisFiguritas.setOnClickListener {
+            val intent = Intent(applicationContext, MyFiguritasActivity::class.java)
+            startActivity(intent)
+        }
+
+    }
+
 
 }

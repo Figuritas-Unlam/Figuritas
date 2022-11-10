@@ -5,6 +5,7 @@ import ar.edu.unlam.figuritas.model.response.TeamResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
+import javax.inject.Inject
 
 interface PlayerAPI {
 
