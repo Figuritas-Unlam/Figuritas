@@ -14,12 +14,15 @@ class InitScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityInitScreenBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-        binding.ivIntercambio.setOnClickListener {
-            startActivity(Intent(this,MapActivity::class.java))
+
+        binding.openPackButton.setOnClickListener {
+            val openPackActivityIntent = Intent(baseContext, OpenPackActivity::class.java)
+            startActivity(openPackActivityIntent)
         }
+        setContentView(binding.root)
 
     }
+
     private fun initMotionLayout() {
         with(binding) {
             constraint.addTransitionListener(object : MotionLayout.TransitionListener {
@@ -27,16 +30,14 @@ class InitScreenActivity : AppCompatActivity() {
                     motionLayout: MotionLayout?,
                     startId: Int,
                     endId: Int
-                ) {
-                }
+                ) { }
 
                 override fun onTransitionChange(
                     motionLayout: MotionLayout?,
                     startId: Int,
                     endId: Int,
                     progress: Float
-                ) {
-                }
+                ) { }
 
                 override fun onTransitionCompleted(motionLayout: MotionLayout?, currentId: Int) {
                  /*  intent = Intent(applicationContext, SecondActivity::class.java)
@@ -48,8 +49,7 @@ class InitScreenActivity : AppCompatActivity() {
                     triggerId: Int,
                     positive: Boolean,
                     progress: Float
-                ) {
-                }
+                ) { }
             })
         }
     }

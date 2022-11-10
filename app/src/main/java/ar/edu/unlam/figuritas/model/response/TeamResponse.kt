@@ -2,26 +2,32 @@ package ar.edu.unlam.figuritas.model.response
 
 import com.google.gson.annotations.SerializedName
 
-class TeamsResponse(
-
+class TeamResponse(
     @SerializedName("data")
-    var data : List<TeamResponse>
+    val data : TeamResponseData
 )
-class TeamResponse (
-
+class TeamResponseData (
     @SerializedName("id")
-    var id : Int,
-
-    @SerializedName("country_id")
-    var country_id : Int,
-
+    val id : Int,
     @SerializedName("name")
-    var name : String,
-
+    val name : String,
     @SerializedName("short_code")
-    var shortName : String,
+    val shortName : String,
+    @SerializedName("logo_path")
+    val imageUrl : String,
+    @SerializedName("founded")
+    val foundedYear : Int,
+    @SerializedName("squad")
+    val squad : TeamSquad,
+)
 
-    @SerializedName("image_path")
-    var image : String
+data class TeamSquad(
+    val data: List<SquadPlayerData>
+)
 
-    )
+data class SquadPlayerData(
+    @SerializedName("player_id")
+    val playerId: Int,
+    @SerializedName("position_id")
+    val positionId: Int
+)
