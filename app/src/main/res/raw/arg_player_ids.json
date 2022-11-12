@@ -1,0 +1,48 @@
+{
+  "id": 18644,
+  "legacy_id": 1350,
+  "name": "Argentina",
+  "short_code": "ARG",
+  "twitter": null,
+  "country_id": 44,
+  "national_team": true,
+  "founded": 1893,
+  "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/20/18644.png",
+  "venue_id": 6569,
+  "current_season_id": 18017,
+  "is_placeholder": false,
+  "squad": {
+    "data": [
+      {
+        "player_id": 211190
+      },
+      {
+        "player_id": 455900
+      },
+      {
+        "player_id": 333781
+      },
+      {
+        "player_id": 186733
+      },
+      {
+        "player_id": 188444
+      },
+      {
+        "player_id": 129798
+      },
+      {
+        "player_id": 4105
+      },
+      {
+        "player_id": 254081
+      },
+      {
+        "player_id": 21394947
+      },
+      {
+        "player_id": 186418
+      }
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": 18558,
+  "legacy_id": 1846,
+  "name": "Senegal",
+  "short_code": "SEN",
+  "twitter": null,
+  "country_id": 200,
+  "national_team": true,
+  "founded": 1960,
+  "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18558.png",
+  "venue_id": 14382,
+  "current_season_id": 20776,
+  "is_placeholder": false,
+  "squad": {
+    "data": [
+      {
+        "player_id": 61806
+      },
+      {
+        "player_id": 98857
+      },
+      {
+        "player_id": 62860
+      },
+      {
+        "player_id": 97078
+      },
+      {
+        "player_id": 37342694
+      },
+      {
+        "player_id": 1030
+      },
+      {
+        "player_id": 433169
+      },
+      {
+        "player_id": 4679
+      },
+      {
+        "player_id": 1243
+      },
+      {
+        "player_id": 1389
+      }
+    ]
+  }
+}
