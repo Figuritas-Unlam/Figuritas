@@ -54,9 +54,10 @@ class OpenPackActivity : AppCompatActivity() {
 
     private fun setPackPlayers(playersData: List<PlayerResponse?>) {
         for((index, playerData) in playersData.withIndex()) {
-            val imageView = binding.root.findViewById<View>(resources.getIdentifier("stickerView${index+1}", "id",
+            val stickerView = binding.root.findViewById<View>(resources.getIdentifier("stickerView${index+1}", "id",
                 BuildConfig.APPLICATION_ID
-            )).findViewById<ImageView>(resources.getIdentifier("imagenJugador", "id",
+            ))
+            val imageView = stickerView.findViewById<ImageView>(resources.getIdentifier("imagenJugador", "id",
                 BuildConfig.APPLICATION_ID
             ))
             Picasso.get().load(playerData?.data?.image).into(imageView)

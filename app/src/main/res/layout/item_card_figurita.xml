@@ -121,9 +121,7 @@
             <ImageView
                 android:id="@+id/imagenJugador"
                 android:layout_width="match_parent"
-                android:layout_height="90dp"
-                android:background="@drawable/messi"
-                />
+                android:layout_height="90dp"/>
 
             <TextView
                 android:id="@+id/nombreJugador"
