@@ -4,20 +4,21 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.ImageView
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import ar.edu.unlam.figuritas.BuildConfig
-import ar.edu.unlam.figuritas.data.api.PlayerClient
-import ar.edu.unlam.figuritas.data.repository.PlayerRepository
 import ar.edu.unlam.figuritas.databinding.ActivityOpenPackBinding
+import dagger.hilt.android.AndroidEntryPoint
+import ar.edu.unlam.figuritas.ui.OpenPackViewModel
 import ar.edu.unlam.figuritas.model.response.PlayerResponse
-import ar.edu.unlam.figuritas.ui.viewmodel.OpenPackViewModel
 import com.squareup.picasso.Picasso
 
+@AndroidEntryPoint
 class OpenPackActivity : AppCompatActivity() {
     private lateinit var incomingCard: View
     private var currentCard: View? = null
     private lateinit var binding: ActivityOpenPackBinding
-    private lateinit var openPackViewModel: OpenPackViewModel
+    private val openPackViewModel: OpenPackViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,10 +44,7 @@ class OpenPackActivity : AppCompatActivity() {
     }
 
     private fun suscribeToViewModel() {
-        val client = PlayerClient()
-        val repo = PlayerRepository(client)
-        openPackViewModel = OpenPackViewModel(repo)
-        openPackViewModel.playerData.observe(this) {
+        openPackViewModel.playerData.observe(this) { it ->
             Log.d("RESPONSE:", it.toString())
             setPackPlayers(it)
         }
