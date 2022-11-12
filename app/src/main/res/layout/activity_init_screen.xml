@@ -34,11 +34,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.105" />
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/ivOpenPack"
         android:layout_width="108dp"
         android:layout_height="88dp"
-        android:background="@drawable/paquete"
+        android:src="@drawable/sticker_pack"
+        app:civ_border_width="5dp"
+        app:civ_border_color="#000000"
         app:layout_constraintBottom_toTopOf="@+id/ivAlbum"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.098"
@@ -64,7 +66,7 @@
         android:id="@+id/ivAlbum"
         android:layout_width="233dp"
         android:layout_height="266dp"
-        android:background="@drawable/album2"
+        android:background="@drawable/album"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -99,9 +101,7 @@
         android:id="@+id/clMisFiguritas"
         android:layout_width="match_parent"
         android:layout_height="140dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="5dp"
-        android:background="@drawable/bgconstraint"
+        android:background="#77FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"

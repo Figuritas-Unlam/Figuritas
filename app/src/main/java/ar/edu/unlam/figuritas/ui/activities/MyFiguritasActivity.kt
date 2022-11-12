@@ -3,7 +3,6 @@ package ar.edu.unlam.figuritas.ui.activities
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.activity.viewModels
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -24,17 +23,14 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import ar.edu.unlam.figuritas.R
 import ar.edu.unlam.figuritas.model.response.MockPlayerProvisorio
-import ar.edu.unlam.figuritas.model.response.PlayerResponse
 import ar.edu.unlam.figuritas.ui.activities.ui.theme.FiguritasTheme
 import ar.edu.unlam.figuritas.ui.activities.ui.theme.Orange
 import ar.edu.unlam.figuritas.ui.activities.ui.theme.RedQatar
-import ar.edu.unlam.figuritas.ui.viewModel.FiguritasViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -67,13 +63,13 @@ fun BackgroundActivity() {
         modifier = Modifier
             .fillMaxSize()
             .fillMaxHeight(1f)
-            .paint(painterResource(id = R.drawable.fondo), contentScale = ContentScale.FillHeight)
+            .paint(painterResource(id = R.drawable.background_qatar), contentScale = ContentScale.FillHeight)
     ) {
         MisFiguritas()
         FiguritaNuevasTxt()
-        rvNuevas()
+        RvNuevas()
         ParaIntercambiar()
-        rvRepetidas()
+        RvRepetidas()
 
 
     }
@@ -117,7 +113,7 @@ fun FiguritaNuevasTxt() {
 }
 
 @Composable
-fun rvNuevas() {
+fun RvNuevas() {
 
     LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(8.dp)) {
         items(getMessiMock()) { messiMock ->
@@ -315,7 +311,7 @@ fun FiguritasRepetidas(messiMock: MockPlayerProvisorio) {
 }
 
 @Composable
-fun rvRepetidas() {
+fun RvRepetidas() {
     LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(8.dp)) {
         items(getMessiMock()) { messiMock ->
             FiguritasRepetidas(messiMock = messiMock)
