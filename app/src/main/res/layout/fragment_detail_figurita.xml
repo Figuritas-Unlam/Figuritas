@@ -6,8 +6,18 @@
     android:layout_marginBottom="50dp"
     android:layout_marginStart="15dp"
     android:layout_marginEnd="15dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/background_world_cup">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/background_qatar"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
