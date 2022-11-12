@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
-        android:id="@+id/ivTitle"
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Qatar 2022"
@@ -34,16 +34,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.105" />
 
-    <ImageView
-        android:id="@+id/ivOpenPaquete"
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivOpenPack"
         android:layout_width="108dp"
         android:layout_height="88dp"
-        android:background="@drawable/paquete"
+        android:src="@drawable/sticker_pack"
+        app:civ_border_width="5dp"
+        app:civ_border_color="#000000"
         app:layout_constraintBottom_toTopOf="@+id/ivAlbum"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.098"
-        app:layout_constraintStart_toEndOf="@+id/ivOpenPaquete"
-        app:layout_constraintTop_toBottomOf="@+id/ivTitle"
+        app:layout_constraintStart_toEndOf="@+id/openPackButton"
+        app:layout_constraintTop_toBottomOf="@+id/title"
         app:layout_constraintVertical_bias="0.553" />
 
     <Button
@@ -57,14 +59,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.255"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivTitle"
+        app:layout_constraintTop_toBottomOf="@+id/title"
         app:layout_constraintVertical_bias="0.523"/>
 
     <ImageView
         android:id="@+id/ivAlbum"
         android:layout_width="233dp"
         android:layout_height="266dp"
-        android:background="@drawable/album2"
+        android:background="@drawable/album"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -99,9 +101,7 @@
         android:id="@+id/clMisFiguritas"
         android:layout_width="match_parent"
         android:layout_height="140dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="5dp"
-        android:background="@drawable/bgconstraint"
+        android:background="#77FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"

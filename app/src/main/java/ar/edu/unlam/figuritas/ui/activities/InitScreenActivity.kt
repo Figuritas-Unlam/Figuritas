@@ -62,7 +62,7 @@ class InitScreenActivity : AppCompatActivity() {
     }
 
     private fun initOpenPack() {
-        binding.ivOpenPaquete.setOnClickListener {
+        binding.ivOpenPack.setOnClickListener {
             val intent = Intent(applicationContext, OpenPackActivity::class.java)
             startActivity(intent)
         }
