@@ -7,11 +7,9 @@ import android.widget.ImageView
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import ar.edu.unlam.figuritas.BuildConfig
-import ar.edu.unlam.figuritas.data.api.PlayerClient
-import ar.edu.unlam.figuritas.data.repository.PlayerRepository
 import ar.edu.unlam.figuritas.databinding.ActivityOpenPackBinding
 import dagger.hilt.android.AndroidEntryPoint
-import ar.edu.unlam.figuritas.ui.viewmodel.OpenPackViewModel
+import ar.edu.unlam.figuritas.ui.OpenPackViewModel
 
 @AndroidEntryPoint
 class OpenPackActivity : AppCompatActivity() {

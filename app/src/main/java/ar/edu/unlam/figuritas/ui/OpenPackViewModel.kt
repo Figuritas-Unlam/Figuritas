@@ -1,4 +1,4 @@
-package ar.edu.unlam.figuritas.ui.viewmodel
+package ar.edu.unlam.figuritas.ui
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
