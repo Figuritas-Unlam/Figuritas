@@ -28,6 +28,7 @@ class InitScreenActivity : AppCompatActivity() {
         initMotionLayout()
         initOpenPack()
         initMisFiguritas()
+        initAlbum()
     }
 
     private fun initMotionLayout() {
@@ -69,6 +70,14 @@ class InitScreenActivity : AppCompatActivity() {
 
     }
 
+    private fun initAlbum(){
+
+        binding.ivMyAlbum.setOnClickListener {
+            val intent = Intent(applicationContext, AlbumActivity::class.java)
+            startActivity(intent)
+        }
+
+    }
     private fun initMisFiguritas() {
         binding.clMisFiguritas.setOnClickListener {
             val intent = Intent(applicationContext, MyFiguritasActivity::class.java)

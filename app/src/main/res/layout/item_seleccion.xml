@@ -5,6 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
+        android:id="@+id/nameSeleccion"
         android:layout_width="230dp"
         android:layout_height="50dp"
         android:gravity="center"
