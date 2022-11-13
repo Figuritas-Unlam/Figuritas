@@ -1,5 +1,6 @@
 package ar.edu.unlam.figuritas.ui
 
+import android.hardware.SensorManager
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
