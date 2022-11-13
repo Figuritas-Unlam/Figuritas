@@ -1,0 +1,48 @@
+{
+  "id": 18553,
+  "legacy_id": 1358,
+  "name": "Ghana",
+  "short_code": "GHA",
+  "twitter": null,
+  "country_id": 468,
+  "national_team": true,
+  "founded": 1957,
+  "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18553.png",
+  "venue_id": 4428,
+  "current_season_id": 20776,
+  "is_placeholder": false,
+  "squad": {
+    "data": [
+      {
+        "player_id": 2178650
+      },
+      {
+        "player_id": 23707377
+      },
+      {
+        "player_id": 338959
+      },
+      {
+        "player_id": 1573
+      },
+      {
+        "player_id": 54303
+      },
+      {
+        "player_id": 5640849
+      },
+      {
+        "player_id": 41231
+      },
+      {
+        "player_id": 37560897
+      },
+      {
+        "player_id": 1038
+      },
+      {
+        "player_id": 9308200
+      }
+    ]
+  }
+}

@@ -1,0 +1,638 @@
+{
+  "id": 18598,
+  "legacy_id": 1211,
+  "name": "Costa Rica",
+  "short_code": "CRC",
+  "twitter": null,
+  "country_id": 1739,
+  "national_team": true,
+  "founded": 1921,
+  "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/6/18598.png",
+  "venue_id": 10981,
+  "current_season_id": 18017,
+  "is_placeholder": false,
+  "squad": {
+    "data": [
+      {
+        "player_id": 2206842,
+        "position_id": 3,
+        "number": null,
+        "captain": 0,
+        "injured": false,
+        "minutes": null,
+        "appearences": null,
+        "lineups": null,
+        "substitute_in": null,
+        "substitute_out": null,
+        "substitutes_on_bench": null,
+        "goals": null,
+        "owngoals": null,
+        "assists": null,
+        "saves": null,
+        "inside_box_saves": null,
+        "dispossesed": null,
+        "interceptions": null,
+        "yellowcards": null,
+        "yellowred": null,
+        "redcards": null,
+        "tackles": null,
+        "blocks": null,
+        "hit_post": null,
+        "cleansheets": null,
+        "rating": null,
+        "fouls": {
+          "committed": null,
+          "drawn": null
+        },
+        "crosses": {
+          "total": null,
+          "accurate": null
+        },
+        "dribbles": {
+          "attempts": null,
+          "success": null,
+          "dribbled_past": null
+        },
+        "duels": {
+          "total": null,
+          "won": null
+        },
+        "passes": {
+          "total": null,
+          "accuracy": null,
+          "key_passes": null
+        },
+        "penalties": {
+          "won": null,
+          "scores": null,
+          "missed": null,
+          "committed": null,
+          "saves": null
+        },
+        "shots": {
+          "shots_total": null,
+          "shots_on_target": null,
+          "shots_off_target": null
+        }
+      },
+      {
+        "player_id": 1478176,
+        "position_id": 2,
+        "number": null,
+        "captain": 0,
+        "injured": false,
+        "minutes": null,
+        "appearences": null,
+        "lineups": null,
+        "substitute_in": null,
+        "substitute_out": null,
+        "substitutes_on_bench": null,
+        "goals": null,
+        "owngoals": null,
+        "assists": null,
+        "saves": null,
+        "inside_box_saves": null,
+        "dispossesed": null,
+        "interceptions": null,
+        "yellowcards": null,
+        "yellowred": null,
+        "redcards": null,
+        "tackles": null,
+        "blocks": null,
+        "hit_post": null,
+        "cleansheets": null,
+        "rating": null,
+        "fouls": {
+          "committed": null,
+          "drawn": null
+        },
+        "crosses": {
+          "total": null,
+          "accurate": null
+        },
+        "dribbles": {
+          "attempts": null,
+          "success": null,
+          "dribbled_past": null
+        },
+        "duels": {
+          "total": null,
+          "won": null
+        },
+        "passes": {
+          "total": null,
+          "accuracy": null,
+          "key_passes": null
+        },
+        "penalties": {
+          "won": null,
+          "scores": null,
+          "missed": null,
+          "committed": null,
+          "saves": null
+        },
+        "shots": {
+          "shots_total": null,
+          "shots_on_target": null,
+          "shots_off_target": null
+        }
+      },
+      {
+        "player_id": 25206251,
+        "position_id": 3,
+        "number": null,
+        "captain": 0,
+        "injured": false,
+        "minutes": null,
+        "appearences": null,
+        "lineups": null,
+        "substitute_in": null,
+        "substitute_out": null,
+        "substitutes_on_bench": null,
+        "goals": null,
+        "owngoals": null,
+        "assists": null,
+        "saves": null,
+        "inside_box_saves": null,
+        "dispossesed": null,
+        "interceptions": null,
+        "yellowcards": null,
+        "yellowred": null,
+        "redcards": null,
+        "tackles": null,
+        "blocks": null,
+        "hit_post": null,
+        "cleansheets": null,
+        "rating": null,
+        "fouls": {
+          "committed": null,
+          "drawn": null
+        },
+        "crosses": {
+          "total": null,
+          "accurate": null
+        },
+        "dribbles": {
+          "attempts": null,
+          "success": null,
+          "dribbled_past": null
+        },
+        "duels": {
+          "total": null,
+          "won": null
+        },
+        "passes": {
+          "total": null,
+          "accuracy": null,
+          "key_passes": null
+        },
+        "penalties": {
+          "won": null,
+          "scores": null,
+          "missed": null,
+          "committed": null,
+          "saves": null
+        },
+        "shots": {
+          "shots_total": null,
+          "shots_on_target": null,
+          "shots_off_target": null
+        }
+      },
+      {
+        "player_id": 1256,
+        "position_id": 2,
+        "number": null,
+        "captain": 0,
+        "injured": false,
+        "minutes": null,
+        "appearences": null,
+        "lineups": null,
+        "substitute_in": null,
+        "substitute_out": null,
+        "substitutes_on_bench": null,
+        "goals": null,
+        "owngoals": null,
+        "assists": null,
+        "saves": null,
+        "inside_box_saves": null,
+        "dispossesed": null,
+        "interceptions": null,
+        "yellowcards": null,
+        "yellowred": null,
+        "redcards": null,
+        "tackles": null,
+        "blocks": null,
+        "hit_post": null,
+        "cleansheets": null,
+        "rating": null,
+        "fouls": {
+          "committed": null,
+          "drawn": null
+        },
+        "crosses": {
+          "total": null,
+          "accurate": null
+        },
+        "dribbles": {
+          "attempts": null,
+          "success": null,
+          "dribbled_past": null
+        },
+        "duels": {
+          "total": null,
+          "won": null
+        },
+        "passes": {
+          "total": null,
+          "accuracy": null,
+          "key_passes": null
+        },
+        "penalties": {
+          "won": null,
+          "scores": null,
+          "missed": null,
+          "committed": null,
+          "saves": null
+        },
+        "shots": {
+          "shots_total": null,
+          "shots_on_target": null,
+          "shots_off_target": null
+        }
+      },
+      {
+        "player_id": 1345,
+        "position_id": 4,
+        "number": null,
+        "captain": 0,
+        "injured": false,
+        "minutes": null,
+        "appearences": null,
+        "lineups": null,
+        "substitute_in": null,
+        "substitute_out": null,
+        "substitutes_on_bench": null,
+        "goals": null,
+        "owngoals": null,
+        "assists": null,
+        "saves": null,
+        "inside_box_saves": null,
+        "dispossesed": null,
+        "interceptions": null,
+        "yellowcards": null,
+        "yellowred": null,
+        "redcards": null,
+        "tackles": null,
+        "blocks": null,
+        "hit_post": null,
+        "cleansheets": null,
+        "rating": null,
+        "fouls": {
+          "committed": null,
+          "drawn": null
+        },
+        "crosses": {
+          "total": null,
+          "accurate": null
+        },
+        "dribbles": {
+          "attempts": null,
+          "success": null,
+          "dribbled_past": null
+        },
+        "duels": {
+          "total": null,
+          "won": null
+        },
+        "passes": {
+          "total": null,
+          "accuracy": null,
+          "key_passes": null
+        },
+        "penalties": {
+          "won": null,
+          "scores": null,
+          "missed": null,
+          "committed": null,
+          "saves": null
+        },
+        "shots": {
+          "shots_total": null,
+          "shots_on_target": null,
+          "shots_off_target": null
+        }
+      },
+      {
+        "player_id": 61747,
+        "position_id": 2,
+        "number": null,
+        "captain": 0,
+        "injured": false,
+        "minutes": null,
+        "appearences": null,
+        "lineups": null,
+        "substitute_in": null,
+        "substitute_out": null,
+        "substitutes_on_bench": null,
+        "goals": null,
+        "owngoals": null,
+        "assists": null,
+        "saves": null,
+        "inside_box_saves": null,
+        "dispossesed": null,
+        "interceptions": null,
+        "yellowcards": null,
+        "yellowred": null,
+        "redcards": null,
+        "tackles": null,
+        "blocks": null,
+        "hit_post": null,
+        "cleansheets": null,
+        "rating": null,
+        "fouls": {
+          "committed": null,
+          "drawn": null
+        },
+        "crosses": {
+          "total": null,
+          "accurate": null
+        },
+        "dribbles": {
+          "attempts": null,
+          "success": null,
+          "dribbled_past": null
+        },
+        "duels": {
+          "total": null,
+          "won": null
+        },
+        "passes": {
+          "total": null,
+          "accuracy": null,
+          "key_passes": null
+        },
+        "penalties": {
+          "won": null,
+          "scores": null,
+          "missed": null,
+          "committed": null,
+          "saves": null
+        },
+        "shots": {
+          "shots_total": null,
+          "shots_on_target": null,
+          "shots_off_target": null
+        }
+      },
+      {
+        "player_id": 25548706,
+        "position_id": 4,
+        "number": null,
+        "captain": 0,
+        "injured": false,
+        "minutes": null,
+        "appearences": null,
+        "lineups": null,
+        "substitute_in": null,
+        "substitute_out": null,
+        "substitutes_on_bench": null,
+        "goals": null,
+        "owngoals": null,
+        "assists": null,
+        "saves": null,
+        "inside_box_saves": null,
+        "dispossesed": null,
+        "interceptions": null,
+        "yellowcards": null,
+        "yellowred": null,
+        "redcards": null,
+        "tackles": null,
+        "blocks": null,
+        "hit_post": null,
+        "cleansheets": null,
+        "rating": null,
+        "fouls": {
+          "committed": null,
+          "drawn": null
+        },
+        "crosses": {
+          "total": null,
+          "accurate": null
+        },
+        "dribbles": {
+          "attempts": null,
+          "success": null,
+          "dribbled_past": null
+        },
+        "duels": {
+          "total": null,
+          "won": null
+        },
+        "passes": {
+          "total": null,
+          "accuracy": null,
+          "key_passes": null
+        },
+        "penalties": {
+          "won": null,
+          "scores": null,
+          "missed": null,
+          "committed": null,
+          "saves": null
+        },
+        "shots": {
+          "shots_total": null,
+          "shots_on_target": null,
+          "shots_off_target": null
+        }
+      },
+      {
+        "player_id": 37644710,
+        "position_id": 4,
+        "number": null,
+        "captain": 0,
+        "injured": false,
+        "minutes": null,
+        "appearences": null,
+        "lineups": null,
+        "substitute_in": null,
+        "substitute_out": null,
+        "substitutes_on_bench": null,
+        "goals": null,
+        "owngoals": null,
+        "assists": null,
+        "saves": null,
+        "inside_box_saves": null,
+        "dispossesed": null,
+        "interceptions": null,
+        "yellowcards": null,
+        "yellowred": null,
+        "redcards": null,
+        "tackles": null,
+        "blocks": null,
+        "hit_post": null,
+        "cleansheets": null,
+        "rating": null,
+        "fouls": {
+          "committed": null,
+          "drawn": null
+        },
+        "crosses": {
+          "total": null,
+          "accurate": null
+        },
+        "dribbles": {
+          "attempts": null,
+          "success": null,
+          "dribbled_past": null
+        },
+        "duels": {
+          "total": null,
+          "won": null
+        },
+        "passes": {
+          "total": null,
+          "accuracy": null,
+          "key_passes": null
+        },
+        "penalties": {
+          "won": null,
+          "scores": null,
+          "missed": null,
+          "committed": null,
+          "saves": null
+        },
+        "shots": {
+          "shots_total": null,
+          "shots_on_target": null,
+          "shots_off_target": null
+        }
+      },
+      {
+        "player_id": 24487,
+        "position_id": 1,
+        "number": null,
+        "captain": 0,
+        "injured": false,
+        "minutes": null,
+        "appearences": null,
+        "lineups": null,
+        "substitute_in": null,
+        "substitute_out": null,
+        "substitutes_on_bench": null,
+        "goals": null,
+        "owngoals": null,
+        "assists": null,
+        "saves": null,
+        "inside_box_saves": null,
+        "dispossesed": null,
+        "interceptions": null,
+        "yellowcards": null,
+        "yellowred": null,
+        "redcards": null,
+        "tackles": null,
+        "blocks": null,
+        "hit_post": null,
+        "cleansheets": null,
+        "rating": null,
+        "fouls": {
+          "committed": null,
+          "drawn": null
+        },
+        "crosses": {
+          "total": null,
+          "accurate": null
+        },
+        "dribbles": {
+          "attempts": null,
+          "success": null,
+          "dribbled_past": null
+        },
+        "duels": {
+          "total": null,
+          "won": null
+        },
+        "passes": {
+          "total": null,
+          "accuracy": null,
+          "key_passes": null
+        },
+        "penalties": {
+          "won": null,
+          "scores": null,
+          "missed": null,
+          "committed": null,
+          "saves": null
+        },
+        "shots": {
+          "shots_total": null,
+          "shots_on_target": null,
+          "shots_off_target": null
+        }
+      },
+      {
+        "player_id": 242484,
+        "position_id": 2,
+        "number": null,
+        "captain": 0,
+        "injured": false,
+        "minutes": null,
+        "appearences": null,
+        "lineups": null,
+        "substitute_in": null,
+        "substitute_out": null,
+        "substitutes_on_bench": null,
+        "goals": null,
+        "owngoals": null,
+        "assists": null,
+        "saves": null,
+        "inside_box_saves": null,
+        "dispossesed": null,
+        "interceptions": null,
+        "yellowcards": null,
+        "yellowred": null,
+        "redcards": null,
+        "tackles": null,
+        "blocks": null,
+        "hit_post": null,
+        "cleansheets": null,
+        "rating": null,
+        "fouls": {
+          "committed": null,
+          "drawn": null
+        },
+        "crosses": {
+          "total": null,
+          "accurate": null
+        },
+        "dribbles": {
+          "attempts": null,
+          "success": null,
+          "dribbled_past": null
+        },
+        "duels": {
+          "total": null,
+          "won": null
+        },
+        "passes": {
+          "total": null,
+          "accuracy": null,
+          "key_passes": null
+        },
+        "penalties": {
+          "won": null,
+          "scores": null,
+          "missed": null,
+          "committed": null,
+          "saves": null
+        },
+        "shots": {
+          "shots_total": null,
+          "shots_on_target": null,
+          "shots_off_target": null
+        }
+      }
+    ]
+  }
+}
