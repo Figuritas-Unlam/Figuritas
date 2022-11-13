@@ -1,0 +1,50 @@
+{
+  "data": {
+    "id": 15251,
+    "legacy_id": 1355,
+    "name": "Uruguay",
+    "short_code": "URU",
+    "twitter": null,
+    "country_id": 158,
+    "national_team": true,
+    "founded": 1900,
+    "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/19/15251.png",
+    "venue_id": 10900,
+    "current_season_id": 18017,
+    "is_placeholder": false,
+    "squad": {
+      "data": [
+        {
+        "player_id": 128229
+        },
+        {
+        "player_id": 25333
+        },
+        {
+        "player_id": 254173
+        },
+        {
+        "player_id": 5393
+        },
+        {
+        "player_id": 456276
+        },
+        {
+        "player_id": 219418
+        },
+        {
+        "player_id": 260880
+        },
+        {
+        "player_id": 20673398
+        },
+        {
+        "player_id": 130022
+        },
+        {
+      "player_id": 260862
+      }
+      ]
+    }
+  }
+}

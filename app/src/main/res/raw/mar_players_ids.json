@@ -1,0 +1,48 @@
+{
+  "id": 18551,
+  "legacy_id": 1354,
+  "name": "Morocco",
+  "short_code": "MAR",
+  "twitter": null,
+  "country_id": 1424,
+  "national_team": true,
+  "founded": 1955,
+  "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18551.png",
+  "venue_id": 1679,
+  "current_season_id": 20776,
+  "is_placeholder": false,
+  "squad": {
+    "data": [
+      {
+        "player_id": 186591
+      },
+      {
+        "player_id": 188803
+      },
+      {
+        "player_id": 7144
+      },
+      {
+        "player_id": 187260
+      },
+      {
+        "player_id": 25489
+      },
+      {
+        "player_id": 21803033
+      },
+      {
+        "player_id": 62786
+      },
+      {
+        "player_id": 1452400
+      },
+      {
+        "player_id": 24288
+      },
+      {
+        "player_id": 36457
+      }
+    ]
+  }
+}

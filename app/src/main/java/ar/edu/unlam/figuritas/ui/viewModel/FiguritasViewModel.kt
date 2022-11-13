@@ -1,5 +1,6 @@
 package ar.edu.unlam.figuritas.ui.viewModel
 
+import android.hardware.SensorManager
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -17,7 +18,8 @@ class FiguritasViewModel @Inject constructor(
 ) : ViewModel() {
 
     //private val playerList = MutableLiveData<PlayerResponse?>()
-     val playerList = MutableLiveData<MutableList<PlayerResponse?>>()
+    lateinit var sensorManager: SensorManager
+    val playerList = MutableLiveData<MutableList<PlayerResponse?>>()
 
 
     fun getplayer() {
