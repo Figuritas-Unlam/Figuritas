@@ -10,6 +10,7 @@ import android.os.Bundle
 import android.os.Vibrator
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.viewModels
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -38,6 +39,7 @@ import ar.edu.unlam.figuritas.model.response.MockPlayerProvisorio
 import ar.edu.unlam.figuritas.ui.activities.ui.theme.FiguritasTheme
 import ar.edu.unlam.figuritas.ui.activities.ui.theme.Orange
 import ar.edu.unlam.figuritas.ui.activities.ui.theme.RedQatar
+import ar.edu.unlam.figuritas.ui.viewModel.FiguritasViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
