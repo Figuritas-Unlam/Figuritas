@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/figurita"
     android:layout_width="100dp"
     android:layout_height="140dp"
@@ -30,11 +30,12 @@
             >
 
             <TextView
+                android:id="@+id/nationality"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="5dp"
+                android:textSize="5sp"
                 android:textStyle="bold"
-                android:text="ARG"
+                tools:text="ARG"
                 android:gravity="center"
                 android:textColor="@color/red_qatar"
                 android:background="@color/white"
@@ -60,7 +61,7 @@
                     android:textStyle="bold"
                     android:textColor="@color/white"
                     android:text="Kg"
-                    android:textSize="5dp"
+                    android:textSize="5sp"
                     android:gravity="center"
                     android:layout_weight="2"
                     />
@@ -69,7 +70,7 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:textColor="@color/white"
-                    android:textSize="5dp"
+                    android:textSize="5sp"
                     android:gravity="center"
                     android:layout_weight="2"
                     android:text="Mt"
@@ -88,8 +89,8 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:textColor="@color/white"
-                    android:text="72"
-                    android:textSize="7dp"
+                    tools:text="72"
+                    android:textSize="7sp"
                     android:gravity="center"
                     android:layout_weight="2"
                     />
@@ -99,11 +100,11 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:textColor="@color/white"
-                    android:textSize="7dp"
+                    android:textSize="7sp"
                     android:layout_marginStart="1dp"
                     android:gravity="center"
                     android:layout_weight="2"
-                    android:text="1,70"
+                    tools:text="1,70"
                     />
             </LinearLayout>
         </LinearLayout>
@@ -130,18 +131,19 @@
                 android:background="@drawable/nombre"
                 android:gravity="center"
                 android:textStyle="bold"
-                android:text="LIONEL MESSI"
+                tools:text="LIONEL MESSI"
                 android:textColor="@color/red_qatar"
-                android:textSize="7dp" />
+                android:textSize="7sp" />
 
             <TextView
+                android:id="@+id/birthdate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="@color/red_qatar"
-                android:text="24-6-1987"
+                tools:text="24-6-1987"
                 android:textColor="@color/white"
-                android:textSize="5dp"
+                android:textSize="5sp"
                 android:textStyle="bold"
                 />
 

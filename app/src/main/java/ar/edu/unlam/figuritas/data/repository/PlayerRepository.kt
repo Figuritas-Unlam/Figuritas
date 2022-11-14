@@ -8,7 +8,6 @@ import javax.inject.Inject
 
 class PlayerRepository @Inject constructor(private val playerClient: PlayerClient) {
 
-
     suspend fun getPlayerById(playerId : Int) : Response<PlayerResponse> {
         return playerClient.searchPlayerById(playerId)
     }
@@ -18,7 +17,9 @@ class PlayerRepository @Inject constructor(private val playerClient: PlayerClien
     }
 
     suspend fun getRandomPlayers(qty: Int) : List<PlayerResponse?> {
-        return List(qty) { getPlayerById(getRandomPlayerId()).body() }
+        return List(qty) {
+            getPlayerById(getRandomPlayerId()).body()
+        }
     }
 
     private suspend fun getRandomPlayerId() : Int {

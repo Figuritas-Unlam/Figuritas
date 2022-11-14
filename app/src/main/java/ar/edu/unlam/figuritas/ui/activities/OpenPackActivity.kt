@@ -3,7 +3,6 @@ package ar.edu.unlam.figuritas.ui.activities
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.ImageView
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import ar.edu.unlam.figuritas.BuildConfig
@@ -11,7 +10,7 @@ import ar.edu.unlam.figuritas.databinding.ActivityOpenPackBinding
 import dagger.hilt.android.AndroidEntryPoint
 import ar.edu.unlam.figuritas.ui.OpenPackViewModel
 import ar.edu.unlam.figuritas.model.response.PlayerResponse
-import com.squareup.picasso.Picasso
+import ar.edu.unlam.figuritas.ui.fragments.StickerItemFragment
 
 @AndroidEntryPoint
 class OpenPackActivity : AppCompatActivity() {
@@ -28,23 +27,23 @@ class OpenPackActivity : AppCompatActivity() {
 
         incomingCard = binding.stickerView1
 
-        var height = 100f
+        var height = 300f
         var incomingCardNumber = 1
 
         binding.button.setOnClickListener {
             currentCard?.animate()?.setDuration(1000)?.x(600f)?.y(height)
-            incomingCard.animate().setDuration(1000).y(400f)
+            incomingCard.animate().setDuration(1000).y(550f)
 
             currentCard = incomingCard
             updateViews(++incomingCardNumber)
-            height += 100
+            height += 150
         }
 
         setContentView(view)
     }
 
     private fun suscribeToViewModel() {
-        openPackViewModel.playerData.observe(this) { it ->
+        openPackViewModel.playersData.observe(this) {
             Log.d("RESPONSE:", it.toString())
             setPackPlayers(it)
         }
@@ -52,13 +51,10 @@ class OpenPackActivity : AppCompatActivity() {
 
     private fun setPackPlayers(playersData: List<PlayerResponse?>) {
         for((index, playerData) in playersData.withIndex()) {
-            val stickerView = binding.root.findViewById<View>(resources.getIdentifier("stickerView${index+1}", "id",
+            val stickerView = supportFragmentManager.findFragmentById((resources.getIdentifier("stickerView${index+1}", "id",
                 BuildConfig.APPLICATION_ID
-            ))
-            val imageView = stickerView.findViewById<ImageView>(resources.getIdentifier("imagenJugador", "id",
-                BuildConfig.APPLICATION_ID
-            ))
-            Picasso.get().load(playerData?.data?.image).into(imageView)
+            ))) as StickerItemFragment
+            playerData?.data?.let { stickerView.passPlayerDataToFragment(it) }
         }
     }
 
@@ -80,10 +76,13 @@ class OpenPackActivity : AppCompatActivity() {
                     cardView.animate()
                         .setDuration(1000)
                         .setStartDelay((300*(cardNumber-1)).toLong())
-                        .x(20f)
-                        .y(500f)
+                        .y(600f)
                 } else {
-                    cardView.animate().setDuration(1000).setStartDelay((300*(cardNumber-1)).toLong()).x(10f*cardNumber).y(120f*(cardNumber+2))
+                    cardView.animate()
+                        .setDuration(1000)
+                        .setStartDelay((300*(cardNumber-1)).toLong())
+                        .x(280f+(40*cardNumber))
+                        .y(400f+(cardNumber*80))
                 }
             }
         }
