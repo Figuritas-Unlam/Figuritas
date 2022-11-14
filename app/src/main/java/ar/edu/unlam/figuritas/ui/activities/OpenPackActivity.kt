@@ -30,7 +30,7 @@ class OpenPackActivity : AppCompatActivity() {
         var height = 300f
         var incomingCardNumber = 1
 
-        binding.button.setOnClickListener {
+        binding.nextButton.setOnClickListener {
             currentCard?.animate()?.setDuration(1000)?.x(600f)?.y(height)
             incomingCard.animate().setDuration(1000).y(550f)
 
@@ -46,6 +46,8 @@ class OpenPackActivity : AppCompatActivity() {
         openPackViewModel.playersData.observe(this) {
             Log.d("RESPONSE:", it.toString())
             setPackPlayers(it)
+            binding.loader.visibility = View.GONE
+            binding.nextButton.visibility = View.VISIBLE
         }
     }
 
@@ -64,8 +66,8 @@ class OpenPackActivity : AppCompatActivity() {
                 BuildConfig.APPLICATION_ID
             ))
         } else {
-            binding.button.animate().setDuration(300).alpha(0F).withEndAction {
-                binding.button.visibility = View.GONE
+            binding.nextButton.animate().setDuration(300).alpha(0F).withEndAction {
+                binding.nextButton.visibility = View.GONE
             }
             for (cardNumber in 1..5) {
                 val cardView: View = binding.root
