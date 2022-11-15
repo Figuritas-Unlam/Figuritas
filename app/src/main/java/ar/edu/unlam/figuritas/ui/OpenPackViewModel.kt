@@ -1,5 +1,7 @@
 package ar.edu.unlam.figuritas.ui
 
+import android.hardware.SensorManager
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -11,13 +13,23 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class OpenPackViewModel @Inject constructor(repository: PlayerRepository): ViewModel() {
-    private val _playerData = MutableLiveData<List<PlayerResponse?>>()
-    val playerData:LiveData<List<PlayerResponse?>> = _playerData
+class OpenPackViewModel @Inject constructor(private val repository: PlayerRepository): ViewModel() {
+    private val _playersData = MutableLiveData<List<PlayerResponse?>>()
+    val playersData:LiveData<List<PlayerResponse?>> = _playersData
 
     init {
+        fetchPlayers()
+    }
+
+
+    private fun fetchPlayers() {
         viewModelScope.launch {
-            _playerData.value = repository.getRandomPlayers(5)
+            try {
+                _playersData.value = repository.getRandomPlayers(5)
+            } catch (e: RuntimeException) {
+                e.printStackTrace()
+                Log.e("Error fetching players", e.message.toString())
+            }
         }
     }
 }

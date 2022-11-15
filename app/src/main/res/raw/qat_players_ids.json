@@ -1,0 +1,48 @@
+{
+  "id": 18544,
+  "legacy_id": 1339,
+  "name": "Qatar",
+  "short_code": "QAT",
+  "twitter": null,
+  "country_id": 74505,
+  "national_team": true,
+  "founded": 1960,
+  "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/16/18544.png",
+  "venue_id": 14371,
+  "current_season_id": 18017,
+  "is_placeholder": false,
+  "squad": {
+    "data": [
+      {
+        "player_id": 301629
+      },
+      {
+        "player_id": 4599015
+      },
+      {
+        "player_id": 16488492
+      },
+      {
+        "player_id": 301393
+      },
+      {
+        "player_id": 301946
+      },
+      {
+        "player_id": 301352
+      },
+      {
+        "player_id": 303634
+      },
+      {
+        "player_id": 1076941
+      },
+      {
+        "player_id": 301403
+      },
+      {
+        "player_id": 301764
+      }
+    ]
+  }
+}

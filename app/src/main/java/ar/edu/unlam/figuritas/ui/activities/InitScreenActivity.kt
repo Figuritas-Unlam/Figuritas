@@ -1,7 +1,13 @@
 package ar.edu.unlam.figuritas.ui.activities
 
+import android.content.Context
 import android.content.Intent
+import android.hardware.Sensor
+import android.hardware.SensorEvent
+import android.hardware.SensorEventListener
+import android.hardware.SensorManager
 import android.os.Bundle
+import android.os.Vibrator
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.motion.widget.MotionLayout
@@ -10,10 +16,10 @@ import ar.edu.unlam.figuritas.ui.viewModel.FiguritasViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class InitScreenActivity : AppCompatActivity() {
+class InitScreenActivity : AppCompatActivity() , SensorEventListener {
 
     private lateinit var binding: ActivityInitScreenBinding
-    val viewModel: FiguritasViewModel by viewModels()
+    private val viewModel: FiguritasViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,7 +30,7 @@ class InitScreenActivity : AppCompatActivity() {
             startActivity(openPackActivityIntent)
         }
         setContentView(binding.root)
-
+        setShakeSensor()
         initMotionLayout()
         initOpenPack()
         initMisFiguritas()
@@ -86,5 +92,41 @@ class InitScreenActivity : AppCompatActivity() {
 
     }
 
+    //Sense Shake
+    private fun setShakeSensor() {
+        viewModel.sensorManager= getSystemService(Context.SENSOR_SERVICE) as SensorManager
+    }
+
+    override fun onSensorChanged(srEvent: SensorEvent?) {
+        if(srEvent!=null && srEvent.sensor.type == Sensor.TYPE_ACCELEROMETER){
+            startOpenPack(srEvent)
+        }
+    }
+
+    override fun onAccuracyChanged(p0: Sensor?, p1: Int) {}
+
+    private fun startOpenPack(event: SensorEvent) {
+        val xVal = event.values[0]
+        val yVal = event.values[1]
+        val zVal = event.values[2]
+        val accelerationSquareRoot = (xVal * xVal + yVal * yVal + zVal * zVal) / (SensorManager.GRAVITY_EARTH * SensorManager.GRAVITY_EARTH)
+        if (accelerationSquareRoot >= 12) {
+            val vibrator = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+            vibrator.vibrate(300)
+            val openPackActivityIntent = Intent(baseContext, OpenPackActivity::class.java)
+            startActivity(openPackActivityIntent)
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        viewModel.sensorManager.registerListener(this,
+            viewModel.sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER), SensorManager.SENSOR_DELAY_NORMAL)
+    }
+
+    override fun onPause() {
+        super.onPause()
+        viewModel.sensorManager.unregisterListener(this)
+    }
 
 }
