@@ -1,60 +1,101 @@
 package ar.edu.unlam.figuritas.ui.viewModel
 
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import ar.edu.unlam.figuritas.data.api.PlayerAPI
+import ar.edu.unlam.figuritas.data.repository.DatabaseRepository
+import ar.edu.unlam.figuritas.data.repository.PlayerRepository
+import ar.edu.unlam.figuritas.model.Seleccion
+import ar.edu.unlam.figuritas.model.WorldCupTeamId
 import ar.edu.unlam.figuritas.model.entities.PlayerEntity
 import ar.edu.unlam.figuritas.model.response.PlayerResponse
+import ar.edu.unlam.figuritas.model.response.PlayerResponseData
+import ar.edu.unlam.figuritas.model.response.Position
+import ar.edu.unlam.figuritas.model.response.PositionData
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class AlbumViewModel @Inject constructor() : ViewModel(){
+class AlbumViewModel @Inject constructor(var databaseRepository: DatabaseRepository, var playerRepository: PlayerRepository) : ViewModel(){
 
-    private var listCountrys = mutableListOf<String>()
-    private var listPlayers = mutableListOf<PlayerEntity>()
+    var listSquads = mutableListOf<Seleccion>()
+    var listCountries = mutableListOf<WorldCupTeamId>()
+    var playersLiveData = MutableLiveData<List<PlayerEntity>>()
+/*
+    fun searchPlayersAvailable(){
+        playersLiveData.value = databaseRepository.searchAllPlayers()
 
+    }
+*/
+    fun searchPlayers() : MutableList<Seleccion>{
+        setCountrys()
+        for(countryTeam in listCountries) {
+            listSquads.add(insertPlayers(countryTeam))
+        }
+        return listSquads
+    }
+
+
+    fun insertPlayers(team : WorldCupTeamId) : Seleccion {
+        val seleccion = Seleccion(team.name, mutableListOf())
+        viewModelScope.launch {
+
+            val response = playerRepository.getPlayersByCountry(team)
+            if (response != null) {
+                for(player in response){
+                    seleccion.players.add(player!!.data)
+                }
+            }
+        }
+        return seleccion
+    }
 
     fun setCountrys(){
 
-        listCountrys.add("Qatar")
-        listCountrys.add("Ecuador")
-        listCountrys.add("Senegal")
-        listCountrys.add("Netherlands")
+        listCountries.add(WorldCupTeamId.QATAR)
+        listCountries.add(WorldCupTeamId.ECUADOR)
+        listCountries.add(WorldCupTeamId.SENEGAL)
+        listCountries.add(WorldCupTeamId.NETHERLANDS)
 
-        listCountrys.add("England")
-        listCountrys.add("IR Iran")
-        listCountrys.add("USA")
-        listCountrys.add("Wales")
+        listCountries.add(WorldCupTeamId.ENGLAND)
+        listCountries.add(WorldCupTeamId.IRAN)
+        listCountries.add(WorldCupTeamId.UNITED_STATES)
+        listCountries.add(WorldCupTeamId.WALES)
 
-        listCountrys.add("Argentina")
-        listCountrys.add("Saudi Arabia")
-        listCountrys.add("Mexico")
-        listCountrys.add("Poland")
+        listCountries.add(WorldCupTeamId.ARGENTINA)
+        listCountries.add(WorldCupTeamId.SAUDI_ARABIA)
+        listCountries.add(WorldCupTeamId.MEXICO)
+        listCountries.add(WorldCupTeamId.POLAND)
 
-        listCountrys.add("France")
-        listCountrys.add("Australia")
-        listCountrys.add("Denmark")
-        listCountrys.add("Tunisia")
+        listCountries.add(WorldCupTeamId.FRANCE)
+        listCountries.add(WorldCupTeamId.AUSTRALIA)
+        listCountries.add(WorldCupTeamId.DENMARK)
+        listCountries.add(WorldCupTeamId.TUNISIA)
 
-        listCountrys.add("Spain")
-        listCountrys.add("Costa Rica")
-        listCountrys.add("Germany")
-        listCountrys.add("Japan")
+        listCountries.add(WorldCupTeamId.SPAIN)
+        listCountries.add(WorldCupTeamId.COSTA_RICA)
+        listCountries.add(WorldCupTeamId.GERMANY)
+        listCountries.add(WorldCupTeamId.JAPAN)
 
-        listCountrys.add("Belgium")
-        listCountrys.add("Canada")
-        listCountrys.add("Morocco")
-        listCountrys.add("Croatia")
+        listCountries.add(WorldCupTeamId.BELGIUM)
+        listCountries.add(WorldCupTeamId.CANADA)
+        listCountries.add(WorldCupTeamId.MOROCCO)
+        listCountries.add(WorldCupTeamId.CROATIA)
 
-        listCountrys.add("Brazil")
-        listCountrys.add("Serbia")
-        listCountrys.add("Switzerland")
-        listCountrys.add("Cameroon")
+        listCountries.add(WorldCupTeamId.BRAZIL)
+        listCountries.add(WorldCupTeamId.SERBIA)
+        listCountries.add(WorldCupTeamId.SWITZERLAND)
+        listCountries.add(WorldCupTeamId.CAMEROON)
 
-        listCountrys.add("Portugal")
-        listCountrys.add("Ghana")
-        listCountrys.add("Uruguay")
-        listCountrys.add("Korea Republic")
+        listCountries.add(WorldCupTeamId.PORTUGAL)
+        listCountries.add(WorldCupTeamId.GHANA)
+        listCountries.add(WorldCupTeamId.URUGUAY)
+        listCountries.add(WorldCupTeamId.KOREA_REPUBLIC)
 
 
     }
+
+
 }
