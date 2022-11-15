@@ -28,5 +28,11 @@ data class PlayerEntity (
     val teamId : Int,
 
     @ColumnInfo(name = "Seleccion_Id")
-    val seleccionId : Int
-        )
+    val seleccionId : Int,
+
+    @ColumnInfo(name = "Quantity")
+    var quantity : Int,
+
+    @ColumnInfo(name = "In_Album")
+    var inAlbum : Boolean
+    )
