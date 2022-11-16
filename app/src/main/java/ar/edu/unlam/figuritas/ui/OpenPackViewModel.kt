@@ -39,9 +39,7 @@ class OpenPackViewModel @Inject constructor(private val repository: PlayerReposi
     private fun insertPlayerDatabase(players : List<PlayerResponse?>?)
     {
         for(player in players!!){
-            viewModelScope.launch{
                 databaseRepository.insertPlayer(player!!)
-            }
         }
     }
 }

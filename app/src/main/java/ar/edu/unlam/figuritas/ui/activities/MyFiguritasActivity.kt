@@ -42,9 +42,7 @@ import ar.edu.unlam.figuritas.ui.activities.ui.theme.FiguritasTheme
 import ar.edu.unlam.figuritas.ui.activities.ui.theme.Orange
 import ar.edu.unlam.figuritas.ui.activities.ui.theme.RedQatar
 import ar.edu.unlam.figuritas.ui.viewModel.FiguritasViewModel
-import com.squareup.picasso.Picasso
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.CoroutineScope
 
 @AndroidEntryPoint
 class MyFiguritasActivity : ComponentActivity(), SensorEventListener {
@@ -53,6 +51,7 @@ class MyFiguritasActivity : ComponentActivity(), SensorEventListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
+            viewModel.getplayer()
             FiguritasTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
@@ -166,14 +165,14 @@ fun FiguritaNuevasTxt() {
 fun RvNuevas(viewModel: FiguritasViewModel) {
     //val rememberPlayers = remember { viewModel.playerList }
     LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(8.dp)) {
-        items(viewModel.playerList) { player ->
+        items(viewModel.getMessiMock()) { player ->
                 FiguritasNuevas(player = player)
 
         }
     }
 }
 
-fun getMessiMock(): List<Player> {
+fun getMessiMock(): MutableList<Player> {
     return mutableListOf(
         Player(123,"nano","ddd","123","123","22/2/00",4),
         Player(123,"nano","ddd","123","123","22/2/00",4),
@@ -357,6 +356,8 @@ fun FiguritasRepetidas(player: Player) {
 @Composable
 fun RvRepetidas(viewModel: FiguritasViewModel) {
    // val rememberPlayers = remember { viewModel.playerList }
+    val li=viewModel.playerList
+    val lil=viewModel.list
     LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(8.dp)) {
         items(viewModel.playerList) { player ->
             FiguritasRepetidas(player = player)

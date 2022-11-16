@@ -25,7 +25,8 @@ class DatabaseRepository @Inject constructor(private val playerDao: PlayerDao) {
             playerDao.sumQuantity(idPlayerResponse)
         }
     }
-    fun getPlayers(): MutableList<Player>{
+
+    suspend fun getPlayers(): MutableList<Player>{
         val players= mutableListOf<Player>()
         val entityPlayers=playerDao.getAllPlayers()
         entityPlayers.forEach {
