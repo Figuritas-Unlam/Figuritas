@@ -3,32 +3,25 @@ package ar.edu.unlam.figuritas.ui.viewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import ar.edu.unlam.figuritas.data.api.PlayerAPI
-import ar.edu.unlam.figuritas.data.repository.DatabaseRepository
 import ar.edu.unlam.figuritas.data.repository.PlayerRepository
 import ar.edu.unlam.figuritas.model.Seleccion
 import ar.edu.unlam.figuritas.model.WorldCupTeamId
 import ar.edu.unlam.figuritas.model.entities.PlayerEntity
-import ar.edu.unlam.figuritas.model.response.PlayerResponse
-import ar.edu.unlam.figuritas.model.response.PlayerResponseData
-import ar.edu.unlam.figuritas.model.response.Position
-import ar.edu.unlam.figuritas.model.response.PositionData
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class AlbumViewModel @Inject constructor(var databaseRepository: DatabaseRepository, var playerRepository: PlayerRepository) : ViewModel(){
+class AlbumViewModel @Inject constructor(var playerRepository: PlayerRepository) : ViewModel(){
 
     var listSquads = mutableListOf<Seleccion>()
     var listCountries = mutableListOf<WorldCupTeamId>()
     var playersLiveData = MutableLiveData<List<PlayerEntity>>()
-/*
-    fun searchPlayersAvailable(){
-        playersLiveData.value = databaseRepository.searchAllPlayers()
 
+    fun searchPlayersAvailable(){
+        playersLiveData.value = playerRepository.searchAllPlayers()
     }
-*/
+
     fun searchPlayers() : MutableList<Seleccion>{
         setCountrys()
         for(countryTeam in listCountries) {
@@ -94,8 +87,6 @@ class AlbumViewModel @Inject constructor(var databaseRepository: DatabaseReposit
         listCountries.add(WorldCupTeamId.URUGUAY)
         listCountries.add(WorldCupTeamId.KOREA_REPUBLIC)
 
-
     }
-
 
 }
