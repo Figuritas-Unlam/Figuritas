@@ -3,33 +3,56 @@ package ar.edu.unlam.figuritas.ui.viewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import ar.edu.unlam.figuritas.data.api.PlayerAPI
+import ar.edu.unlam.figuritas.data.repository.DatabaseRepository
 import ar.edu.unlam.figuritas.data.repository.PlayerRepository
 import ar.edu.unlam.figuritas.model.Seleccion
 import ar.edu.unlam.figuritas.model.WorldCupTeamId
 import ar.edu.unlam.figuritas.model.entities.PlayerEntity
+import ar.edu.unlam.figuritas.model.response.PlayerResponse
+import ar.edu.unlam.figuritas.model.response.PlayerResponseData
+import ar.edu.unlam.figuritas.model.response.Position
+import ar.edu.unlam.figuritas.model.response.PositionData
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class AlbumViewModel @Inject constructor(var playerRepository: PlayerRepository) : ViewModel(){
+class AlbumViewModel @Inject constructor(var databaseRepository: DatabaseRepository, var playerRepository: PlayerRepository) : ViewModel(){
 
-    var listSquads = mutableListOf<Seleccion>()
+    var listPlayers = mutableListOf<PlayerResponseData>()
     var listCountries = mutableListOf<WorldCupTeamId>()
+    var listSquads = mutableListOf<Seleccion>()
+    var listSquadsLiveData = MutableLiveData<MutableList<Seleccion>>()
     var playersLiveData = MutableLiveData<List<PlayerEntity>>()
 
-    fun searchPlayersAvailable(){
-        playersLiveData.value = playerRepository.searchAllPlayers()
+    fun getSquads(): MutableLiveData<MutableList<Seleccion>>{
+        return this.listSquadsLiveData
     }
 
     fun searchPlayers() : MutableList<Seleccion>{
         setCountrys()
         for(countryTeam in listCountries) {
-            listSquads.add(insertPlayers(countryTeam))
+            insertPlayers2(countryTeam)
         }
         return listSquads
     }
 
+    fun insertPlayers2(team : WorldCupTeamId){
+        var numero = 26
+        while(numero > 0)
+        {
+            numero--
+            listPlayers.add(
+                PlayerResponseData(1, 2,3,"?",
+                    "?", "?", "?", "?", "?",
+                    "?", PositionData(Position(1, "?"))
+                )
+            )
+        }
+        val seleccion = Seleccion(team.name, listPlayers)
+        listSquads.add(seleccion)
+    }
 
     fun insertPlayers(team : WorldCupTeamId) : Seleccion {
         val seleccion = Seleccion(team.name, mutableListOf())

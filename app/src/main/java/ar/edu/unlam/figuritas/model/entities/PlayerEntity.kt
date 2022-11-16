@@ -2,7 +2,6 @@ package ar.edu.unlam.figuritas.model.entities
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
-import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
 
 
