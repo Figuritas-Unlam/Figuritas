@@ -1,4 +1,4 @@
-package ar.edu.unlam.figuritas.data
+package ar.edu.unlam.figuritas.di
 
 import android.content.Context
 import androidx.room.Room
@@ -17,7 +17,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-object NetworkModule {
+object AppModule {
 
     private const val BASE_URL = "https://soccer.sportmonks.com/api/v2.0/"
 
