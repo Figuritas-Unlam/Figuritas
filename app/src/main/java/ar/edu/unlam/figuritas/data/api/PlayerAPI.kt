@@ -17,4 +17,5 @@ interface PlayerAPI {
 
     @GET("teams/{countryId}?api_token=$API_KEY&include=squad")
     suspend fun searchPlayersByCountryId(@Path("countryId") countryId : Int) : Response<TeamResponse>
+
 }

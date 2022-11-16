@@ -1,0 +1,48 @@
+{
+  "id": 18554,
+  "legacy_id": 1348,
+  "name": "Tunisia",
+  "short_code": "TUN",
+  "twitter": null,
+  "country_id": 1439,
+  "national_team": true,
+  "founded": 1957,
+  "logo_path": "https://cdn.sportmonks.com/images/soccer/teams/26/18554.png",
+  "venue_id": 4563,
+  "current_season_id": 18017,
+  "is_placeholder": false,
+  "squad": {
+    "data": [
+      {
+        "player_id": 600694
+      },
+      {
+        "player_id": 306155
+      },
+      {
+        "player_id": 430355
+      },
+      {
+        "player_id": 304553
+      },
+      {
+        "player_id": 293923
+      },
+      {
+        "player_id": 305358
+      },
+      {
+        "player_id": 47280
+      },
+      {
+        "player_id": 37357411
+      },
+      {
+        "player_id": 98020
+      },
+      {
+        "player_id": 37316858
+      }
+    ]
+  }
+}
