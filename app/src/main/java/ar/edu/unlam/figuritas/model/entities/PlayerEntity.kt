@@ -32,6 +32,25 @@ data class PlayerEntity (
     @ColumnInfo(name = "Quantity")
     var quantity : Int,
 
+    @ColumnInfo(name = "image")
+    val imageUrl: String,
+
     @ColumnInfo(name = "In_Album")
     var inAlbum : Boolean
     )
+fun PlayerEntity.mapToPlayer(): Player=Player(this.playerId,
+    this.playerName,
+    this.imageUrl,
+    this.height,
+    this.weight,
+    this.birthdate,
+    this.quantity)
+data class Player (
+    val playerId : Int,
+    val playerName : String,
+    val imageUrl: String,
+    val height : String,
+    val weight : String,
+    val birthdate : String,
+    var quantity : Int,
+)

@@ -5,7 +5,8 @@ import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import ar.edu.unlam.figuritas.data.api.PlayerClient
+import ar.edu.unlam.figuritas.data.repository.DatabaseRepository
+import ar.edu.unlam.figuritas.model.entities.Player
 import ar.edu.unlam.figuritas.model.response.PlayerResponse
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -14,17 +15,20 @@ import javax.inject.Inject
 
 @HiltViewModel
 class FiguritasViewModel @Inject constructor(
-    private val playerClient: PlayerClient,
+    val playerDBRepository: DatabaseRepository,
 ) : ViewModel() {
 
     //private val playerList = MutableLiveData<PlayerResponse?>()
     lateinit var sensorManager: SensorManager
-    val playerList = MutableLiveData<MutableList<PlayerResponse?>>()
+    var playerList = mutableListOf<Player>()
+    var list: List<Player> = playerList
 
+    init {
+    }
 
-    fun getplayer() {
+    /*fun getplayer() {
         viewModelScope.launch {
-            val response = playerClient.searchPlayerById(5)
+            val response = playerDBRepository.searchPlayerById(5)
             if (response.isSuccessful && response.body() != null) {
                 val player = response.body()
                 playerList.value?.add(player)
@@ -34,7 +38,7 @@ class FiguritasViewModel @Inject constructor(
             }
         }
 
-    }
+    }*/
 
 
 }

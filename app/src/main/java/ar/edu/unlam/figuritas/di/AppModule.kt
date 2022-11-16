@@ -43,7 +43,7 @@ object AppModule {
             context,
             PlayerDatabase::class.java,
             "Figuritas_Database"
-        ).build()
+        ).fallbackToDestructiveMigration().build()
     }
 
     @Singleton

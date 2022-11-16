@@ -6,7 +6,7 @@ import ar.edu.unlam.figuritas.model.entities.PlayerEntity
 @Dao
 interface PlayerDao {
 
-    @Query("Select * From Players")
+    @Query("Select * From Players pa")
     fun getAllPlayers() : List<PlayerEntity>
 
     @Query("Select * From Players pa Where pa.Name = :namePlayer ")
