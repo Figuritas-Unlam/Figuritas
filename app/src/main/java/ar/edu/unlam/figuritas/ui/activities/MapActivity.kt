@@ -4,6 +4,7 @@ import android.Manifest
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import ar.edu.unlam.figuritas.R
@@ -41,8 +42,8 @@ class MapActivity() : AppCompatActivity(),
 
     private fun suscribeToViewModel() {
         val client = OpenRouteClient()
-        val polyProvider=PolyLineRouteProvider(client)
-        mapViewModel= MapViewModel(polyProvider)
+        val polyProvider = PolyLineRouteProvider(client)
+        mapViewModel = MapViewModel(polyProvider)
     }
 
     private fun isLocationPermissionGranted() = ContextCompat.checkSelfPermission(
@@ -112,12 +113,30 @@ class MapActivity() : AppCompatActivity(),
     }
 
     private fun setMarkersMeetPoints() {
-        map.addMarker(MarkerOptions().title(MeetPoints.POINT_ONE.namePoint).position(MeetPoints.POINT_ONE.coordinates))
-        map.addMarker(MarkerOptions().title(MeetPoints.POINT_TWO.namePoint).position(MeetPoints.POINT_TWO.coordinates))
-        map.addMarker(MarkerOptions().title(MeetPoints.POINT_THREE.namePoint).position(MeetPoints.POINT_THREE.coordinates))
-        map.addMarker(MarkerOptions().title(MeetPoints.POINT_FOUR.namePoint).position(MeetPoints.POINT_FOUR.coordinates))
-        map.addMarker(MarkerOptions().title(MeetPoints.POINT_FIVE.namePoint).position(MeetPoints.POINT_FIVE.coordinates))
-        map.addMarker(MarkerOptions().title(MeetPoints.POINT_SIX.namePoint).position(MeetPoints.POINT_SIX.coordinates))
+        map.addMarker(
+            MarkerOptions().title(MeetPoints.POINT_ONE.namePoint)
+                .position(MeetPoints.POINT_ONE.coordinates)
+        )
+        map.addMarker(
+            MarkerOptions().title(MeetPoints.POINT_TWO.namePoint)
+                .position(MeetPoints.POINT_TWO.coordinates)
+        )
+        map.addMarker(
+            MarkerOptions().title(MeetPoints.POINT_THREE.namePoint)
+                .position(MeetPoints.POINT_THREE.coordinates)
+        )
+        map.addMarker(
+            MarkerOptions().title(MeetPoints.POINT_FOUR.namePoint)
+                .position(MeetPoints.POINT_FOUR.coordinates)
+        )
+        map.addMarker(
+            MarkerOptions().title(MeetPoints.POINT_FIVE.namePoint)
+                .position(MeetPoints.POINT_FIVE.coordinates)
+        )
+        map.addMarker(
+            MarkerOptions().title(MeetPoints.POINT_SIX.namePoint)
+                .position(MeetPoints.POINT_SIX.coordinates)
+        )
         setMarkerListener()
     }
 
@@ -147,7 +166,7 @@ class MapActivity() : AppCompatActivity(),
                 mapViewModel.poly = map.addPolyline(polyLine)
             }
         } else {
-            //Mensaje "No se pudo calcular la ruta"
+            Log.d("MAP", "No se pudo calcular la ruta x.x")
         }
     }
 
