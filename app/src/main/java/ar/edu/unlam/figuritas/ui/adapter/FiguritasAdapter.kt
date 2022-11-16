@@ -3,8 +3,10 @@ package ar.edu.unlam.figuritas.ui.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import ar.edu.unlam.figuritas.R
 import ar.edu.unlam.figuritas.databinding.ItemFiguritaBinding
 import ar.edu.unlam.figuritas.model.response.PlayerResponseData
+import com.squareup.picasso.Picasso
 
 class FiguritasAdapter(var figuritas: MutableList<PlayerResponseData>
 ) : RecyclerView.Adapter<FiguritaViewHolder>(){
@@ -18,6 +20,8 @@ class FiguritasAdapter(var figuritas: MutableList<PlayerResponseData>
 
     override fun onBindViewHolder(holder: FiguritaViewHolder, position: Int) {
 
+        val player = figuritas[position]
+        bind(holder, player)
     }
 
     override fun getItemCount(): Int = figuritas.size
@@ -26,3 +30,20 @@ class FiguritasAdapter(var figuritas: MutableList<PlayerResponseData>
 }
 
 class FiguritaViewHolder(val binding : ItemFiguritaBinding) : RecyclerView.ViewHolder(binding.root)
+
+private fun bind(
+    holder : FiguritaViewHolder,
+    player : PlayerResponseData
+){
+
+    holder.binding.alturaJugador.text = player.height
+    holder.binding.pesoJugador.text = player.weight
+    holder.binding.nombreJugador.text = player.name
+    holder.binding.fechaNacimiento.text = player.birthdate
+
+    Picasso.get()
+        .load(player.image)
+        .placeholder(R.drawable.image_not_found)
+        .into(holder.binding.imagenJugador)
+
+}
