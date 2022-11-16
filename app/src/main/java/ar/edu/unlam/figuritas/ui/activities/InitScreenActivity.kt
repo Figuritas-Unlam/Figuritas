@@ -35,6 +35,7 @@ class InitScreenActivity : AppCompatActivity() , SensorEventListener {
         initOpenPack()
         initMisFiguritas()
         initAlbum()
+        initSwaps()
     }
 
     private fun initMotionLayout() {
@@ -73,23 +74,26 @@ class InitScreenActivity : AppCompatActivity() , SensorEventListener {
             val intent = Intent(applicationContext, OpenPackActivity::class.java)
             startActivity(intent)
         }
+    }
 
+    private fun initSwaps() {
+        binding.swapsButton.setOnClickListener {
+            val intent = Intent(applicationContext, SwapsActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun initAlbum(){
-
         binding.ivMyAlbum.setOnClickListener {
             val intent = Intent(applicationContext, AlbumActivity::class.java)
             startActivity(intent)
         }
-
     }
     private fun initMisFiguritas() {
         binding.clMisFiguritas.setOnClickListener {
             val intent = Intent(applicationContext, MyFiguritasActivity::class.java)
             startActivity(intent)
         }
-
     }
 
     //Sense Shake
