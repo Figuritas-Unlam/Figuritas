@@ -46,9 +46,9 @@ class AlbumViewModel @Inject constructor(var databaseRepository: DatabaseReposit
         {
             numero--
             listPlayers.add(
-                PlayerResponseData(1, 2,3,"asdas",
-                    "asdas", "sadiao", "asdas", "wiqqw", "sadas",
-                    "sadas", PositionData(Position(1, "sadas"))
+                PlayerResponseData(1, 2,3,"?",
+                    "?", "?", "?", "?", "?",
+                    "?", PositionData(Position(1, "?"))
                 )
             )
         }
