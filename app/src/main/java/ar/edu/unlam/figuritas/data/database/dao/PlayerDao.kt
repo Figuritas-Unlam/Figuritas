@@ -16,8 +16,8 @@ interface PlayerDao {
     @Query("Select * From Players pa Where pa.Id = :idPlayer ")
     fun searchPlayerForId(idPlayer: String) : PlayerEntity
 
-    @Query("Select Count(*) From Players Where Id = :idPlayer")
-    fun countRepetidas(idPlayer : String) : Int
+    @Query("Select Exists(Select pa.* From Players pa Where pa.Id = :idPlayer)")
+    fun isPlayerExists(idPlayer : Int) : Boolean
 
     @Insert
     fun insertPlayer(entity: PlayerEntity)
@@ -26,6 +26,6 @@ interface PlayerDao {
     fun deletePlayer(entity: PlayerEntity)
 
     @Query("Update Players Set Quantity = Quantity + 1 Where Id = :idPlayer")
-    fun sumQuantity(idPlayer: String)
+    fun sumQuantity(idPlayer: Int)
 
 }

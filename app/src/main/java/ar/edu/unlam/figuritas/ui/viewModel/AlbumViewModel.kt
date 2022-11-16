@@ -20,7 +20,7 @@ import javax.inject.Inject
 @HiltViewModel
 class AlbumViewModel @Inject constructor(var databaseRepository: DatabaseRepository, var playerRepository: PlayerRepository) : ViewModel(){
 
-    var listPlayers = mutableListOf<PlayerResponseData>()
+    var listPlayers = mutableListOf<PlayerEntity>()
     var listCountries = mutableListOf<WorldCupTeamId>()
     var listSquads = mutableListOf<Seleccion>()
     var listSquadsLiveData = MutableLiveData<MutableList<Seleccion>>()
@@ -39,21 +39,19 @@ class AlbumViewModel @Inject constructor(var databaseRepository: DatabaseReposit
     }
 
     fun insertPlayers2(team : WorldCupTeamId){
-        var numero = 26
-        while(numero > 0)
-        {
-            numero--
-            listPlayers.add(
-                PlayerResponseData(1, 2,3,"?",
-                    "?", "?", "?", "?", "?",
-                    "?", PositionData(Position(1, "?"))
-                )
-            )
-        }
-        val seleccion = Seleccion(team.name, listPlayers)
-        listSquads.add(seleccion)
-    }
 
+        viewModelScope.launch {
+            val playersDatabase = databaseRepository.getallPlayers()
+
+            listPlayers.addAll(playersDatabase)
+
+            val seleccion = Seleccion(team.name, listPlayers)
+            listSquads.add(seleccion)
+            listPlayers.clear()
+        }
+
+    }
+/*
     fun insertPlayers(team : WorldCupTeamId) : Seleccion {
         val seleccion = Seleccion(team.name, mutableListOf())
         viewModelScope.launch {
@@ -67,7 +65,7 @@ class AlbumViewModel @Inject constructor(var databaseRepository: DatabaseReposit
         }
         return seleccion
     }
-
+*/
     fun setCountrys(){
 
         listCountries.add(WorldCupTeamId.QATAR)
