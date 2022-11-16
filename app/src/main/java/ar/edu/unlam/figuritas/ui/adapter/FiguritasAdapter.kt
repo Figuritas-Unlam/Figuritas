@@ -5,10 +5,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import ar.edu.unlam.figuritas.R
 import ar.edu.unlam.figuritas.databinding.ItemFiguritaBinding
+import ar.edu.unlam.figuritas.model.entities.PlayerEntity
 import ar.edu.unlam.figuritas.model.response.PlayerResponseData
 import com.squareup.picasso.Picasso
 
-class FiguritasAdapter(var figuritas: MutableList<PlayerResponseData>
+class FiguritasAdapter(var figuritas: MutableList<PlayerEntity>
 ) : RecyclerView.Adapter<FiguritaViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FiguritaViewHolder {
@@ -33,16 +34,17 @@ class FiguritaViewHolder(val binding : ItemFiguritaBinding) : RecyclerView.ViewH
 
 private fun bind(
     holder : FiguritaViewHolder,
-    player : PlayerResponseData
+    player : PlayerEntity
 ){
 
     holder.binding.alturaJugador.text = player.height
     holder.binding.pesoJugador.text = player.weight
-    holder.binding.nombreJugador.text = player.name
+    holder.binding.nombreJugador.text = player.playerName
     holder.binding.fechaNacimiento.text = player.birthdate
 
+
     Picasso.get()
-        .load(player.image)
+        .load(player.imageUrl)
         .placeholder(R.drawable.image_not_found)
         .into(holder.binding.imagenJugador)
 
