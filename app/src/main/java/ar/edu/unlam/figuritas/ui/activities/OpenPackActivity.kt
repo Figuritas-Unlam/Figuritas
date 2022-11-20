@@ -1,5 +1,6 @@
 package ar.edu.unlam.figuritas.ui.activities
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -53,6 +54,11 @@ class OpenPackActivity : AppCompatActivity() {
             binding.loader.visibility = View.GONE
             binding.nextButton.visibility = View.VISIBLE
         }
+        openPackViewModel.error.observe(this) {
+            if (it) {
+                showErrorDialog()
+            }
+        }
     }
 
     private fun setPackPlayers(playersData: List<PlayerResponse?>) {
@@ -92,6 +98,16 @@ class OpenPackActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    private fun showErrorDialog() {
+        val dialog = AlertDialog.Builder(this)
+            .setTitle("Hubo un problema")
+            .setMessage("Chequeá to conexion e intenta mas tarde")
+            .setPositiveButton("Ok") { _, _ ->
+                finish()
+            }
+        dialog.show()
     }
 
 }
