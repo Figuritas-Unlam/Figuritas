@@ -3,6 +3,7 @@ package ar.edu.unlam.figuritas.ui.activities
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Button
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import ar.edu.unlam.figuritas.BuildConfig
@@ -31,8 +32,11 @@ class OpenPackActivity : AppCompatActivity() {
         var incomingCardNumber = 1
 
         binding.nextButton.setOnClickListener {
+            (it as Button).isClickable = false
             currentCard?.animate()?.setDuration(1000)?.x(600f)?.y(height)
-            incomingCard.animate().setDuration(1000).y(550f)
+            incomingCard.animate().setDuration(1000).y(550f).withEndAction{
+                it.isClickable = true
+            }
 
             currentCard = incomingCard
             updateViews(++incomingCardNumber)
