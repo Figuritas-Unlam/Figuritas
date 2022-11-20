@@ -23,6 +23,7 @@ class OpenPackViewModel @Inject constructor(
     private val _playersData = MutableLiveData<List<PlayerResponse?>>()
     val playersData: LiveData<List<PlayerResponse?>> = _playersData
     val playerRepetidos: MutableList<PlayerEntity> = mutableListOf()
+    val playerNuevas: MutableList<PlayerEntity> = mutableListOf()
 
     init {
         fetchPlayers()
@@ -41,6 +42,9 @@ class OpenPackViewModel @Inject constructor(
                 for (player in response) {
                     if (player != null) {
                         if(databaseRepository.insertPlayer(player)) {
+                            val playerEntity =databaseRepository.getPlayer(player.data.playerId)
+                            playerNuevas.add(playerEntity)
+                        }else{
                             val playerEntity =databaseRepository.getPlayer(player.data.playerId)
                             playerRepetidos.add(playerEntity)
                         }
