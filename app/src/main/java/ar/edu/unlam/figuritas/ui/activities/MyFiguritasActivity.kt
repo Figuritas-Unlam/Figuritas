@@ -174,13 +174,15 @@ fun RvNuevas(viewModel: FiguritasViewModel) {
 
 fun getMessiMock(): MutableList<Player> {
     return mutableListOf(
-        Player(123,"nano","ddd","123","123","22/2/00",4),
-        Player(123,"nano","ddd","123","123","22/2/00",4),
-        Player(123,"nano","ddd","123","123","22/2/00",4),
-        Player(123,"nano","ddd","123","123","22/2/00",4),
-        Player(123,"nano","ddd","123","123","22/2/00",4),
-        Player(123,"nano","ddd","123","123","22/2/00",4)
-    )
+        Player(123,"nano","ddd","123","22/2/00",123,123,"22/2/00"),
+        Player(123,"nano","ddd","123","22/2/00",123,123,"22/2/00"),
+        Player(123,"nano","ddd","123","22/2/00",123,123,"22/2/00"),
+        Player(123,"nano","ddd","123","22/2/00",123,123,"22/2/00"),
+        Player(123,"nano","ddd","123","22/2/00",123,123,"22/2/00"),
+        Player(123,"nano","ddd","123","22/2/00",123,123,"22/2/00"),
+        Player(123,"nano","ddd","123","22/2/00",123,123,"22/2/00"),
+        Player(123,"nano","ddd","123","22/2/00",123,123,"22/2/00"),
+        )
 }
 
 

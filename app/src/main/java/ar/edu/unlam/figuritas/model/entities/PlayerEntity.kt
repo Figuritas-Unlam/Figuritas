@@ -2,7 +2,6 @@ package ar.edu.unlam.figuritas.model.entities
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
-import androidx.room.Ignore
 import androidx.room.PrimaryKey
 
 
@@ -39,3 +38,19 @@ data class PlayerEntity (
     @ColumnInfo(name = "Image")
     var imageUrl : String
     )
+fun PlayerEntity.mapToPlayer()=Player(playerId,
+    playerName,height,
+    weight,birthdate,
+    seleccionId,
+    quantity, imageUrl)
+
+data class Player (
+    val playerId : Int,
+    val playerName : String,
+    val height : String?,
+    val weight : String?,
+    val birthdate : String,
+    val seleccionId : Int,
+    var quantity : Int,
+    var imageUrl : String
+)

@@ -7,17 +7,17 @@ import ar.edu.unlam.figuritas.model.entities.PlayerEntity
 interface PlayerDao {
 
     @Query("Select * From Players")
-    fun getAllPlayers() : List<PlayerEntity>
+    fun getAllPlayers(): List<PlayerEntity>
 
     @Query("Select * From Players pa Where pa.Name = :namePlayer ")
-    fun searchPlayerForName(namePlayer: String) : PlayerEntity
+    fun searchPlayerForName(namePlayer: String): PlayerEntity
 
 
     @Query("Select * From Players pa Where pa.Id = :idPlayer ")
-    fun searchPlayerForId(idPlayer: String) : PlayerEntity
+    fun searchPlayerForId(idPlayer: Int): PlayerEntity
 
     @Query("Select Exists(Select pa.* From Players pa Where pa.Id = :idPlayer)")
-    fun isPlayerExists(idPlayer : Int) : Boolean
+    fun isPlayerExists(idPlayer: Int): Boolean
 
     @Insert
     fun insertPlayer(entity: PlayerEntity)

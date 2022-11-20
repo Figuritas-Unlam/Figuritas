@@ -43,12 +43,12 @@ object AppModule {
             context,
             PlayerDatabase::class.java,
             "Figuritas_Database"
-        ).allowMainThreadQueries().build()
+        ).allowMainThreadQueries().fallbackToDestructiveMigration().build()
     }
 
     @Singleton
     @Provides
-    fun provideDao(database: PlayerDatabase) : PlayerDao{
+    fun provideDao(database: PlayerDatabase): PlayerDao {
         return database.playerDao()
     }
 

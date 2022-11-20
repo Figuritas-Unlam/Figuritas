@@ -38,6 +38,11 @@ class AlbumViewModel @Inject constructor(var databaseRepository: DatabaseReposit
         return listSquads
     }
 
+    fun searchPlayer () : List<PlayerEntity>{
+        return databaseRepository.getallPlayers()
+
+    }
+
     fun insertPlayers2(team : WorldCupTeamId){
 
         viewModelScope.launch {
