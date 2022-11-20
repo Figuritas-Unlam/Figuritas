@@ -28,4 +28,9 @@ interface PlayerDao {
     @Query("Update Players Set Quantity = Quantity + 1 Where Id = :idPlayer")
     fun sumQuantity(idPlayer: Int)
 
+    @Query("Select * From Players pa Where pa.Paste = 'NotPaste' And pa.Quantity>0")
+    fun getPlayersNotPaste(): List<PlayerEntity>
+
+    @Query("Select * From Players pa Where pa.Paste = 'Paste'")
+    fun getRepeats(): List<PlayerEntity>
 }

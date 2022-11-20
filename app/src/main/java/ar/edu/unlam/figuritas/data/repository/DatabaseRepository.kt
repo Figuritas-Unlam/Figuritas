@@ -1,6 +1,7 @@
 package ar.edu.unlam.figuritas.data.repository
 
 import android.util.Log
+import androidx.room.Query
 import ar.edu.unlam.figuritas.data.database.dao.PlayerDao
 import ar.edu.unlam.figuritas.model.entities.PlayerEntity
 import ar.edu.unlam.figuritas.model.response.PlayerResponse
@@ -9,7 +10,7 @@ import javax.inject.Inject
 class DatabaseRepository @Inject constructor(private val playerDao: PlayerDao) {
 
 
-    fun insertPlayer(playerResponse: PlayerResponse): Boolean {
+    fun insertPlayer(playerResponse: PlayerResponse, isPaste: String): Boolean {
         val idPlayerResponse = playerResponse.data.playerId
         if (!playerDao.isPlayerExists(idPlayerResponse)) {
             playerDao.insertPlayer(
@@ -23,7 +24,8 @@ class DatabaseRepository @Inject constructor(private val playerDao: PlayerDao) {
                     playerResponse.data.countryId,
                     1,
                     false,
-                    playerResponse.data.image
+                    playerResponse.data.image,
+                    isPaste
                 )
             )
             Log.e("insert", "insert correcto")
@@ -43,7 +45,12 @@ class DatabaseRepository @Inject constructor(private val playerDao: PlayerDao) {
         return playerDao.searchPlayerForId(id)
     }
 
-    fun sumQuantity(idPlayer: Int){
-        playerDao.sumQuantity(idPlayer)
+    fun getPlayersNotPaste(): List<PlayerEntity> {
+        return playerDao.getPlayersNotPaste()
     }
+
+    fun getRepeats(): List<PlayerEntity> {
+        return playerDao.getRepeats()
+    }
+
 }
