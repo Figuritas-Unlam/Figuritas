@@ -29,7 +29,7 @@ class AlbumActivity : AppCompatActivity() {
     private lateinit var albumAdapter: AlbumAdapter
     private lateinit var listCountries: MutableList<String>
     private lateinit var listSelecciones: MutableList<Seleccion>
-    private lateinit var player: PlayerResponse
+    private var player: PlayerResponse? = null
 
     private val albumViewModel: AlbumViewModel by viewModels()
     private val nuevasViewMdel: OpenPackViewModel by viewModels()
@@ -68,19 +68,20 @@ class AlbumActivity : AppCompatActivity() {
     }
 
     private fun getListNuevas(): PlayerResponse? {
-        var list: List<PlayerResponse>
+        var list: List<PlayerResponse?>
         nuevasViewMdel.playersData.observe(this) {
-            list = it as List<PlayerResponse>
-            player = list[0]
+            list = it
+            player = list.first()!!
         }
         return player
     }
+
 
     private fun figus() {
         val jugador = getListNuevas()
         albumBinding.nombreJugador.text = jugador?.data?.fullname
         Picasso.get().load(jugador?.data?.image)
-            .placeholder(R.drawable.ney)
+                .placeholder(R.drawable.ney)
             .into(albumBinding.imagenJugador)
     }
 }

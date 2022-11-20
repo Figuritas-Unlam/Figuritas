@@ -42,6 +42,7 @@ import ar.edu.unlam.figuritas.ui.activities.ui.theme.FiguritasTheme
 import ar.edu.unlam.figuritas.ui.activities.ui.theme.Orange
 import ar.edu.unlam.figuritas.ui.activities.ui.theme.RedQatar
 import ar.edu.unlam.figuritas.ui.viewModel.FiguritasViewModel
+import coil.compose.AsyncImage
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -69,11 +70,11 @@ class MyFiguritasActivity : ComponentActivity(), SensorEventListener {
 
     //Sense Shake
     private fun setShakeSensor() {
-        viewModel.sensorManager= getSystemService(Context.SENSOR_SERVICE) as SensorManager
+        viewModel.sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
     }
 
     override fun onSensorChanged(srEvent: SensorEvent?) {
-        if(srEvent!=null && srEvent.sensor.type == Sensor.TYPE_ACCELEROMETER){
+        if (srEvent != null && srEvent.sensor.type == Sensor.TYPE_ACCELEROMETER) {
             startOpenPack(srEvent)
         }
     }
@@ -84,7 +85,8 @@ class MyFiguritasActivity : ComponentActivity(), SensorEventListener {
         val xVal = event.values[0]
         val yVal = event.values[1]
         val zVal = event.values[2]
-        val accelerationSquareRoot = (xVal * xVal + yVal * yVal + zVal * zVal) / (SensorManager.GRAVITY_EARTH * SensorManager.GRAVITY_EARTH)
+        val accelerationSquareRoot =
+            (xVal * xVal + yVal * yVal + zVal * zVal) / (SensorManager.GRAVITY_EARTH * SensorManager.GRAVITY_EARTH)
         if (accelerationSquareRoot >= 12) {
             val vibrator = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
             vibrator.vibrate(300)
@@ -95,8 +97,11 @@ class MyFiguritasActivity : ComponentActivity(), SensorEventListener {
 
     override fun onResume() {
         super.onResume()
-        viewModel.sensorManager.registerListener(this,
-            viewModel.sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER), SensorManager.SENSOR_DELAY_NORMAL)
+        viewModel.sensorManager.registerListener(
+            this,
+            viewModel.sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),
+            SensorManager.SENSOR_DELAY_NORMAL
+        )
     }
 
     override fun onPause() {
@@ -112,7 +117,10 @@ fun BackgroundActivity(viewModel: FiguritasViewModel) {
         modifier = Modifier
             .fillMaxSize()
             .fillMaxHeight(1f)
-            .paint(painterResource(id = R.drawable.background_qatar), contentScale = ContentScale.FillHeight)
+            .paint(
+                painterResource(id = R.drawable.background_qatar),
+                contentScale = ContentScale.FillHeight
+            )
     ) {
         MisFiguritas()
         FiguritaNuevasTxt()
@@ -166,23 +174,10 @@ fun RvNuevas(viewModel: FiguritasViewModel) {
     //val rememberPlayers = remember { viewModel.playerList }
     LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(8.dp)) {
         items(viewModel.getMessiMock()) { player ->
-                FiguritasNuevas(player = player)
+            FiguritasNuevas(player = player)
 
         }
     }
-}
-
-fun getMessiMock(): MutableList<Player> {
-    return mutableListOf(
-        Player(123,"nano","ddd","123","22/2/00",123,123,"22/2/00"),
-        Player(123,"nano","ddd","123","22/2/00",123,123,"22/2/00"),
-        Player(123,"nano","ddd","123","22/2/00",123,123,"22/2/00"),
-        Player(123,"nano","ddd","123","22/2/00",123,123,"22/2/00"),
-        Player(123,"nano","ddd","123","22/2/00",123,123,"22/2/00"),
-        Player(123,"nano","ddd","123","22/2/00",123,123,"22/2/00"),
-        Player(123,"nano","ddd","123","22/2/00",123,123,"22/2/00"),
-        Player(123,"nano","ddd","123","22/2/00",123,123,"22/2/00"),
-        )
 }
 
 
@@ -321,9 +316,8 @@ fun FiguritasRepetidas(player: Player) {
 
             }
 
-
-            Image(
-                painter = painterResource(id = R.drawable.messi),
+            AsyncImage(
+                model = player.imageUrl,
                 contentDescription = null,
                 modifier = Modifier
                     .width(140.dp)
@@ -357,9 +351,6 @@ fun FiguritasRepetidas(player: Player) {
 
 @Composable
 fun RvRepetidas(viewModel: FiguritasViewModel) {
-   // val rememberPlayers = remember { viewModel.playerList }
-    val li=viewModel.playerList
-    val lil=viewModel.list
     LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(8.dp)) {
         items(viewModel.playerList) { player ->
             FiguritasRepetidas(player = player)

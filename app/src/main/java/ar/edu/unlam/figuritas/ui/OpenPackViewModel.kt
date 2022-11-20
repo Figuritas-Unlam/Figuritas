@@ -28,10 +28,6 @@ class OpenPackViewModel @Inject constructor(
         fetchPlayers()
     }
 
-    fun cantidadJugadores(id: Int): PlayerEntity {
-        return databaseRepository.getPlayer(id)
-    }
-
 
     private fun fetchPlayers() {
         try {
@@ -40,8 +36,8 @@ class OpenPackViewModel @Inject constructor(
                 _playersData.value = response
                 for (player in response) {
                     if (player != null) {
-                        if(databaseRepository.insertPlayer(player)) {
-                            val playerEntity =databaseRepository.getPlayer(player.data.playerId)
+                        if (databaseRepository.insertPlayer(player)) {
+                            val playerEntity = databaseRepository.getPlayer(player.data.playerId)
                             playerRepetidos.add(playerEntity)
                         }
                     }
