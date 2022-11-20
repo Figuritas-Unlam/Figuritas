@@ -34,32 +34,23 @@ class OpenPackViewModel @Inject constructor(
 
 
     private fun fetchPlayers() {
-        viewModelScope.launch {
-            try {
-                var response = repository.getRandomPlayers(5)
+        try {
+            viewModelScope.launch {
+                val response = repository.getRandomPlayers(5)
                 _playersData.value = response
                 for (player in response) {
-                    if (databaseRepository.getallPlayers()
-                            .any { playerEntity -> player?.data?.playerId == playerEntity.playerId }
-                    ) {
-                        player?.let { playerRepetidos.add(it.mapToEntity(2, true)) }
-
+                    if (player != null) {
+                        if(databaseRepository.insertPlayer(player)) {
+                            val playerEntity =databaseRepository.getPlayer(player.data.playerId)
+                            playerRepetidos.add(playerEntity)
+                        }
                     }
-                    // NUEVA
                 }
-                insertPlayerDatabase(_playersData.value)
-            } catch (e: RuntimeException) {
-                e.printStackTrace()
-                Log.e("Error fetching players", e.message.toString())
             }
-        }
-    }
-
-    private fun insertPlayerDatabase(players: List<PlayerResponse?>?) {
-        for (player in players!!) {
-            viewModelScope.launch {
-                databaseRepository.insertPlayer(player!!)
-            }
+        } catch (e: RuntimeException) {
+            e.printStackTrace()
+            Log.e("Error fetching players", e.message.toString())
         }
     }
 }
+

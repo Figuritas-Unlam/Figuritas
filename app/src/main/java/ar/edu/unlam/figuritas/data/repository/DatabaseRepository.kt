@@ -9,12 +9,9 @@ import javax.inject.Inject
 class DatabaseRepository @Inject constructor(private val playerDao: PlayerDao) {
 
 
-    fun insertPlayer(playerResponse: PlayerResponse) {
+    fun insertPlayer(playerResponse: PlayerResponse): Boolean {
         val idPlayerResponse = playerResponse.data.playerId
-
-
         if (!playerDao.isPlayerExists(idPlayerResponse)) {
-
             playerDao.insertPlayer(
                 PlayerEntity(
                     playerResponse.data.playerId,
@@ -30,8 +27,10 @@ class DatabaseRepository @Inject constructor(private val playerDao: PlayerDao) {
                 )
             )
             Log.e("insert", "insert correcto")
+            return true
         } else {
             playerDao.sumQuantity(idPlayerResponse)
+            return false
         }
     }
 
@@ -42,5 +41,9 @@ class DatabaseRepository @Inject constructor(private val playerDao: PlayerDao) {
 
     fun getPlayer (id : Int ): PlayerEntity{
         return playerDao.searchPlayerForId(id)
+    }
+
+    fun sumQuantity(idPlayer: Int){
+        playerDao.sumQuantity(idPlayer)
     }
 }
