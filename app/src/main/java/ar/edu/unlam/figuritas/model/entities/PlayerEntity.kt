@@ -2,7 +2,7 @@ package ar.edu.unlam.figuritas.model.entities
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
-import androidx.room.ForeignKey
+import androidx.room.Ignore
 import androidx.room.PrimaryKey
 
 
@@ -16,10 +16,10 @@ data class PlayerEntity (
     val playerName : String,
 
     @ColumnInfo(name = "Height")
-    val height : String,
+    val height : String?,
 
     @ColumnInfo(name = "Weight")
-    val weight : String,
+    val weight : String?,
 
     @ColumnInfo(name = "Birthdate")
     val birthdate : String,
@@ -28,5 +28,14 @@ data class PlayerEntity (
     val teamId : Int,
 
     @ColumnInfo(name = "Seleccion_Id")
-    val seleccionId : Int
-        )
+    val seleccionId : Int,
+
+    @ColumnInfo(name = "Quantity")
+    var quantity : Int,
+
+    @ColumnInfo(name = "In_Album")
+    var inAlbum : Boolean,
+
+    @ColumnInfo(name = "Image")
+    var imageUrl : String
+    )
