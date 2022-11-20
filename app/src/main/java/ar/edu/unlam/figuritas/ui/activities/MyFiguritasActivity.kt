@@ -52,8 +52,9 @@ class MyFiguritasActivity : ComponentActivity(), SensorEventListener {
     private val viewModelos: FiguritasViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContent {
-            viewModelos.getplayer()
+            viewModel.setLists()
             FiguritasTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
@@ -104,6 +105,8 @@ class MyFiguritasActivity : ComponentActivity(), SensorEventListener {
     override fun onPause() {
         super.onPause()
         viewModelos.sensorManager.unregisterListener(this)
+        viewModel.playerRepetidos.clear()
+        viewModel.playerNuevas.clear()
     }
 
 }
@@ -167,7 +170,7 @@ fun FiguritaNuevasTxt() {
 fun RvNuevas(viewModel: OpenPackViewModel) {
     //val rememberPlayers = remember { viewModel.playerList }
     LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(8.dp)) {
-        items(viewModel.getNews()) { player ->
+        items(viewModel.playerNuevas) { player ->
                 FiguritasNuevas(player = player.mapToPlayer())
 
         }
@@ -361,7 +364,7 @@ fun FiguritasRepetidas(player: Player) {
 fun RvRepetidas(viewModel: OpenPackViewModel) {
    // val rememberPlayers = remember { viewModel.playerList }
     LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(8.dp)) {
-        items(viewModel.getRepeats()) { player ->
+        items(viewModel.playerRepetidos) { player ->
             FiguritasRepetidas(player = player.mapToPlayer())
 
         }
