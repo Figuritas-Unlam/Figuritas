@@ -36,7 +36,11 @@ data class PlayerEntity (
     var inAlbum : Boolean,
 
     @ColumnInfo(name = "Image")
-    var imageUrl : String
+    var imageUrl : String,
+
+    @ColumnInfo(name = "Paste")
+    var isPaste : String,
+
     )
 fun PlayerEntity.mapToPlayer()=Player(playerId,
     playerName,height,

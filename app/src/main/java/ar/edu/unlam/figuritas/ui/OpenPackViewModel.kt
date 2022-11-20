@@ -39,22 +39,28 @@ class OpenPackViewModel @Inject constructor(
             viewModelScope.launch {
                 val response = repository.getRandomPlayers(5)
                 _playersData.value = response
-                for (player in response) {
-                    if (player != null) {
-                        if(databaseRepository.insertPlayer(player)) {
-                            val playerEntity =databaseRepository.getPlayer(player.data.playerId)
-                            playerNuevas.add(playerEntity)
-                        }else{
-                            val playerEntity =databaseRepository.getPlayer(player.data.playerId)
-                            playerRepetidos.add(playerEntity)
-                        }
+                val position=0
+                for(player in response){
+                    if(position<3){
+                    databaseRepository.insertPlayer(player!!, "Paste")
+                    }else{
+                        databaseRepository.insertPlayer(player!!, "NotPaste")
                     }
                 }
+
             }
         } catch (e: RuntimeException) {
             e.printStackTrace()
             Log.e("Error fetching players", e.message.toString())
         }
+    }
+
+    fun getNews(): List<PlayerEntity> {
+        return databaseRepository.getPlayersNotPaste()
+    }
+
+    fun getRepeats(): List<PlayerEntity> {
+        return databaseRepository.getRepeats()
     }
 }
 

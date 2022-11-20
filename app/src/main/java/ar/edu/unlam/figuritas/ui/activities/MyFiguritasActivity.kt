@@ -37,7 +37,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import ar.edu.unlam.figuritas.R
 import ar.edu.unlam.figuritas.model.entities.Player
+import ar.edu.unlam.figuritas.model.entities.mapToPlayer
 import ar.edu.unlam.figuritas.model.response.MockPlayerProvisorio
+import ar.edu.unlam.figuritas.ui.OpenPackViewModel
 import ar.edu.unlam.figuritas.ui.activities.ui.theme.FiguritasTheme
 import ar.edu.unlam.figuritas.ui.activities.ui.theme.Orange
 import ar.edu.unlam.figuritas.ui.activities.ui.theme.RedQatar
@@ -46,12 +48,12 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MyFiguritasActivity : ComponentActivity(), SensorEventListener {
-    private val viewModel: FiguritasViewModel by viewModels()
-
+    private val viewModel: OpenPackViewModel by viewModels()
+    private val viewModelos: FiguritasViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            viewModel.getplayer()
+            viewModelos.getplayer()
             FiguritasTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
@@ -69,7 +71,7 @@ class MyFiguritasActivity : ComponentActivity(), SensorEventListener {
 
     //Sense Shake
     private fun setShakeSensor() {
-        viewModel.sensorManager= getSystemService(Context.SENSOR_SERVICE) as SensorManager
+        viewModelos.sensorManager= getSystemService(Context.SENSOR_SERVICE) as SensorManager
     }
 
     override fun onSensorChanged(srEvent: SensorEvent?) {
@@ -95,19 +97,19 @@ class MyFiguritasActivity : ComponentActivity(), SensorEventListener {
 
     override fun onResume() {
         super.onResume()
-        viewModel.sensorManager.registerListener(this,
-            viewModel.sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER), SensorManager.SENSOR_DELAY_NORMAL)
+        viewModelos.sensorManager.registerListener(this,
+            viewModelos.sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER), SensorManager.SENSOR_DELAY_NORMAL)
     }
 
     override fun onPause() {
         super.onPause()
-        viewModel.sensorManager.unregisterListener(this)
+        viewModelos.sensorManager.unregisterListener(this)
     }
 
 }
 
 @Composable
-fun BackgroundActivity(viewModel: FiguritasViewModel) {
+fun BackgroundActivity(viewModel: OpenPackViewModel) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -162,11 +164,11 @@ fun FiguritaNuevasTxt() {
 }
 
 @Composable
-fun RvNuevas(viewModel: FiguritasViewModel) {
+fun RvNuevas(viewModel: OpenPackViewModel) {
     //val rememberPlayers = remember { viewModel.playerList }
     LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(8.dp)) {
-        items(viewModel.getMessiMock()) { player ->
-                FiguritasNuevas(player = player)
+        items(viewModel.getNews()) { player ->
+                FiguritasNuevas(player = player.mapToPlayer())
 
         }
     }
@@ -356,13 +358,11 @@ fun FiguritasRepetidas(player: Player) {
 }
 
 @Composable
-fun RvRepetidas(viewModel: FiguritasViewModel) {
+fun RvRepetidas(viewModel: OpenPackViewModel) {
    // val rememberPlayers = remember { viewModel.playerList }
-    val li=viewModel.playerList
-    val lil=viewModel.list
     LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(8.dp)) {
-        items(viewModel.playerList) { player ->
-            FiguritasRepetidas(player = player)
+        items(viewModel.getRepeats()) { player ->
+            FiguritasRepetidas(player = player.mapToPlayer())
 
         }
     }
