@@ -9,23 +9,23 @@ class DatabaseRepository @Inject constructor(private val playerDao: PlayerDao) {
 
 
     fun insertPlayer(playerResponse : PlayerResponse){
-        val idPlayerResponse = playerResponse.data.playerId
-
-/*
-        if(playerDao.isPlayerExists(idPlayerResponse))
-        {*/
-        playerDao.insertPlayer(PlayerEntity(playerResponse.data.playerId, playerResponse.data.name,
-        playerResponse.data.height, playerResponse.data.weight, playerResponse.data.birthdate,
-            playerResponse.data.teamId, playerResponse.data.countryId, 1, false, playerResponse.data.image))
-        /*}
-        else
-        {
-            playerDao.sumQuantity(idPlayerResponse)
-        }*/
+        playerDao.insertOrUpdate(
+            PlayerEntity(
+                playerResponse.data.playerId,
+                playerResponse.data.name,
+                playerResponse.data.height,
+                playerResponse.data.weight,
+                playerResponse.data.birthdate,
+                playerResponse.data.teamId,
+                playerResponse.data.countryId,
+                1,
+                false,
+                playerResponse.data.image
+            )
+        )
     }
 
     fun getallPlayers(): List<PlayerEntity> {
         return playerDao.getAllPlayers()
-
     }
 }
