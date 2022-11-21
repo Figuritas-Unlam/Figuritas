@@ -7,12 +7,13 @@ import ar.edu.unlam.figuritas.model.entities.PlayerEntity
 import ar.edu.unlam.figuritas.model.response.PlayerResponse
 import javax.inject.Inject
 
-class DatabaseRepository @Inject constructor(private val playerDao: PlayerDao) {
+class DatabaseRepository @Inject constructor(private val playerDao: PlayerDao, private val playerRepository: PlayerRepository) {
 
 
     fun insertPlayer(playerResponse: PlayerResponse) {
         val idPlayerResponse = playerResponse.data.playerId
         if (!playerDao.isPlayerExists(idPlayerResponse)) {
+
             playerDao.insertPlayer(
                 PlayerEntity(
                     playerResponse.data.playerId,
@@ -25,7 +26,8 @@ class DatabaseRepository @Inject constructor(private val playerDao: PlayerDao) {
                     1,
                     false,
                     playerResponse.data.image,
-                    "NotPaste"
+                    "NotPaste",
+                    playerResponse.data.imageCountry
                 )
             )
             Log.e("insert", "insert correcto")

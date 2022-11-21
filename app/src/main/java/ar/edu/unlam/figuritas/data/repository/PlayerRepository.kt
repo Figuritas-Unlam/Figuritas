@@ -26,8 +26,8 @@ class PlayerRepository @Inject constructor(
         }
     }
 
-    suspend fun getCountryById(countryId : Int) : Response<CountryResponse>{
-        return playerClient.searchCountryById(countryId)
+    suspend fun getCountryById(countryId : Int) : CountryResponse?{
+        return playerClient.searchCountryById(countryId).body()
     }
 
     private suspend fun getRandomPlayerId() : Int {

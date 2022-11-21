@@ -35,7 +35,8 @@ class OpenPackViewModel @Inject constructor(
                 val response = repository.getRandomPlayers(5)
                 _playersData.value = response
                 for(player in response){
-                    databaseRepository.insertPlayer(player!!)
+                    player!!.data.imageCountry = repository.getCountryById(player.data.countryId)!!.data.image
+                    databaseRepository.insertPlayer(player)
                 }
             }
         } catch (e: RuntimeException) {
