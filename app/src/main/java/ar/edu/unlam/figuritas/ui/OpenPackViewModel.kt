@@ -22,32 +22,21 @@ class OpenPackViewModel @Inject constructor(
 ) : ViewModel() {
     private val _playersData = MutableLiveData<List<PlayerResponse?>>()
     val playersData: LiveData<List<PlayerResponse?>> = _playersData
-    val playerRepetidos: MutableList<PlayerEntity> = mutableListOf()
-    val playerNuevas: MutableList<PlayerEntity> = mutableListOf()
+    var playerRepetidos: MutableList<PlayerEntity> = mutableListOf()
+    var playerNuevas: MutableList<PlayerEntity> = mutableListOf()
 
     init {
         fetchPlayers()
     }
-
-    fun cantidadJugadores(id: Int): PlayerEntity {
-        return databaseRepository.getPlayer(id)
-    }
-
 
     private fun fetchPlayers() {
         try {
             viewModelScope.launch {
                 val response = repository.getRandomPlayers(5)
                 _playersData.value = response
-                val position=0
                 for(player in response){
-                    if(position<3){
-                    databaseRepository.insertPlayer(player!!, "Paste")
-                    }else{
-                        databaseRepository.insertPlayer(player!!, "NotPaste")
-                    }
+                    databaseRepository.insertPlayer(player!!)
                 }
-
             }
         } catch (e: RuntimeException) {
             e.printStackTrace()
@@ -55,12 +44,17 @@ class OpenPackViewModel @Inject constructor(
         }
     }
 
-    fun getNews(): List<PlayerEntity> {
-        return databaseRepository.getPlayersNotPaste()
+    fun setLists(){
+        getRepeats()
+        getNews()
     }
 
-    fun getRepeats(): List<PlayerEntity> {
-        return databaseRepository.getRepeats()
+    private fun getNews() {
+        playerNuevas.addAll(databaseRepository.getPlayersNotPaste())
+    }
+
+    private fun getRepeats() {
+        playerRepetidos.addAll(databaseRepository.getRepeats())
     }
 }
 

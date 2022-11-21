@@ -10,7 +10,7 @@ import javax.inject.Inject
 class DatabaseRepository @Inject constructor(private val playerDao: PlayerDao) {
 
 
-    fun insertPlayer(playerResponse: PlayerResponse, isPaste: String): Boolean {
+    fun insertPlayer(playerResponse: PlayerResponse) {
         val idPlayerResponse = playerResponse.data.playerId
         if (!playerDao.isPlayerExists(idPlayerResponse)) {
             playerDao.insertPlayer(
@@ -25,20 +25,17 @@ class DatabaseRepository @Inject constructor(private val playerDao: PlayerDao) {
                     1,
                     false,
                     playerResponse.data.image,
-                    isPaste
+                    "NotPaste"
                 )
             )
             Log.e("insert", "insert correcto")
-            return true
         } else {
             playerDao.sumQuantity(idPlayerResponse)
-            return false
         }
     }
 
     fun getallPlayers(): List<PlayerEntity> {
         return playerDao.getAllPlayers()
-
     }
 
     fun getPlayer (id : Int ): PlayerEntity{
@@ -51,6 +48,10 @@ class DatabaseRepository @Inject constructor(private val playerDao: PlayerDao) {
 
     fun getRepeats(): List<PlayerEntity> {
         return playerDao.getRepeats()
+    }
+
+    fun pastePlayer(idPlayer: Int){
+        playerDao.pastePlayer(idPlayer)
     }
 
 }
