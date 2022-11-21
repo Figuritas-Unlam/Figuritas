@@ -8,40 +8,53 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import ar.edu.unlam.figuritas.data.repository.DatabaseRepository
 import ar.edu.unlam.figuritas.data.repository.PlayerRepository
+import ar.edu.unlam.figuritas.model.entities.PlayerEntity
 import ar.edu.unlam.figuritas.model.response.PlayerResponse
+import ar.edu.unlam.figuritas.model.response.mapToEntity
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class OpenPackViewModel @Inject constructor(private val repository: PlayerRepository,
-        private val databaseRepository: DatabaseRepository): ViewModel() {
+class OpenPackViewModel @Inject constructor(
+    private val repository: PlayerRepository,
+    private val databaseRepository: DatabaseRepository
+) : ViewModel() {
     private val _playersData = MutableLiveData<List<PlayerResponse?>>()
-    val playersData:LiveData<List<PlayerResponse?>> = _playersData
+    val playersData: LiveData<List<PlayerResponse?>> = _playersData
+    var playerRepetidos: MutableList<PlayerEntity> = mutableListOf()
+    var playerNuevas: MutableList<PlayerEntity> = mutableListOf()
 
     init {
         fetchPlayers()
     }
 
-
     private fun fetchPlayers() {
-        viewModelScope.launch {
-            try {
-                _playersData.value = repository.getRandomPlayers(5)
-                insertPlayerDatabase(_playersData.value)
-            } catch (e: RuntimeException) {
-                e.printStackTrace()
-                Log.e("Error fetching players", e.message.toString())
+        try {
+            viewModelScope.launch {
+                val response = repository.getRandomPlayers(5)
+                _playersData.value = response
+                for(player in response){
+                    databaseRepository.insertPlayer(player!!)
+                }
             }
+        } catch (e: RuntimeException) {
+            e.printStackTrace()
+            Log.e("Error fetching players", e.message.toString())
         }
     }
 
-    private fun insertPlayerDatabase(players : List<PlayerResponse?>?)
-    {
-        for(player in players!!){
-            viewModelScope.launch {
-                databaseRepository.insertPlayer(player!!)
-            }
-        }
+    fun setLists(){
+        getRepeats()
+        getNews()
+    }
+
+    private fun getNews() {
+        playerNuevas.addAll(databaseRepository.getPlayersNotPaste())
+    }
+
+    private fun getRepeats() {
+        playerRepetidos.addAll(databaseRepository.getRepeats())
     }
 }
+
