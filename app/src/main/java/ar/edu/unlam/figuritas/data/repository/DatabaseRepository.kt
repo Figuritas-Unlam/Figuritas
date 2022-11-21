@@ -48,7 +48,7 @@ class DatabaseRepository @Inject constructor(private val playerDao: PlayerDao, p
         return playerDao.getPlayersNotPaste()
     }
 
-    fun getRep  eats(): List<PlayerEntity?> {
+    fun getRepeats(): List<PlayerEntity?> {
         return playerDao.getRepeats()
     }
 
