@@ -1,21 +1,16 @@
 package ar.edu.unlam.figuritas.ui.viewModel
 
 import android.util.Log
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import ar.edu.unlam.figuritas.data.api.PlayerAPI
 import ar.edu.unlam.figuritas.data.repository.DatabaseRepository
 import ar.edu.unlam.figuritas.data.repository.PlayerRepository
 import ar.edu.unlam.figuritas.model.Seleccion
 import ar.edu.unlam.figuritas.model.WorldCupTeamId
-import ar.edu.unlam.figuritas.model.entities.Player
 import ar.edu.unlam.figuritas.model.entities.PlayerEntity
 import ar.edu.unlam.figuritas.model.response.PlayerResponse
-import ar.edu.unlam.figuritas.model.response.PlayerResponseData
-import ar.edu.unlam.figuritas.model.response.Position
-import ar.edu.unlam.figuritas.model.response.PositionData
+
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -53,16 +48,18 @@ class AlbumViewModel @Inject constructor(var databaseRepository: DatabaseReposit
             viewModelScope.launch {
                 val response = playerRepository.getPlayersByCountry(country)
                 val playersDatabase = databaseRepository.getallPlayers()
-                for (player in response!!) {
-                    for (playerPaste in playersDatabase) {
-                        if (player != null) {
-                            listPlayers.add(inAlbum(player, playerPaste))
-                        }
+                if (response != null) {
+                    for (player in response) {
+                        for (playerPaste in playersDatabase) {
+                            if (player != null) {
+                                listPlayers.add(inAlbum(player, playerPaste))
+                            }
 
+                        }
+                        val seleccion = Seleccion(country.name, listPlayers)
+                        listSquads.add(seleccion)
+                        listPlayers.clear()
                     }
-                    val seleccion = Seleccion(country.name, listPlayers)
-                    listSquads.add(seleccion)
-                    listPlayers.clear()
                 }
             }
         }

@@ -47,19 +47,6 @@ class FiguritasViewModel @Inject constructor(
             Player(123,"nano","ddd","123","123",1,1,"nununu"),
         )
     }
-    /*fun getplayer() {
-        viewModelScope.launch {
-            val response = playerDBRepository.searchPlayerById(5)
-            if (response.isSuccessful && response.body() != null) {
-                val player = response.body()
-                playerList.value?.add(player)
-            } else {
-                val error = response.errorBody().toString()
-                Log.d("Error response player ", error)
-            }
-        }
-
-    }*/
 
 
 }
