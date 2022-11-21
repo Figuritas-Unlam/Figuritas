@@ -74,19 +74,7 @@ class AlbumViewModel @Inject constructor(var databaseRepository: DatabaseReposit
 
     fun inAlbum(playerResponse : PlayerResponse, playerEntity : PlayerEntity) : PlayerEntity{
         if(playerResponse.data.playerId == playerEntity.playerId){
-            return PlayerEntity(
-                playerResponse.data.playerId,
-                playerResponse.data.name,
-                playerResponse.data.height,
-                playerResponse.data.weight,
-                playerResponse.data.birthdate,
-                playerResponse.data.teamId,
-                playerResponse.data.countryId,
-                0,
-                false,
-                "",
-                ""
-            )
+            return playerEntity
         }
         else{
             return PlayerEntity(
@@ -99,6 +87,7 @@ class AlbumViewModel @Inject constructor(var databaseRepository: DatabaseReposit
                 0,
                 0,
                 false,
+                "",
                 "",
                 ""
             )

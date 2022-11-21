@@ -42,10 +42,14 @@ private fun bind(
     holder.binding.nombreJugador.text = player.playerName
     holder.binding.fechaNacimiento.text = player.birthdate
 
-
     Picasso.get()
         .load(player.imageUrl)
         .placeholder(R.drawable.image_not_found)
         .into(holder.binding.imagenJugador)
+
+    Picasso.get()
+        .load(player.imageCountry)
+        .placeholder(R.drawable.bandera_not_found)
+        .into(holder.binding.imageCountry)
 
 }
