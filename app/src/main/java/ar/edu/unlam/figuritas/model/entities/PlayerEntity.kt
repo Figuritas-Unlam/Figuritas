@@ -41,6 +41,8 @@ data class PlayerEntity (
     @ColumnInfo(name = "Paste")
     var isPaste : String,
 
+    @ColumnInfo(name = "Image_Country")
+    var imageCountry : String
     )
 fun PlayerEntity.mapToPlayer()=Player(playerId,
     playerName,height,

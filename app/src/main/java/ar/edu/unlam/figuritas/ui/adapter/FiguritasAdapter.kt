@@ -9,7 +9,7 @@ import ar.edu.unlam.figuritas.model.entities.PlayerEntity
 import ar.edu.unlam.figuritas.model.response.PlayerResponseData
 import com.squareup.picasso.Picasso
 
-class FiguritasAdapter(var figuritas: MutableList<PlayerEntity>
+class FiguritasAdapter(var figuritas: List<PlayerEntity>
 ) : RecyclerView.Adapter<FiguritaViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FiguritaViewHolder {
@@ -42,10 +42,14 @@ private fun bind(
     holder.binding.nombreJugador.text = player.playerName
     holder.binding.fechaNacimiento.text = player.birthdate
 
-
     Picasso.get()
         .load(player.imageUrl)
         .placeholder(R.drawable.image_not_found)
         .into(holder.binding.imagenJugador)
+
+    Picasso.get()
+        .load(player.imageCountry)
+        .placeholder(R.drawable.arg)
+        .into(holder.binding.imageCountry)
 
 }

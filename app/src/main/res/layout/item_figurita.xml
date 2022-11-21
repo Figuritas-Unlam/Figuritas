@@ -47,6 +47,7 @@
             />
 
         <ImageView
+            android:id="@+id/imageCountry"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:src="@drawable/arg"

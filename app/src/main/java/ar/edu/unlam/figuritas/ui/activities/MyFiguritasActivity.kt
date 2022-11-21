@@ -172,7 +172,7 @@ fun RvNuevas(viewModel: OpenPackViewModel) {
     //val rememberPlayers = remember { viewModel.playerList }
     LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(8.dp)) {
         items(viewModel.playerNuevas) { player ->
-                FiguritasNuevas(player = player.mapToPlayer())
+            FiguritasNuevas(player = player.mapToPlayer())
 
         }
     }
@@ -188,7 +188,7 @@ fun getMessiMock(): MutableList<Player> {
         Player(123,"nano","ddd","123","22/2/00",123,123,"22/2/00"),
         Player(123,"nano","ddd","123","22/2/00",123,123,"22/2/00"),
         Player(123,"nano","ddd","123","22/2/00",123,123,"22/2/00"),
-        )
+    )
 }
 
 
@@ -363,7 +363,6 @@ fun FiguritasRepetidas(player: Player) {
 
 @Composable
 fun RvRepetidas(viewModel: OpenPackViewModel) {
-   // val rememberPlayers = remember { viewModel.playerList }
     LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(8.dp)) {
         items(viewModel.playerRepetidos) { player ->
             FiguritasRepetidas(player = player.mapToPlayer())

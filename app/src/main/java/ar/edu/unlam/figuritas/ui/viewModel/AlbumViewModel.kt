@@ -1,5 +1,7 @@
 package ar.edu.unlam.figuritas.ui.viewModel
 
+import android.util.Log
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -8,6 +10,7 @@ import ar.edu.unlam.figuritas.data.repository.DatabaseRepository
 import ar.edu.unlam.figuritas.data.repository.PlayerRepository
 import ar.edu.unlam.figuritas.model.Seleccion
 import ar.edu.unlam.figuritas.model.WorldCupTeamId
+import ar.edu.unlam.figuritas.model.entities.Player
 import ar.edu.unlam.figuritas.model.entities.PlayerEntity
 import ar.edu.unlam.figuritas.model.response.PlayerResponse
 import ar.edu.unlam.figuritas.model.response.PlayerResponseData
@@ -23,19 +26,13 @@ class AlbumViewModel @Inject constructor(var databaseRepository: DatabaseReposit
     var listPlayers = mutableListOf<PlayerEntity>()
     var listCountries = mutableListOf<WorldCupTeamId>()
     var listSquads = mutableListOf<Seleccion>()
-    var listSquadsLiveData = MutableLiveData<MutableList<Seleccion>>()
-    var playersLiveData = MutableLiveData<List<PlayerEntity>>()
+    private val _seleccionData = MutableLiveData<List<Seleccion?>>()
+    val seleccionData: MutableLiveData<List<Seleccion?>> = _seleccionData
 
-    fun getSquads(): MutableLiveData<MutableList<Seleccion>>{
-        return this.listSquadsLiveData
-    }
 
-    fun searchPlayers() : MutableList<Seleccion>{
+    init {
         setCountrys()
-        for(countryTeam in listCountries) {
-            insertPlayers2(countryTeam)
-        }
-        return listSquads
+        searchSelecciones()
     }
 
     fun searchPlayer () : List<PlayerEntity>{
@@ -43,34 +40,60 @@ class AlbumViewModel @Inject constructor(var databaseRepository: DatabaseReposit
 
     }
 
-    fun insertPlayers2(team : WorldCupTeamId){
+    fun searchSelecciones(){
 
-        viewModelScope.launch {
-            val playersDatabase = databaseRepository.getallPlayers()
-
-            listPlayers.addAll(playersDatabase)
-
-            val seleccion = Seleccion(team.name, listPlayers)
-            listSquads.add(seleccion)
-            listPlayers.clear()
+        for(seleccion in listCountries){
+            searchPlayers(seleccion)
         }
-
+        _seleccionData.value = listSquads
     }
-/*
-    fun insertPlayers(team : WorldCupTeamId) : Seleccion {
-        val seleccion = Seleccion(team.name, mutableListOf())
-        viewModelScope.launch {
 
-            val response = playerRepository.getPlayersByCountry(team)
-            if (response != null) {
-                for(player in response){
-                    seleccion.players.add(player!!.data)
+    fun searchPlayers(country : WorldCupTeamId){
+        try {
+            viewModelScope.launch {
+                val response = playerRepository.getPlayersByCountry(country)
+                val playersDatabase = databaseRepository.getallPlayers()
+                for (player in response!!) {
+                    for (playerPaste in playersDatabase) {
+                        if (player != null) {
+                            listPlayers.add(inAlbum(player, playerPaste))
+                        }
+
+                    }
+                    val seleccion = Seleccion(country.name, listPlayers)
+                    listSquads.add(seleccion)
+                    listPlayers.clear()
                 }
             }
         }
-        return seleccion
+     catch (e: RuntimeException) {
+        e.printStackTrace()
+        Log.e("Error fetching players", e.message.toString())
     }
-*/
+    }
+
+    fun inAlbum(playerResponse : PlayerResponse, playerEntity : PlayerEntity) : PlayerEntity{
+        if(playerResponse.data.playerId == playerEntity.playerId){
+            return playerEntity
+        }
+        else{
+            return PlayerEntity(
+                playerResponse.data.playerId,
+                "?",
+                "?",
+                "?",
+                "?",
+                0,
+                0,
+                0,
+                false,
+                "",
+                "",
+                ""
+            )
+        }
+    }
+
     fun setCountrys(){
 
         listCountries.add(WorldCupTeamId.QATAR)

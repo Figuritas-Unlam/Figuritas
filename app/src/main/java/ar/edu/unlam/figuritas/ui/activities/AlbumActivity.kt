@@ -15,6 +15,8 @@ import ar.edu.unlam.figuritas.R
 
 import ar.edu.unlam.figuritas.databinding.ActivityAlbumBinding
 import ar.edu.unlam.figuritas.model.Seleccion
+import ar.edu.unlam.figuritas.model.WorldCupTeamId
+import ar.edu.unlam.figuritas.model.entities.PlayerEntity
 import ar.edu.unlam.figuritas.model.response.PlayerResponse
 import ar.edu.unlam.figuritas.ui.OpenPackViewModel
 import ar.edu.unlam.figuritas.ui.adapter.AlbumAdapter
@@ -27,7 +29,7 @@ class AlbumActivity : AppCompatActivity() {
 
     private lateinit var albumBinding: ActivityAlbumBinding
     private lateinit var albumAdapter: AlbumAdapter
-    private lateinit var listCountries: MutableList<String>
+    private lateinit var listPlayers : List<PlayerEntity>
     private lateinit var listSelecciones: MutableList<Seleccion>
     private var player: PlayerResponse? = null
 
@@ -41,23 +43,35 @@ class AlbumActivity : AppCompatActivity() {
 
         initMyFiguritas()
         setContentView(view)
-
         initRecyclerView()
-
-        figus()
+        subscribeToViewModel()
+        albumBinding.textoAlbum.text = albumViewModel.searchPlayer()[0].playerName
+        /*figus()*/
 
 
     }
 
 
+    @SuppressLint("NotifyDataSetChanged")
     private fun initRecyclerView() {
-        listSelecciones = albumViewModel.searchPlayers()
-        albumAdapter = AlbumAdapter(listSelecciones, applicationContext)
+
+
+        albumAdapter = AlbumAdapter(mutableListOf(), applicationContext)
+        albumAdapter.notifyDataSetChanged()
         albumBinding.rvSelecciones.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         albumBinding.rvSelecciones.adapter = albumAdapter
+
     }
 
+    @SuppressLint("NotifyDataSetChanged")
+    private fun subscribeToViewModel(){
+
+        albumViewModel.seleccionData.observe(this){
+            albumAdapter.countries = it as MutableList<Seleccion>
+            albumAdapter.notifyDataSetChanged()
+        }
+    }
 
     private fun initMyFiguritas() {
 
@@ -84,4 +98,6 @@ class AlbumActivity : AppCompatActivity() {
                 .placeholder(R.drawable.ney)
             .into(albumBinding.imagenJugador)
     }
+
+
 }
