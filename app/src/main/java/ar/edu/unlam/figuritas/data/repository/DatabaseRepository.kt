@@ -8,24 +8,38 @@ import javax.inject.Inject
 class DatabaseRepository @Inject constructor(private val playerDao: PlayerDao) {
 
 
-    fun insertPlayer(playerResponse : PlayerResponse){
-        val idPlayerResponse = playerResponse.data.playerId
+    fun insertPlayer(playerResponse : PlayerResponse) {
+        playerDao.insertOrUpdate(
+            PlayerEntity(
+                playerResponse.data.playerId,
+                playerResponse.data.name,
+                playerResponse.data.height,
+                playerResponse.data.weight,
+                playerResponse.data.birthdate,
+                playerResponse.data.nationality,
+                playerResponse.data.teamId,
+                playerResponse.data.countryId,
+                quantity = 1,
+                inAlbum = false,
+                isSwappable = false,
+                imageUrl = playerResponse.data.image
+            )
+        )
+    }
 
-/*
-        if(playerDao.isPlayerExists(idPlayerResponse))
-        {*/
-        playerDao.insertPlayer(PlayerEntity(playerResponse.data.playerId, playerResponse.data.name,
-        playerResponse.data.height, playerResponse.data.weight, playerResponse.data.birthdate,
-            playerResponse.data.teamId, playerResponse.data.countryId, 1, false, playerResponse.data.image))
-        /*}
-        else
-        {
-            playerDao.sumQuantity(idPlayerResponse)
-        }*/
+    fun insertPlayerEntity(player : PlayerEntity) {
+        playerDao.insertOrUpdate(player)
+    }
+
+    fun getSwapablePlayers(): List<PlayerEntity> {
+        return playerDao.getSwappablePlayers()
     }
 
     fun getallPlayers(): List<PlayerEntity> {
         return playerDao.getAllPlayers()
+    }
 
+    fun deletePlayers(players: List<PlayerEntity>?) {
+        players?.forEach { playerDao.deleteOrUpdate(it) }
     }
 }

@@ -62,6 +62,11 @@
                 android:value="" />
         </activity>
         <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation"
+            android:stateNotNeeded="true"/>
+        <activity
             android:name=".ui.activities.InitScreenActivity"
             android:exported="true">
             <meta-data

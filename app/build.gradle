@@ -19,7 +19,7 @@ android {
 
     defaultConfig {
         applicationId "ar.edu.unlam.figuritas"
-        minSdk 21
+        minSdk 24
         targetSdk 33
         versionCode 1
         versionName "1.0"
@@ -128,4 +128,8 @@ dependencies {
     implementation 'com.google.android.gms:play-services-maps:18.1.0'
     //Location
     implementation 'com.google.android.gms:play-services-location:21.0.0'
+
+    //ZXing
+    implementation 'com.google.zxing:core:3.3.0'
+    implementation ('com.journeyapps:zxing-android-embedded:4.1.0') { transitive = false }
 }

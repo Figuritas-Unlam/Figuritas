@@ -36,7 +36,7 @@ object AppModule {
 
     @Singleton
     @Provides
-    fun provideOngApi(retrofit: Retrofit): PlayerAPI {
+    fun providePlayersApi(retrofit: Retrofit): PlayerAPI {
         return retrofit.create(PlayerAPI::class.java)
     }
 
@@ -68,7 +68,7 @@ object AppModule {
             context,
             PlayerDatabase::class.java,
             "Figuritas_Database"
-        ).allowMainThreadQueries().build()
+        ).allowMainThreadQueries().fallbackToDestructiveMigration().build()
     }
 
     @Singleton
