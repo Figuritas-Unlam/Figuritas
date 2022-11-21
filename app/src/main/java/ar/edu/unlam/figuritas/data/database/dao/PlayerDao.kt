@@ -10,22 +10,42 @@ interface PlayerDao {
     fun getAllPlayers() : List<PlayerEntity>
 
     @Query("Select * From Players pa Where pa.Name = :namePlayer ")
-    fun searchPlayerForName(namePlayer: String) : PlayerEntity
+    fun getPlayerForName(namePlayer: String) : PlayerEntity
 
+    @Query("Select * From Players pa Where pa.quantity > 1 ")
+    fun getRepeatedPlayers() : List<PlayerEntity>
 
-    @Query("Select * From Players pa Where pa.Id = :idPlayer ")
-    fun searchPlayerForId(idPlayer: String) : PlayerEntity
+    @Query("Select * From Players pa Where pa.Is_Swapable = 1")
+    fun getSwappablePlayers() : List<PlayerEntity>
 
-    @Query("Select Exists(Select pa.* From Players pa Where pa.Id = :idPlayer)")
-    fun isPlayerExists(idPlayer : Int) : Boolean
+    @Query("UPDATE Players SET Is_Swapable = :swappable WHERE id = :playerId AND In_Album = 0")
+    fun setSwappablePlayers(playerId: Int, swappable: Boolean)
 
     @Insert
     fun insertPlayer(entity: PlayerEntity)
 
+    @Query("SELECT * from Players WHERE id= :id AND In_Album = 0 And Quantity > 0")
+    fun getPlayerById(id: Int) : PlayerEntity?
+
+    @Query("UPDATE Players SET quantity = quantity + :qty WHERE id = :id")
+    fun updateQuantity(id: Int, qty: Int)
+
+    fun insertOrUpdate(player: PlayerEntity) {
+        val playerFromDB = getPlayerById(player.playerId)
+        if (playerFromDB == null) insertPlayer(player)
+        else updateQuantity(player.playerId, 1)
+    }
+
     @Delete
     fun deletePlayer(entity: PlayerEntity)
 
-    @Query("Update Players Set Quantity = Quantity + 1 Where Id = :idPlayer")
-    fun sumQuantity(idPlayer: Int)
+    fun deleteOrUpdate(player: PlayerEntity) {
+        val playerFromDB = getPlayerById(player.playerId)
+        if (playerFromDB == null) deletePlayer(player)
+        else updateQuantity(player.playerId, -1)
+    }
+
+    @Query("UPDATE Players SET in_album = 1 WHERE id = :id")
+    fun placePlayerInAlbum(id: Int)
 
 }
