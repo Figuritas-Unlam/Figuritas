@@ -24,7 +24,7 @@ interface PlayerDao {
     @Insert
     fun insertPlayer(entity: PlayerEntity)
 
-    @Query("SELECT * from Players WHERE id= :id AND In_Album = 0 And Quantity > 0")
+    @Query("SELECT * from Players WHERE id= :id AND In_Album = 0 And Quantity > 1")
     fun getPlayerById(id: Int) : PlayerEntity?
 
     @Query("UPDATE Players SET quantity = quantity + :qty WHERE id = :id")
