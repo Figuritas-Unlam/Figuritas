@@ -15,6 +15,12 @@ interface PlayerDao {
     @Query("Select * From Players pa Where pa.quantity > 1 ")
     fun getRepeatedPlayers() : List<PlayerEntity>
 
+    @Query("Select * From Players pa Where pa.Is_Swapable = 1")
+    fun getSwappablePlayers() : List<PlayerEntity>
+
+    @Query("UPDATE Players SET Is_Swapable = :swappable WHERE id = :playerId AND In_Album = 0")
+    fun setSwappablePlayers(playerId: Int, swappable: Boolean)
+
     @Insert
     fun insertPlayer(entity: PlayerEntity)
 
