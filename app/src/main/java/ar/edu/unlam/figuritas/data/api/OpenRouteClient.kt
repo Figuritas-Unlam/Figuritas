@@ -4,26 +4,19 @@ import ar.edu.unlam.figuritas.Data.models.RouteResponse
 import ar.edu.unlam.figuritas.Data.models.mapToRoute
 import ar.edu.unlam.figuritas.Domain.Models.Route
 import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Query
+import javax.inject.Inject
 
-class OpenRouteClient{
-
-    private val openRouteService: OpenRouteService = Retrofit.Builder()
-        .baseUrl("https://api.openrouteservice.org/")
-        .addConverterFactory(GsonConverterFactory.create())
-        .build()
-        .create(OpenRouteService::class.java)
-
+class OpenRouteClient @Inject constructor(
+    private val openRouteService: OpenRouteService
+){
     suspend fun getRoute(start: String, end: String): Route? {
         var route: Route? = null
         try {
             val response = openRouteService.getRoute(
-                "5b3ce3597851110001cf6248349f0f0bc0aa4a07a3c239a5f3611c6f",
-                start,
-                end
+                start = start,
+                end= end
             )
             if (response.isSuccessful && response.body() != null) {
                 route = response.body()?.mapToRoute()
@@ -36,9 +29,14 @@ class OpenRouteClient{
 }
 
 interface OpenRouteService {
+
+    companion object{
+        const val API_KEY_ROUTE = "3puVV9TkLHqxgI5xrd00AOS16Zxs2IdcSJLhGciUdRuzswDOvN4KuUVtZuHo"
+    }
+
     @GET("/v2/directions/driving-car")
     suspend fun getRoute(
-        @Query("api_key") key: String,
+        @Query("api_key") key: String = API_KEY_ROUTE,
         @Query("start", encoded = true) start: String,
         @Query("end", encoded = true) end: String): Response<RouteResponse>
 }

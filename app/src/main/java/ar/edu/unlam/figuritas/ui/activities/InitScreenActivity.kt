@@ -24,12 +24,15 @@ class InitScreenActivity : AppCompatActivity(), SensorEventListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityInitScreenBinding.inflate(layoutInflater)
-
+        setContentView(binding.root)
         binding.openPackButton.setOnClickListener {
             val openPackActivityIntent = Intent(baseContext, OpenPackActivity::class.java)
             startActivity(openPackActivityIntent)
         }
-        setContentView(binding.root)
+        binding.title.setOnClickListener{
+            val mapActivityIntent = Intent(baseContext, MapActivity::class.java)
+            startActivity(mapActivityIntent)
+        }
         setShakeSensor()
         initMotionLayout()
         initOpenPack()

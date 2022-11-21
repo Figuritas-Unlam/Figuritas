@@ -5,12 +5,11 @@ import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.activity.viewModels
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import ar.edu.unlam.figuritas.R
-import ar.edu.unlam.figuritas.Data.api.OpenRouteClient
 import ar.edu.unlam.figuritas.Domain.Models.MeetPoints
-import ar.edu.unlam.figuritas.Domain.PolyLineRouteProvider
 import ar.edu.unlam.figuritas.databinding.ActivityMapBinding
 import ar.edu.unlam.figuritas.ui.viewmodel.MapViewModel
 import com.google.android.gms.location.*
@@ -20,12 +19,13 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import dagger.hilt.android.AndroidEntryPoint
 
-//Se tiene que inyectar VM y al que se le inyectaría routeProvider
-class MapActivity() : AppCompatActivity(),
+@AndroidEntryPoint
+class MapActivity: AppCompatActivity(),
     OnMapReadyCallback, GoogleMap.OnMyLocationButtonClickListener {
 
-    private lateinit var mapViewModel: MapViewModel
+    private val mapViewModel: MapViewModel by viewModels()
     private val LOCATION_REQUEST = 0
     private val FINE_LOCATION = Manifest.permission.ACCESS_FINE_LOCATION
     private lateinit var binding: ActivityMapBinding
@@ -35,15 +35,8 @@ class MapActivity() : AppCompatActivity(),
         super.onCreate(savedInstanceState)
         binding = ActivityMapBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        suscribeToViewModel()
         createMap()
         setManagerLocation()
-    }
-
-    private fun suscribeToViewModel() {
-        val client = OpenRouteClient()
-        val polyProvider = PolyLineRouteProvider(client)
-        mapViewModel = MapViewModel(polyProvider)
     }
 
     private fun isLocationPermissionGranted() = ContextCompat.checkSelfPermission(
@@ -143,12 +136,13 @@ class MapActivity() : AppCompatActivity(),
     private fun setMarkerListener() {
         map.setOnMarkerClickListener {
             val coordinates = it.position
+            Log.d("MarkerCoords","${coordinates.longitude}, ${coordinates.latitude}")
             if (isLocationPermissionGranted()) {
                 if (mapViewModel.name != it.title.toString()) {
                     mapViewModel.resetLocations()
                     mapViewModel.name = it.title.toString()
                     drawPolyLineRoute(
-                        "${mapViewModel.actualLocation?.longitude}, ${mapViewModel.actualLocation?.latitude}",
+                        "-58.463202, -34.605046",
                         "${coordinates.longitude}, ${coordinates.latitude}"
                     )
                 }
@@ -162,6 +156,8 @@ class MapActivity() : AppCompatActivity(),
     private fun drawPolyLineRoute(start: String, end: String) {
         val polyLine = mapViewModel.getPolyline(start, end)
         if (polyLine != null) {
+            Log.d("MarkerCoords en Pegada", end)
+            Log.d("'My location'Coords", start)
             runOnUiThread {
                 mapViewModel.poly = map.addPolyline(polyLine)
             }

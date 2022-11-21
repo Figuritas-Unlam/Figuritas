@@ -9,11 +9,16 @@ import com.google.android.gms.location.*
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Polyline
 import com.google.android.gms.maps.model.PolylineOptions
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class MapViewModel(private val routeProvider: PolyLineRouteProvider): ViewModel() {
+@HiltViewModel
+class MapViewModel @Inject constructor(
+    private val routeProvider: PolyLineRouteProvider
+    ): ViewModel() {
     var name = ""
     var poly: Polyline? = null
     lateinit var fusedLocation: FusedLocationProviderClient

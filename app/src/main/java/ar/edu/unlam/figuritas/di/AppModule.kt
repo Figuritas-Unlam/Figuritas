@@ -2,6 +2,8 @@ package ar.edu.unlam.figuritas.di
 
 import android.content.Context
 import androidx.room.Room
+import ar.edu.unlam.figuritas.Data.api.OpenRouteService
+import ar.edu.unlam.figuritas.Domain.PolyLineRouteProvider
 import ar.edu.unlam.figuritas.data.api.PlayerAPI
 import ar.edu.unlam.figuritas.data.database.PlayerDatabase
 import ar.edu.unlam.figuritas.data.database.dao.PlayerDao
@@ -20,6 +22,8 @@ import javax.inject.Singleton
 object AppModule {
 
     private const val BASE_URL = "https://soccer.sportmonks.com/api/v2.0/"
+    private const val BASE_ROUTE_URL = "https://api.openrouteservice.org/"
+
 
     @Singleton
     @Provides
@@ -34,6 +38,27 @@ object AppModule {
     @Provides
     fun provideOngApi(retrofit: Retrofit): PlayerAPI {
         return retrofit.create(PlayerAPI::class.java)
+    }
+
+    @Singleton
+    @Provides
+    fun provideRouteRetrofit(): Retrofit {
+        return Retrofit.Builder()
+            .baseUrl(BASE_ROUTE_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+    }
+
+    @Singleton
+    @Provides
+    fun provideRouteApi(retrofit: Retrofit): OpenRouteService {
+        return retrofit.create(OpenRouteService::class.java)
+    }
+
+    @Singleton
+    @Provides
+    fun providePolyLineProvider(retrofit: Retrofit): PolyLineRouteProvider {
+        return retrofit.create(PolyLineRouteProvider::class.java)
     }
 
     @Singleton
