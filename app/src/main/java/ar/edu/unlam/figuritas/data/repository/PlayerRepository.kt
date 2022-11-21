@@ -21,7 +21,7 @@ class PlayerRepository @Inject constructor(
         return getSquadDataByCountry(country)?.map { getPlayerById(it.playerId).body() }
     }
 
-    suspend fun     getRandomPlayers(qty: Int) : List<PlayerResponse?> {
+    suspend fun getRandomPlayers(qty: Int) : List<PlayerResponse?> {
         return List(qty) {
             getPlayerById(getRandomPlayerId()).body()
         }

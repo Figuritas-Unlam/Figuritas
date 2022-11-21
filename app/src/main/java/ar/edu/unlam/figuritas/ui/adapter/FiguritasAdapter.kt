@@ -9,7 +9,7 @@ import ar.edu.unlam.figuritas.model.entities.PlayerEntity
 import ar.edu.unlam.figuritas.model.response.PlayerResponseData
 import com.squareup.picasso.Picasso
 
-class FiguritasAdapter(var figuritas: MutableList<PlayerEntity>
+class FiguritasAdapter(var figuritas: List<PlayerEntity>
 ) : RecyclerView.Adapter<FiguritaViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FiguritaViewHolder {

@@ -39,4 +39,7 @@ interface PlayerDao {
 
     @Query("Update Players Set Paste = 'Paste', Quantity = Quantity-1 Where Id = :idPlayer")
     fun pastePlayer(idPlayer: Int)
+
+    @Query("Select * From Players pa Where pa.Paste = 'Paste'")
+    fun getPlayersPaste() : List<PlayerEntity>
 }

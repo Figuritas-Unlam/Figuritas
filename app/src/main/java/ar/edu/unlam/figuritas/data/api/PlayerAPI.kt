@@ -1,5 +1,6 @@
 package ar.edu.unlam.figuritas.data.api
 
+import ar.edu.unlam.figuritas.model.response.CountryResponse
 import ar.edu.unlam.figuritas.model.response.PlayerResponse
 import ar.edu.unlam.figuritas.model.response.TeamResponse
 import retrofit2.Response
@@ -18,4 +19,6 @@ interface PlayerAPI {
     @GET("teams/{countryId}?api_token=$API_KEY&include=squad")
     suspend fun searchPlayersByCountryId(@Path("countryId") countryId : Int) : Response<TeamResponse>
 
+    @GET("countries/{countryId}?api_token=$API_KEY")
+    suspend fun searchCountryById(@Path("countryId") countryId: Int) : Response<CountryResponse>
 }
