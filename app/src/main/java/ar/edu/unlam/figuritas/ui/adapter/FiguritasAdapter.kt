@@ -49,7 +49,7 @@ private fun bind(
 
     Picasso.get()
         .load(player.imageCountry)
-        .placeholder(R.drawable.bandera_not_found)
+        .placeholder(R.drawable.arg)
         .into(holder.binding.imageCountry)
 
 }

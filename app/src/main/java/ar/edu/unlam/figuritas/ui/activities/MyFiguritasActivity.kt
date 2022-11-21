@@ -44,6 +44,7 @@ import ar.edu.unlam.figuritas.ui.activities.ui.theme.FiguritasTheme
 import ar.edu.unlam.figuritas.ui.activities.ui.theme.Orange
 import ar.edu.unlam.figuritas.ui.activities.ui.theme.RedQatar
 import ar.edu.unlam.figuritas.ui.viewModel.FiguritasViewModel
+import coil.compose.AsyncImage
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -232,8 +233,8 @@ fun FiguritasNuevas(player: Player) {
 
             }
 
-            Image(
-                painter = painterResource(id = R.drawable.messi),
+            AsyncImage(
+                model = player.imageUrl,
                 contentDescription = null,
                 modifier = Modifier
                     .width(140.dp)
@@ -327,8 +328,8 @@ fun FiguritasRepetidas(player: Player) {
             }
 
 
-            Image(
-                painter = painterResource(id = R.drawable.messi),
+            AsyncImage(
+            model = player.imageUrl,
                 contentDescription = null,
                 modifier = Modifier
                     .width(140.dp)
