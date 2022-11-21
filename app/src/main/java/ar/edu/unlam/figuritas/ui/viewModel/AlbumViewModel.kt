@@ -51,6 +51,9 @@ class AlbumViewModel @Inject constructor(var databaseRepository: DatabaseReposit
         }
 
     }
+
+    fun getPlayersInAlbum() {
+    }
 /*
     fun insertPlayers(team : WorldCupTeamId) : Seleccion {
         val seleccion = Seleccion(team.name, mutableListOf())
