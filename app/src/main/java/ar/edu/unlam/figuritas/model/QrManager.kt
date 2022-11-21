@@ -2,7 +2,6 @@ package ar.edu.unlam.figuritas.model
 
 import android.graphics.Bitmap
 import android.text.TextUtils
-import ar.edu.unlam.figuritas.model.entities.PlayerEntity
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.google.zxing.BarcodeFormat
@@ -18,7 +17,7 @@ class QRManager {
     ))
 
     //Devolverá una lista de figuritas
-    fun deserializeStickers(playersJson: String): List<PlayerEntity> {
+    fun deserializeStickers(playersJson: String): List<PlayerModel> {
         return Gson().fromJson(
             TextUtils.substring(playersJson, CODE_VERIFY.length, playersJson.length),
             LIST_OF_PLAYERS
@@ -26,19 +25,19 @@ class QRManager {
     }
 
     //Se genera el QR para regalar (Mediante la serializacion de la info + CODE_VERIFY, para luego validar)
-    fun generateQR(stickers: List<PlayerEntity>, width : Int, height : Int): Bitmap? {
+    fun generateQR(stickers: List<PlayerModel>, width : Int, height : Int): Bitmap? {
         val figures = serializeStickers(stickers)
         return BarcodeEncoder().encodeBitmap(
             CODE_VERIFY+figures, BarcodeFormat.QR_CODE,
             width, height)
     }
 
-    private fun serializeStickers(figus : List<PlayerEntity>): String{
+    private fun serializeStickers(figus : List<PlayerModel>): String{
         return Gson().toJson(figus)
     }
 
     companion object {
-        private val LIST_OF_PLAYERS = object : TypeToken<List<PlayerEntity>>() {}.type
+        private val LIST_OF_PLAYERS = object : TypeToken<List<PlayerModel>>() {}.type
         //Codigo de verificacion, para saber si el qr lo genero nuestra app
         private val CODE_VERIFY = "Tomas1Aitor2Pablo3Elias4ROCA".hashCode().toString()
     }

@@ -38,4 +38,8 @@ class DatabaseRepository @Inject constructor(private val playerDao: PlayerDao) {
     fun getallPlayers(): List<PlayerEntity> {
         return playerDao.getAllPlayers()
     }
+
+    fun deletePlayers(players: List<PlayerEntity>?) {
+        players?.forEach { playerDao.deleteOrUpdate(it) }
+    }
 }

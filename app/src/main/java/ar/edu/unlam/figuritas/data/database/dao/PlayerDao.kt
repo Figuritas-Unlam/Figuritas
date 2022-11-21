@@ -27,17 +27,23 @@ interface PlayerDao {
     @Query("SELECT * from Players WHERE id= :id")
     fun getPlayerById(id: Int) : PlayerEntity?
 
-    @Query("UPDATE Players SET quantity = quantity + 1 WHERE id = :id")
-    fun updateQuantity(id: Int)
+    @Query("UPDATE Players SET quantity = quantity + :qty WHERE id = :id")
+    fun updateQuantity(id: Int, qty: Int)
 
     fun insertOrUpdate(player: PlayerEntity) {
         val playerFromDB = getPlayerById(player.playerId)
         if (playerFromDB == null) insertPlayer(player)
-        else updateQuantity(player.playerId)
+        else updateQuantity(player.playerId, 1)
     }
 
     @Delete
     fun deletePlayer(entity: PlayerEntity)
+
+    fun deleteOrUpdate(player: PlayerEntity) {
+        val playerFromDB = getPlayerById(player.playerId)
+        if (playerFromDB == null) deletePlayer(player)
+        else updateQuantity(player.playerId, -1)
+    }
 
     @Query("UPDATE Players SET in_album = 1 WHERE id = :id")
     fun placePlayerInAlbum(id: Int)

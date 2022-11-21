@@ -1,14 +1,16 @@
 package ar.edu.unlam.figuritas.ui.activities
 
+import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import ar.edu.unlam.figuritas.databinding.ActivitySwapsBinding
+import ar.edu.unlam.figuritas.model.PlayerModel
 import ar.edu.unlam.figuritas.model.QRManager
-import ar.edu.unlam.figuritas.model.entities.PlayerEntity
 import ar.edu.unlam.figuritas.ui.adapter.SwapsStickersAdapter
 import ar.edu.unlam.figuritas.ui.SwapsViewModel
 import com.google.zxing.integration.android.IntentIntegrator
@@ -25,14 +27,21 @@ class SwapsActivity : AppCompatActivity() {
         binding = ActivitySwapsBinding.inflate(layoutInflater)
         val view = binding.root
 
+        setOnClickListeners()
+        setRecyclerView()
+        setContentView(view)
+    }
+
+    private fun setOnClickListeners() {
         binding.scanCode.setOnClickListener {
             startCamera()
         }
-
         binding.swapsButton.setOnClickListener {
             generateQr()
         }
+    }
 
+    private fun setRecyclerView() {
         val recyclerView = binding.recyclerView
         suscribeToViewModel()
         val dividerItemDecoration = DividerItemDecoration(
@@ -40,8 +49,6 @@ class SwapsActivity : AppCompatActivity() {
             DividerItemDecoration.HORIZONTAL
         )
         recyclerView.addItemDecoration(dividerItemDecoration)
-
-        setContentView(view)
     }
 
     private fun suscribeToViewModel() {
@@ -74,17 +81,20 @@ class SwapsActivity : AppCompatActivity() {
 
     private fun generateQr() {
         try {
-            // TODO("Show dialog with QR code")
-            qrManager.generateQR(createSomeFigus(), 450, 450)
-        } catch (e: Exception) {
+            val iv = ImageView(this)
+            iv.setImageBitmap(qrManager.generateQR(getSelectedPlayers(), 450, 450))
+            AlertDialog.Builder(this)
+                .setMessage("Mostrá el codigo para enviarlas")
+                .setView(iv)
+                .show()
+        } catch (e: RuntimeException) {
             //No se pudo generar el QR
             Toast.makeText(this,"Error al generar QR", Toast.LENGTH_SHORT).show()
         }
     }
 
-    private fun createSomeFigus(): List<PlayerEntity> {
-        // TODO("return selected stickers for QR code generation")
-        return emptyList()
+    private fun getSelectedPlayers(): List<PlayerModel> {
+        return viewModel.getSelectedStickers()
     }
 
 }
