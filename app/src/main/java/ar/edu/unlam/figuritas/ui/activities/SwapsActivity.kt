@@ -3,6 +3,7 @@ package ar.edu.unlam.figuritas.ui.activities
 import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.viewModels
@@ -54,6 +55,7 @@ class SwapsActivity : AppCompatActivity() {
     private fun suscribeToViewModel() {
         viewModel.swappableStickers.observe(this) {
             binding.recyclerView.adapter = SwapsStickersAdapter(it)
+            if (it.isNotEmpty()) binding.emptyListText.visibility = View.GONE
         }
     }
 
