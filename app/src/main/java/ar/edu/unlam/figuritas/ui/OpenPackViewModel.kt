@@ -1,6 +1,5 @@
 package ar.edu.unlam.figuritas.ui
 
-import android.hardware.SensorManager
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -10,7 +9,6 @@ import ar.edu.unlam.figuritas.data.repository.DatabaseRepository
 import ar.edu.unlam.figuritas.data.repository.PlayerRepository
 import ar.edu.unlam.figuritas.model.entities.PlayerEntity
 import ar.edu.unlam.figuritas.model.response.PlayerResponse
-import ar.edu.unlam.figuritas.model.response.mapToEntity
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -29,13 +27,25 @@ class OpenPackViewModel @Inject constructor(
         fetchPlayers()
     }
 
+     fun getFirstPlayerRepets() : PlayerEntity{
+         return databaseRepository.getRepeats().first()
+     }
+
+    fun getFirstPlayerNueva() : PlayerEntity{
+        return databaseRepository.getPlayersNotPaste().first()
+    }
+
     private fun fetchPlayers() {
         try {
             viewModelScope.launch {
                 val response = repository.getRandomPlayers(5)
                 _playersData.value = response
                 for(player in response){
-                    player!!.data.imageCountry = repository.getCountryById(player.data.countryId)!!.data.image
+                    player?.data?.imageCountry = player?.data?.countryId?.let {
+                        repository.getCountryById(
+                            it
+                        )?.data
+                    }!!.image
                     databaseRepository.insertPlayer(player)
                 }
             }

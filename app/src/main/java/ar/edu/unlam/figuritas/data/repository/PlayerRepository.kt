@@ -1,9 +1,7 @@
 package ar.edu.unlam.figuritas.data.repository
 
 import ar.edu.unlam.figuritas.data.api.PlayerClient
-import ar.edu.unlam.figuritas.data.database.dao.PlayerDao
 import ar.edu.unlam.figuritas.model.WorldCupTeamId
-import ar.edu.unlam.figuritas.model.entities.PlayerEntity
 import ar.edu.unlam.figuritas.model.response.*
 import retrofit2.Response
 import javax.inject.Inject
@@ -22,7 +20,7 @@ class PlayerRepository @Inject constructor(
 
     suspend fun getRandomPlayers(qty: Int) : List<PlayerResponse?> {
         return List(qty) {
-            getPlayerById(getRandomPlayerId()).body()
+            getRandomPlayerId()?.let { it1 -> getPlayerById(it1).body() }
         }
     }
 
@@ -30,8 +28,8 @@ class PlayerRepository @Inject constructor(
         return playerClient.searchCountryById(countryId).body()
     }
 
-    private suspend fun getRandomPlayerId() : Int {
-        return getSquadDataByCountry(getRandomCountryId())?.random()?.playerId!!
+    private suspend fun getRandomPlayerId() : Int? {
+        return getSquadDataByCountry(getRandomCountryId())?.random()?.playerId
     }
 
     private suspend fun getSquadDataByCountry(country: WorldCupTeamId): List<SquadPlayerData>? {

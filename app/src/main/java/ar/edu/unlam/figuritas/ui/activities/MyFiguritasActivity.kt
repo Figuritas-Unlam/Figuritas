@@ -22,7 +22,6 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.paint
@@ -37,6 +36,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import ar.edu.unlam.figuritas.R
 import ar.edu.unlam.figuritas.model.entities.Player
+import ar.edu.unlam.figuritas.model.entities.PlayerEntity
 import ar.edu.unlam.figuritas.model.entities.mapToPlayer
 import ar.edu.unlam.figuritas.model.response.MockPlayerProvisorio
 import ar.edu.unlam.figuritas.ui.OpenPackViewModel
@@ -73,11 +73,11 @@ class MyFiguritasActivity : ComponentActivity(), SensorEventListener {
 
     //Sense Shake
     private fun setShakeSensor() {
-        viewModelos.sensorManager= getSystemService(Context.SENSOR_SERVICE) as SensorManager
+        viewModelos.sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
     }
 
     override fun onSensorChanged(srEvent: SensorEvent?) {
-        if(srEvent!=null && srEvent.sensor.type == Sensor.TYPE_ACCELEROMETER){
+        if (srEvent != null && srEvent.sensor.type == Sensor.TYPE_ACCELEROMETER) {
             startOpenPack(srEvent)
         }
     }
@@ -88,7 +88,8 @@ class MyFiguritasActivity : ComponentActivity(), SensorEventListener {
         val xVal = event.values[0]
         val yVal = event.values[1]
         val zVal = event.values[2]
-        val accelerationSquareRoot = (xVal * xVal + yVal * yVal + zVal * zVal) / (SensorManager.GRAVITY_EARTH * SensorManager.GRAVITY_EARTH)
+        val accelerationSquareRoot =
+            (xVal * xVal + yVal * yVal + zVal * zVal) / (SensorManager.GRAVITY_EARTH * SensorManager.GRAVITY_EARTH)
         if (accelerationSquareRoot >= 12) {
             val vibrator = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
             vibrator.vibrate(300)
@@ -99,8 +100,11 @@ class MyFiguritasActivity : ComponentActivity(), SensorEventListener {
 
     override fun onResume() {
         super.onResume()
-        viewModelos.sensorManager.registerListener(this,
-            viewModelos.sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER), SensorManager.SENSOR_DELAY_NORMAL)
+        viewModelos.sensorManager.registerListener(
+            this,
+            viewModelos.sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),
+            SensorManager.SENSOR_DELAY_NORMAL
+        )
     }
 
     override fun onPause() {
@@ -118,7 +122,10 @@ fun BackgroundActivity(viewModel: OpenPackViewModel) {
         modifier = Modifier
             .fillMaxSize()
             .fillMaxHeight(1f)
-            .paint(painterResource(id = R.drawable.background_qatar), contentScale = ContentScale.FillHeight)
+            .paint(
+                painterResource(id = R.drawable.background_qatar),
+                contentScale = ContentScale.FillHeight
+            )
     ) {
         MisFiguritas()
         FiguritaNuevasTxt()
@@ -172,7 +179,7 @@ fun RvNuevas(viewModel: OpenPackViewModel) {
     //val rememberPlayers = remember { viewModel.playerList }
     LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(8.dp)) {
         items(viewModel.playerNuevas) { player ->
-            FiguritasNuevas(player = player.mapToPlayer())
+            FiguritasNuevas(player = player)
 
         }
     }
@@ -180,20 +187,20 @@ fun RvNuevas(viewModel: OpenPackViewModel) {
 
 fun getMessiMock(): MutableList<Player> {
     return mutableListOf(
-        Player(123,"nano","ddd","123","22/2/00",123,123,"22/2/00"),
-        Player(123,"nano","ddd","123","22/2/00",123,123,"22/2/00"),
-        Player(123,"nano","ddd","123","22/2/00",123,123,"22/2/00"),
-        Player(123,"nano","ddd","123","22/2/00",123,123,"22/2/00"),
-        Player(123,"nano","ddd","123","22/2/00",123,123,"22/2/00"),
-        Player(123,"nano","ddd","123","22/2/00",123,123,"22/2/00"),
-        Player(123,"nano","ddd","123","22/2/00",123,123,"22/2/00"),
-        Player(123,"nano","ddd","123","22/2/00",123,123,"22/2/00"),
+        Player(123, "nano", "ddd", "123", "22/2/00", 123, 123, "22/2/00"),
+        Player(123, "nano", "ddd", "123", "22/2/00", 123, 123, "22/2/00"),
+        Player(123, "nano", "ddd", "123", "22/2/00", 123, 123, "22/2/00"),
+        Player(123, "nano", "ddd", "123", "22/2/00", 123, 123, "22/2/00"),
+        Player(123, "nano", "ddd", "123", "22/2/00", 123, 123, "22/2/00"),
+        Player(123, "nano", "ddd", "123", "22/2/00", 123, 123, "22/2/00"),
+        Player(123, "nano", "ddd", "123", "22/2/00", 123, 123, "22/2/00"),
+        Player(123, "nano", "ddd", "123", "22/2/00", 123, 123, "22/2/00"),
     )
 }
 
 
 @Composable
-fun FiguritasNuevas(player: Player) {
+fun FiguritasNuevas(player: PlayerEntity) {
     Card(
         border = BorderStroke(2.dp, Color.Yellow),
         modifier = Modifier
@@ -222,8 +229,8 @@ fun FiguritasNuevas(player: Player) {
                         .width(50.dp)
                         .height(40.dp)
                 )
-                Image(
-                    painter = painterResource(id = R.drawable.arg),
+                AsyncImage(
+                    model = player.imageCountry,
                     contentDescription = "bandera",
                     modifier = Modifier
                         .width(50.dp)
@@ -286,7 +293,7 @@ fun ParaIntercambiar() {
 }
 
 @Composable
-fun FiguritasRepetidas(player: Player) {
+fun FiguritasRepetidas(player: PlayerEntity) {
     Card(
         border = BorderStroke(2.dp, Color.Yellow),
         modifier = Modifier
@@ -316,8 +323,8 @@ fun FiguritasRepetidas(player: Player) {
                         .width(50.dp)
                         .height(40.dp)
                 )
-                Image(
-                    painter = painterResource(id = R.drawable.arg),
+                AsyncImage(
+                    model = player.imageCountry,
                     contentDescription = "bandera",
                     modifier = Modifier
                         .width(50.dp)
@@ -365,7 +372,7 @@ fun FiguritasRepetidas(player: Player) {
 fun RvRepetidas(viewModel: OpenPackViewModel) {
     LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(8.dp)) {
         items(viewModel.playerRepetidos) { player ->
-            FiguritasRepetidas(player = player.mapToPlayer())
+            FiguritasRepetidas(player = player)
 
         }
     }

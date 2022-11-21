@@ -107,7 +107,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_width="79dp"
             app:layout_constraintTop_toBottomOf="@+id/clMisFiguritas"
-            android:id="@+id/ivOpenPack" />
+            android:id="@+id/ivOpenPack"
+            android:layout_marginTop="48dp" />
         <Constraint
             app:layout_constraintVertical_bias="0.347"
             android:layout_height="wrap_content"
@@ -150,11 +151,12 @@
             android:layout_height="65dp"
             app:layout_constraintStart_toEndOf="@+id/openPackButton"
             app:layout_constraintBottom_toTopOf="@+id/ivIntercambio"
-            app:layout_constraintHorizontal_bias="0.134"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_width="79dp"
             app:layout_constraintTop_toBottomOf="@+id/clMisFiguritas"
-            android:id="@+id/ivOpenPack" />
+            android:id="@+id/ivOpenPack"
+            android:layout_marginTop="36dp" />
     </ConstraintSet>
 
     <Transition

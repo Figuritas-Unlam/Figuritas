@@ -36,7 +36,7 @@ data class PlayerResponseData (
     @SerializedName("position")
     var position: PositionData,
 
-    var imageCountry : String = ""
+    var imageCountry : String = "https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg"
     )
 
 data class PositionData(
