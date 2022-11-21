@@ -82,7 +82,7 @@ class SwapsActivity : AppCompatActivity() {
     private fun generateQr() {
         try {
             val iv = ImageView(this)
-            iv.setImageBitmap(qrManager.generateQR(getSelectedPlayers(), 450, 450))
+            iv.setImageBitmap(qrManager.generateQR(getSelectedPlayers(), 900, 900))
             AlertDialog.Builder(this)
                 .setMessage("Mostrá el codigo para enviarlas")
                 .setView(iv)
