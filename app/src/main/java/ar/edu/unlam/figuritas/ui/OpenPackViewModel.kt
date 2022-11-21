@@ -22,30 +22,50 @@ class OpenPackViewModel @Inject constructor(
 ) : ViewModel() {
     private val _playersData = MutableLiveData<List<PlayerResponse?>>()
     val playersData: LiveData<List<PlayerResponse?>> = _playersData
-    var playerRepetidos: MutableList<PlayerEntity> = mutableListOf()
-    var playerNuevas: MutableList<PlayerEntity> = mutableListOf()
+    var playerRepetidos: MutableList<PlayerEntity?> = mutableListOf()
+    var playerNuevas: MutableList<PlayerEntity?> = mutableListOf()
+    private val _error = MutableLiveData<Boolean>()
+    val error: LiveData<Boolean> = _error
 
     init {
         fetchPlayers()
     }
 
+
+    fun getFirstPlayerRepets(): PlayerEntity? {
+        return databaseRepository.getRepeats()?.first()
+    }
+
+    fun getFirstPlayerNueva(): PlayerEntity? {
+        return databaseRepository.getPlayersNotPaste().first()
+    }
+
     private fun fetchPlayers() {
-        try {
-            viewModelScope.launch {
+        viewModelScope.launch {
+            try {
+                _error.value = true
+
                 val response = repository.getRandomPlayers(5)
                 _playersData.value = response
-                for(player in response){
-                    player!!.data.imageCountry = repository.getCountryById(player.data.countryId)!!.data.image
+                for (player in response) {
+                    player?.data?.imageCountry = player?.data?.countryId?.let {
+                        repository.getCountryById(
+                            it
+                        )?.data
+                    }!!.image
                     databaseRepository.insertPlayer(player)
+                    _error.value = false
                 }
+            } catch (e: RuntimeException) {
+                e.printStackTrace()
+                _error.value = true
+
+                Log.e("Error fetching players", e.message.toString())
             }
-        } catch (e: RuntimeException) {
-            e.printStackTrace()
-            Log.e("Error fetching players", e.message.toString())
         }
     }
 
-    fun setLists(){
+    fun setLists() {
         getRepeats()
         getNews()
     }

@@ -37,6 +37,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import ar.edu.unlam.figuritas.R
 import ar.edu.unlam.figuritas.model.entities.Player
+import ar.edu.unlam.figuritas.model.entities.PlayerEntity
 import ar.edu.unlam.figuritas.model.entities.mapToPlayer
 import ar.edu.unlam.figuritas.model.response.MockPlayerProvisorio
 import ar.edu.unlam.figuritas.ui.OpenPackViewModel
@@ -172,7 +173,7 @@ fun RvNuevas(viewModel: OpenPackViewModel) {
     //val rememberPlayers = remember { viewModel.playerList }
     LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(8.dp)) {
         items(viewModel.playerNuevas) { player ->
-            FiguritasNuevas(player = player.mapToPlayer())
+            player?.let { FiguritasNuevas(player = it) }
 
         }
     }
@@ -193,7 +194,7 @@ fun getMessiMock(): MutableList<Player> {
 
 
 @Composable
-fun FiguritasNuevas(player: Player) {
+fun FiguritasNuevas(player: PlayerEntity) {
     Card(
         border = BorderStroke(2.dp, Color.Yellow),
         modifier = Modifier
@@ -222,8 +223,8 @@ fun FiguritasNuevas(player: Player) {
                         .width(50.dp)
                         .height(40.dp)
                 )
-                Image(
-                    painter = painterResource(id = R.drawable.arg),
+                AsyncImage(
+                    model = player.imageCountry,
                     contentDescription = "bandera",
                     modifier = Modifier
                         .width(50.dp)
@@ -286,7 +287,7 @@ fun ParaIntercambiar() {
 }
 
 @Composable
-fun FiguritasRepetidas(player: Player) {
+fun FiguritasRepetidas(player: PlayerEntity) {
     Card(
         border = BorderStroke(2.dp, Color.Yellow),
         modifier = Modifier
@@ -316,8 +317,8 @@ fun FiguritasRepetidas(player: Player) {
                         .width(50.dp)
                         .height(40.dp)
                 )
-                Image(
-                    painter = painterResource(id = R.drawable.arg),
+                AsyncImage(
+                    model = player.imageCountry,
                     contentDescription = "bandera",
                     modifier = Modifier
                         .width(50.dp)
@@ -365,7 +366,7 @@ fun FiguritasRepetidas(player: Player) {
 fun RvRepetidas(viewModel: OpenPackViewModel) {
     LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(8.dp)) {
         items(viewModel.playerRepetidos) { player ->
-            FiguritasRepetidas(player = player.mapToPlayer())
+            player?.let { FiguritasRepetidas(player = it) }
 
         }
     }
