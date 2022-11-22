@@ -1,6 +1,5 @@
 package ar.edu.unlam.figuritas.ui
 
-import android.hardware.SensorManager
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -8,54 +7,46 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import ar.edu.unlam.figuritas.data.repository.DatabaseRepository
 import ar.edu.unlam.figuritas.data.repository.PlayerRepository
-import ar.edu.unlam.figuritas.model.entities.PlayerEntity
 import ar.edu.unlam.figuritas.model.response.PlayerResponse
 import ar.edu.unlam.figuritas.model.response.mapToEntity
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import java.io.IOException
 import javax.inject.Inject
 
 @HiltViewModel
-class OpenPackViewModel @Inject constructor(
-    private val repository: PlayerRepository,
-    private val databaseRepository: DatabaseRepository
-) : ViewModel() {
+class OpenPackViewModel @Inject constructor(private val repository: PlayerRepository,
+        private val databaseRepository: DatabaseRepository): ViewModel() {
     private val _playersData = MutableLiveData<List<PlayerResponse?>>()
-    val playersData: LiveData<List<PlayerResponse?>> = _playersData
-    var playerRepetidos: MutableList<PlayerEntity> = mutableListOf()
-    var playerNuevas: MutableList<PlayerEntity> = mutableListOf()
+    val playersData:LiveData<List<PlayerResponse?>> = _playersData
+
+    private val _error = MutableLiveData<Boolean>()
+    val error:LiveData<Boolean> = _error
 
     init {
         fetchPlayers()
     }
 
+
     private fun fetchPlayers() {
-        try {
-            viewModelScope.launch {
-                val response = repository.getRandomPlayers(5)
-                _playersData.value = response
-                for(player in response){
-                    player!!.data.imageCountry = repository.getCountryById(player.data.countryId)!!.data.image
-                    databaseRepository.insertPlayer(player)
-                }
+        viewModelScope.launch {
+            try {
+                _error.value = false
+                val randomPlayers = repository.getRandomPlayers(5)
+                _playersData.value = randomPlayers
+                insertPlayerDatabase(randomPlayers)
+            } catch (e: IOException) {
+                _error.value = true
+                Log.e("Error fetching players", e.message.toString())
             }
-        } catch (e: RuntimeException) {
-            e.printStackTrace()
-            Log.e("Error fetching players", e.message.toString())
         }
     }
 
-    fun setLists(){
-        getRepeats()
-        getNews()
-    }
-
-    private fun getNews() {
-        playerNuevas.addAll(databaseRepository.getPlayersNotPaste())
-    }
-
-    private fun getRepeats() {
-        playerRepetidos.addAll(databaseRepository.getRepeats())
+    private fun insertPlayerDatabase(players : List<PlayerResponse?>) {
+        for(player in players){
+            viewModelScope.launch {
+                databaseRepository.insertPlayer(player!!)
+            }
+        }
     }
 }
-

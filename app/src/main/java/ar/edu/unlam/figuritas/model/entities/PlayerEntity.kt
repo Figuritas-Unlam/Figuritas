@@ -2,6 +2,7 @@ package ar.edu.unlam.figuritas.model.entities
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
+import androidx.room.Ignore
 import androidx.room.PrimaryKey
 
 
@@ -23,6 +24,9 @@ data class PlayerEntity (
     @ColumnInfo(name = "Birthdate")
     val birthdate : String,
 
+    @ColumnInfo(name = "Nationality")
+    val nationality : String,
+
     @ColumnInfo(name = "TeamId")
     val teamId : Int,
 
@@ -34,6 +38,9 @@ data class PlayerEntity (
 
     @ColumnInfo(name = "In_Album")
     var inAlbum : Boolean,
+
+    @ColumnInfo(name = "Is_Swapable")
+    var isSwappable : Boolean,
 
     @ColumnInfo(name = "Image")
     var imageUrl : String,
@@ -61,4 +68,5 @@ data class Player (
     val seleccionId : Int,
     var quantity : Int,
     var imageUrl : String
+)
 )

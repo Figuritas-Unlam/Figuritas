@@ -1,60 +1,46 @@
 package ar.edu.unlam.figuritas.data.repository
 
-import android.util.Log
-import androidx.room.Query
 import ar.edu.unlam.figuritas.data.database.dao.PlayerDao
-import ar.edu.unlam.figuritas.model.entities.Player
 import ar.edu.unlam.figuritas.model.entities.PlayerEntity
 import ar.edu.unlam.figuritas.model.response.PlayerResponse
 import javax.inject.Inject
 
-class DatabaseRepository @Inject constructor(private val playerDao: PlayerDao, private val playerRepository: PlayerRepository) {
+class DatabaseRepository @Inject constructor(private val playerDao: PlayerDao) {
 
 
-    fun insertPlayer(playerResponse: PlayerResponse) {
-        val idPlayerResponse = playerResponse.data.playerId
-        if (!playerDao.isPlayerExists(idPlayerResponse)) {
-
-            playerDao.insertPlayer(
-                PlayerEntity(
-                    playerResponse.data.playerId,
-                    playerResponse.data.name,
-                    playerResponse.data.height,
-                    playerResponse.data.weight,
-                    playerResponse.data.birthdate,
-                    playerResponse.data.teamId,
-                    playerResponse.data.countryId,
-                    1,
-                    false,
-                    playerResponse.data.image,
-                    "NotPaste",
-                    0
-                )
+    fun insertPlayer(playerResponse : PlayerResponse) {
+        playerDao.insertOrUpdate(
+            PlayerEntity(
+                playerResponse.data.playerId,
+                playerResponse.data.name,
+                playerResponse.data.height,
+                playerResponse.data.weight,
+                playerResponse.data.birthdate,
+                playerResponse.data.nationality,
+                playerResponse.data.teamId,
+                playerResponse.data.countryId,
+                quantity = 1,
+                inAlbum = false,
+                isSwappable = false,
+                imageUrl = playerResponse.data.image
             )
-            Log.e("insert", "insert correcto")
-        } else {
-            playerDao.sumQuantity(idPlayerResponse)
-        }
+        )
+    }
+
+    fun insertPlayerEntity(player : PlayerEntity) {
+        playerDao.insertOrUpdate(player)
+    }
+
+    fun getSwapablePlayers(): List<PlayerEntity> {
+        return playerDao.getSwappablePlayers()
     }
 
     fun getallPlayers(): List<PlayerEntity> {
         return playerDao.getAllPlayers()
     }
 
-    fun getPlayer (id : Int ): PlayerEntity{
-        return playerDao.searchPlayerForId(id)
-    }
-
-    fun getPlayersNotPaste(): List<PlayerEntity> {
-        return playerDao.getPlayersNotPaste()
-    }
-
-    fun getRepeats(): List<PlayerEntity> {
-        return playerDao.getRepeats()
-    }
-
-    fun pastePlayer(idPlayer: Int){
-        playerDao.pastePlayer(idPlayer)
+    fun deletePlayers(players: List<PlayerEntity>?) {
+        players?.forEach { playerDao.deleteOrUpdate(it) }
     }
 
     fun getPlayersForCountry(countryId : Int) : List<PlayerEntity>{

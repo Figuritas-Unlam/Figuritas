@@ -32,7 +32,7 @@ object AppModule {
 
     @Singleton
     @Provides
-    fun provideOngApi(retrofit: Retrofit): PlayerAPI {
+    fun providePlayersApi(retrofit: Retrofit): PlayerAPI {
         return retrofit.create(PlayerAPI::class.java)
     }
 
