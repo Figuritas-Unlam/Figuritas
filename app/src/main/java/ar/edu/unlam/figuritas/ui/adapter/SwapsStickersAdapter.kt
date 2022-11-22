@@ -1,6 +1,5 @@
 package ar.edu.unlam.figuritas.ui.adapter
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -21,9 +20,10 @@ class SwapsStickersAdapter(
         val item = swappableStickers[position]
         viewHolder.bind(item)
         viewHolder.itemView.setOnClickListener {
-            Log.d("View CLicked, is selected:", item.isSelected.toString())
-            item.isSelected = !item.isSelected
-            it.alpha = if (item.isSelected) 1F else 0.5F
+            if (swappableStickers.count { sticker -> sticker.isSelected } < 3 || item.isSelected) {
+                item.isSelected = !item.isSelected
+                it.alpha = if (item.isSelected) 1F else 0.5F
+            }
         }
     }
 
