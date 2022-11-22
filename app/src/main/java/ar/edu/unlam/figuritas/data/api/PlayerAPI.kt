@@ -10,7 +10,7 @@ import retrofit2.http.Path
 interface PlayerAPI {
 
     companion object{
-        const val API_KEY = "fYqTB9XfINa59yGPulaC7Ui2dUz2q94UTSrAtAJkEy20m9Z0DwHAC6fP0G2Q"
+        const val API_KEY = "zxFKJNN81g8mrbNg709uk0Vtve4nmBRwtZp9CxK553U5MavxPXA9lrLc6ryg"
     }
 
     @GET("players/{playerId}?api_token=$API_KEY")

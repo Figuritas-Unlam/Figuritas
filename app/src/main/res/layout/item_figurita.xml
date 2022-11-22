@@ -114,10 +114,10 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="110dp"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:orientation="vertical"
@@ -126,7 +126,7 @@
         <ImageView
             android:id="@+id/imagenJugador"
             android:layout_width="match_parent"
-            android:layout_height="115dp"
+            android:layout_height="95dp"
             />
 
         <TextView
@@ -153,6 +153,16 @@
             />
 
     </LinearLayout>
+        <ImageView
+            android:id="@+id/pasteFigu"
+            android:layout_width="70dp"
+            android:layout_height="80dp"
+            android:src="@drawable/paste_figu"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="30dp"
+            />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

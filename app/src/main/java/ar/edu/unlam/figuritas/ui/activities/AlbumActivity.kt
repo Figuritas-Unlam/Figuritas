@@ -44,9 +44,14 @@ class AlbumActivity : AppCompatActivity() {
         initMyFiguritas()
         setContentView(view)
         initRecyclerView()
+
+
+    /*
+        albumViewModel.setCountrys()
+        albumViewModel.searchSelecciones()
         subscribeToViewModel()
-        albumBinding.textoAlbum.text = albumViewModel.searchPlayer()[0].playerName
-        /*figus()*/
+
+        figus()*/
 
 
     }
@@ -55,8 +60,7 @@ class AlbumActivity : AppCompatActivity() {
     @SuppressLint("NotifyDataSetChanged")
     private fun initRecyclerView() {
 
-
-        albumAdapter = AlbumAdapter(mutableListOf(), applicationContext)
+        albumAdapter = AlbumAdapter(albumViewModel.insertPlayersInSeleccion(), applicationContext, albumViewModel)
         albumAdapter.notifyDataSetChanged()
         albumBinding.rvSelecciones.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)

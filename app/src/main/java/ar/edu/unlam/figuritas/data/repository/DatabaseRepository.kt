@@ -27,7 +27,7 @@ class DatabaseRepository @Inject constructor(private val playerDao: PlayerDao, p
                     false,
                     playerResponse.data.image,
                     "NotPaste",
-                    playerResponse.data.imageCountry
+                    0
                 )
             )
             Log.e("insert", "insert correcto")
