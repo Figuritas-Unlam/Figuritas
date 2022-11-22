@@ -26,7 +26,6 @@ object AppModule {
     private const val BASE_URL = "https://soccer.sportmonks.com/api/v2.0/"
     private const val BASE_ROUTE_URL = "https://api.openrouteservice.org"
 
-
     @Singleton
     @Provides
     fun provideRetrofit(): Retrofit {
@@ -42,11 +41,6 @@ object AppModule {
         return retrofit.create(PlayerAPI::class.java)
     }
 
-    @Singleton
-    @Provides
-    fun providePlayersClient(api: PlayerAPI): PlayerClient {
-        return PlayerClient(api)
-    }
 
     @Singleton
     @Provides
@@ -63,11 +57,6 @@ object AppModule {
         return retrofit.create(OpenRouteService::class.java)
     }
 
-    @Singleton
-    @Provides
-    fun provideRouteClient(api: OpenRouteService): OpenRouteClient {
-        return OpenRouteClient(api)
-    }
 
     @Singleton
     @Provides
@@ -90,6 +79,40 @@ object AppModule {
     fun provideDao(database: PlayerDatabase) : PlayerDao{
         return database.playerDao()
     }
+    /*
+    private const val BASE_URL = "https://soccer.sportmonks.com/api/v2.0/"
+
+    @Singleton
+    @Provides
+    fun provideRetrofit(): Retrofit {
+        return Retrofit.Builder()
+            .baseUrl(BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+    }
+
+    @Singleton
+    @Provides
+    fun providePlayersApi(retrofit: Retrofit): PlayerAPI {
+        return retrofit.create(PlayerAPI::class.java)
+    }
+
+    @Singleton
+    @Provides
+    fun provideDataBase(@ApplicationContext context: Context): PlayerDatabase {
+        return Room.databaseBuilder(
+            context,
+            PlayerDatabase::class.java,
+            "Figuritas_Database"
+        ).allowMainThreadQueries().fallbackToDestructiveMigration().build()
+    }
+
+    @Singleton
+    @Provides
+    fun provideDao(database: PlayerDatabase) : PlayerDao{
+        return database.playerDao()
+    }
+     */
 
 
 }
