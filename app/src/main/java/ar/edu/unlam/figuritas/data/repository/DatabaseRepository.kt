@@ -7,7 +7,7 @@ import ar.edu.unlam.figuritas.model.entities.PlayerEntity
 import ar.edu.unlam.figuritas.model.response.PlayerResponse
 import javax.inject.Inject
 
-class DatabaseRepository @Inject constructor(private val playerDao: PlayerDao, private val playerRepository: PlayerRepository) {
+class DatabaseRepository @Inject constructor(private val playerDao: PlayerDao) {
 
 
     fun insertPlayer(playerResponse: PlayerResponse) {
