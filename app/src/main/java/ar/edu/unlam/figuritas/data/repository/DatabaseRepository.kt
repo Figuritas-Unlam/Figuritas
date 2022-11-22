@@ -3,6 +3,7 @@ package ar.edu.unlam.figuritas.data.repository
 import android.util.Log
 import androidx.room.Query
 import ar.edu.unlam.figuritas.data.database.dao.PlayerDao
+import ar.edu.unlam.figuritas.model.entities.Player
 import ar.edu.unlam.figuritas.model.entities.PlayerEntity
 import ar.edu.unlam.figuritas.model.response.PlayerResponse
 import javax.inject.Inject
@@ -54,6 +55,10 @@ class DatabaseRepository @Inject constructor(private val playerDao: PlayerDao, p
 
     fun pastePlayer(idPlayer: Int){
         playerDao.pastePlayer(idPlayer)
+    }
+
+    fun getPlayersForCountry(countryId : Int) : List<PlayerEntity>{
+        return playerDao.getPlayersForIdCountry(countryId)
     }
 
 }

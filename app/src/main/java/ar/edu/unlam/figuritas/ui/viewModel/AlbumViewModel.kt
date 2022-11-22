@@ -75,25 +75,38 @@ class AlbumViewModel @Inject constructor(var databaseRepository: DatabaseReposit
 
             var listPlayers = mutableListOf<PlayerEntity>()
             while(listPlayers.size != 26){
-                listPlayers.add(PlayerEntity(
-                    0,
-                    "?",
-                    "?",
-                    "?",
-                    "?",
-                    0,
-                    0,
-                    0,
-                    false,
-                    "?",
-                    "",
-                    listPlayers.size
-                ))
+                listPlayers.add(playerInAlbum(listPlayers.size, seleccion.idCountry))
 
             }
             seleccion.players = listPlayers
         }
         return listCountries
+    }
+
+    private fun playerInAlbum(position: Int, idCountry : Int) : PlayerEntity{
+
+        val players = databaseRepository.getPlayersForCountry(idCountry)
+        for(player in players){
+
+            if(player.position == position){
+                return player
+            }
+
+        }
+        return PlayerEntity(
+            0,
+            "?",
+            "?",
+            "?",
+            "?",
+            0,
+            0,
+            0,
+            false,
+            "?",
+            "",
+            position
+        )
     }
     /*
     fun searchSelecciones(){
@@ -152,114 +165,114 @@ class AlbumViewModel @Inject constructor(var databaseRepository: DatabaseReposit
 
     fun setCountrys(){
 
-        listCountries.add(Seleccion("QATAR", "https://cdn.sportmonks.com/images/countries/png/short/qa.png",
+        listCountries.add(Seleccion("QATAR", "QAT", "https://cdn.sportmonks.com/images/countries/png/short/qa.png",
             74505, mutableListOf()
         ))
-        listCountries.add(Seleccion("ECUADOR", "https://cdn.sportmonks.com/images/countries/png/short/ec.png",
+        listCountries.add(Seleccion("ECUADOR", "ECU", "https://cdn.sportmonks.com/images/countries/png/short/ec.png",
             459, mutableListOf()
         ))
-        listCountries.add(Seleccion("SENEGAL", "https://cdn.sportmonks.com/images/countries/png/short/sn.png",
+        listCountries.add(Seleccion("SENEGAL", "SEN", "https://cdn.sportmonks.com/images/countries/png/short/sn.png",
             200, mutableListOf()
         ))
-        listCountries.add(Seleccion("NETHERLANDS", "https://cdn.sportmonks.com/images/countries/png/short/nl.png",
+        listCountries.add(Seleccion("NETHERLANDS", "NHL", "https://cdn.sportmonks.com/images/countries/png/short/nl.png",
             38, mutableListOf()
         ))
 
 
-        listCountries.add(Seleccion("ENGLAND", "https://cdn.sportmonks.com/images/countries/png/short/gb.png",
+        listCountries.add(Seleccion("ENGLAND", "ENG", "https://cdn.sportmonks.com/images/countries/png/short/gb.png",
             462, mutableListOf()
         ))
-        listCountries.add(Seleccion("IRAN", "https://cdn.sportmonks.com/images/countries/png/short/ir.png",
+        listCountries.add(Seleccion("IRAN", "IRN", "https://cdn.sportmonks.com/images/countries/png/short/ir.png",
             488, mutableListOf()
         ))
-        listCountries.add(Seleccion("UNITED STATES", "https://cdn.sportmonks.com/images/countries/png/short/us.png",
+        listCountries.add(Seleccion("UNITED STATES", "USA", "https://cdn.sportmonks.com/images/countries/png/short/us.png",
             3483, mutableListOf()
         ))
-        listCountries.add(Seleccion("WALES", "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Flag_of_Wales.svg/200px-Flag_of_Wales.svg.png",
+        listCountries.add(Seleccion("WALES", "WAL", "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Flag_of_Wales.svg/200px-Flag_of_Wales.svg.png",
             515, mutableListOf()
         ))
 
 
-        listCountries.add(Seleccion("ARGENTINA", "https://cdn.sportmonks.com/images/countries/png/short/ar.png",
+        listCountries.add(Seleccion("ARGENTINA", "ARG", "https://cdn.sportmonks.com/images/countries/png/short/ar.png",
             44, mutableListOf()
         ))
-        listCountries.add(Seleccion("SAUDI ARABIA", "https://cdn.sportmonks.com/images/countries/png/short/sa.png",
+        listCountries.add(Seleccion("SAUDI ARABIA", "SAB", "https://cdn.sportmonks.com/images/countries/png/short/sa.png",
             35376, mutableListOf()
         ))
-        listCountries.add(Seleccion("MEXICO", "https://cdn.sportmonks.com/images/countries/png/short/mx.png",
+        listCountries.add(Seleccion("MEXICO", "MEX", "https://cdn.sportmonks.com/images/countries/png/short/mx.png",
             458, mutableListOf()
         ))
-        listCountries.add(Seleccion("POLAND", "https://cdn.sportmonks.com/images/countries/png/short/pl.png",
+        listCountries.add(Seleccion("POLAND", "POL", "https://cdn.sportmonks.com/images/countries/png/short/pl.png",
             2, mutableListOf()
         ))
 
 
-        listCountries.add(Seleccion("FRANCE", "https://cdn.sportmonks.com/images/countries/png/short/fr.png",
+        listCountries.add(Seleccion("FRANCE", "FRA", "https://cdn.sportmonks.com/images/countries/png/short/fr.png",
             17, mutableListOf()
         ))
-        listCountries.add(Seleccion("AUSTRALIA", "https://cdn.sportmonks.com/images/countries/png/short/au.png",
+        listCountries.add(Seleccion("AUSTRALIA", "AUS", "https://cdn.sportmonks.com/images/countries/png/short/au.png",
             98, mutableListOf()
         ))
-        listCountries.add(Seleccion("DENMARK", "https://cdn.sportmonks.com/images/countries/png/short/dk.png",
+        listCountries.add(Seleccion("DENMARK", "DEN", "https://cdn.sportmonks.com/images/countries/png/short/dk.png",
             320, mutableListOf()
         ))
-        listCountries.add(Seleccion("TUNISIA", "https://cdn.sportmonks.com/images/countries/png/short/tn.png",
+        listCountries.add(Seleccion("TUNISIA", "TUN", "https://cdn.sportmonks.com/images/countries/png/short/tn.png",
             1439, mutableListOf()
         ))
 
 
-        listCountries.add(Seleccion("SPAIN", "https://cdn.sportmonks.com/images/countries/png/short/es.png",
+        listCountries.add(Seleccion("SPAIN", "SPA", "https://cdn.sportmonks.com/images/countries/png/short/es.png",
             32, mutableListOf()
         ))
-        listCountries.add(Seleccion("COSTA RICA", "https://cdn.sportmonks.com/images/countries/png/short/cr.png",
+        listCountries.add(Seleccion("COSTA RICA", "COS", "https://cdn.sportmonks.com/images/countries/png/short/cr.png",
             1739, mutableListOf()
         ))
-        listCountries.add(Seleccion("GERMANY", "https://cdn.sportmonks.com/images/countries/png/short/de.png",
+        listCountries.add(Seleccion("GERMANY", "GER", "https://cdn.sportmonks.com/images/countries/png/short/de.png",
             11, mutableListOf()
         ))
-        listCountries.add(Seleccion("JAPAN", "https://cdn.sportmonks.com/images/countries/png/short/jp.png",
+        listCountries.add(Seleccion("JAPAN", "JAP", "https://cdn.sportmonks.com/images/countries/png/short/jp.png",
             479, mutableListOf()
         ))
 
 
-        listCountries.add(Seleccion("BELGIUM", "https://cdn.sportmonks.com/images/countries/png/short/be.png",
+        listCountries.add(Seleccion("BELGIUM", "BEL", "https://cdn.sportmonks.com/images/countries/png/short/be.png",
             556, mutableListOf()
         ))
-        listCountries.add(Seleccion("CANADA", "https://cdn.sportmonks.com/images/countries/png/short/ca.png",
+        listCountries.add(Seleccion("CANADA", "CAN", "https://cdn.sportmonks.com/images/countries/png/short/ca.png",
             1004, mutableListOf()
         ))
-        listCountries.add(Seleccion("MOROCCO", "https://cdn.sportmonks.com/images/countries/png/short/ma.png",
+        listCountries.add(Seleccion("MOROCCO", "MOR", "https://cdn.sportmonks.com/images/countries/png/short/ma.png",
             1424, mutableListOf()
         ))
-        listCountries.add(Seleccion("CROATIA", "https://cdn.sportmonks.com/images/countries/png/short/hr.png",
+        listCountries.add(Seleccion("CROATIA", "CRO", "https://cdn.sportmonks.com/images/countries/png/short/hr.png",
             226, mutableListOf()
         ))
 
 
-        listCountries.add(Seleccion("BRAZIL", "https://cdn.sportmonks.com/images/countries/png/short/br.png",
+        listCountries.add(Seleccion("BRAZIL", "BRA", "https://cdn.sportmonks.com/images/countries/png/short/br.png",
             5, mutableListOf()
         ))
-        listCountries.add(Seleccion("SERBIA", "https://cdn.sportmonks.com/images/countries/png/short/rs.png",
+        listCountries.add(Seleccion("SERBIA", "SER", "https://cdn.sportmonks.com/images/countries/png/short/rs.png",
             296, mutableListOf()
         ))
-        listCountries.add(Seleccion("SWITZERLAND", "https://cdn.sportmonks.com/images/countries/png/short/ch.png",
+        listCountries.add(Seleccion("SWITZERLAND", "SWI", "https://cdn.sportmonks.com/images/countries/png/short/ch.png",
             62, mutableListOf()
         ))
-        listCountries.add(Seleccion("CAMEROON", "https://cdn.sportmonks.com/images/countries/png/short/cm.png",
+        listCountries.add(Seleccion("CAMEROON", "CAM", "https://cdn.sportmonks.com/images/countries/png/short/cm.png",
             593, mutableListOf()
         ))
 
 
-        listCountries.add(Seleccion("PORTUGAL", "https://cdn.sportmonks.com/images/countries/png/short/pt.png",
+        listCountries.add(Seleccion("PORTUGAL", "POR", "https://cdn.sportmonks.com/images/countries/png/short/pt.png",
             20, mutableListOf()
         ))
-        listCountries.add(Seleccion("GHANA", "https://cdn.sportmonks.com/images/countries/png/short/gh.png",
+        listCountries.add(Seleccion("GHANA", "GHA", "https://cdn.sportmonks.com/images/countries/png/short/gh.png",
             468, mutableListOf()
         ))
-        listCountries.add(Seleccion("URUGUAY", "https://cdn.sportmonks.com/images/countries/png/short/uy.png",
+        listCountries.add(Seleccion("URUGUAY", "URU", "https://cdn.sportmonks.com/images/countries/png/short/uy.png",
             158, mutableListOf()
         ))
-        listCountries.add(Seleccion("KOREA REPUBLIC", "https://cdn.sportmonks.com/images/countries/png/short/kr.png",
+        listCountries.add(Seleccion("KOREA REPUBLIC", "KOR", "https://cdn.sportmonks.com/images/countries/png/short/kr.png",
             712, mutableListOf()
         ))
 

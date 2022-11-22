@@ -16,6 +16,9 @@ interface PlayerDao {
     @Query("Select * From Players pa Where pa.Id = :idPlayer ")
     fun searchPlayerForId(idPlayer: Int): PlayerEntity
 
+    @Query("Select * From Players pa Where pa.Seleccion_Id = :countryId")
+    fun getPlayersForIdCountry(countryId : Int) : List<PlayerEntity>
+
     @Query("Select Exists(Select pa.* From Players pa Where pa.Id = :idPlayer)")
     fun isPlayerExists(idPlayer: Int): Boolean
 

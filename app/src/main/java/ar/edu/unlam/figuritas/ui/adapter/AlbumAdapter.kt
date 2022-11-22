@@ -42,7 +42,7 @@ private fun bind(
     albumViewModel: AlbumViewModel
 ){
     holder.binding.nameSeleccion.text = seleccion.nameCountry
-    val figuritasAdapter = FiguritasAdapter(seleccion.players, albumViewModel, seleccion.imageCountry)
+    val figuritasAdapter = FiguritasAdapter(seleccion.players, albumViewModel, seleccion.imageCountry, seleccion.displayNameCountry)
     holder.binding.rvFiguritas.layoutManager = GridLayoutManager(applicationContext, 2)
     holder.binding.rvFiguritas.adapter = figuritasAdapter
 

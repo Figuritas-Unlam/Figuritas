@@ -13,7 +13,8 @@ import com.squareup.picasso.Picasso
 
 class FiguritasAdapter(var figuritas: List<PlayerEntity>,
                        var albumViewModel: AlbumViewModel,
-                       var imageCountry : String
+                       var imageCountry : String,
+                       val nameSeleccion : String
 ) : RecyclerView.Adapter<FiguritaViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FiguritaViewHolder {
@@ -26,7 +27,7 @@ class FiguritasAdapter(var figuritas: List<PlayerEntity>,
     override fun onBindViewHolder(holder: FiguritaViewHolder, position: Int) {
 
         val player = figuritas[position]
-        bind(holder, player, imageCountry)
+        bind(holder, player, imageCountry, nameSeleccion)
     }
 
     override fun getItemCount(): Int = figuritas.size
@@ -39,7 +40,8 @@ class FiguritaViewHolder(val binding : ItemFiguritaBinding) : RecyclerView.ViewH
 private fun bind(
     holder : FiguritaViewHolder,
     player : PlayerEntity,
-    imageCountry: String
+    imageCountry: String,
+    nameSeleccion: String
 ){
 
     holder.binding.alturaJugador.text = player.height
@@ -47,6 +49,7 @@ private fun bind(
     holder.binding.nombreJugador.text = player.playerName
     holder.binding.fechaNacimiento.text = player.birthdate
     holder.binding.pasteFigu.visibility = View.INVISIBLE
+    holder.binding.nameSeleccion.text = nameSeleccion
 
     Picasso.get()
         .load(player.imageUrl)
