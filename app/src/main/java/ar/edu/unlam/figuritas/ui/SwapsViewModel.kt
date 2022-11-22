@@ -14,7 +14,7 @@ import javax.inject.Inject
 @HiltViewModel
 class SwapsViewModel @Inject constructor(private val repository: DatabaseRepository) : ViewModel() {
     private val _swappableStickers = MutableLiveData<List<PlayerModel>>()
-    val swappableStickers : LiveData<List<PlayerModel>> = _swappableStickers
+    val swappableStickers: LiveData<List<PlayerModel>> = _swappableStickers
 
     init {
         _swappableStickers.value = emptyList()
@@ -48,8 +48,11 @@ private fun List<PlayerModel>?.toDataModel(): List<PlayerEntity> {
             seleccionId = it.seleccionId,
             quantity = it.quantity,
             inAlbum = it.inAlbum,
+            isSwappable = it.isSwappable,
             imageUrl = it.imageUrl,
-            isSwappable = it.isSwappable
+            isPaste = it.isPaste,
+            imageCountry = it.imageCountry
+
         )
     } ?: emptyList()
 }
@@ -66,7 +69,10 @@ private fun PlayerModel.toDataModel(): PlayerEntity {
         seleccionId = this.seleccionId,
         quantity = this.quantity,
         inAlbum = this.inAlbum,
+        isSwappable = this.isSwappable,
         imageUrl = this.imageUrl,
-        isSwappable = this.isSwappable
+        isPaste = this.isPaste,
+        imageCountry = this.imageCountry
+
     )
 }

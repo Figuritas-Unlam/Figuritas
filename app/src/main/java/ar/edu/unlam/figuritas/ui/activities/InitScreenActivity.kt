@@ -11,8 +11,11 @@ import android.os.Vibrator
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.motion.widget.MotionLayout
+import ar.edu.unlam.figuritas.R
 import ar.edu.unlam.figuritas.databinding.ActivityInitScreenBinding
+import ar.edu.unlam.figuritas.ui.OpenPackViewModel
 import ar.edu.unlam.figuritas.ui.viewModel.FiguritasViewModel
+import com.squareup.picasso.Picasso
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -20,6 +23,7 @@ class InitScreenActivity : AppCompatActivity() , SensorEventListener {
 
     private lateinit var binding: ActivityInitScreenBinding
     private val viewModel: FiguritasViewModel by viewModels()
+    private val openViewModel : OpenPackViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +40,37 @@ class InitScreenActivity : AppCompatActivity() , SensorEventListener {
         initMisFiguritas()
         initAlbum()
         initSwaps()
+        setNueva()
+        setRepetidas()
+    }
+
+    private fun setNueva() {
+        val player = openViewModel.getFirstPlayerNueva()
+        player.let {
+            Picasso.get().load(player?.imageUrl)
+                .placeholder(R.drawable.ney)
+                .into(binding.imagenJugadorNuevo)
+            Picasso.get().load(player?.imageCountry)
+                .placeholder(R.drawable.ney)
+                .into(binding.banderaJugadorNuevo)
+            binding.nacimientoJugadorNuevo.text = player?.birthdate
+            binding.nombreJugadorNuevo.text = player?.playerName
+        }
+    }
+
+    private fun setRepetidas() {
+        val player = openViewModel.getFirstPlayerRepets()
+        player.let {
+            Picasso.get().load(player?.imageUrl)
+                .placeholder(R.drawable.ney)
+                .into(binding.imagenJugadorRepetida)
+
+            Picasso.get().load(player?.imageCountry)
+                .placeholder(R.drawable.ney)
+                .into(binding.banderaJugadorRepetida)
+            binding.nacimientoJugadorRepetida.text = player?.birthdate
+            binding.nombreJugadorRepetida.text = player?.playerName
+        }
     }
 
     private fun initMotionLayout() {
@@ -55,8 +90,8 @@ class InitScreenActivity : AppCompatActivity() , SensorEventListener {
                 ) { }
 
                 override fun onTransitionCompleted(motionLayout: MotionLayout?, currentId: Int) {
-                 /*  intent = Intent(applicationContext, SecondActivity::class.java)
-                    startActivity(intent)*/
+                 intent = Intent(applicationContext, AlbumActivity::class.java)
+                    startActivity(intent)
                 }
 
                 override fun onTransitionTrigger(
