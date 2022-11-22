@@ -84,6 +84,7 @@ class MapActivity: AppCompatActivity(),
                 )
             )
         }
+        map.uiSettings.isMyLocationButtonEnabled=true
         map.setOnMyLocationButtonClickListener(this)
         map.setOnMapClickListener {
             mapViewModel.resetLocations()

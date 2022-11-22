@@ -34,7 +34,7 @@ interface OpenRouteService {
         const val API_KEY_ROUTE = "3puVV9TkLHqxgI5xrd00AOS16Zxs2IdcSJLhGciUdRuzswDOvN4KuUVtZuHo"
     }
 
-    @GET("/v2/directions/driving-car")
+    @GET("/v2/directions/driving-car?")
     suspend fun getRoute(
         @Query("api_key") key: String = API_KEY_ROUTE,
         @Query("start", encoded = true) start: String,
