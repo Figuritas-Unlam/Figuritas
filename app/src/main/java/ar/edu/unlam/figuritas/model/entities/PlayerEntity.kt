@@ -67,6 +67,7 @@ data class Player (
     val birthdate : String,
     val seleccionId : Int,
     var quantity : Int,
-    var imageUrl : String
+    var imageUrl : String,
+
 )
-)
+

@@ -8,10 +8,10 @@ data class PlayerResponse(
     @SerializedName("data")
     var data : PlayerResponseData
 )
-
+/*
 fun PlayerResponse.mapToEntity(quantity: Int, inAlbum: Boolean, isPaste: String)=PlayerEntity(data.playerId,
 data.name, data.height,data.weight, data.birthdate, data.teamId, data.countryId, quantity, inAlbum,data.image, isPaste, 1)
-
+*/
 data class PlayerResponseData (
     @SerializedName("player_id")
     var playerId : Int,

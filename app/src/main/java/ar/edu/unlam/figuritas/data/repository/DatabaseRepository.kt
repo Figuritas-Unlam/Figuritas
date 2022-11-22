@@ -22,7 +22,9 @@ class DatabaseRepository @Inject constructor(private val playerDao: PlayerDao) {
                 quantity = 1,
                 inAlbum = false,
                 isSwappable = false,
-                imageUrl = playerResponse.data.image
+                imageUrl = playerResponse.data.image,
+                "",
+                4
             )
         )
     }

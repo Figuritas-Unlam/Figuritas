@@ -99,12 +99,14 @@ class AlbumViewModel @Inject constructor(var databaseRepository: DatabaseReposit
             "?",
             "?",
             "?",
+            "?",
             0,
             0,
             0,
             false,
+            false,
             "?",
-            "",
+            "?",
             position
         )
     }
@@ -140,7 +142,7 @@ class AlbumViewModel @Inject constructor(var databaseRepository: DatabaseReposit
         Log.e("Error fetching players", e.message.toString())
     }
     }
-*/
+
     fun inAlbum(playerResponse : PlayerResponse, playerEntity : PlayerEntity) : PlayerEntity{
         if(playerResponse.data.playerId == playerEntity.playerId){
             return playerEntity
@@ -162,7 +164,7 @@ class AlbumViewModel @Inject constructor(var databaseRepository: DatabaseReposit
             )
         }
     }
-
+*/
     fun setCountrys(){
 
         listCountries.add(Seleccion("QATAR", "QAT", "https://cdn.sportmonks.com/images/countries/png/short/qa.png",

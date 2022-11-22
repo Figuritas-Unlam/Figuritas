@@ -49,7 +49,9 @@ private fun List<PlayerModel>?.toDataModel(): List<PlayerEntity> {
             quantity = it.quantity,
             inAlbum = it.inAlbum,
             imageUrl = it.imageUrl,
-            isSwappable = it.isSwappable
+            isSwappable = it.isSwappable,
+            isPaste = "",
+            position = 0
         )
     } ?: emptyList()
 }
@@ -67,6 +69,8 @@ private fun PlayerModel.toDataModel(): PlayerEntity {
         quantity = this.quantity,
         inAlbum = this.inAlbum,
         imageUrl = this.imageUrl,
-        isSwappable = this.isSwappable
+        isSwappable = this.isSwappable,
+        isPaste = "",
+        position = 0
     )
 }
