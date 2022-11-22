@@ -53,8 +53,6 @@ class OpenPackViewModel @Inject constructor(
     private fun fetchPlayers() {
         viewModelScope.launch {
             try {
-                _error.value = true
-
                 val response = repository.getRandomPlayers(5)
                 _playersData.value = response
                 for (player in response) {

@@ -54,10 +54,8 @@ class OpenPackActivity : AppCompatActivity() {
             binding.loader.visibility = View.GONE
             binding.nextButton.visibility = View.VISIBLE
         }
-        openPackViewModel.error.observe(this) {
-            if (it) {
-                showErrorDialog()
-            }
+        openPackViewModel.error.observe(this) { error ->
+            if (error) { showErrorDialog() }
         }
     }
 
