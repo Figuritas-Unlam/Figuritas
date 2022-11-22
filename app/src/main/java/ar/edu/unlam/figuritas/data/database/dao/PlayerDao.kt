@@ -24,8 +24,11 @@ interface PlayerDao {
     @Insert
     fun insertPlayer(entity: PlayerEntity)
 
-    @Query("SELECT * from Players WHERE id= :id AND In_Album = 0 And Quantity > 0")
+    @Query("SELECT * from Players WHERE id= :id")
     fun getPlayerById(id: Int) : PlayerEntity?
+
+    @Query("SELECT * from Players WHERE id= :id AND In_Album = 0 And Quantity > 1")
+    fun getDuplicatedPlayerById(id: Int) : PlayerEntity?
 
     @Query("UPDATE Players SET quantity = quantity + :qty WHERE id = :id")
     fun updateQuantity(id: Int, qty: Int)
@@ -40,12 +43,23 @@ interface PlayerDao {
     fun deletePlayer(entity: PlayerEntity)
 
     fun deleteOrUpdate(player: PlayerEntity) {
-        val playerFromDB = getPlayerById(player.playerId)
+        val playerFromDB = getDuplicatedPlayerById(player.playerId)
         if (playerFromDB == null) deletePlayer(player)
         else updateQuantity(player.playerId, -1)
     }
 
     @Query("UPDATE Players SET in_album = 1 WHERE id = :id")
     fun placePlayerInAlbum(id: Int)
+
+    @Query("Select * From Players pa Where pa.Paste = 'NotPaste' ")
+    fun getPlayersNotPaste(): List<PlayerEntity>
+
+    @Query("Select * From Players pa Where (pa.Paste = 'Paste' And pa.Quantity>0) Or (pa.Paste = 'NotPaste' And pa.Quantity>1)")
+    fun getRepeats(): List<PlayerEntity>
+
+    @Query("Update Players Set Paste = 'Paste', Quantity = Quantity-1 Where Id = :idPlayer")
+    fun pastePlayer(idPlayer: Int)
+
+
 
 }

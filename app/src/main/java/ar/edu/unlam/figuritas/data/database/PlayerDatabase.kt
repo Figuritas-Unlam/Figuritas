@@ -6,7 +6,7 @@ import ar.edu.unlam.figuritas.data.database.dao.PlayerDao
 import ar.edu.unlam.figuritas.data.database.entities.PlayerEntity
 
 @Database(
-    version = 3,
+    version = 5,
     entities = [PlayerEntity::class]
 )
 abstract class PlayerDatabase : RoomDatabase() {

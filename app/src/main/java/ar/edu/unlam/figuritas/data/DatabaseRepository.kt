@@ -8,7 +8,7 @@ import javax.inject.Inject
 class DatabaseRepository @Inject constructor(private val playerDao: PlayerDao) {
 
 
-    fun insertPlayer(playerResponse : PlayerResponse) {
+    fun insertPlayer(playerResponse: PlayerResponse) {
         playerDao.insertOrUpdate(
             PlayerEntity(
                 playerResponse.data.playerId,
@@ -22,9 +22,18 @@ class DatabaseRepository @Inject constructor(private val playerDao: PlayerDao) {
                 quantity = 1,
                 inAlbum = false,
                 isSwappable = false,
-                imageUrl = playerResponse.data.image
+                imageUrl = playerResponse.data.image,
+                "NotPaste",
+                playerResponse.data.imageCountry
             )
         )
+    }
+    fun getPlayersNotPaste(): List<PlayerEntity?> {
+        return playerDao.getPlayersNotPaste()
+    }
+
+    fun getRepeats(): List<PlayerEntity?> {
+        return playerDao.getRepeats()
     }
 
     fun insertPlayerEntity(player : PlayerEntity) {

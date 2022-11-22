@@ -1,6 +1,7 @@
 package ar.edu.unlam.figuritas.ui.adapter
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import ar.edu.unlam.figuritas.databinding.ItemCardFiguritaBinding
@@ -38,6 +39,10 @@ class SwapsStickersAdapter(
             binding.nationality.text = playerData.nationality
             Picasso.get().load(playerData.imageUrl).into(binding.imagenJugador)
             binding.nombreJugador.text = playerData.playerName
+            if (playerData.quantity > 1) {
+                binding.stickerQty.visibility = View.VISIBLE
+                binding.stickerQty.text = playerData.quantity.toString()
+            }
         }
     }
 }

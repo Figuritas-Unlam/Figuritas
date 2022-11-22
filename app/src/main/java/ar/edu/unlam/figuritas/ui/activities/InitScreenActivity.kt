@@ -11,7 +11,11 @@ import android.os.Vibrator
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.motion.widget.MotionLayout
+import ar.edu.unlam.figuritas.R
 import ar.edu.unlam.figuritas.databinding.ActivityInitScreenBinding
+import ar.edu.unlam.figuritas.ui.OpenPackViewModel
+import ar.edu.unlam.figuritas.ui.viewModel.FiguritasViewModel
+import com.squareup.picasso.Picasso
 import ar.edu.unlam.figuritas.ui.FiguritasViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -20,25 +24,54 @@ class InitScreenActivity : AppCompatActivity(), SensorEventListener {
 
     private lateinit var binding: ActivityInitScreenBinding
     private val viewModel: FiguritasViewModel by viewModels()
+    private val openViewModel : OpenPackViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityInitScreenBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+
         binding.openPackButton.setOnClickListener {
             val openPackActivityIntent = Intent(baseContext, OpenPackActivity::class.java)
             startActivity(openPackActivityIntent)
         }
-        binding.title.setOnClickListener{
-            val mapActivityIntent = Intent(baseContext, MapActivity::class.java)
-            startActivity(mapActivityIntent)
-        }
+        setContentView(binding.root)
         setShakeSensor()
         initMotionLayout()
         initOpenPack()
         initMisFiguritas()
         initAlbum()
         initSwaps()
+        setNueva()
+        setRepetidas()
+    }
+
+    private fun setNueva() {
+        val player = openViewModel.getFirstPlayerNueva()
+        player.let {
+            Picasso.get().load(player?.imageUrl)
+                .placeholder(R.drawable.ney)
+                .into(binding.imagenJugadorNuevo)
+            Picasso.get().load(player?.imageCountry)
+                .placeholder(R.drawable.ney)
+                .into(binding.banderaJugadorNuevo)
+            binding.nacimientoJugadorNuevo.text = player?.birthdate
+            binding.nombreJugadorNuevo.text = player?.playerName
+        }
+    }
+
+    private fun setRepetidas() {
+        val player = openViewModel.getFirstPlayerRepets()
+        player.let {
+            Picasso.get().load(player?.imageUrl)
+                .placeholder(R.drawable.ney)
+                .into(binding.imagenJugadorRepetida)
+
+            Picasso.get().load(player?.imageCountry)
+                .placeholder(R.drawable.ney)
+                .into(binding.banderaJugadorRepetida)
+            binding.nacimientoJugadorRepetida.text = player?.birthdate
+            binding.nombreJugadorRepetida.text = player?.playerName
+        }
     }
 
     private fun initMotionLayout() {
@@ -48,20 +81,18 @@ class InitScreenActivity : AppCompatActivity(), SensorEventListener {
                     motionLayout: MotionLayout?,
                     startId: Int,
                     endId: Int
-                ) {
-                }
+                ) { }
 
                 override fun onTransitionChange(
                     motionLayout: MotionLayout?,
                     startId: Int,
                     endId: Int,
                     progress: Float
-                ) {
-                }
+                ) { }
 
                 override fun onTransitionCompleted(motionLayout: MotionLayout?, currentId: Int) {
-                    /*  intent = Intent(applicationContext, SecondActivity::class.java)
-                       startActivity(intent)*/
+                 /*  intent = Intent(applicationContext, SecondActivity::class.java)
+                    startActivity(intent)*/
                 }
 
                 override fun onTransitionTrigger(
@@ -69,8 +100,7 @@ class InitScreenActivity : AppCompatActivity(), SensorEventListener {
                     triggerId: Int,
                     positive: Boolean,
                     progress: Float
-                ) {
-                }
+                ) { }
             })
         }
     }
