@@ -1,7 +1,6 @@
 package ar.edu.unlam.figuritas.domain.response
 
-import androidx.annotation.DrawableRes
-import ar.edu.unlam.figuritas.model.entities.PlayerEntity
+import ar.edu.unlam.figuritas.data.database.entities.PlayerEntity
 import com.google.gson.annotations.SerializedName
 
 data class PlayerResponse(
@@ -62,6 +61,4 @@ fun PlayerResponse.mapToEntity(quantity: Int, inAlbum: Boolean, isPaste: String)
     data.image,
     "NotPaste",
     data.imageCountry
-
-
 )

@@ -119,6 +119,7 @@ dependencies {
 
     //Compose
     implementation 'androidx.activity:activity-compose:1.6.1'
+    implementation("io.coil-kt:coil-compose:2.2.2")
 
     //Dagger Hilt
     kapt "com.google.dagger:hilt-android-compiler:2.44"
@@ -132,6 +133,5 @@ dependencies {
     //ZXing
     implementation 'com.google.zxing:core:3.3.0'
     implementation('com.journeyapps:zxing-android-embedded:4.1.0') { transitive = false }
-    implementation("io.coil-kt:coil-compose:2.2.2")
 
 }

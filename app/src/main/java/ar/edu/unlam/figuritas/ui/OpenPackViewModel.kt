@@ -5,17 +5,12 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import ar.edu.unlam.figuritas.data.repository.DatabaseRepository
-import ar.edu.unlam.figuritas.data.repository.PlayerRepository
-import ar.edu.unlam.figuritas.model.entities.PlayerEntity
-import ar.edu.unlam.figuritas.model.response.PlayerResponse
-import ar.edu.unlam.figuritas.model.response.mapToEntity
 import ar.edu.unlam.figuritas.data.DatabaseRepository
 import ar.edu.unlam.figuritas.data.PlayerRepository
+import ar.edu.unlam.figuritas.data.database.entities.PlayerEntity
 import ar.edu.unlam.figuritas.domain.response.PlayerResponse
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
-import java.io.IOException
 import javax.inject.Inject
 
 @HiltViewModel
@@ -36,7 +31,7 @@ class OpenPackViewModel @Inject constructor(
     }
 
     fun getFirstPlayerRepets(): PlayerEntity? {
-        var player = databaseRepository.getRepeats()
+        val player = databaseRepository.getRepeats()
         return if (player.isEmpty()) {
             playerRandomEntity()
         } else {
@@ -47,7 +42,7 @@ class OpenPackViewModel @Inject constructor(
 
 
     fun getFirstPlayerNueva(): PlayerEntity? {
-        var player = databaseRepository.getPlayersNotPaste()
+        val player = databaseRepository.getPlayersNotPaste()
         return if (player.isEmpty()) {
             playerRandomEntity()
         } else {
