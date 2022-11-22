@@ -39,6 +39,10 @@ class PlayerRepository @Inject constructor(
         return WorldCupTeamId.values().random()
     }
 
+    suspend fun getCountryById(countryId : Int) : CountryResponse?{
+        return playerClient.searchCountryById(countryId).body()
+    }
+
     fun searchAllPlayers() : List<PlayerEntity>{
         return playerDao.getAllPlayers()
     }

@@ -1,5 +1,6 @@
 package ar.edu.unlam.figuritas.data.api
 
+import ar.edu.unlam.figuritas.model.response.CountryResponse
 import ar.edu.unlam.figuritas.model.response.PlayerResponse
 import ar.edu.unlam.figuritas.model.response.TeamResponse
 import retrofit2.Response
@@ -23,5 +24,9 @@ class PlayerClient @Inject constructor(
 
     suspend fun searchPlayersByCountryId(countryId : Int) : Response<TeamResponse> {
         return servicePlayerApi.searchPlayersByCountryId(countryId)
+    }
+
+    suspend fun searchCountryById(countryId: Int) : Response<CountryResponse>{
+        return servicePlayerApi.searchCountryById(countryId)
     }
 }

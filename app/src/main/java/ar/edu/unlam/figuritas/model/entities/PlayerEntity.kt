@@ -5,6 +5,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 
+
 @Entity(tableName = "Players")
 data class PlayerEntity (
     @PrimaryKey
@@ -42,5 +43,11 @@ data class PlayerEntity (
     var isSwappable : Boolean,
 
     @ColumnInfo(name = "Image")
-    var imageUrl : String
+    var imageUrl : String,
+
+    @ColumnInfo(name = "Paste")
+    var isPaste : String,
+
+    @ColumnInfo(name = "Image_Country")
+    var imageCountry : String
 )

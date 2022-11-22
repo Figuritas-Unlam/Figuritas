@@ -51,4 +51,15 @@ interface PlayerDao {
     @Query("UPDATE Players SET in_album = 1 WHERE id = :id")
     fun placePlayerInAlbum(id: Int)
 
+    @Query("Select * From Players pa Where pa.Paste = 'NotPaste' ")
+    fun getPlayersNotPaste(): List<PlayerEntity>
+
+    @Query("Select * From Players pa Where (pa.Paste = 'Paste' And pa.Quantity>0) Or (pa.Paste = 'NotPaste' And pa.Quantity>1)")
+    fun getRepeats(): List<PlayerEntity>
+
+    @Query("Update Players Set Paste = 'Paste', Quantity = Quantity-1 Where Id = :idPlayer")
+    fun pastePlayer(idPlayer: Int)
+
+
+
 }
