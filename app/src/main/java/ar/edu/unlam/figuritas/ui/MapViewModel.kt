@@ -1,17 +1,14 @@
-package ar.edu.unlam.figuritas.ui.viewmodel
+package ar.edu.unlam.figuritas.ui
 
-import android.annotation.SuppressLint
 import android.os.Looper
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import ar.edu.unlam.figuritas.Domain.PolyLineRouteProvider
+import ar.edu.unlam.figuritas.domain.PolyLineRouteProvider
 import com.google.android.gms.location.*
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Polyline
 import com.google.android.gms.maps.model.PolylineOptions
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 

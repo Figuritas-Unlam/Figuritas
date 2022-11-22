@@ -5,9 +5,9 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import ar.edu.unlam.figuritas.data.repository.DatabaseRepository
-import ar.edu.unlam.figuritas.data.repository.PlayerRepository
-import ar.edu.unlam.figuritas.model.response.PlayerResponse
+import ar.edu.unlam.figuritas.data.DatabaseRepository
+import ar.edu.unlam.figuritas.data.PlayerRepository
+import ar.edu.unlam.figuritas.domain.response.PlayerResponse
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import java.io.IOException

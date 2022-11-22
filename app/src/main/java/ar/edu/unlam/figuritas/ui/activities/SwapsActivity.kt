@@ -9,8 +9,8 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import ar.edu.unlam.figuritas.databinding.ActivitySwapsBinding
-import ar.edu.unlam.figuritas.model.PlayerModel
-import ar.edu.unlam.figuritas.model.QRManager
+import ar.edu.unlam.figuritas.domain.model.PlayerModel
+import ar.edu.unlam.figuritas.player_model.QRManager
 import ar.edu.unlam.figuritas.ui.adapter.SwapsStickersAdapter
 import ar.edu.unlam.figuritas.ui.SwapsViewModel
 import com.google.zxing.integration.android.IntentIntegrator

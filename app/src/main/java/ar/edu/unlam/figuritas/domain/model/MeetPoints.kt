@@ -1,4 +1,4 @@
-package ar.edu.unlam.figuritas.Domain.Models
+package ar.edu.unlam.figuritas.domain.model
 
 import com.google.android.gms.maps.model.LatLng
 

@@ -1,4 +1,4 @@
-package ar.edu.unlam.figuritas.model.entities
+package ar.edu.unlam.figuritas.data.database.entities
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

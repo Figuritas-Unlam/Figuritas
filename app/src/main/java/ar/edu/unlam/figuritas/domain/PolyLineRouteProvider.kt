@@ -1,9 +1,8 @@
-package ar.edu.unlam.figuritas.Domain
+package ar.edu.unlam.figuritas.domain
 
-import ar.edu.unlam.figuritas.Data.api.OpenRouteClient
+import ar.edu.unlam.figuritas.data.OpenRouteClient
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.PolylineOptions
-import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
 class PolyLineRouteProvider @Inject constructor(private val openRouteClient: OpenRouteClient){

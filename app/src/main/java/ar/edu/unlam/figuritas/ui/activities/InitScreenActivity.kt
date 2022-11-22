@@ -12,7 +12,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.motion.widget.MotionLayout
 import ar.edu.unlam.figuritas.databinding.ActivityInitScreenBinding
-import ar.edu.unlam.figuritas.ui.viewModel.FiguritasViewModel
+import ar.edu.unlam.figuritas.ui.FiguritasViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

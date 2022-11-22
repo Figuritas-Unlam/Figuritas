@@ -1,7 +1,8 @@
-package ar.edu.unlam.figuritas.model
+package ar.edu.unlam.figuritas.player_model
 
 import android.graphics.Bitmap
 import android.text.TextUtils
+import ar.edu.unlam.figuritas.domain.model.PlayerModel
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.google.zxing.BarcodeFormat

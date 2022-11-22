@@ -1,4 +1,4 @@
-package ar.edu.unlam.figuritas.model.response
+package ar.edu.unlam.figuritas.domain.response
 
 import androidx.annotation.DrawableRes
 import com.google.gson.annotations.SerializedName

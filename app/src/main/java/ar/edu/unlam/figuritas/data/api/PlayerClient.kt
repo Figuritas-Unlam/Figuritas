@@ -1,7 +1,7 @@
 package ar.edu.unlam.figuritas.data.api
 
-import ar.edu.unlam.figuritas.model.response.PlayerResponse
-import ar.edu.unlam.figuritas.model.response.TeamResponse
+import ar.edu.unlam.figuritas.domain.response.PlayerResponse
+import ar.edu.unlam.figuritas.domain.response.TeamResponse
 import retrofit2.Response
 import javax.inject.Inject
 

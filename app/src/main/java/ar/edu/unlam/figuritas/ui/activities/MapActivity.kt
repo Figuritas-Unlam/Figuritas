@@ -9,9 +9,9 @@ import androidx.activity.viewModels
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import ar.edu.unlam.figuritas.R
-import ar.edu.unlam.figuritas.Domain.Models.MeetPoints
+import ar.edu.unlam.figuritas.domain.model.MeetPoints
 import ar.edu.unlam.figuritas.databinding.ActivityMapBinding
-import ar.edu.unlam.figuritas.ui.viewmodel.MapViewModel
+import ar.edu.unlam.figuritas.ui.MapViewModel
 import com.google.android.gms.location.*
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap

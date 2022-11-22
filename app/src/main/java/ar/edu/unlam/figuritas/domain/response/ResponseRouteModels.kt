@@ -1,6 +1,6 @@
-package ar.edu.unlam.figuritas.Data.models
+package ar.edu.unlam.figuritas.domain.response
 
-import ar.edu.unlam.figuritas.Domain.Models.Route
+import ar.edu.unlam.figuritas.domain.model.Route
 import com.google.gson.annotations.SerializedName
 
 data class RouteResponse (@SerializedName("features") val features: List<Feature>)

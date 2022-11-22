@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import ar.edu.unlam.figuritas.R
 import ar.edu.unlam.figuritas.databinding.ItemCardFiguritaBinding
-import ar.edu.unlam.figuritas.model.response.PlayerResponseData
+import ar.edu.unlam.figuritas.domain.response.PlayerResponseData
 import com.squareup.picasso.Picasso
 
 class StickerItemFragment: Fragment(), FragmentPlayerCommunicator {

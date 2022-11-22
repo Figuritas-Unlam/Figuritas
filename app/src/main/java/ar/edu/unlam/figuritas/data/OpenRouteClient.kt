@@ -1,8 +1,8 @@
-package ar.edu.unlam.figuritas.Data.api
+package ar.edu.unlam.figuritas.data
 
-import ar.edu.unlam.figuritas.Data.models.RouteResponse
-import ar.edu.unlam.figuritas.Data.models.mapToRoute
-import ar.edu.unlam.figuritas.Domain.Models.Route
+import ar.edu.unlam.figuritas.domain.response.RouteResponse
+import ar.edu.unlam.figuritas.domain.response.mapToRoute
+import ar.edu.unlam.figuritas.domain.model.Route
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query

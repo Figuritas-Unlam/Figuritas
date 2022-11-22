@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import ar.edu.unlam.figuritas.databinding.ItemCardFiguritaBinding
-import ar.edu.unlam.figuritas.model.PlayerModel
+import ar.edu.unlam.figuritas.domain.model.PlayerModel
 import com.squareup.picasso.Picasso
 
 class SwapsStickersAdapter(

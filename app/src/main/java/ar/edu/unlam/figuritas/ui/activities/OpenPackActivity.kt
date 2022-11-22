@@ -11,7 +11,7 @@ import ar.edu.unlam.figuritas.BuildConfig
 import ar.edu.unlam.figuritas.databinding.ActivityOpenPackBinding
 import dagger.hilt.android.AndroidEntryPoint
 import ar.edu.unlam.figuritas.ui.OpenPackViewModel
-import ar.edu.unlam.figuritas.model.response.PlayerResponse
+import ar.edu.unlam.figuritas.domain.response.PlayerResponse
 import ar.edu.unlam.figuritas.ui.fragments.StickerItemFragment
 
 @AndroidEntryPoint

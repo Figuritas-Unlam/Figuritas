@@ -1,8 +1,8 @@
-package ar.edu.unlam.figuritas.data.repository
+package ar.edu.unlam.figuritas.data
 
 import ar.edu.unlam.figuritas.data.database.dao.PlayerDao
-import ar.edu.unlam.figuritas.model.entities.PlayerEntity
-import ar.edu.unlam.figuritas.model.response.PlayerResponse
+import ar.edu.unlam.figuritas.data.database.entities.PlayerEntity
+import ar.edu.unlam.figuritas.domain.response.PlayerResponse
 import javax.inject.Inject
 
 class DatabaseRepository @Inject constructor(private val playerDao: PlayerDao) {
