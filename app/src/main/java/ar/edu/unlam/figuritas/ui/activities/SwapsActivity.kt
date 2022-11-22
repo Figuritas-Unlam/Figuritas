@@ -39,6 +39,9 @@ class SwapsActivity : AppCompatActivity() {
         binding.swapsButton.setOnClickListener {
             generateQr()
         }
+        binding.openMap.setOnClickListener {
+            startMap()
+        }
     }
 
     private fun setRecyclerView() {
@@ -62,6 +65,11 @@ class SwapsActivity : AppCompatActivity() {
         integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE)
         integrator.setPrompt("Escanee el QR para obtener el regalo")
         integrator.initiateScan()
+    }
+
+    private fun startMap() {
+        val intent = Intent(applicationContext, MapActivity::class.java)
+        startActivity(intent)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
