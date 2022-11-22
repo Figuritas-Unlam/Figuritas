@@ -92,11 +92,16 @@ class SwapsActivity : AppCompatActivity() {
     private fun generateQr() {
         try {
             val iv = ImageView(this)
-            iv.setImageBitmap(qrManager.generateQR(getSelectedPlayers(), 900, 900))
-            AlertDialog.Builder(this)
-                .setMessage("Mostrá el codigo para enviarlas")
-                .setView(iv)
-                .show()
+            val selectedPlayers = getSelectedPlayers()
+            if (selectedPlayers.isEmpty()) {
+                Toast.makeText(this,"Seleccioná al menos una figurita", Toast.LENGTH_SHORT).show()
+            } else {
+                iv.setImageBitmap(qrManager.generateQR(getSelectedPlayers(), 900, 900))
+                AlertDialog.Builder(this)
+                    .setMessage("Mostrá el codigo para enviarlas")
+                    .setView(iv)
+                    .show()
+            }
         } catch (e: RuntimeException) {
             //No se pudo generar el QR
             Toast.makeText(this,"Error al generar QR", Toast.LENGTH_SHORT).show()
