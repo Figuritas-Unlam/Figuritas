@@ -1,6 +1,7 @@
 package ar.edu.unlam.figuritas.data.repository
 
 import ar.edu.unlam.figuritas.data.database.dao.PlayerDao
+import ar.edu.unlam.figuritas.model.entities.PlayerAlbumEntity
 import ar.edu.unlam.figuritas.model.entities.PlayerEntity
 import ar.edu.unlam.figuritas.model.response.PlayerResponse
 import javax.inject.Inject
@@ -20,11 +21,8 @@ class DatabaseRepository @Inject constructor(private val playerDao: PlayerDao) {
                 playerResponse.data.teamId,
                 playerResponse.data.countryId,
                 quantity = 1,
-                inAlbum = false,
                 isSwappable = false,
-                imageUrl = playerResponse.data.image,
-                "",
-                4
+                imageUrl = playerResponse.data.image
             )
         )
     }
@@ -45,8 +43,16 @@ class DatabaseRepository @Inject constructor(private val playerDao: PlayerDao) {
         players?.forEach { playerDao.deleteOrUpdate(it) }
     }
 
-    fun getPlayersForCountry(countryId : Int) : List<PlayerEntity>{
-        return playerDao.getPlayersForIdCountry(countryId)
+    fun getPlayersPasteForCountry(countryId : Int) : List<PlayerAlbumEntity>{
+        return playerDao.getPlayersInAlbumForIdCountry(countryId)
+    }
+
+    fun insertPlayerInAlbum(playerAlbum : PlayerAlbumEntity){
+        playerDao.insertPlayerInAlbum(playerAlbum)
+    }
+
+    fun getPlayerForId(playerId : Int) : PlayerEntity?{
+        return playerDao.getPlayerById(playerId)
     }
 
 }

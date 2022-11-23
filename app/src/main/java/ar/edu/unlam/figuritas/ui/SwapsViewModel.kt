@@ -47,11 +47,8 @@ private fun List<PlayerModel>?.toDataModel(): List<PlayerEntity> {
             teamId = it.teamId,
             seleccionId = it.seleccionId,
             quantity = it.quantity,
-            inAlbum = it.inAlbum,
             imageUrl = it.imageUrl,
             isSwappable = it.isSwappable,
-            isPaste = "",
-            position = 0
         )
     } ?: emptyList()
 }
@@ -67,10 +64,7 @@ private fun PlayerModel.toDataModel(): PlayerEntity {
         teamId = this.teamId,
         seleccionId = this.seleccionId,
         quantity = this.quantity,
-        inAlbum = this.inAlbum,
         imageUrl = this.imageUrl,
         isSwappable = this.isSwappable,
-        isPaste = "",
-        position = 0
     )
 }
