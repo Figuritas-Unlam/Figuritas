@@ -74,7 +74,8 @@ class AlbumViewModel @Inject constructor(var databaseRepository: DatabaseReposit
             0,
             0,
             false,
-            "?",
+            false,
+            imageUrl = "",
             imageCountry = ""
         )
     }

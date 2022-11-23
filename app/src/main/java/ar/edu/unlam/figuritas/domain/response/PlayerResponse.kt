@@ -57,6 +57,7 @@ fun PlayerResponse.mapToEntity(quantity: Int, inAlbum: Boolean, isPaste: String)
     0,
     1,
     false,
+    false,
     data.image,
-    data.imageCountry
+    ""
 )

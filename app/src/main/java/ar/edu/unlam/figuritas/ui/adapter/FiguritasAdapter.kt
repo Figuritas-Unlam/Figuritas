@@ -54,10 +54,10 @@ private fun bind(
     applicationContext: Context
 ){
 
-    holder.binding.alturaJugador.text = player.height
-    holder.binding.pesoJugador.text = player.weight
-    holder.binding.nombreJugador.text = player.playerName
-    holder.binding.fechaNacimiento.text = player.birthdate
+    holder.binding.alturaJugador.text = player?.height
+    holder.binding.pesoJugador.text = player?.weight
+    holder.binding.nombreJugador.text = player?.playerName
+    holder.binding.fechaNacimiento.text = player?.birthdate
     holder.binding.nameSeleccion.text = nameSeleccion
 
     if(inInsert){

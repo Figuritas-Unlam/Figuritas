@@ -14,7 +14,7 @@ import javax.inject.Inject
 @HiltViewModel
 class SwapsViewModel @Inject constructor(private val repository: DatabaseRepository) : ViewModel() {
     private val _swappableStickers = MutableLiveData<List<PlayerModel>>()
-    val swappableStickers : LiveData<List<PlayerModel>> = _swappableStickers
+    val swappableStickers: LiveData<List<PlayerModel>> = _swappableStickers
 
     init {
         _swappableStickers.value = emptyList()
@@ -31,7 +31,7 @@ class SwapsViewModel @Inject constructor(private val repository: DatabaseReposit
     }
 
     fun getSelectedStickers(): List<PlayerModel> {
-        val selectedStickers = _swappableStickers.value?.filter { it.isSelected}
+        val selectedStickers = _swappableStickers.value?.filter { it.isSelected }
         repository.deletePlayers(selectedStickers.toDataModel())
         _swappableStickers.value = repository.getRepeats().map { PlayerModel.of(it!!) }
         return selectedStickers ?: emptyList()

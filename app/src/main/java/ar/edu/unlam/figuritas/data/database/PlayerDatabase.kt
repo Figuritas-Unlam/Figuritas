@@ -7,7 +7,7 @@ import ar.edu.unlam.figuritas.data.database.entities.PlayerEntity
 import ar.edu.unlam.figuritas.model.entities.PlayerAlbumEntity
 
 @Database(
-    version = 6,
+    version = 7,
     entities = [PlayerEntity::class,
                 PlayerAlbumEntity::class]
 )

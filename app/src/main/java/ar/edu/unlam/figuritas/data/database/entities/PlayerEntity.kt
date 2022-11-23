@@ -6,41 +6,44 @@ import androidx.room.PrimaryKey
 
 
 @Entity(tableName = "Players")
-data class PlayerEntity (
+data class PlayerEntity(
     @PrimaryKey
     @ColumnInfo(name = "Id")
-    val playerId : Int,
+    val playerId: Int,
 
     @ColumnInfo(name = "Name")
-    val playerName : String,
+    val playerName: String,
 
     @ColumnInfo(name = "Height")
-    val height : String?,
+    val height: String?,
 
     @ColumnInfo(name = "Weight")
-    val weight : String?,
+    val weight: String?,
 
     @ColumnInfo(name = "Birthdate")
-    val birthdate : String,
+    val birthdate: String,
 
     @ColumnInfo(name = "Nationality")
-    val nationality : String,
+    val nationality: String,
 
     @ColumnInfo(name = "TeamId")
-    val teamId : Int,
+    val teamId: Int,
 
     @ColumnInfo(name = "Seleccion_Id")
-    val seleccionId : Int,
+    val seleccionId: Int,
 
     @ColumnInfo(name = "Quantity")
-    var quantity : Int,
+    var quantity: Int,
+
+    @ColumnInfo(name = "inAlbum")
+    var inAlbum: Boolean = false,
 
     @ColumnInfo(name = "Is_Swapable")
-    var isSwappable : Boolean,
+    var isSwappable: Boolean,
 
     @ColumnInfo(name = "Image")
-    var imageUrl : String,
+    var imageUrl: String = "" ,
 
     @ColumnInfo(name = "Image_Country")
-    var imageCountry : String
+    var imageCountry: String
 )
