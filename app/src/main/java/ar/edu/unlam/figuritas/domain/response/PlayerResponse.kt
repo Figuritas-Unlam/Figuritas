@@ -31,7 +31,7 @@ data class PlayerResponseData(
     var image: String,
     @SerializedName("position")
     var position: PositionData,
-    var imageCountry: String = ""
+    var imageCountry: String
 )
 
 data class PositionData(

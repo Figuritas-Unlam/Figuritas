@@ -115,7 +115,10 @@ fun BackgroundActivity(viewModel: OpenPackViewModel) {
         modifier = Modifier
             .fillMaxSize()
             .fillMaxHeight(1f)
-            .paint(painterResource(id = R.drawable.background_qatar), contentScale = ContentScale.FillHeight)
+            .paint(
+                painterResource(id = R.drawable.background_qatar),
+                contentScale = ContentScale.FillHeight
+            )
     ) {
         MisFiguritas()
         FiguritaNuevasTxt()
@@ -310,6 +313,7 @@ fun FiguritasRepetidas(player: PlayerEntity) {
 
                 )
 
+
             }
 
 
@@ -339,6 +343,7 @@ fun FiguritasRepetidas(player: PlayerEntity) {
                     lineHeight = TextUnit.Unspecified
 
                 )
+
             }
 
         }

@@ -9,8 +9,16 @@ import ar.edu.unlam.figuritas.data.DatabaseRepository
 import ar.edu.unlam.figuritas.data.PlayerRepository
 import ar.edu.unlam.figuritas.data.database.entities.PlayerEntity
 import ar.edu.unlam.figuritas.domain.response.PlayerResponse
+import ar.edu.unlam.figuritas.data.repository.DatabaseRepository
+import ar.edu.unlam.figuritas.data.repository.PlayerRepository
+import ar.edu.unlam.figuritas.model.entities.PlayerEntity
+import ar.edu.unlam.figuritas.model.response.PlayerResponse
+import ar.edu.unlam.figuritas.model.response.mapToEntity
+import ar.edu.unlam.figuritas.ui.activities.OpenPackActivity
 import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.launch
+import java.io.IOException
 import javax.inject.Inject
 
 @HiltViewModel
@@ -66,14 +74,13 @@ class OpenPackViewModel @Inject constructor(
                     }
                     _error.value = false
                 }
-            } catch (e: RuntimeException) {
+            } catch (e: IOException) {
                 e.printStackTrace()
                 _error.value = true
                 Log.e("Error fetching players", e.message.toString())
             }
         }
     }
-
 
     fun setLists() {
         getRepeats()

@@ -13,6 +13,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import ar.edu.unlam.figuritas.ui.OpenPackViewModel
 import ar.edu.unlam.figuritas.domain.response.PlayerResponse
 import ar.edu.unlam.figuritas.ui.fragments.StickerItemFragment
+import dagger.hilt.android.qualifiers.ApplicationContext
 
 @AndroidEntryPoint
 class OpenPackActivity : AppCompatActivity() {

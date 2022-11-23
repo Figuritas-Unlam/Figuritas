@@ -11,7 +11,8 @@ interface PlayerAPI {
 
     companion object{
 //        const val API_KEY = "M0To6SUZNekgxV2duNiRFX1ukMLfSBNhTo0WuZnn1aQQnpwLbKORHDP3ocSq"
-        const val API_KEY = "fYqTB9XfINa59yGPulaC7Ui2dUz2q94UTSrAtAJkEy20m9Z0DwHAC6fP0G2Q"
+//        const val API_KEY = "fYqTB9XfINa59yGPulaC7Ui2dUz2q94UTSrAtAJkEy20m9Z0DwHAC6fP0G2Q"
+        const val API_KEY = "3puVV9TkLHqxgI5xrd00AOS16Zxs2IdcSJLhGciUdRuzswDOvN4KuUVtZuHo"
     }
 
     @GET("players/{playerId}?api_token=$API_KEY")
