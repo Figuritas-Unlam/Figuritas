@@ -6,6 +6,7 @@ import androidx.room.Ignore
 import androidx.room.PrimaryKey
 
 
+
 @Entity(tableName = "Players")
 data class PlayerEntity (
     @PrimaryKey
@@ -36,29 +37,12 @@ data class PlayerEntity (
     @ColumnInfo(name = "Quantity")
     var quantity : Int,
 
+    @ColumnInfo(name = "In_Album")
+    var inAlbum : Boolean,
+
     @ColumnInfo(name = "Is_Swapable")
     var isSwappable : Boolean,
 
     @ColumnInfo(name = "Image")
     var imageUrl : String
-    )
-
-
-fun PlayerEntity.mapToPlayer()=Player(playerId,
-    playerName,height,
-    weight,birthdate,
-    seleccionId,
-    quantity, imageUrl)
-
-data class Player (
-    val playerId : Int,
-    val playerName : String,
-    val height : String?,
-    val weight : String?,
-    val birthdate : String,
-    val seleccionId : Int,
-    var quantity : Int,
-    var imageUrl : String,
-
 )
-

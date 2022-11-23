@@ -8,10 +8,7 @@ data class PlayerResponse(
     @SerializedName("data")
     var data : PlayerResponseData
 )
-/*
-fun PlayerResponse.mapToEntity(quantity: Int, inAlbum: Boolean, isPaste: String)=PlayerEntity(data.playerId,
-data.name, data.height,data.weight, data.birthdate, data.teamId, data.countryId, quantity, inAlbum,data.image, isPaste, 1)
-*/
+
 data class PlayerResponseData (
     @SerializedName("player_id")
     var playerId : Int,
@@ -35,23 +32,36 @@ data class PlayerResponseData (
     var image : String,
     @SerializedName("position")
     var position: PositionData,
-
-    var imageCountry : String = ""
-    )
+    var imageCountry: String = ""
+)
 
 data class PositionData(
     val data: Position
 )
 
-data class Position (
+data class Position(
     @SerializedName("id")
     var id: Int,
     @SerializedName("name")
-    var name : String
+    var name: String
 )
 
 
-data class MockPlayerProvisorio(
-    var name: String,
-    @DrawableRes var image: Int
+fun PlayerResponse.mapToEntity(quantity: Int, inAlbum: Boolean, isPaste: String) = PlayerEntity(
+    data.playerId,
+    data.name,
+    data.height,
+    data.weight,
+    data.birthdate,
+    data.nationality,
+    data.teamId,
+    0,
+    1,
+    false,
+    false,
+    data.image,
+    "NotPaste",
+    data.imageCountry
+
+
 )

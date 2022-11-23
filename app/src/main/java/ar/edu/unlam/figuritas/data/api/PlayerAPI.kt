@@ -1,6 +1,5 @@
 package ar.edu.unlam.figuritas.data.api
 
-import ar.edu.unlam.figuritas.model.response.CountryResponse
 import ar.edu.unlam.figuritas.model.response.PlayerResponse
 import ar.edu.unlam.figuritas.model.response.TeamResponse
 import retrofit2.Response
@@ -10,7 +9,7 @@ import retrofit2.http.Path
 interface PlayerAPI {
 
     companion object{
-        const val API_KEY = "zxFKJNN81g8mrbNg709uk0Vtve4nmBRwtZp9CxK553U5MavxPXA9lrLc6ryg"
+        const val API_KEY = "3puVV9TkLHqxgI5xrd00AOS16Zxs2IdcSJLhGciUdRuzswDOvN4KuUVtZuHo"
     }
 
     @GET("players/{playerId}?api_token=$API_KEY")
@@ -21,4 +20,5 @@ interface PlayerAPI {
 
     @GET("countries/{countryId}?api_token=$API_KEY")
     suspend fun searchCountryById(@Path("countryId") countryId: Int) : Response<CountryResponse>
+
 }

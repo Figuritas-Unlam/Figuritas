@@ -9,7 +9,8 @@ import retrofit2.Response
 import javax.inject.Inject
 
 class PlayerRepository @Inject constructor(
-    private val playerClient: PlayerClient
+    private val playerClient: PlayerClient,
+    private val playerDao: PlayerDao
 ) {
 
     suspend fun getPlayerById(playerId : Int) : Response<PlayerResponse> {
@@ -26,10 +27,6 @@ class PlayerRepository @Inject constructor(
         }
     }
 
-    suspend fun getCountryById(countryId : Int) : CountryResponse?{
-        return playerClient.searchCountryById(countryId).body()
-    }
-
     private suspend fun getRandomPlayerId() : Int {
         return getSquadDataByCountry(getRandomCountryId())?.random()?.playerId!!
     }
@@ -42,5 +39,11 @@ class PlayerRepository @Inject constructor(
         return WorldCupTeamId.values().random()
     }
 
+    suspend fun getCountryById(countryId : Int) : CountryResponse?{
+        return playerClient.searchCountryById(countryId).body()
+    }
 
+    fun searchAllPlayers() : List<PlayerEntity>{
+        return playerDao.getAllPlayers()
+    }
 }

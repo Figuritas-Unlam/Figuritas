@@ -22,7 +22,6 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.paint
@@ -36,23 +35,24 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import ar.edu.unlam.figuritas.R
-import ar.edu.unlam.figuritas.model.entities.Player
-import ar.edu.unlam.figuritas.model.entities.mapToPlayer
-import ar.edu.unlam.figuritas.model.response.MockPlayerProvisorio
+import ar.edu.unlam.figuritas.model.entities.PlayerEntity
 import ar.edu.unlam.figuritas.ui.OpenPackViewModel
 import ar.edu.unlam.figuritas.ui.activities.ui.theme.FiguritasTheme
 import ar.edu.unlam.figuritas.ui.activities.ui.theme.Orange
 import ar.edu.unlam.figuritas.ui.activities.ui.theme.RedQatar
 import ar.edu.unlam.figuritas.ui.viewModel.FiguritasViewModel
+import coil.compose.AsyncImage
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MyFiguritasActivity : ComponentActivity(), SensorEventListener {
-    private val viewModel: FiguritasViewModel by viewModels()
-
+    private val viewModel: OpenPackViewModel by viewModels()
+    private val viewModelos: FiguritasViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContent {
+            viewModel.setLists()
             FiguritasTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
@@ -60,7 +60,7 @@ class MyFiguritasActivity : ComponentActivity(), SensorEventListener {
                     color = MaterialTheme.colors.background
                 ) {
                     Column() {
-                        BackgroundActivity()
+                        BackgroundActivity(viewModel)
                     }
                 }
             }
@@ -70,7 +70,7 @@ class MyFiguritasActivity : ComponentActivity(), SensorEventListener {
 
     //Sense Shake
     private fun setShakeSensor() {
-        viewModel.sensorManager= getSystemService(Context.SENSOR_SERVICE) as SensorManager
+        viewModelos.sensorManager= getSystemService(Context.SENSOR_SERVICE) as SensorManager
     }
 
     override fun onSensorChanged(srEvent: SensorEvent?) {
@@ -96,19 +96,21 @@ class MyFiguritasActivity : ComponentActivity(), SensorEventListener {
 
     override fun onResume() {
         super.onResume()
-        viewModel.sensorManager.registerListener(this,
-            viewModel.sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER), SensorManager.SENSOR_DELAY_NORMAL)
+        viewModelos.sensorManager.registerListener(this,
+            viewModelos.sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER), SensorManager.SENSOR_DELAY_NORMAL)
     }
 
     override fun onPause() {
         super.onPause()
-        viewModel.sensorManager.unregisterListener(this)
+        viewModelos.sensorManager.unregisterListener(this)
+        viewModel.playerRepetidos.clear()
+        viewModel.playerNuevas.clear()
     }
 
 }
 
 @Composable
-fun BackgroundActivity() {
+fun BackgroundActivity(viewModel: OpenPackViewModel) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -117,9 +119,9 @@ fun BackgroundActivity() {
     ) {
         MisFiguritas()
         FiguritaNuevasTxt()
-        RvNuevas()
+        RvNuevas(viewModel)
         ParaIntercambiar()
-        RvRepetidas()
+        RvRepetidas(viewModel)
 
 
     }
@@ -163,35 +165,20 @@ fun FiguritaNuevasTxt() {
 }
 
 @Composable
-fun RvNuevas() {
-
+fun RvNuevas(viewModel: OpenPackViewModel) {
+    //val rememberPlayers = remember { viewModel.playerList }
     LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(8.dp)) {
-        items(getMessiMock()) { messiMock ->
-            FiguritasNuevas(messiMock = messiMock)
+        items(viewModel.playerNuevas) { player ->
+            player?.let { FiguritasNuevas(player = it) }
 
         }
     }
 }
 
-fun getMessiMock(): List<MockPlayerProvisorio> {
-    return listOf(
-        MockPlayerProvisorio("Lionel Messi", R.drawable.messi),
-        MockPlayerProvisorio("Lionel Messi", R.drawable.messi),
-        MockPlayerProvisorio("Lionel Messi", R.drawable.messi),
-        MockPlayerProvisorio("Lionel Messi", R.drawable.messi),
-        MockPlayerProvisorio("Lionel Messi", R.drawable.messi),
-        MockPlayerProvisorio("Lionel Messi", R.drawable.messi),
-        MockPlayerProvisorio("Lionel Messi", R.drawable.messi),
-        MockPlayerProvisorio("Lionel Messi", R.drawable.messi),
-        MockPlayerProvisorio("Lionel Messi", R.drawable.messi),
-        MockPlayerProvisorio("Lionel Messi", R.drawable.messi),
-
-        )
-}
 
 
 @Composable
-fun FiguritasNuevas(messiMock: MockPlayerProvisorio) {
+fun FiguritasNuevas(player: PlayerEntity) {
     Card(
         border = BorderStroke(2.dp, Color.Yellow),
         modifier = Modifier
@@ -220,8 +207,8 @@ fun FiguritasNuevas(messiMock: MockPlayerProvisorio) {
                         .width(50.dp)
                         .height(40.dp)
                 )
-                Image(
-                    painter = painterResource(id = R.drawable.arg),
+                AsyncImage(
+                    model = player.imageCountry,
                     contentDescription = "bandera",
                     modifier = Modifier
                         .width(50.dp)
@@ -231,9 +218,8 @@ fun FiguritasNuevas(messiMock: MockPlayerProvisorio) {
 
             }
 
-
-            Image(
-                painter = painterResource(id = messiMock.image),
+            AsyncImage(
+                model = player.imageUrl,
                 contentDescription = null,
                 modifier = Modifier
                     .width(140.dp)
@@ -250,7 +236,7 @@ fun FiguritasNuevas(messiMock: MockPlayerProvisorio) {
 
             ) {
                 Text(
-                    text = messiMock.name, modifier = Modifier.align(Alignment.Center),
+                    text = player.playerName, modifier = Modifier.align(Alignment.Center),
                     color = RedQatar,
                     fontWeight = FontWeight.SemiBold,
                     maxLines = 1,
@@ -285,7 +271,7 @@ fun ParaIntercambiar() {
 }
 
 @Composable
-fun FiguritasRepetidas(messiMock: MockPlayerProvisorio) {
+fun FiguritasRepetidas(player: PlayerEntity) {
     Card(
         border = BorderStroke(2.dp, Color.Yellow),
         modifier = Modifier
@@ -315,8 +301,8 @@ fun FiguritasRepetidas(messiMock: MockPlayerProvisorio) {
                         .width(50.dp)
                         .height(40.dp)
                 )
-                Image(
-                    painter = painterResource(id = R.drawable.arg),
+                AsyncImage(
+                    model = player.imageCountry,
                     contentDescription = "bandera",
                     modifier = Modifier
                         .width(50.dp)
@@ -327,8 +313,8 @@ fun FiguritasRepetidas(messiMock: MockPlayerProvisorio) {
             }
 
 
-            Image(
-                painter = painterResource(id = messiMock.image),
+            AsyncImage(
+                model = player.imageUrl,
                 contentDescription = null,
                 modifier = Modifier
                     .width(140.dp)
@@ -345,7 +331,7 @@ fun FiguritasRepetidas(messiMock: MockPlayerProvisorio) {
 
             ) {
                 Text(
-                    text = messiMock.name, modifier = Modifier.align(Alignment.Center),
+                    text = player.playerName, modifier = Modifier.align(Alignment.Center),
                     color = RedQatar,
                     fontWeight = FontWeight.SemiBold,
                     maxLines = 1,
@@ -361,12 +347,11 @@ fun FiguritasRepetidas(messiMock: MockPlayerProvisorio) {
 }
 
 @Composable
-fun RvRepetidas() {
+fun RvRepetidas(viewModel: OpenPackViewModel) {
     LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(8.dp)) {
-        items(getMessiMock()) { messiMock ->
-            FiguritasRepetidas(messiMock = messiMock)
+        items(viewModel.playerRepetidos) { player ->
+            player?.let { FiguritasRepetidas(player = it) }
 
         }
     }
 }
-

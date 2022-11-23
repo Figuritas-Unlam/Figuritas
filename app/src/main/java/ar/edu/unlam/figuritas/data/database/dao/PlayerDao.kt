@@ -1,7 +1,6 @@
 package ar.edu.unlam.figuritas.data.database.dao
 
 import androidx.room.*
-import ar.edu.unlam.figuritas.model.entities.PlayerAlbumEntity
 import ar.edu.unlam.figuritas.model.entities.PlayerEntity
 
 @Dao
@@ -26,17 +25,17 @@ interface PlayerDao {
     @Query("Select * From Players pa Where pa.Is_Swapable = 1")
     fun getSwappablePlayers() : List<PlayerEntity>
 
-    @Query("UPDATE Players SET Is_Swapable = :swappable WHERE id = :playerId")
+    @Query("UPDATE Players SET Is_Swapable = :swappable WHERE id = :playerId AND In_Album = 0")
     fun setSwappablePlayers(playerId: Int, swappable: Boolean)
 
     @Insert
     fun insertPlayer(entity: PlayerEntity)
 
-    @Insert
-    fun insertPlayerInAlbum(entity: PlayerAlbumEntity)
-
-    @Query("SELECT * from Players WHERE id= :id And Quantity > 0")
+    @Query("SELECT * from Players WHERE id= :id AND In_Album = 0 And Quantity > 0")
     fun getPlayerById(id: Int) : PlayerEntity?
+
+    @Query("SELECT * from Players WHERE id= :id AND In_Album = 0 And Quantity > 1")
+    fun getDuplicatedPlayerById(id: Int) : PlayerEntity?
 
     @Query("UPDATE Players SET quantity = quantity + :qty WHERE id = :id")
     fun updateQuantity(id: Int, qty: Int)
@@ -51,7 +50,7 @@ interface PlayerDao {
     fun deletePlayer(entity: PlayerEntity)
 
     fun deleteOrUpdate(player: PlayerEntity) {
-        val playerFromDB = getPlayerById(player.playerId)
+        val playerFromDB = getDuplicatedPlayerById(player.playerId)
         if (playerFromDB == null) deletePlayer(player)
         else updateQuantity(player.playerId, -1)
     }
@@ -72,6 +71,6 @@ interface PlayerDao {
     @Query("Update Players Set Paste = 'Paste', Quantity = Quantity-1 Where Id = :idPlayer")
     fun pastePlayer(idPlayer: Int)
 
-    @Query("Select * From Players pa Where pa.Paste = 'Paste'")
-    fun getPlayersPaste() : List<PlayerEntity>*/
+
+
 }
