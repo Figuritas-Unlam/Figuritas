@@ -1,20 +1,15 @@
 package ar.edu.unlam.figuritas.ui.activities
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import androidx.activity.viewModels
-import androidx.lifecycle.LifecycleOwner
-import androidx.lifecycle.Observer
-import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 
 import ar.edu.unlam.figuritas.databinding.ActivityAlbumBinding
-import ar.edu.unlam.figuritas.model.Seleccion
+import ar.edu.unlam.figuritas.data.database.entities.Seleccion
 import ar.edu.unlam.figuritas.ui.adapter.AlbumAdapter
-import ar.edu.unlam.figuritas.ui.viewModel.AlbumViewModel
+import ar.edu.unlam.figuritas.ui.AlbumViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

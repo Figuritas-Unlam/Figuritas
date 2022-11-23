@@ -10,8 +10,8 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import ar.edu.unlam.figuritas.databinding.ActivitySwapsBinding
-import ar.edu.unlam.figuritas.model.PlayerModel
-import ar.edu.unlam.figuritas.model.QRManager
+import ar.edu.unlam.figuritas.domain.model.PlayerModel
+import ar.edu.unlam.figuritas.player_model.QRManager
 import ar.edu.unlam.figuritas.ui.adapter.SwapsStickersAdapter
 import ar.edu.unlam.figuritas.ui.SwapsViewModel
 import com.google.zxing.integration.android.IntentIntegrator
@@ -40,6 +40,9 @@ class SwapsActivity : AppCompatActivity() {
         binding.swapsButton.setOnClickListener {
             generateQr()
         }
+        binding.openMap.setOnClickListener {
+            startMap()
+        }
     }
 
     private fun setRecyclerView() {
@@ -66,6 +69,11 @@ class SwapsActivity : AppCompatActivity() {
         integrator.initiateScan()
     }
 
+    private fun startMap() {
+        val intent = Intent(applicationContext, MapActivity::class.java)
+        startActivity(intent)
+    }
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         val result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data)
         if(result != null) {
@@ -83,15 +91,17 @@ class SwapsActivity : AppCompatActivity() {
 
     private fun generateQr() {
         try {
-            val selectedPlayes=getSelectedPlayers()
-            if(selectedPlayes.isNotEmpty()) {
-                val iv = ImageView(this)
-                iv.setImageBitmap(qrManager.generateQR(selectedPlayes, 900, 900))
+            val iv = ImageView(this)
+            val selectedPlayers = getSelectedPlayers()
+            if (selectedPlayers.isEmpty()) {
+                Toast.makeText(this,"Seleccioná al menos una figurita", Toast.LENGTH_SHORT).show()
+            } else {
+                iv.setImageBitmap(qrManager.generateQR(getSelectedPlayers(), 900, 900))
                 AlertDialog.Builder(this)
                     .setMessage("Mostrá el codigo para enviarlas")
                     .setView(iv)
                     .show()
-            }else Toast.makeText(this,"Debe seleccionar al menos una figurita", Toast.LENGTH_SHORT).show()
+            }
         } catch (e: RuntimeException) {
             //No se pudo generar el QR
             Toast.makeText(this,"Error al generar QR", Toast.LENGTH_SHORT).show()

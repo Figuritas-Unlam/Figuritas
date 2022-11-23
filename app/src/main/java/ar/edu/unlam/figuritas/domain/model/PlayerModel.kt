@@ -1,6 +1,6 @@
-package ar.edu.unlam.figuritas.model
+package ar.edu.unlam.figuritas.domain.model
 
-import ar.edu.unlam.figuritas.model.entities.PlayerEntity
+import ar.edu.unlam.figuritas.data.database.entities.PlayerEntity
 
 data class PlayerModel (
     val playerId : Int,

@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import ar.edu.unlam.figuritas.databinding.ItemSeleccionBinding
-import ar.edu.unlam.figuritas.model.Seleccion
+import ar.edu.unlam.figuritas.data.database.entities.Seleccion
 
 class AlbumAdapter(
 

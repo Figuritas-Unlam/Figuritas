@@ -1,11 +1,14 @@
 package ar.edu.unlam.figuritas.ui
 
-import android.app.AlertDialog
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import ar.edu.unlam.figuritas.data.DatabaseRepository
+import ar.edu.unlam.figuritas.data.PlayerRepository
+import ar.edu.unlam.figuritas.data.database.entities.PlayerEntity
+import ar.edu.unlam.figuritas.domain.response.PlayerResponse
 import ar.edu.unlam.figuritas.data.repository.DatabaseRepository
 import ar.edu.unlam.figuritas.data.repository.PlayerRepository
 import ar.edu.unlam.figuritas.model.entities.PlayerEntity
@@ -58,7 +61,6 @@ class OpenPackViewModel @Inject constructor(
     private fun fetchPlayers() {
         viewModelScope.launch {
             try {
-                _error.value = false
                 val response = repository.getRandomPlayers(5)
                 _playersData.value = response
                 for (player in response) {
@@ -70,8 +72,9 @@ class OpenPackViewModel @Inject constructor(
                     if (player != null) {
                         databaseRepository.insertPlayer(player)
                     }
+                    _error.value = false
                 }
-            } catch (e: RuntimeException) {
+            } catch (e: IOException) {
                 e.printStackTrace()
                 _error.value = true
                 Log.e("Error fetching players", e.message.toString())
@@ -120,4 +123,3 @@ class OpenPackViewModel @Inject constructor(
         )
     }
 }
-

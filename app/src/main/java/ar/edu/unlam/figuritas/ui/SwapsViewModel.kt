@@ -4,9 +4,9 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import ar.edu.unlam.figuritas.data.repository.DatabaseRepository
-import ar.edu.unlam.figuritas.model.PlayerModel
-import ar.edu.unlam.figuritas.model.entities.PlayerEntity
+import ar.edu.unlam.figuritas.data.DatabaseRepository
+import ar.edu.unlam.figuritas.domain.model.PlayerModel
+import ar.edu.unlam.figuritas.data.database.entities.PlayerEntity
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
