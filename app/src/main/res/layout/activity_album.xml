@@ -35,7 +35,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvSelecciones"
         android:layout_width="match_parent"
-        android:layout_height="550dp"
+        android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/textoAlbum"
         android:layout_marginTop="80dp"
         />
