@@ -1,5 +1,6 @@
 package ar.edu.unlam.figuritas.ui
 
+import android.app.AlertDialog
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -10,7 +11,9 @@ import ar.edu.unlam.figuritas.data.repository.PlayerRepository
 import ar.edu.unlam.figuritas.model.entities.PlayerEntity
 import ar.edu.unlam.figuritas.model.response.PlayerResponse
 import ar.edu.unlam.figuritas.model.response.mapToEntity
+import ar.edu.unlam.figuritas.ui.activities.OpenPackActivity
 import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.launch
 import java.io.IOException
 import javax.inject.Inject
@@ -33,7 +36,7 @@ class OpenPackViewModel @Inject constructor(
     }
 
     fun getFirstPlayerRepets(): PlayerEntity? {
-        var player = databaseRepository.getRepeats()
+        val player = databaseRepository.getRepeats()
         return if (player.isEmpty()) {
             playerRandomEntity()
         } else {
@@ -44,7 +47,7 @@ class OpenPackViewModel @Inject constructor(
 
 
     fun getFirstPlayerNueva(): PlayerEntity? {
-        var player = databaseRepository.getPlayersNotPaste()
+        val player = databaseRepository.getPlayersNotPaste()
         return if (player.isEmpty()) {
             playerRandomEntity()
         } else {
@@ -56,7 +59,6 @@ class OpenPackViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 _error.value = true
-
                 val response = repository.getRandomPlayers(5)
                 _playersData.value = response
                 for (player in response) {
@@ -68,8 +70,8 @@ class OpenPackViewModel @Inject constructor(
                     if (player != null) {
                         databaseRepository.insertPlayer(player)
                     }
-                    _error.value = false
                 }
+                _error.value=false
             } catch (e: RuntimeException) {
                 e.printStackTrace()
                 _error.value = true
@@ -77,6 +79,8 @@ class OpenPackViewModel @Inject constructor(
             }
         }
     }
+
+
 
 
     fun setLists() {

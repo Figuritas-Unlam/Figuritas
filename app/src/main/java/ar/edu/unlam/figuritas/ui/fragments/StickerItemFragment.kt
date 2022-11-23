@@ -27,6 +27,7 @@ class StickerItemFragment: Fragment(), FragmentPlayerCommunicator {
 
     override fun passPlayerDataToFragment(data: PlayerResponseData) {
         Picasso.get().load(data.image).into(binding.imagenJugador)
+        Picasso.get().load(data.imageCountry).into(binding.nationalityImage)
         binding.nombreJugador.text = data.name
         binding.alturaJugador.text = data.height
         binding.pesoJugador.text = data.weight

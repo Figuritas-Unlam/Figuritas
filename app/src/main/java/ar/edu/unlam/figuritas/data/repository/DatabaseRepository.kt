@@ -7,7 +7,6 @@ import javax.inject.Inject
 
 class DatabaseRepository @Inject constructor(private val playerDao: PlayerDao) {
 
-
     fun insertPlayer(playerResponse: PlayerResponse) {
         playerDao.insertOrUpdate(
             PlayerEntity(
@@ -32,7 +31,7 @@ class DatabaseRepository @Inject constructor(private val playerDao: PlayerDao) {
         return playerDao.getPlayersNotPaste()
     }
 
-    fun getRepeats(): List<PlayerEntity?> {
+    fun getRepeats(): List<PlayerEntity> {
         return playerDao.getRepeats()
     }
 
