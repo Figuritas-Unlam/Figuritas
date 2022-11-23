@@ -313,6 +313,7 @@ fun FiguritasRepetidas(player: PlayerEntity) {
 
                 )
 
+
             }
 
 
@@ -342,6 +343,7 @@ fun FiguritasRepetidas(player: PlayerEntity) {
                     lineHeight = TextUnit.Unspecified
 
                 )
+
             }
 
         }

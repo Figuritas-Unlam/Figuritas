@@ -58,7 +58,7 @@ class OpenPackViewModel @Inject constructor(
     private fun fetchPlayers() {
         viewModelScope.launch {
             try {
-                _error.value = true
+                _error.value = false
                 val response = repository.getRandomPlayers(5)
                 _playersData.value = response
                 for (player in response) {
@@ -71,7 +71,6 @@ class OpenPackViewModel @Inject constructor(
                         databaseRepository.insertPlayer(player)
                     }
                 }
-                _error.value=false
             } catch (e: RuntimeException) {
                 e.printStackTrace()
                 _error.value = true
@@ -79,9 +78,6 @@ class OpenPackViewModel @Inject constructor(
             }
         }
     }
-
-
-
 
     fun setLists() {
         getRepeats()

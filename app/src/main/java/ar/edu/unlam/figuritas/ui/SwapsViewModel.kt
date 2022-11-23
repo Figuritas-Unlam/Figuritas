@@ -19,14 +19,14 @@ class SwapsViewModel @Inject constructor(private val repository: DatabaseReposit
     init {
         _swappableStickers.value = emptyList()
         viewModelScope.launch {
-            _swappableStickers.value = repository.getRepeats().map { PlayerModel.of(it) }
+            _swappableStickers.value = repository.getSwapablePlayers().map { PlayerModel.of(it) }
         }
     }
 
     fun addStickers(stickers: List<PlayerModel>) {
         stickers.forEach { repository.insertPlayerEntity(it.toDataModel()) }
         viewModelScope.launch {
-            _swappableStickers.value = repository.getRepeats().map { PlayerModel.of(it) }
+            _swappableStickers.value = repository.getSwapablePlayers().map { PlayerModel.of(it) }
         }
     }
 
