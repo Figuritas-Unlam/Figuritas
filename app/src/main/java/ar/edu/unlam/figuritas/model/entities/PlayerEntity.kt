@@ -36,20 +36,11 @@ data class PlayerEntity (
     @ColumnInfo(name = "Quantity")
     var quantity : Int,
 
-    @ColumnInfo(name = "In_Album")
-    var inAlbum : Boolean,
-
     @ColumnInfo(name = "Is_Swapable")
     var isSwappable : Boolean,
 
     @ColumnInfo(name = "Image")
-    var imageUrl : String,
-
-    @ColumnInfo(name = "Paste")
-    var isPaste : String,
-
-    @ColumnInfo(name = "Position")
-    var position : Int
+    var imageUrl : String
     )
 
 
