@@ -1,5 +1,6 @@
 package ar.edu.unlam.figuritas.ui
 
+import android.annotation.SuppressLint
 import android.os.Looper
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

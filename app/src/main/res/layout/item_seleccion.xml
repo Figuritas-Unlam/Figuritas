@@ -20,8 +20,9 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvFiguritas"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/nameSeleccion"
         android:layout_marginBottom="20dp"
         />
 

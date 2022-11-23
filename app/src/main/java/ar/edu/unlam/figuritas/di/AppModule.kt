@@ -109,7 +109,7 @@ object AppModule {
 
     @Singleton
     @Provides
-    fun provideDao(database: PlayerDatabase) : PlayerDao{
+    fun provideDao(database: PlayerDatabase): PlayerDao {
         return database.playerDao()
     }
      */

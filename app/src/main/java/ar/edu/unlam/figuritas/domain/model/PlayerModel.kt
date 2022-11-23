@@ -12,10 +12,8 @@ data class PlayerModel (
     val teamId : Int,
     val seleccionId : Int,
     val quantity : Int,
-    val inAlbum : Boolean,
     val isSwappable : Boolean,
     val imageUrl : String,
-    val isPaste : String,
     val imageCountry : String,
     var isSelected: Boolean
 ) {
@@ -31,12 +29,9 @@ data class PlayerModel (
                 teamId = playerEntity.teamId,
                 seleccionId = playerEntity.seleccionId,
                 quantity = playerEntity.quantity,
-                inAlbum = playerEntity.inAlbum,
                 isSwappable = playerEntity.isSwappable,
                 imageUrl = playerEntity.imageUrl,
-                isPaste = playerEntity.isPaste,
                 imageCountry = playerEntity.imageCountry,
-
                 isSelected = false
             )
         }

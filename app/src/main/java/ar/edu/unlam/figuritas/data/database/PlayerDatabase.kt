@@ -4,10 +4,12 @@ import androidx.room.Database
 import androidx.room.RoomDatabase
 import ar.edu.unlam.figuritas.data.database.dao.PlayerDao
 import ar.edu.unlam.figuritas.data.database.entities.PlayerEntity
+import ar.edu.unlam.figuritas.model.entities.PlayerAlbumEntity
 
 @Database(
-    version = 5,
-    entities = [PlayerEntity::class]
+    version = 6,
+    entities = [PlayerEntity::class,
+                PlayerAlbumEntity::class]
 )
 abstract class PlayerDatabase : RoomDatabase() {
 

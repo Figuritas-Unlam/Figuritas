@@ -1,4 +1,4 @@
-package ar.edu.unlam.figuritas.ui
+package ar.edu.unlam.figuritas.ui.viewModel
 
 import android.hardware.SensorManager
 import android.util.Log
@@ -6,15 +6,20 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import ar.edu.unlam.figuritas.data.api.PlayerClient
+import ar.edu.unlam.figuritas.data.repository.DatabaseRepository
 import ar.edu.unlam.figuritas.domain.response.PlayerResponse
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import java.lang.Math.log
 import javax.inject.Inject
 
 
 @HiltViewModel
 class FiguritasViewModel @Inject constructor(
     private val playerClient: PlayerClient,
+    var playerDBRepository: DatabaseRepository,
 ) : ViewModel() {
 
     //private val playerList = MutableLiveData<PlayerResponse?>()

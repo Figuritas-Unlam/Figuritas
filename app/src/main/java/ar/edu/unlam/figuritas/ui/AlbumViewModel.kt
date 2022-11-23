@@ -1,107 +1,196 @@
-package ar.edu.unlam.figuritas.ui
+package ar.edu.unlam.figuritas.ui.viewModel
+
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
-import ar.edu.unlam.figuritas.data.DatabaseRepository
 import ar.edu.unlam.figuritas.data.PlayerRepository
-import ar.edu.unlam.figuritas.data.database.entities.Seleccion
-import ar.edu.unlam.figuritas.domain.WorldCupTeamId
 import ar.edu.unlam.figuritas.data.database.entities.PlayerEntity
+import ar.edu.unlam.figuritas.data.repository.DatabaseRepository
+import ar.edu.unlam.figuritas.model.Seleccion
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
 class AlbumViewModel @Inject constructor(var databaseRepository: DatabaseRepository, var playerRepository: PlayerRepository) : ViewModel(){
 
-    var listPlayers = mutableListOf<PlayerEntity>()
-    var listCountries = mutableListOf<WorldCupTeamId>()
-    var listSquads = mutableListOf<Seleccion>()
-    var listSquadsLiveData = MutableLiveData<MutableList<Seleccion>>()
-    var playersLiveData = MutableLiveData<List<PlayerEntity>>()
+    var listCountries = mutableListOf<Seleccion>()
+    private val _seleccionData = MutableLiveData<List<Seleccion?>>()
+    val seleccionData: MutableLiveData<List<Seleccion?>> = _seleccionData
+    var playerId = 0
 
-    fun getSquads(): MutableLiveData<MutableList<Seleccion>>{
-        return this.listSquadsLiveData
-    }
-
-    fun searchPlayers() : MutableList<Seleccion>{
+    init {
         setCountrys()
-        for(countryTeam in listCountries) {
-            insertPlayers2(countryTeam)
-        }
-        return listSquads
     }
 
-    fun insertPlayers2(team : WorldCupTeamId){
+    fun insertPlayersInSeleccion(countryId : Int) : MutableList<Seleccion>{
+        var listPlayers = mutableListOf<PlayerEntity>()
+        var listCountry = mutableListOf<Seleccion>()
 
-        viewModelScope.launch {
-            val playersDatabase = databaseRepository.getallPlayers()
-
-            listPlayers.addAll(playersDatabase)
-
-            val seleccion = Seleccion(team.name, listPlayers)
-            listSquads.add(seleccion)
-            listPlayers.clear()
-        }
-
-    }
-/*
-    fun insertPlayers(team : WorldCupTeamId) : Seleccion {
-        val seleccion = Seleccion(team.name, mutableListOf())
-        viewModelScope.launch {
-
-            val response = playerRepository.getPlayersByCountry(team)
-            if (response != null) {
-                for(player in response){
-                    seleccion.players.add(player!!.data)
+        for (seleccion in listCountries){
+            if(seleccion.idCountry == countryId){
+                while(listPlayers.size != 26){
+                    listPlayers.add(playerInAlbum(listPlayers.size, seleccion.idCountry))
                 }
+                seleccion.players = listPlayers
+                listCountry.add(seleccion)
             }
         }
-        return seleccion
+        return listCountry
     }
-*/
+
+    fun insertPlayersInSelecciones() : MutableList<Seleccion>{
+
+
+        for(seleccion in listCountries){
+
+            var listPlayers = mutableListOf<PlayerEntity>()
+            while(listPlayers.size != 26){
+                listPlayers.add(playerInAlbum(listPlayers.size, seleccion.idCountry))
+
+            }
+            seleccion.players = listPlayers
+        }
+        return listCountries
+    }
+
+    private fun playerInAlbum(position: Int, idCountry : Int) : PlayerEntity{
+
+        val players = databaseRepository.getPlayersPasteForCountry(idCountry)
+        for(player in players){
+
+            if(player.position == position){
+                return databaseRepository.getPlayerForId(player.playerId)!!
+            }
+
+        }
+        return PlayerEntity(
+            0,
+            "?",
+            "?",
+            "?",
+            "?",
+            "?",
+            0,
+            0,
+            0,
+            false,
+            "?",
+            imageCountry = ""
+        )
+    }
+
     fun setCountrys(){
 
-        listCountries.add(WorldCupTeamId.QATAR)
-        listCountries.add(WorldCupTeamId.ECUADOR)
-        listCountries.add(WorldCupTeamId.SENEGAL)
-        listCountries.add(WorldCupTeamId.NETHERLANDS)
+        listCountries.add(Seleccion("QATAR", "QAT", "https://cdn.sportmonks.com/images/countries/png/short/qa.png",
+            74505, mutableListOf()
+        ))
+        listCountries.add(Seleccion("ECUADOR", "ECU", "https://cdn.sportmonks.com/images/countries/png/short/ec.png",
+            459, mutableListOf()
+        ))
+        listCountries.add(Seleccion("SENEGAL", "SEN", "https://cdn.sportmonks.com/images/countries/png/short/sn.png",
+            200, mutableListOf()
+        ))
+        listCountries.add(Seleccion("NETHERLANDS", "NHL", "https://cdn.sportmonks.com/images/countries/png/short/nl.png",
+            38, mutableListOf()
+        ))
 
-        listCountries.add(WorldCupTeamId.ENGLAND)
-        listCountries.add(WorldCupTeamId.IRAN)
-        listCountries.add(WorldCupTeamId.UNITED_STATES)
-        listCountries.add(WorldCupTeamId.WALES)
 
-        listCountries.add(WorldCupTeamId.ARGENTINA)
-        listCountries.add(WorldCupTeamId.SAUDI_ARABIA)
-        listCountries.add(WorldCupTeamId.MEXICO)
-        listCountries.add(WorldCupTeamId.POLAND)
+        listCountries.add(Seleccion("ENGLAND", "ENG", "https://cdn.sportmonks.com/images/countries/png/short/gb.png",
+            462, mutableListOf()
+        ))
+        listCountries.add(Seleccion("IRAN", "IRN", "https://cdn.sportmonks.com/images/countries/png/short/ir.png",
+            488, mutableListOf()
+        ))
+        listCountries.add(Seleccion("UNITED STATES", "USA", "https://cdn.sportmonks.com/images/countries/png/short/us.png",
+            3483, mutableListOf()
+        ))
+        listCountries.add(Seleccion("WALES", "WAL", "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Flag_of_Wales.svg/200px-Flag_of_Wales.svg.png",
+            515, mutableListOf()
+        ))
 
-        listCountries.add(WorldCupTeamId.FRANCE)
-        listCountries.add(WorldCupTeamId.AUSTRALIA)
-        listCountries.add(WorldCupTeamId.DENMARK)
-        listCountries.add(WorldCupTeamId.TUNISIA)
 
-        listCountries.add(WorldCupTeamId.SPAIN)
-        listCountries.add(WorldCupTeamId.COSTA_RICA)
-        listCountries.add(WorldCupTeamId.GERMANY)
-        listCountries.add(WorldCupTeamId.JAPAN)
+        listCountries.add(Seleccion("ARGENTINA", "ARG", "https://cdn.sportmonks.com/images/countries/png/short/ar.png",
+            44, mutableListOf()
+        ))
+        listCountries.add(Seleccion("SAUDI ARABIA", "SAB", "https://cdn.sportmonks.com/images/countries/png/short/sa.png",
+            35376, mutableListOf()
+        ))
+        listCountries.add(Seleccion("MEXICO", "MEX", "https://cdn.sportmonks.com/images/countries/png/short/mx.png",
+            458, mutableListOf()
+        ))
+        listCountries.add(Seleccion("POLAND", "POL", "https://cdn.sportmonks.com/images/countries/png/short/pl.png",
+            2, mutableListOf()
+        ))
 
-        listCountries.add(WorldCupTeamId.BELGIUM)
-        listCountries.add(WorldCupTeamId.CANADA)
-        listCountries.add(WorldCupTeamId.MOROCCO)
-        listCountries.add(WorldCupTeamId.CROATIA)
 
-        listCountries.add(WorldCupTeamId.BRAZIL)
-        listCountries.add(WorldCupTeamId.SERBIA)
-        listCountries.add(WorldCupTeamId.SWITZERLAND)
-        listCountries.add(WorldCupTeamId.CAMEROON)
+        listCountries.add(Seleccion("FRANCE", "FRA", "https://cdn.sportmonks.com/images/countries/png/short/fr.png",
+            17, mutableListOf()
+        ))
+        listCountries.add(Seleccion("AUSTRALIA", "AUS", "https://cdn.sportmonks.com/images/countries/png/short/au.png",
+            98, mutableListOf()
+        ))
+        listCountries.add(Seleccion("DENMARK", "DEN", "https://cdn.sportmonks.com/images/countries/png/short/dk.png",
+            320, mutableListOf()
+        ))
+        listCountries.add(Seleccion("TUNISIA", "TUN", "https://cdn.sportmonks.com/images/countries/png/short/tn.png",
+            1439, mutableListOf()
+        ))
 
-        listCountries.add(WorldCupTeamId.PORTUGAL)
-        listCountries.add(WorldCupTeamId.GHANA)
-        listCountries.add(WorldCupTeamId.URUGUAY)
-        listCountries.add(WorldCupTeamId.KOREA_REPUBLIC)
+
+        listCountries.add(Seleccion("SPAIN", "SPA", "https://cdn.sportmonks.com/images/countries/png/short/es.png",
+            32, mutableListOf()
+        ))
+        listCountries.add(Seleccion("COSTA RICA", "COS", "https://cdn.sportmonks.com/images/countries/png/short/cr.png",
+            1739, mutableListOf()
+        ))
+        listCountries.add(Seleccion("GERMANY", "GER", "https://cdn.sportmonks.com/images/countries/png/short/de.png",
+            11, mutableListOf()
+        ))
+        listCountries.add(Seleccion("JAPAN", "JAP", "https://cdn.sportmonks.com/images/countries/png/short/jp.png",
+            479, mutableListOf()
+        ))
+
+
+        listCountries.add(Seleccion("BELGIUM", "BEL", "https://cdn.sportmonks.com/images/countries/png/short/be.png",
+            556, mutableListOf()
+        ))
+        listCountries.add(Seleccion("CANADA", "CAN", "https://cdn.sportmonks.com/images/countries/png/short/ca.png",
+            1004, mutableListOf()
+        ))
+        listCountries.add(Seleccion("MOROCCO", "MOR", "https://cdn.sportmonks.com/images/countries/png/short/ma.png",
+            1424, mutableListOf()
+        ))
+        listCountries.add(Seleccion("CROATIA", "CRO", "https://cdn.sportmonks.com/images/countries/png/short/hr.png",
+            226, mutableListOf()
+        ))
+
+
+        listCountries.add(Seleccion("BRAZIL", "BRA", "https://cdn.sportmonks.com/images/countries/png/short/br.png",
+            5, mutableListOf()
+        ))
+        listCountries.add(Seleccion("SERBIA", "SER", "https://cdn.sportmonks.com/images/countries/png/short/rs.png",
+            296, mutableListOf()
+        ))
+        listCountries.add(Seleccion("SWITZERLAND", "SWI", "https://cdn.sportmonks.com/images/countries/png/short/ch.png",
+            62, mutableListOf()
+        ))
+        listCountries.add(Seleccion("CAMEROON", "CAM", "https://cdn.sportmonks.com/images/countries/png/short/cm.png",
+            593, mutableListOf()
+        ))
+
+
+        listCountries.add(Seleccion("PORTUGAL", "POR", "https://cdn.sportmonks.com/images/countries/png/short/pt.png",
+            20, mutableListOf()
+        ))
+        listCountries.add(Seleccion("GHANA", "GHA", "https://cdn.sportmonks.com/images/countries/png/short/gh.png",
+            468, mutableListOf()
+        ))
+        listCountries.add(Seleccion("URUGUAY", "URU", "https://cdn.sportmonks.com/images/countries/png/short/uy.png",
+            158, mutableListOf()
+        ))
+        listCountries.add(Seleccion("KOREA REPUBLIC", "KOR", "https://cdn.sportmonks.com/images/countries/png/short/kr.png",
+            712, mutableListOf()
+        ))
 
     }
 

@@ -2,7 +2,7 @@ package ar.edu.unlam.figuritas.data.database.dao
 
 import androidx.room.*
 import ar.edu.unlam.figuritas.data.database.entities.PlayerEntity
-
+import ar.edu.unlam.figuritas.model.entities.PlayerAlbumEntity
 @Dao
 interface PlayerDao {
 
@@ -15,19 +15,29 @@ interface PlayerDao {
     @Query("Select * From Players pa Where pa.quantity > 1 ")
     fun getRepeatedPlayers() : List<PlayerEntity>
 
+    @Query("Select * From Players pa Where pa.Id = :idPlayer ")
+    fun searchPlayerForId(idPlayer: Int): PlayerEntity
+
+    @Query("Select pm.* From Players pa Join PlayerAlbum pm On pa.Id = pm.PlayerId" +
+            " Where pa.Seleccion_Id = :countryId")
+    fun getPlayersInAlbumForIdCountry(countryId : Int) : List<PlayerAlbumEntity>
+
     @Query("Select * From Players pa Where pa.Is_Swapable = 1")
     fun getSwappablePlayers() : List<PlayerEntity>
 
-    @Query("UPDATE Players SET Is_Swapable = :swappable WHERE id = :playerId AND In_Album = 0")
+    @Query("UPDATE Players SET Is_Swapable = :swappable WHERE id = :playerId AND Id Not In ( Select pl.playerId From PlayerAlbum pl)")
     fun setSwappablePlayers(playerId: Int, swappable: Boolean)
 
     @Insert
     fun insertPlayer(entity: PlayerEntity)
 
-    @Query("SELECT * from Players WHERE id= :id")
+    @Insert
+    fun insertPlayerInAlbum(entity: PlayerAlbumEntity)
+
+    @Query("SELECT * from Players WHERE id= :id AND Quantity > 0 And Id Not In ( Select pl.playerId From PlayerAlbum pl)")
     fun getPlayerById(id: Int) : PlayerEntity?
 
-    @Query("SELECT * from Players WHERE id= :id AND In_Album = 0 And Quantity > 1")
+    @Query("SELECT * from Players WHERE id= :id And Quantity > 1 And Id Not In ( Select pl.playerId From PlayerAlbum pl)")
     fun getDuplicatedPlayerById(id: Int) : PlayerEntity?
 
     @Query("UPDATE Players SET quantity = quantity + :qty WHERE id = :id")
@@ -48,18 +58,14 @@ interface PlayerDao {
         else updateQuantity(player.playerId, -1)
     }
 
-    @Query("UPDATE Players SET in_album = 1 WHERE id = :id")
-    fun placePlayerInAlbum(id: Int)
 
-    @Query("Select * From Players pa Where pa.Paste = 'NotPaste' ")
+    @Query("Update Players Set Quantity = Quantity - 1 Where Id = :idPlayer")
+    fun restQuantity(idPlayer: Int)
+
+    @Query("Select * From Players pa Where pa.Id Not In ( Select pl.playerId From PlayerAlbum pl)")
     fun getPlayersNotPaste(): List<PlayerEntity>
 
-    @Query("Select * From Players pa Where (pa.Paste = 'Paste' And pa.Quantity>0) Or (pa.Paste = 'NotPaste' And pa.Quantity>1)")
+    @Query("Select * From Players pa Where  pa.Quantity>1")
     fun getRepeats(): List<PlayerEntity>
-
-    @Query("Update Players Set Paste = 'Paste', Quantity = Quantity-1 Where Id = :idPlayer")
-    fun pastePlayer(idPlayer: Int)
-
-
 
 }

@@ -1,62 +1,120 @@
 package ar.edu.unlam.figuritas.ui.activities
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.activity.viewModels
+import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.Observer
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import ar.edu.unlam.figuritas.R
+import ar.edu.unlam.figuritas.data.database.entities.PlayerEntity
 
 import ar.edu.unlam.figuritas.databinding.ActivityAlbumBinding
-import ar.edu.unlam.figuritas.data.database.entities.Seleccion
+import ar.edu.unlam.figuritas.domain.response.PlayerResponse
+import ar.edu.unlam.figuritas.model.Seleccion
+import ar.edu.unlam.figuritas.ui.OpenPackViewModel
 import ar.edu.unlam.figuritas.ui.adapter.AlbumAdapter
-import ar.edu.unlam.figuritas.ui.AlbumViewModel
+import ar.edu.unlam.figuritas.ui.viewModel.AlbumViewModel
+import com.squareup.picasso.Picasso
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class AlbumActivity : AppCompatActivity() {
 
     private lateinit var albumBinding: ActivityAlbumBinding
-    private lateinit var albumAdapter : AlbumAdapter
-    private lateinit var listCountries : MutableList<String>
-    private lateinit var listSelecciones : MutableList<Seleccion>
+    private lateinit var albumAdapter: AlbumAdapter
+    private lateinit var listPlayers : List<PlayerEntity>
+    private lateinit var listSelecciones: MutableList<Seleccion>
+    private lateinit var player: PlayerResponse
 
-    private val albumViewModel : AlbumViewModel by viewModels()
+    private val albumViewModel: AlbumViewModel by viewModels()
+    private val nuevasViewMdel: OpenPackViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         albumBinding = ActivityAlbumBinding.inflate(layoutInflater)
         val view = albumBinding.root
 
+        verifiyIntent()
         initMyFiguritas()
         setContentView(view)
 
-        initRecyclerView()
+    /*
+        albumViewModel.setCountrys()
+        albumViewModel.searchSelecciones()
+        subscribeToViewModel()
+
+        figus()*/
+
 
     }
 
 
-
-    private fun initRecyclerView(){
-        listSelecciones = albumViewModel.searchPlayers()
-        albumAdapter = AlbumAdapter(listSelecciones, applicationContext)
-        albumBinding.rvSelecciones.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        albumBinding.rvSelecciones.adapter = albumAdapter
-    }
-/*
     @SuppressLint("NotifyDataSetChanged")
-    private fun setupObservers(){
+    private fun initRecyclerAlbumCompleted() {
 
-        albumViewModel.getSquads().observe(this, Observer {
-            albumAdapter.countries = it
-            albumAdapter.notifyDataSetChanged()
-        })
-    }*/
+        albumAdapter = AlbumAdapter(albumViewModel.insertPlayersInSelecciones(), applicationContext, albumViewModel, false)
+        albumAdapter.notifyDataSetChanged()
+        albumBinding.rvSelecciones.layoutManager =
+            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        albumBinding.rvSelecciones.adapter = albumAdapter
 
-    private fun initMyFiguritas(){
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    private fun initRecyclerIndividual(countryId : Int) {
+
+        albumAdapter = AlbumAdapter(albumViewModel.insertPlayersInSeleccion(countryId),
+            applicationContext, albumViewModel, true)
+        albumAdapter.notifyDataSetChanged()
+        albumBinding.rvSelecciones.layoutManager =
+            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        albumBinding.rvSelecciones.adapter = albumAdapter
+
+    }
+
+
+    private fun initMyFiguritas() {
 
         albumBinding.figurita.setOnClickListener {
             val intent = Intent(applicationContext, MyFiguritasActivity::class.java)
             startActivity(intent)
         }
+    }
+
+
+    private fun verifiyIntent() {
+
+            var playerId = intent.getIntExtra("id", 0)
+            if (playerId == 0) {
+                initRecyclerAlbumCompleted()
+            } else {
+                albumViewModel.playerId = playerId
+                var player = albumViewModel.databaseRepository.getPlayerForId(playerId)
+                setPlayerFigu(playerId)
+                initRecyclerIndividual(player!!.seleccionId)
+            }
+        }
+
+
+    private fun setPlayerFigu(playerId : Int){
+
+        val player = albumViewModel.databaseRepository.getPlayerForId(playerId)
+
+        albumBinding.nombreJugador.text = player!!.playerName
+
+        Picasso.get()
+            .load(player!!.imageCountry)
+            .placeholder(R.drawable.bandera_not_found)
+            .into(albumBinding.imageCountry)
+        Picasso.get()
+            .load(player!!.imageUrl)
+            .placeholder(R.drawable.image_not_found)
+            .into(albumBinding.imagenJugador)
     }
 }

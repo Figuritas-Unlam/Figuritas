@@ -5,7 +5,6 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 
-
 @Entity(tableName = "Players")
 data class PlayerEntity (
     @PrimaryKey
@@ -36,17 +35,11 @@ data class PlayerEntity (
     @ColumnInfo(name = "Quantity")
     var quantity : Int,
 
-    @ColumnInfo(name = "In_Album")
-    var inAlbum : Boolean,
-
     @ColumnInfo(name = "Is_Swapable")
     var isSwappable : Boolean,
 
     @ColumnInfo(name = "Image")
     var imageUrl : String,
-
-    @ColumnInfo(name = "Paste")
-    var isPaste : String,
 
     @ColumnInfo(name = "Image_Country")
     var imageCountry : String
