@@ -35,12 +35,12 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import ar.edu.unlam.figuritas.R
-import ar.edu.unlam.figuritas.model.entities.PlayerEntity
+import ar.edu.unlam.figuritas.data.database.entities.PlayerEntity
 import ar.edu.unlam.figuritas.ui.OpenPackViewModel
 import ar.edu.unlam.figuritas.ui.activities.ui.theme.FiguritasTheme
 import ar.edu.unlam.figuritas.ui.activities.ui.theme.Orange
 import ar.edu.unlam.figuritas.ui.activities.ui.theme.RedQatar
-import ar.edu.unlam.figuritas.ui.viewModel.FiguritasViewModel
+import ar.edu.unlam.figuritas.ui.FiguritasViewModel
 import coil.compose.AsyncImage
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -115,7 +115,10 @@ fun BackgroundActivity(viewModel: OpenPackViewModel) {
         modifier = Modifier
             .fillMaxSize()
             .fillMaxHeight(1f)
-            .paint(painterResource(id = R.drawable.background_qatar), contentScale = ContentScale.FillHeight)
+            .paint(
+                painterResource(id = R.drawable.background_qatar),
+                contentScale = ContentScale.FillHeight
+            )
     ) {
         MisFiguritas()
         FiguritaNuevasTxt()
@@ -310,6 +313,7 @@ fun FiguritasRepetidas(player: PlayerEntity) {
 
                 )
 
+
             }
 
 
@@ -339,6 +343,7 @@ fun FiguritasRepetidas(player: PlayerEntity) {
                     lineHeight = TextUnit.Unspecified
 
                 )
+
             }
 
         }

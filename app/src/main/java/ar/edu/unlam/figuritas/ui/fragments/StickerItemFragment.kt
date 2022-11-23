@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import ar.edu.unlam.figuritas.R
 import ar.edu.unlam.figuritas.databinding.ItemCardFiguritaBinding
-import ar.edu.unlam.figuritas.model.response.PlayerResponseData
+import ar.edu.unlam.figuritas.domain.response.PlayerResponseData
 import com.squareup.picasso.Picasso
 
 class StickerItemFragment: Fragment(), FragmentPlayerCommunicator {
@@ -27,6 +27,7 @@ class StickerItemFragment: Fragment(), FragmentPlayerCommunicator {
 
     override fun passPlayerDataToFragment(data: PlayerResponseData) {
         Picasso.get().load(data.image).into(binding.imagenJugador)
+        Picasso.get().load(data.imageCountry).into(binding.nationalityImage)
         binding.nombreJugador.text = data.name
         binding.alturaJugador.text = data.height
         binding.pesoJugador.text = data.weight

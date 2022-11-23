@@ -1,7 +1,6 @@
-package ar.edu.unlam.figuritas.model.response
+package ar.edu.unlam.figuritas.domain.response
 
-import androidx.annotation.DrawableRes
-import ar.edu.unlam.figuritas.model.entities.PlayerEntity
+import ar.edu.unlam.figuritas.data.database.entities.PlayerEntity
 import com.google.gson.annotations.SerializedName
 
 data class PlayerResponse(
@@ -32,7 +31,7 @@ data class PlayerResponseData (
     var image : String,
     @SerializedName("position")
     var position: PositionData,
-    var imageCountry: String = ""
+    var imageCountry: String
 )
 
 data class PositionData(

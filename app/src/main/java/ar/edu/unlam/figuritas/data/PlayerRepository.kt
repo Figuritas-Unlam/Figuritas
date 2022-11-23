@@ -1,10 +1,12 @@
-package ar.edu.unlam.figuritas.data.repository
+package ar.edu.unlam.figuritas.data
 
 import ar.edu.unlam.figuritas.data.api.PlayerClient
 import ar.edu.unlam.figuritas.data.database.dao.PlayerDao
-import ar.edu.unlam.figuritas.model.WorldCupTeamId
-import ar.edu.unlam.figuritas.model.entities.PlayerEntity
-import ar.edu.unlam.figuritas.model.response.*
+import ar.edu.unlam.figuritas.domain.WorldCupTeamId
+import ar.edu.unlam.figuritas.data.database.entities.PlayerEntity
+import ar.edu.unlam.figuritas.domain.response.PlayerResponse
+import ar.edu.unlam.figuritas.domain.response.SquadPlayerData
+import ar.edu.unlam.figuritas.model.response.CountryResponse
 import retrofit2.Response
 import javax.inject.Inject
 

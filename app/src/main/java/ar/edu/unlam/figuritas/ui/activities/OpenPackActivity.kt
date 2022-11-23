@@ -11,8 +11,9 @@ import ar.edu.unlam.figuritas.BuildConfig
 import ar.edu.unlam.figuritas.databinding.ActivityOpenPackBinding
 import dagger.hilt.android.AndroidEntryPoint
 import ar.edu.unlam.figuritas.ui.OpenPackViewModel
-import ar.edu.unlam.figuritas.model.response.PlayerResponse
+import ar.edu.unlam.figuritas.domain.response.PlayerResponse
 import ar.edu.unlam.figuritas.ui.fragments.StickerItemFragment
+import dagger.hilt.android.qualifiers.ApplicationContext
 
 @AndroidEntryPoint
 class OpenPackActivity : AppCompatActivity() {
@@ -54,10 +55,8 @@ class OpenPackActivity : AppCompatActivity() {
             binding.loader.visibility = View.GONE
             binding.nextButton.visibility = View.VISIBLE
         }
-        openPackViewModel.error.observe(this) {
-            if (it) {
-                showErrorDialog()
-            }
+        openPackViewModel.error.observe(this) { error ->
+            if (error) { showErrorDialog() }
         }
     }
 

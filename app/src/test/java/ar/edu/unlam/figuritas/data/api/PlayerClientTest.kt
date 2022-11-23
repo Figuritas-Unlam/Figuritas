@@ -1,9 +1,9 @@
 package ar.edu.unlam.figuritas.data.api
 
-import ar.edu.unlam.figuritas.model.response.PlayerResponse
-import ar.edu.unlam.figuritas.model.response.PlayerResponseData
-import ar.edu.unlam.figuritas.model.response.Position
-import ar.edu.unlam.figuritas.model.response.PositionData
+import ar.edu.unlam.figuritas.domain.response.PlayerResponse
+import ar.edu.unlam.figuritas.domain.response.PlayerResponseData
+import ar.edu.unlam.figuritas.domain.response.Position
+import ar.edu.unlam.figuritas.domain.response.PositionData
 import io.mockk.MockKAnnotations
 import io.mockk.coEvery
 import io.mockk.impl.annotations.MockK
