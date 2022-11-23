@@ -1,11 +1,13 @@
-package ar.edu.unlam.figuritas.data
+package ar.edu.unlam.figuritas.data.repository
 
 import ar.edu.unlam.figuritas.data.database.dao.PlayerDao
 import ar.edu.unlam.figuritas.data.database.entities.PlayerEntity
 import ar.edu.unlam.figuritas.domain.response.PlayerResponse
+import ar.edu.unlam.figuritas.model.entities.PlayerAlbumEntity
 import javax.inject.Inject
 
 class DatabaseRepository @Inject constructor(private val playerDao: PlayerDao) {
+
 
     fun insertPlayer(playerResponse: PlayerResponse) {
         playerDao.insertOrUpdate(
@@ -19,10 +21,8 @@ class DatabaseRepository @Inject constructor(private val playerDao: PlayerDao) {
                 playerResponse.data.teamId,
                 playerResponse.data.countryId,
                 quantity = 1,
-                inAlbum = false,
                 isSwappable = false,
                 imageUrl = playerResponse.data.image,
-                "NotPaste",
                 playerResponse.data.imageCountry
             )
         )
@@ -31,7 +31,7 @@ class DatabaseRepository @Inject constructor(private val playerDao: PlayerDao) {
         return playerDao.getPlayersNotPaste()
     }
 
-    fun getRepeats(): List<PlayerEntity> {
+    fun getRepeats(): List<PlayerEntity?> {
         return playerDao.getRepeats()
     }
 
@@ -50,4 +50,17 @@ class DatabaseRepository @Inject constructor(private val playerDao: PlayerDao) {
     fun deletePlayers(players: List<PlayerEntity>?) {
         players?.forEach { playerDao.deleteOrUpdate(it) }
     }
+
+    fun getPlayersPasteForCountry(countryId : Int) : List<PlayerAlbumEntity>{
+        return playerDao.getPlayersInAlbumForIdCountry(countryId)
+    }
+
+    fun insertPlayerInAlbum(playerAlbum : PlayerAlbumEntity){
+        playerDao.insertPlayerInAlbum(playerAlbum)
+    }
+
+    fun getPlayerForId(playerId : Int) : PlayerEntity?{
+        return playerDao.searchPlayerForId(playerId)
+    }
+
 }

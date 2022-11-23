@@ -5,30 +5,30 @@ import com.google.gson.annotations.SerializedName
 
 data class PlayerResponse(
     @SerializedName("data")
-    var data: PlayerResponseData
+    var data : PlayerResponseData
 )
 
-data class PlayerResponseData(
+data class PlayerResponseData (
     @SerializedName("player_id")
-    var playerId: Int,
+    var playerId : Int,
     @SerializedName("team_id")
-    var teamId: Int,
+    var teamId : Int,
     @SerializedName("country_id")
-    var countryId: Int,
+    var countryId : Int,
     @SerializedName("display_name")
-    var name: String,
+    var name : String,
     @SerializedName("fullname")
-    var fullname: String,
+    var fullname : String,
     @SerializedName("height")
-    var height: String,
+    var height : String,
     @SerializedName("weight")
-    var weight: String,
+    var weight : String,
     @SerializedName("birthdate")
-    var birthdate: String,
+    var birthdate : String,
     @SerializedName("nationality")
-    var nationality: String,
+    var nationality : String,
     @SerializedName("image_path")
-    var image: String,
+    var image : String,
     @SerializedName("position")
     var position: PositionData,
     var imageCountry: String
@@ -57,8 +57,6 @@ fun PlayerResponse.mapToEntity(quantity: Int, inAlbum: Boolean, isPaste: String)
     0,
     1,
     false,
-    false,
     data.image,
-    "NotPaste",
     data.imageCountry
 )

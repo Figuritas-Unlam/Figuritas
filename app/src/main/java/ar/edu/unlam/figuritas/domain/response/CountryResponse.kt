@@ -3,6 +3,7 @@ package ar.edu.unlam.figuritas.model.response
 import com.google.gson.annotations.SerializedName
 
 data class CountryResponse(
+
     @SerializedName("data")
     var data : CountryDataResponse
 )
