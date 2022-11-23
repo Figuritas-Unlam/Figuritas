@@ -41,10 +41,9 @@ class AlbumActivity : AppCompatActivity() {
         albumBinding = ActivityAlbumBinding.inflate(layoutInflater)
         val view = albumBinding.root
 
+        verifiyIntent()
         initMyFiguritas()
         setContentView(view)
-        initRecyclerView()
-
 
     /*
         albumViewModel.setCountrys()
@@ -58,9 +57,9 @@ class AlbumActivity : AppCompatActivity() {
 
 
     @SuppressLint("NotifyDataSetChanged")
-    private fun initRecyclerView() {
+    private fun initRecyclerAlbumCompleted() {
 
-        albumAdapter = AlbumAdapter(albumViewModel.insertPlayersInSeleccion(), applicationContext, albumViewModel)
+        albumAdapter = AlbumAdapter(albumViewModel.insertPlayersInSelecciones(), applicationContext, albumViewModel, false)
         albumAdapter.notifyDataSetChanged()
         albumBinding.rvSelecciones.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
@@ -69,13 +68,17 @@ class AlbumActivity : AppCompatActivity() {
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    private fun subscribeToViewModel(){
+    private fun initRecyclerIndividual(countryId : Int) {
 
-        albumViewModel.seleccionData.observe(this){
-            albumAdapter.countries = it as MutableList<Seleccion>
-            albumAdapter.notifyDataSetChanged()
-        }
+        albumAdapter = AlbumAdapter(albumViewModel.insertPlayersInSeleccion(countryId),
+            applicationContext, albumViewModel, true)
+        albumAdapter.notifyDataSetChanged()
+        albumBinding.rvSelecciones.layoutManager =
+            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        albumBinding.rvSelecciones.adapter = albumAdapter
+
     }
+
 
     private fun initMyFiguritas() {
 
@@ -85,22 +88,18 @@ class AlbumActivity : AppCompatActivity() {
         }
     }
 
-    private fun getListNuevas(): PlayerResponse? {
-        var list: List<PlayerResponse>
-        nuevasViewMdel.playersData.observe(this) {
-            list = it as List<PlayerResponse>
-            player = list[0]
-        }
-        return player
-    }
 
-    private fun figus() {
-        val jugador = getListNuevas()
-        albumBinding.nombreJugador.text = jugador?.data?.fullname
-        Picasso.get().load(jugador?.data?.image)
-            .placeholder(R.drawable.ney)
-            .into(albumBinding.imagenJugador)
-    }
+    private fun verifiyIntent() {
+
+            var playerId = intent.getIntExtra("id", 0)
+            if (playerId == 0) {
+                initRecyclerAlbumCompleted()
+            } else {
+                albumViewModel.playerId = playerId
+                var player = albumViewModel.databaseRepository.getPlayerForId(playerId)
+                initRecyclerIndividual(player!!.seleccionId)
+            }
+        }
 
 
 }

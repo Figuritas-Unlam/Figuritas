@@ -28,47 +28,29 @@ class AlbumViewModel @Inject constructor(var databaseRepository: DatabaseReposit
     var listCountries = mutableListOf<Seleccion>()
     private val _seleccionData = MutableLiveData<List<Seleccion?>>()
     val seleccionData: MutableLiveData<List<Seleccion?>> = _seleccionData
-
+    var playerId = 0
 
     init {
         setCountrys()
-        insertPlayersInSeleccion()
     }
 
-/*
-    fun buscarcoso() : MutableList<Seleccion>{
-        CoroutineScope(Dispatchers.IO).launch {
-            var listaEntidades = mutableListOf<PlayerEntity>()
+    fun insertPlayersInSeleccion(countryId : Int) : MutableList<Seleccion>{
+        var listPlayers = mutableListOf<PlayerEntity>()
+        var listCountry = mutableListOf<Seleccion>()
 
-            for (responseplayer in playerRepository.getPlayersByCountry(WorldCupTeamId.ARGENTINA)!!) {
-                if (responseplayer != null) {
-                    listaEntidades.add(
-                        PlayerEntity(
-                            responseplayer.data.playerId,
-                            responseplayer.data.name,
-                            responseplayer.data.height,
-                            responseplayer.data.weight,
-                            responseplayer.data.birthdate,
-                            responseplayer.data.teamId,
-                            responseplayer.data.countryId,
-                            0,
-                            false,
-                            "",
-                            "",
-                            ""
-                        )
-                    )
+        for (seleccion in listCountries){
+            if(seleccion.idCountry == countryId){
+                while(listPlayers.size != 26){
+                    listPlayers.add(playerInAlbum(listPlayers.size, seleccion.idCountry))
                 }
+                seleccion.players = listPlayers
+                listCountry.add(seleccion)
             }
-            listSquads.add(Seleccion(WorldCupTeamId.ARGENTINA.name, listaEntidades))
-
         }
-        return listSquads
+        return listCountry
     }
-    */
 
-
-    fun insertPlayersInSeleccion() : MutableList<Seleccion>{
+    fun insertPlayersInSelecciones() : MutableList<Seleccion>{
 
 
         for(seleccion in listCountries){
@@ -85,11 +67,11 @@ class AlbumViewModel @Inject constructor(var databaseRepository: DatabaseReposit
 
     private fun playerInAlbum(position: Int, idCountry : Int) : PlayerEntity{
 
-        val players = databaseRepository.getPlayersForCountry(idCountry)
+        val players = databaseRepository.getPlayersPasteForCountry(idCountry)
         for(player in players){
 
             if(player.position == position){
-                return player
+                return databaseRepository.getPlayerForId(player.playerId)!!
             }
 
         }
@@ -104,67 +86,10 @@ class AlbumViewModel @Inject constructor(var databaseRepository: DatabaseReposit
             0,
             0,
             false,
-            false,
             "?",
-            "?",
-            position
         )
     }
-    /*
-    fun searchSelecciones(){
 
-        for(seleccion in listCountries){
-            searchPlayers(seleccion)
-        }
-        _seleccionData.value = listSquads
-    }
-
-    fun searchPlayers(country : WorldCupTeamId){
-        try {
-            viewModelScope.launch {
-                val response = playerRepository.getPlayersByCountry(country)
-                val playersDatabase = databaseRepository.getallPlayers()
-                for (player in response!!) {
-                    for (playerPaste in playersDatabase) {
-                        if (player != null) {
-                            listPlayers.add(inAlbum(player, playerPaste))
-                        }
-
-                    }
-                    val seleccion = Seleccion(country.name, listPlayers)
-                    listSquads.add(seleccion)
-                    listPlayers.clear()
-                }
-            }
-        }
-     catch (e: RuntimeException) {
-        e.printStackTrace()
-        Log.e("Error fetching players", e.message.toString())
-    }
-    }
-
-    fun inAlbum(playerResponse : PlayerResponse, playerEntity : PlayerEntity) : PlayerEntity{
-        if(playerResponse.data.playerId == playerEntity.playerId){
-            return playerEntity
-        }
-        else{
-            return PlayerEntity(
-                playerResponse.data.playerId,
-                "?",
-                "?",
-                "?",
-                "?",
-                0,
-                0,
-                0,
-                false,
-                "",
-                "",
-                0
-            )
-        }
-    }
-*/
     fun setCountrys(){
 
         listCountries.add(Seleccion("QATAR", "QAT", "https://cdn.sportmonks.com/images/countries/png/short/qa.png",

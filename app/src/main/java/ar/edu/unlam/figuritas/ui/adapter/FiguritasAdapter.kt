@@ -6,6 +6,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import ar.edu.unlam.figuritas.R
 import ar.edu.unlam.figuritas.databinding.ItemFiguritaBinding
+import ar.edu.unlam.figuritas.model.entities.Player
+import ar.edu.unlam.figuritas.model.entities.PlayerAlbumEntity
 import ar.edu.unlam.figuritas.model.entities.PlayerEntity
 import ar.edu.unlam.figuritas.model.response.PlayerResponseData
 import ar.edu.unlam.figuritas.ui.viewModel.AlbumViewModel
@@ -14,7 +16,8 @@ import com.squareup.picasso.Picasso
 class FiguritasAdapter(var figuritas: List<PlayerEntity>,
                        var albumViewModel: AlbumViewModel,
                        var imageCountry : String,
-                       val nameSeleccion : String
+                       val nameSeleccion : String,
+                       var inInsert : Boolean
 ) : RecyclerView.Adapter<FiguritaViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FiguritaViewHolder {
@@ -27,7 +30,7 @@ class FiguritasAdapter(var figuritas: List<PlayerEntity>,
     override fun onBindViewHolder(holder: FiguritaViewHolder, position: Int) {
 
         val player = figuritas[position]
-        bind(holder, player, imageCountry, nameSeleccion)
+        bind(holder, player, imageCountry, nameSeleccion, position, inInsert, albumViewModel)
     }
 
     override fun getItemCount(): Int = figuritas.size
@@ -41,16 +44,30 @@ private fun bind(
     holder : FiguritaViewHolder,
     player : PlayerEntity,
     imageCountry: String,
-    nameSeleccion: String
+    nameSeleccion: String,
+    position: Int,
+    inInsert : Boolean,
+    albumViewModel: AlbumViewModel
 ){
 
     holder.binding.alturaJugador.text = player.height
     holder.binding.pesoJugador.text = player.weight
     holder.binding.nombreJugador.text = player.playerName
     holder.binding.fechaNacimiento.text = player.birthdate
-    holder.binding.pasteFigu.visibility = View.INVISIBLE
     holder.binding.nameSeleccion.text = nameSeleccion
 
+    if(inInsert){
+        holder.binding.pasteFigu.visibility = View.VISIBLE
+        holder.binding.imagenJugador.visibility = View.INVISIBLE
+    }
+    else
+    {
+        holder.binding.pasteFigu.visibility = View.INVISIBLE
+    }
+
+    holder.binding.pasteFigu.setOnClickListener {
+        albumViewModel.databaseRepository.insertPlayerInAlbum(PlayerAlbumEntity(albumViewModel.playerId, position))
+    }
     Picasso.get()
         .load(player.imageUrl)
         .placeholder(R.drawable.image_not_found)

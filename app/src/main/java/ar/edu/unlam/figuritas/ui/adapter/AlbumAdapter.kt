@@ -13,7 +13,8 @@ class AlbumAdapter(
 
     var countries: MutableList<Seleccion>,
     var applicationContext: Context,
-    var albumViewModel: AlbumViewModel
+    var albumViewModel: AlbumViewModel,
+    var inInsert : Boolean
 ) : RecyclerView.Adapter<SeleccionViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SeleccionViewHolder {
@@ -26,7 +27,7 @@ class AlbumAdapter(
     override fun onBindViewHolder(holder: SeleccionViewHolder, position: Int) {
 
         val seleccion = countries[position]
-        bind(holder, seleccion, applicationContext, albumViewModel)
+        bind(holder, seleccion, applicationContext, albumViewModel, inInsert)
     }
 
     override fun getItemCount(): Int = countries.size
@@ -39,10 +40,11 @@ private fun bind(
     holder : SeleccionViewHolder,
     seleccion : Seleccion,
     applicationContext: Context,
-    albumViewModel: AlbumViewModel
+    albumViewModel: AlbumViewModel,
+    inInsert: Boolean
 ){
     holder.binding.nameSeleccion.text = seleccion.nameCountry
-    val figuritasAdapter = FiguritasAdapter(seleccion.players, albumViewModel, seleccion.imageCountry, seleccion.displayNameCountry)
+    val figuritasAdapter = FiguritasAdapter(seleccion.players, albumViewModel, seleccion.imageCountry, seleccion.displayNameCountry, inInsert)
     holder.binding.rvFiguritas.layoutManager = GridLayoutManager(applicationContext, 2)
     holder.binding.rvFiguritas.adapter = figuritasAdapter
 
