@@ -28,7 +28,7 @@ class SwapsViewModel @Inject constructor(private val repository: DatabaseReposit
     }
 
     fun getSelectedStickers(): List<PlayerModel> {
-        val selectedStickers = _swappableStickers.value?.filter { it.isSelected }
+        val selectedStickers = _swappableStickers.value?.filter { it.isSelected}
         repository.deletePlayers(selectedStickers.toDataModel())
         _swappableStickers.value = repository.getSwapablePlayers().map { PlayerModel.of(it) }
         return selectedStickers ?: emptyList()
@@ -49,6 +49,7 @@ private fun List<PlayerModel>?.toDataModel(): List<PlayerEntity> {
             quantity = it.quantity,
             imageUrl = it.imageUrl,
             isSwappable = it.isSwappable,
+            imageCountry = it.imageCountry
         )
     } ?: emptyList()
 }
@@ -66,5 +67,6 @@ private fun PlayerModel.toDataModel(): PlayerEntity {
         quantity = this.quantity,
         imageUrl = this.imageUrl,
         isSwappable = this.isSwappable,
+        imageCountry = this.imageCountry
     )
 }

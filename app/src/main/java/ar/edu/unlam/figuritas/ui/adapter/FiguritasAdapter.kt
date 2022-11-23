@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import ar.edu.unlam.figuritas.R
 import ar.edu.unlam.figuritas.databinding.ItemFiguritaBinding
-import ar.edu.unlam.figuritas.model.entities.Player
 import ar.edu.unlam.figuritas.model.entities.PlayerAlbumEntity
 import ar.edu.unlam.figuritas.model.entities.PlayerEntity
 import ar.edu.unlam.figuritas.model.response.PlayerResponseData

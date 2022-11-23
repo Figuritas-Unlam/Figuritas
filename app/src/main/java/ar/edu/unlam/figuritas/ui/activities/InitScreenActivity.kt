@@ -1,5 +1,6 @@
 package ar.edu.unlam.figuritas.ui.activities
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.hardware.Sensor
@@ -89,6 +90,7 @@ class InitScreenActivity : AppCompatActivity() , SensorEventListener {
                     progress: Float
                 ) { }
 
+                @SuppressLint("SuspiciousIndentation")
                 override fun onTransitionCompleted(motionLayout: MotionLayout?, currentId: Int) {
                  intent = Intent(applicationContext, AlbumActivity::class.java)
                     startActivity(intent)

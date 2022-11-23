@@ -23,7 +23,6 @@ class DatabaseRepository @Inject constructor(private val playerDao: PlayerDao) {
                 quantity = 1,
                 isSwappable = false,
                 imageUrl = playerResponse.data.image,
-                "NotPaste",
                 playerResponse.data.imageCountry
             )
         )

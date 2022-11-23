@@ -70,7 +70,7 @@ class MyFiguritasActivity : ComponentActivity(), SensorEventListener {
 
     //Sense Shake
     private fun setShakeSensor() {
-        viewModelos.sensorManager= getSystemService(Context.SENSOR_SERVICE) as SensorManager
+        viewModelos.sensorManager= getSystemService(SENSOR_SERVICE) as SensorManager
     }
 
     override fun onSensorChanged(srEvent: SensorEvent?) {
@@ -87,7 +87,7 @@ class MyFiguritasActivity : ComponentActivity(), SensorEventListener {
         val zVal = event.values[2]
         val accelerationSquareRoot = (xVal * xVal + yVal * yVal + zVal * zVal) / (SensorManager.GRAVITY_EARTH * SensorManager.GRAVITY_EARTH)
         if (accelerationSquareRoot >= 12) {
-            val vibrator = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+            val vibrator = getSystemService(VIBRATOR_SERVICE) as Vibrator
             vibrator.vibrate(300)
             val openPackActivityIntent = Intent(baseContext, OpenPackActivity::class.java)
             startActivity(openPackActivityIntent)
