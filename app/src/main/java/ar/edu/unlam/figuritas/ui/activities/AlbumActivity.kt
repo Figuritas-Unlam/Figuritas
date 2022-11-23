@@ -12,12 +12,11 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import ar.edu.unlam.figuritas.R
+import ar.edu.unlam.figuritas.data.database.entities.PlayerEntity
 
 import ar.edu.unlam.figuritas.databinding.ActivityAlbumBinding
+import ar.edu.unlam.figuritas.domain.response.PlayerResponse
 import ar.edu.unlam.figuritas.model.Seleccion
-import ar.edu.unlam.figuritas.model.WorldCupTeamId
-import ar.edu.unlam.figuritas.model.entities.PlayerEntity
-import ar.edu.unlam.figuritas.model.response.PlayerResponse
 import ar.edu.unlam.figuritas.ui.OpenPackViewModel
 import ar.edu.unlam.figuritas.ui.adapter.AlbumAdapter
 import ar.edu.unlam.figuritas.ui.viewModel.AlbumViewModel
@@ -97,9 +96,25 @@ class AlbumActivity : AppCompatActivity() {
             } else {
                 albumViewModel.playerId = playerId
                 var player = albumViewModel.databaseRepository.getPlayerForId(playerId)
+                setPlayerFigu(playerId)
                 initRecyclerIndividual(player!!.seleccionId)
             }
         }
 
 
+    private fun setPlayerFigu(playerId : Int){
+
+        val player = albumViewModel.databaseRepository.getPlayerForId(playerId)
+
+        albumBinding.nombreJugador.text = player!!.playerName
+
+        Picasso.get()
+            .load(player!!.imageCountry)
+            .placeholder(R.drawable.bandera_not_found)
+            .into(albumBinding.imageCountry)
+        Picasso.get()
+            .load(player!!.imageUrl)
+            .placeholder(R.drawable.image_not_found)
+            .into(albumBinding.imagenJugador)
+    }
 }

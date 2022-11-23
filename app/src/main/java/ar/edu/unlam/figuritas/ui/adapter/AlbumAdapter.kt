@@ -44,7 +44,7 @@ private fun bind(
     inInsert: Boolean
 ){
     holder.binding.nameSeleccion.text = seleccion.nameCountry
-    val figuritasAdapter = FiguritasAdapter(seleccion.players, albumViewModel, seleccion.imageCountry, seleccion.displayNameCountry, inInsert)
+    val figuritasAdapter = FiguritasAdapter(seleccion.players, albumViewModel, seleccion.imageCountry, seleccion.displayNameCountry, inInsert, applicationContext)
     holder.binding.rvFiguritas.layoutManager = GridLayoutManager(applicationContext, 2)
     holder.binding.rvFiguritas.adapter = figuritasAdapter
 

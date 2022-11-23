@@ -14,6 +14,7 @@ import androidx.activity.viewModels
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
@@ -27,6 +28,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.paint
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -40,7 +42,7 @@ import ar.edu.unlam.figuritas.ui.OpenPackViewModel
 import ar.edu.unlam.figuritas.ui.activities.ui.theme.FiguritasTheme
 import ar.edu.unlam.figuritas.ui.activities.ui.theme.Orange
 import ar.edu.unlam.figuritas.ui.activities.ui.theme.RedQatar
-import ar.edu.unlam.figuritas.ui.FiguritasViewModel
+import ar.edu.unlam.figuritas.ui.viewModel.FiguritasViewModel
 import coil.compose.AsyncImage
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -105,6 +107,9 @@ class MyFiguritasActivity : ComponentActivity(), SensorEventListener {
         viewModelos.sensorManager.unregisterListener(this)
         viewModel.playerRepetidos.clear()
         viewModel.playerNuevas.clear()
+    }
+    fun intentAlbum(playerId : Int){
+
     }
 
 }
@@ -182,16 +187,22 @@ fun RvNuevas(viewModel: OpenPackViewModel) {
 
 @Composable
 fun FiguritasNuevas(player: PlayerEntity) {
+    val context = LocalContext.current
+    val intent = Intent(context, AlbumActivity::class.java)
+    intent.putExtra("id", player.playerId)
     Card(
         border = BorderStroke(2.dp, Color.Yellow),
         modifier = Modifier
             .width(140.dp)
             .height(260.dp)
-            .padding(top = 40.dp),
+            .padding(top = 40.dp)
+            .clickable {
+                context.startActivity(intent)
+            },
         backgroundColor = Orange,
-
         elevation = 50.dp
     ) {
+
 
         Column(
             Modifier

@@ -15,7 +15,7 @@ import androidx.constraintlayout.motion.widget.MotionLayout
 import ar.edu.unlam.figuritas.R
 import ar.edu.unlam.figuritas.databinding.ActivityInitScreenBinding
 import ar.edu.unlam.figuritas.ui.OpenPackViewModel
-import ar.edu.unlam.figuritas.ui.FiguritasViewModel
+import ar.edu.unlam.figuritas.ui.viewModel.FiguritasViewModel
 import com.squareup.picasso.Picasso
 import dagger.hilt.android.AndroidEntryPoint
 

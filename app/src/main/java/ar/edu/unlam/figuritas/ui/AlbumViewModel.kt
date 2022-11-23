@@ -3,10 +3,10 @@ package ar.edu.unlam.figuritas.ui.viewModel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import ar.edu.unlam.figuritas.data.PlayerRepository
+import ar.edu.unlam.figuritas.data.database.entities.PlayerEntity
 import ar.edu.unlam.figuritas.data.repository.DatabaseRepository
-import ar.edu.unlam.figuritas.data.repository.PlayerRepository
 import ar.edu.unlam.figuritas.model.Seleccion
-import ar.edu.unlam.figuritas.model.entities.PlayerEntity
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 

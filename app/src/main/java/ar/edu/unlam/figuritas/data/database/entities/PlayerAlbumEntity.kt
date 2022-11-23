@@ -4,6 +4,7 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
+import ar.edu.unlam.figuritas.data.database.entities.PlayerEntity
 
 @Entity(tableName = "PlayerAlbum",
     foreignKeys = [ForeignKey(entity = PlayerEntity::class,
