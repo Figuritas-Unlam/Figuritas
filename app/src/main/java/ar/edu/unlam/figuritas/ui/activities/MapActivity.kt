@@ -19,7 +19,9 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import com.google.android.gms.maps.model.PolylineOptions
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.CoroutineScope
 
 @AndroidEntryPoint
 class MapActivity: AppCompatActivity(),
@@ -142,9 +144,11 @@ class MapActivity: AppCompatActivity(),
                 if (mapViewModel.name != it.title.toString()) {
                     mapViewModel.resetLocations()
                     mapViewModel.name = it.title.toString()
+                    //"-58.463202, -34.605046"
+                    Log.d("ACTUALLOCATION","${mapViewModel.actualLocation?.longitude},${mapViewModel.actualLocation?.latitude}")
                     drawPolyLineRoute(
-                        "-58.463202, -34.605046",
-                        "${coordinates.longitude}, ${coordinates.latitude}"
+                        "${mapViewModel.actualLocation?.longitude},${mapViewModel.actualLocation?.latitude}",
+                        "${coordinates.longitude},${coordinates.latitude}"
                     )
                 }
             } else {
@@ -155,14 +159,17 @@ class MapActivity: AppCompatActivity(),
     }
 
     private fun drawPolyLineRoute(start: String, end: String) {
-        val polyLine = mapViewModel.getPolyline(start, end)
-        if (polyLine != null) {
+        val points = mapViewModel.getPolyline(start, end)
+        try {
             Log.d("MarkerCoords en Pegada", end)
             Log.d("'My location'Coords", start)
-            runOnUiThread {
+            Log.e("ROUTENOTNULL","${points.size}/")
+            val polyLine = PolylineOptions()
+            points.forEach { polyLine.add(LatLng(it[1],it[0])) }
+            /*runOnUiThread {
                 mapViewModel.poly = map.addPolyline(polyLine)
-            }
-        } else {
+            }*/
+        } catch (e: Exception) {
             Log.d("MAP", "No se pudo calcular la ruta x.x")
         }
     }

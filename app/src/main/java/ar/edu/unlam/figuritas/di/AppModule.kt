@@ -23,7 +23,7 @@ import javax.inject.Singleton
 object AppModule {
 
     private const val BASE_URL = "https://soccer.sportmonks.com/api/v2.0/"
-    private const val BASE_ROUTE_URL = "https://api.openrouteservice.org"
+    private const val BASE_ROUTE_URL = "https://api.openrouteservice.org/"
 
     @Singleton
     @Provides

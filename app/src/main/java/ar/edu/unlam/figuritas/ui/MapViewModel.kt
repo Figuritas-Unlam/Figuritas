@@ -1,6 +1,7 @@
 package ar.edu.unlam.figuritas.ui
 
 import android.os.Looper
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import ar.edu.unlam.figuritas.domain.PolyLineRouteProvider
@@ -51,13 +52,16 @@ class MapViewModel @Inject constructor(
         }
     }
 
-    fun getPolyline(start: String, end: String): PolylineOptions? {
-        var polyLine: PolylineOptions? = null
+    suspend fun getPolyline(start: String, end: String): MutableList<List<Double>> {
+        val points = mutableListOf<List<Double>>()
         viewModelScope.launch {
             //Esta llamada pasaria al viewModel
-            polyLine = routeProvider.getPolyline(start, end)
+            routeProvider.getPolyline(start, end).forEach {
+                points.add(it)
+            }
         }
-        return polyLine
+        Log.e("PointVM, YAPOLY", "${points.size}")
+        return points
     }
 
     fun resetLocations() {

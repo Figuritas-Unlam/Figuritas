@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 
 data class RouteResponse (@SerializedName("features") val features: List<Feature>)
 
-fun RouteResponse.mapToRoute() = Route(features[0].geometry.coordinates)
+fun RouteResponse.mapToRoute() = Route(features.first().geometry.coordinates)
 
 data class Feature(@SerializedName("geometry") val geometry: Geometry)
 
