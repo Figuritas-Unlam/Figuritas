@@ -19,7 +19,7 @@ interface PlayerAPI {
     suspend fun searchPlayerById(@Path("playerId") playerId : Int) : Response<PlayerResponse>
 
     @GET("teams/{countryId}?api_token=$API_KEY&include=squad")
-    suspend fun searchPlayersByCountryId(@Path("countryId") countryId : Int) : Response<TeamResponse>
+    suspend fun searchPlayersByCountryId(@Path("countryId") countryId : Int) : Response<TeamResponse?>
 
     @GET("countries/{countryId}?api_token=$API_KEY")
     suspend fun searchCountryById(@Path("countryId") countryId: Int) : Response<CountryResponse>

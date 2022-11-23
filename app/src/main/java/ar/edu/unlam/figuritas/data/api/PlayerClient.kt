@@ -13,7 +13,7 @@ class PlayerClient @Inject constructor(
         return servicePlayerApi.searchPlayerById(playerId)
     }
 
-    suspend fun searchPlayersByCountryId(countryId: Int): Response<TeamResponse> {
+    suspend fun searchPlayersByCountryId(countryId: Int): Response<TeamResponse?> {
         return servicePlayerApi.searchPlayersByCountryId(countryId)
     }
 

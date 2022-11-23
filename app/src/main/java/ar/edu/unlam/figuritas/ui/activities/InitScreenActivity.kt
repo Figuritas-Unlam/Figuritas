@@ -90,8 +90,8 @@ class InitScreenActivity : AppCompatActivity(), SensorEventListener {
                 ) { }
 
                 override fun onTransitionCompleted(motionLayout: MotionLayout?, currentId: Int) {
-                 /*  intent = Intent(applicationContext, SecondActivity::class.java)
-                    startActivity(intent)*/
+                  intent = Intent(applicationContext, AlbumActivity::class.java)
+                    startActivity(intent)
                 }
 
                 override fun onTransitionTrigger(
