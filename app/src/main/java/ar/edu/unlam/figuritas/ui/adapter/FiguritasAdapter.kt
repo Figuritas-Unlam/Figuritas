@@ -5,8 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import ar.edu.unlam.figuritas.R
 import ar.edu.unlam.figuritas.databinding.ItemFiguritaBinding
-import ar.edu.unlam.figuritas.model.entities.PlayerEntity
-import ar.edu.unlam.figuritas.model.response.PlayerResponseData
+import ar.edu.unlam.figuritas.data.database.entities.PlayerEntity
 import com.squareup.picasso.Picasso
 
 class FiguritasAdapter(var figuritas: MutableList<PlayerEntity>

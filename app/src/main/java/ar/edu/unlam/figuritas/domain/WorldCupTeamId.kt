@@ -1,4 +1,4 @@
-package ar.edu.unlam.figuritas.model
+package ar.edu.unlam.figuritas.domain
 
 enum class WorldCupTeamId(val id:Int) {
     URUGUAY(15251),

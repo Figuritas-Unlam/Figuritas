@@ -1,7 +1,7 @@
 package ar.edu.unlam.figuritas.data.database.dao
 
 import androidx.room.*
-import ar.edu.unlam.figuritas.model.entities.PlayerEntity
+import ar.edu.unlam.figuritas.data.database.entities.PlayerEntity
 
 @Dao
 interface PlayerDao {

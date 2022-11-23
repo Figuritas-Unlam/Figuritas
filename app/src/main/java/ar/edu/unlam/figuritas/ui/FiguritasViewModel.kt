@@ -1,4 +1,4 @@
-package ar.edu.unlam.figuritas.ui.viewModel
+package ar.edu.unlam.figuritas.ui
 
 import android.hardware.SensorManager
 import android.util.Log
@@ -6,7 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import ar.edu.unlam.figuritas.data.api.PlayerClient
-import ar.edu.unlam.figuritas.model.response.PlayerResponse
+import ar.edu.unlam.figuritas.domain.response.PlayerResponse
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
